@@ -3,13 +3,13 @@ from __future__ import annotations
 import torch
 from torch import nn
 from .bert_encoder import BertTextEncoder
-from .gnn_model import GraphSAGEEncoder
+from .task2.models import GraphSAGEEncoder
 
 class GNNBertFusion(nn.Module):
     def __init__(self, graph_encoder: GraphSAGEEncoder, text_encoder: BertTextEncoder, num_labels: int, fusion: str = "cross_attention", dropout: float = 0.2) -> None:
         super().__init__()
         self.graph_encoder, self.text_encoder, self.fusion = graph_encoder, text_encoder, fusion
-        self.graph_projection = nn.Linear(graph_encoder.hidden_dim, text_encoder.hidden_size)
+        self.graph_projection = nn.Linear(graph_encoder.output_dim, text_encoder.hidden_size)
         self.attention = nn.MultiheadAttention(text_encoder.hidden_size, num_heads=8, batch_first=True)
         self.head = nn.Sequential(nn.Dropout(dropout), nn.Linear(text_encoder.hidden_size * 2, num_labels))
 

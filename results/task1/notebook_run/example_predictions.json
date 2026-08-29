@@ -1,0 +1,155 @@
+[
+  {
+    "text": "This is the live performance of a Paraguayan folk music piece. There is no singer. There is a Paraguayan harp playing a vibrant yet melancholic tune. The atmosphere is heart-touching. This piece could be used in the soundtrack of a drama movie during a scene of serenity or mourning.",
+    "top_predicted": [
+      {
+        "tag": "live",
+        "probability": 0.9781
+      },
+      {
+        "tag": "folk",
+        "probability": 0.8651
+      },
+      {
+        "tag": "vocals",
+        "probability": 0.6
+      },
+      {
+        "tag": "classical",
+        "probability": 0.1807
+      },
+      {
+        "tag": "acoustic",
+        "probability": 0.177
+      }
+    ],
+    "true_tags": [
+      "vocals",
+      "live",
+      "folk",
+      "sad"
+    ]
+  },
+  {
+    "text": "This is the sound of a didgeridoo being played. This sound alternates between a droning sound and a deep bass sound. There are no other instruments in this song. There are no voices in this song. This song can be played in a movie featuring aboriginals.",
+    "top_predicted": [
+      {
+        "tag": "bass",
+        "probability": 0.9978
+      },
+      {
+        "tag": "guitar",
+        "probability": 0.136
+      },
+      {
+        "tag": "synthesizer",
+        "probability": 0.0433
+      },
+      {
+        "tag": "drums",
+        "probability": 0.0333
+      },
+      {
+        "tag": "calm",
+        "probability": 0.0311
+      }
+    ],
+    "true_tags": [
+      "bass"
+    ]
+  },
+  {
+    "text": "Male voices are singing a hymn while supported by strings playing chords, a triangle sound can be heard as a rhythmic addition. Upright basses being plucked along with a soft timpani hit. This song may be playing at an official national event.",
+    "top_predicted": [
+      {
+        "tag": "bass",
+        "probability": 0.9826
+      },
+      {
+        "tag": "vocals",
+        "probability": 0.8834
+      },
+      {
+        "tag": "violin",
+        "probability": 0.7959
+      },
+      {
+        "tag": "drums",
+        "probability": 0.2707
+      },
+      {
+        "tag": "choir",
+        "probability": 0.1751
+      }
+    ],
+    "true_tags": [
+      "vocals",
+      "bass",
+      "violin"
+    ]
+  },
+  {
+    "text": "The music features a female voice singing an ascending melody. The rhythm section consists of a bass guitar, a pair of congas and a ride cymbal. An electric piano accompanies the singer with chords. In the background an electric guitar plays an accompaniment that combines melody and chords. Right at the end of the music excerpt a China cymbal can be heard.",
+    "top_predicted": [
+      {
+        "tag": "guitar",
+        "probability": 0.9909
+      },
+      {
+        "tag": "bass",
+        "probability": 0.9824
+      },
+      {
+        "tag": "electric guitar",
+        "probability": 0.973
+      },
+      {
+        "tag": "piano",
+        "probability": 0.9613
+      },
+      {
+        "tag": "vocals",
+        "probability": 0.8509
+      }
+    ],
+    "true_tags": [
+      "vocals",
+      "bass",
+      "guitar",
+      "piano",
+      "electric guitar"
+    ]
+  },
+  {
+    "text": "This rock song features a female voice singing at a comfortable pitch. The song starts off with the voice singing vocables. This is accompanied by the overdriven guitar playing one chord three times followed by a second chord three times which is higher in pitch than the first chord. The percussion plays a role at that time. The voice continues to sing a phrase. One guitar harmonic note keeps ringing during this part. The overdriven guitar plays a descending chord pattern. The bass plays the root notes of the guitar. The percussion plays a simple beat in common time. This song can be played in a detective movie.",
+    "top_predicted": [
+      {
+        "tag": "drums",
+        "probability": 0.993
+      },
+      {
+        "tag": "rock",
+        "probability": 0.9672
+      },
+      {
+        "tag": "guitar",
+        "probability": 0.9667
+      },
+      {
+        "tag": "vocals",
+        "probability": 0.9541
+      },
+      {
+        "tag": "bass",
+        "probability": 0.8865
+      }
+    ],
+    "true_tags": [
+      "vocals",
+      "drums",
+      "bass",
+      "guitar",
+      "rock"
+    ]
+  }
+]

@@ -1,0 +1,322 @@
+{
+  "audit_version": 1,
+  "generated_utc": "2026-08-29T04:08:19.035252+00:00",
+  "source": "data\\.cache\\huggingface\\google___music_caps\\default\\0.0.0\\0a51889b340037bb75a9a0858af2e4ece21f7f89\\music_caps-train.arrow",
+  "metadata": {
+    "rows": 5521,
+    "unique_video_ids": 5521,
+    "duplicate_video_id_rows": 0,
+    "unique_clip_windows": 5521,
+    "duplicate_clip_window_rows": 0,
+    "exact_duplicate_captions": 0,
+    "missing_by_column": {
+      "aspect_list": 0,
+      "audioset_positive_labels": 0,
+      "author_id": 0,
+      "caption": 0,
+      "end_s": 0,
+      "is_audioset_eval": 0,
+      "is_balanced_subset": 0,
+      "start_s": 0,
+      "ytid": 0
+    },
+    "duration_seconds": {
+      "minimum": 10.0,
+      "median": 10.0,
+      "maximum": 10.0,
+      "invalid_or_nonpositive": 0
+    },
+    "authors": 10,
+    "balanced_subset_rows": 1000,
+    "audioset_eval_rows": 2858
+  },
+  "label_analysis": {
+    "aspect_unique_canonical_labels": 13082,
+    "audioset_unique_label_ids": 346,
+    "top_aspects_global_audit_only": [
+      {
+        "label": "low quality",
+        "count": 1220
+      },
+      {
+        "label": "instrumental",
+        "count": 908
+      },
+      {
+        "label": "emotional",
+        "count": 636
+      },
+      {
+        "label": "noisy",
+        "count": 628
+      },
+      {
+        "label": "medium tempo",
+        "count": 610
+      },
+      {
+        "label": "passionate",
+        "count": 610
+      },
+      {
+        "label": "energetic",
+        "count": 599
+      },
+      {
+        "label": "amateur recording",
+        "count": 518
+      },
+      {
+        "label": "live performance",
+        "count": 478
+      },
+      {
+        "label": "slow tempo",
+        "count": 476
+      },
+      {
+        "label": "acoustic drums",
+        "count": 394
+      },
+      {
+        "label": "fast tempo",
+        "count": 383
+      },
+      {
+        "label": "mono",
+        "count": 358
+      },
+      {
+        "label": "groovy",
+        "count": 321
+      },
+      {
+        "label": "bass guitar",
+        "count": 297
+      },
+      {
+        "label": "electric guitar",
+        "count": 297
+      },
+      {
+        "label": "acoustic guitar",
+        "count": 292
+      },
+      {
+        "label": "instrumental music",
+        "count": 265
+      },
+      {
+        "label": "uptempo",
+        "count": 247
+      },
+      {
+        "label": "piano",
+        "count": 240
+      },
+      {
+        "label": "punchy kick",
+        "count": 239
+      },
+      {
+        "label": "poor audio quality",
+        "count": 238
+      },
+      {
+        "label": "punchy snare",
+        "count": 235
+      },
+      {
+        "label": "groovy bass",
+        "count": 229
+      },
+      {
+        "label": "happy",
+        "count": 228
+      },
+      {
+        "label": "male voice",
+        "count": 224
+      },
+      {
+        "label": "moderate tempo",
+        "count": 224
+      },
+      {
+        "label": "e bass",
+        "count": 222
+      },
+      {
+        "label": "shimmering hi hats",
+        "count": 217
+      },
+      {
+        "label": "male vocal",
+        "count": 208
+      }
+    ],
+    "top_audioset_label_ids_global_audit_only": [
+      {
+        "label": "/m/04rlf",
+        "count": 4464
+      },
+      {
+        "label": "/m/04szw",
+        "count": 668
+      },
+      {
+        "label": "/m/0342h",
+        "count": 445
+      },
+      {
+        "label": "/m/0fx80y",
+        "count": 427
+      },
+      {
+        "label": "/m/015lz1",
+        "count": 343
+      },
+      {
+        "label": "/m/0l14md",
+        "count": 227
+      },
+      {
+        "label": "/m/085jw",
+        "count": 215
+      },
+      {
+        "label": "/m/01kcd",
+        "count": 192
+      },
+      {
+        "label": "/m/09x0r",
+        "count": 171
+      },
+      {
+        "label": "/m/026t6",
+        "count": 161
+      },
+      {
+        "label": "/m/074ft",
+        "count": 135
+      },
+      {
+        "label": "/m/02lkt",
+        "count": 132
+      },
+      {
+        "label": "/m/05148p4",
+        "count": 131
+      },
+      {
+        "label": "/m/02sgy",
+        "count": 129
+      },
+      {
+        "label": "/m/02rr_",
+        "count": 129
+      },
+      {
+        "label": "/m/06by7",
+        "count": 122
+      },
+      {
+        "label": "/m/042v_gx",
+        "count": 117
+      },
+      {
+        "label": "/m/0l14_3",
+        "count": 111
+      },
+      {
+        "label": "/m/0g12c5",
+        "count": 110
+      },
+      {
+        "label": "/m/01lyv",
+        "count": 102
+      },
+      {
+        "label": "/m/05rwpb",
+        "count": 100
+      },
+      {
+        "label": "/t/dd00036",
+        "count": 100
+      },
+      {
+        "label": "/m/064t9",
+        "count": 98
+      },
+      {
+        "label": "/m/02x8m",
+        "count": 97
+      },
+      {
+        "label": "/m/0164x2",
+        "count": 97
+      },
+      {
+        "label": "/m/0155w",
+        "count": 96
+      },
+      {
+        "label": "/m/02bxd",
+        "count": 95
+      },
+      {
+        "label": "/m/02v2lh",
+        "count": 94
+      },
+      {
+        "label": "/m/03_d0",
+        "count": 92
+      },
+      {
+        "label": "/m/0gywn",
+        "count": 92
+      }
+    ],
+    "aspect_count_per_row": {
+      "minimum": 1,
+      "median": 9.0,
+      "maximum": 34
+    },
+    "warning": "These global counts are for viability analysis only. The final label vocabulary and canonical synonym map must be fitted on the training split only."
+  },
+  "lexical_overlap": {
+    "rows_with_any_exact_aspect_phrase_in_caption": 5387,
+    "row_rate": 0.975729034595182,
+    "mean_overlapping_aspects_per_row": 5.345951820322405,
+    "interpretation": "Aspect phrases and captions describe the same clip and often overlap lexically. Aspect labels must never be concatenated into the BERT input; keyword and TF-IDF controls plus overlap-stratified reporting are required."
+  },
+  "availability": {
+    "status": "completed",
+    "method": "yt-dlp metadata extraction with skip_download=True; no media saved",
+    "probe_count": 200,
+    "seed": 42,
+    "counts": {
+      "available": 187,
+      "unavailable": 13
+    },
+    "available_rate": 0.935,
+    "technical_error_rate": 0.0,
+    "threshold": 0.8,
+    "gate": "pass",
+    "interpretation": "Technical errors above 10% make the pilot inconclusive rather than proving clips unavailable. Availability is time-, region-, network-, and platform-dependent."
+  },
+  "storage": {
+    "decoded_pcm_22050hz_mono_16bit_gb": 2.435,
+    "recommended_workspace_allowance_gb": "10-20"
+  },
+  "licensing": {
+    "metadata": "MusicCaps metadata/annotations: CC BY-SA 4.0 per the dataset card",
+    "audio": "Referenced YouTube audio has separate rights and platform constraints; do not redistribute it"
+  },
+  "decision": {
+    "metadata_gate": "pass",
+    "audio_availability_gate": "pass",
+    "instructor_approval": "pending_human_action",
+    "route": "musiccaps_pending_instructor_approval"
+  }
+}

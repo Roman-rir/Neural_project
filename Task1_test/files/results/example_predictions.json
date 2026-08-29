@@ -1,0 +1,155 @@
+[
+  {
+    "text": "This is the live performance of a Paraguayan folk music piece. There is no singer. There is a Paraguayan harp playing a vibrant yet melancholic tune. The atmosphere is heart-touching. This piece could be used in the soundtrack of a drama movie during a scene of serenity or mourning.",
+    "top_predicted": [
+      [
+        "folk",
+        0.998
+      ],
+      [
+        "live",
+        0.995
+      ],
+      [
+        "sad",
+        0.994
+      ],
+      [
+        "vocals",
+        0.984
+      ],
+      [
+        "female vocals",
+        0.044
+      ]
+    ],
+    "true_tags": [
+      "vocals",
+      "live",
+      "folk",
+      "sad"
+    ]
+  },
+  {
+    "text": "This is the sound of a didgeridoo being played. This sound alternates between a droning sound and a deep bass sound. There are no other instruments in this song. There are no voices in this song. This song can be played in a movie featuring aboriginals.",
+    "top_predicted": [
+      [
+        "bass",
+        1.0
+      ],
+      [
+        "hip hop",
+        0.02
+      ],
+      [
+        "r&b",
+        0.002
+      ],
+      [
+        "angry",
+        0.001
+      ],
+      [
+        "instrumental",
+        0.001
+      ]
+    ],
+    "true_tags": [
+      "bass"
+    ]
+  },
+  {
+    "text": "Male voices are singing a hymn while supported by strings playing chords, a triangle sound can be heard as a rhythmic addition. Upright basses being plucked along with a soft timpani hit. This song may be playing at an official national event.",
+    "top_predicted": [
+      [
+        "bass",
+        1.0
+      ],
+      [
+        "vocals",
+        1.0
+      ],
+      [
+        "violin",
+        1.0
+      ],
+      [
+        "female vocals",
+        0.012
+      ],
+      [
+        "male vocals",
+        0.002
+      ]
+    ],
+    "true_tags": [
+      "vocals",
+      "bass",
+      "violin"
+    ]
+  },
+  {
+    "text": "The music features a female voice singing an ascending melody. The rhythm section consists of a bass guitar, a pair of congas and a ride cymbal. An electric piano accompanies the singer with chords. In the background an electric guitar plays an accompaniment that combines melody and chords. Right at the end of the music excerpt a China cymbal can be heard.",
+    "top_predicted": [
+      [
+        "guitar",
+        1.0
+      ],
+      [
+        "bass",
+        1.0
+      ],
+      [
+        "piano",
+        1.0
+      ],
+      [
+        "vocals",
+        0.999
+      ],
+      [
+        "electric guitar",
+        0.989
+      ]
+    ],
+    "true_tags": [
+      "vocals",
+      "bass",
+      "guitar",
+      "piano",
+      "electric guitar"
+    ]
+  },
+  {
+    "text": "This rock song features a female voice singing at a comfortable pitch. The song starts off with the voice singing vocables. This is accompanied by the overdriven guitar playing one chord three times followed by a second chord three times which is higher in pitch than the first chord. The percussion plays a role at that time. The voice continues to sing a phrase. One guitar harmonic note keeps ringing during this part. The overdriven guitar plays a descending chord pattern. The bass plays the root notes of the guitar. The percussion plays a simple beat in common time. This song can be played in a detective movie.",
+    "top_predicted": [
+      [
+        "drums",
+        1.0
+      ],
+      [
+        "bass",
+        1.0
+      ],
+      [
+        "vocals",
+        1.0
+      ],
+      [
+        "rock",
+        1.0
+      ],
+      [
+        "guitar",
+        1.0
+      ]
+    ],
+    "true_tags": [
+      "vocals",
+      "drums",
+      "bass",
+      "guitar",
+      "rock"
+    ]
+  }
+]
