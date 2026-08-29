@@ -6,10 +6,12 @@ data/raw/*
 !data/raw/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
+data/.cache/
 results/metrics/*
 !results/metrics/.gitkeep
 results/plots/*
 !results/plots/.gitkeep
+!results/plots/musiccaps_label_frequency.png
 results/retrieval_examples/*
 !results/retrieval_examples/.gitkeep
 results/checkpoints/
@@ -18,3 +20,6 @@ results/checkpoints/
 .idea/
 .DS_Store
 Thumbs.db
+tmp/
+
+*.pt
