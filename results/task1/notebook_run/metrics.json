@@ -1,0 +1,414 @@
+{
+  "dataset": {
+    "path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\Task1_test\\files\\data\\processed\\musiccaps_tags.csv",
+    "samples": 5299,
+    "num_tags": 50,
+    "proxy_label_warning": "Labels are deterministic keyword matches from the same input captions; scores measure recovery of lexical proxy rules, not independent semantic annotation."
+  },
+  "config": {
+    "data_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\Task1_test\\files\\data\\processed\\musiccaps_tags.csv",
+    "output_dir": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task1\\notebook_run",
+    "model_name": "distilbert-base-uncased",
+    "text_col": "text",
+    "max_length": 128,
+    "batch_size": 16,
+    "epochs": 2,
+    "lr_bert": 2e-05,
+    "lr_head": 0.001,
+    "weight_decay": 1e-05,
+    "val_size": 0.15,
+    "test_size": 0.15,
+    "freeze_bert": false,
+    "patience": 2,
+    "threshold": 0.5,
+    "seed": 42,
+    "device": "cpu"
+  },
+  "split_sizes": {
+    "train": 3709,
+    "validation": 795,
+    "test": 795
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.22747682702689198,
+      "val_loss": 0.11235540482982899,
+      "train_macro_f1": 0.17901944659776284,
+      "train_micro_f1": 0.45336631913765685,
+      "val_macro_f1": 0.3836480966144059,
+      "val_micro_f1": 0.8086410742957233
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.09404366032940321,
+      "val_loss": 0.07393902183141349,
+      "train_macro_f1": 0.46351316707473694,
+      "train_micro_f1": 0.8293095594455652,
+      "val_macro_f1": 0.5383170892867981,
+      "val_micro_f1": 0.886395123302854
+    }
+  ],
+  "test": {
+    "macro_f1": 0.5526975491935876,
+    "micro_f1": 0.8771135265700483,
+    "macro_precision": 0.7407917458092281,
+    "macro_recall": 0.503934848775338,
+    "mean_auc_pr": 0.7319788036418123,
+    "threshold": 0.5,
+    "samples": 795,
+    "per_tag": {
+      "vocals": {
+        "precision": 0.9661016949152542,
+        "recall": 0.9743589743589743,
+        "f1": 0.9702127659574468,
+        "support": 351,
+        "auc_pr": 0.9941258102756978
+      },
+      "drums": {
+        "precision": 0.9606741573033708,
+        "recall": 0.991304347826087,
+        "f1": 0.9757489300998573,
+        "support": 345,
+        "auc_pr": 0.9968076800074035
+      },
+      "bass": {
+        "precision": 0.9738562091503268,
+        "recall": 0.9933333333333333,
+        "f1": 0.9834983498349835,
+        "support": 300,
+        "auc_pr": 0.9989468828835786
+      },
+      "guitar": {
+        "precision": 0.979381443298969,
+        "recall": 0.9895833333333334,
+        "f1": 0.9844559585492227,
+        "support": 288,
+        "auc_pr": 0.9977799392910081
+      },
+      "male vocals": {
+        "precision": 0.9577464788732394,
+        "recall": 0.9784172661870504,
+        "f1": 0.9679715302491103,
+        "support": 139,
+        "auc_pr": 0.9944298347220695
+      },
+      "instrumental": {
+        "precision": 0.9794520547945206,
+        "recall": 0.9407894736842105,
+        "f1": 0.959731543624161,
+        "support": 152,
+        "auc_pr": 0.9924648214451405
+      },
+      "acoustic": {
+        "precision": 0.9929577464788732,
+        "recall": 0.9929577464788732,
+        "f1": 0.9929577464788732,
+        "support": 142,
+        "auc_pr": 0.9995599636669574
+      },
+      "synthesizer": {
+        "precision": 0.9485294117647058,
+        "recall": 0.9084507042253521,
+        "f1": 0.9280575539568345,
+        "support": 142,
+        "auc_pr": 0.9814176806654084
+      },
+      "energetic": {
+        "precision": 0.9017857142857143,
+        "recall": 0.926605504587156,
+        "f1": 0.9140271493212669,
+        "support": 109,
+        "auc_pr": 0.9692514405528986
+      },
+      "piano": {
+        "precision": 0.9809523809523809,
+        "recall": 0.9903846153846154,
+        "f1": 0.9856459330143541,
+        "support": 104,
+        "auc_pr": 0.9997304097771387
+      },
+      "electric guitar": {
+        "precision": 0.9428571428571428,
+        "recall": 1.0,
+        "f1": 0.9705882352941176,
+        "support": 99,
+        "auc_pr": 0.9805919673437618
+      },
+      "live": {
+        "precision": 1.0,
+        "recall": 0.9732142857142857,
+        "f1": 0.9864253393665159,
+        "support": 112,
+        "auc_pr": 0.9990714285714285
+      },
+      "fast": {
+        "precision": 0.9506172839506173,
+        "recall": 0.6814159292035398,
+        "f1": 0.7938144329896907,
+        "support": 113,
+        "auc_pr": 0.9243020529329048
+      },
+      "violin": {
+        "precision": 0.9342105263157895,
+        "recall": 0.8987341772151899,
+        "f1": 0.9161290322580645,
+        "support": 79,
+        "auc_pr": 0.9841116701155289
+      },
+      "female vocals": {
+        "precision": 0.9390243902439024,
+        "recall": 0.9506172839506173,
+        "f1": 0.9447852760736196,
+        "support": 81,
+        "auc_pr": 0.9732107095783671
+      },
+      "rock": {
+        "precision": 0.9859154929577465,
+        "recall": 0.9459459459459459,
+        "f1": 0.9655172413793104,
+        "support": 74,
+        "auc_pr": 0.9869438967689614
+      },
+      "pop": {
+        "precision": 0.9344262295081968,
+        "recall": 0.890625,
+        "f1": 0.912,
+        "support": 64,
+        "auc_pr": 0.9635628399751832
+      },
+      "electronic": {
+        "precision": 0.8813559322033898,
+        "recall": 0.8387096774193549,
+        "f1": 0.859504132231405,
+        "support": 62,
+        "auc_pr": 0.9089884581042531
+      },
+      "happy": {
+        "precision": 0.75,
+        "recall": 0.32608695652173914,
+        "f1": 0.45454545454545453,
+        "support": 46,
+        "auc_pr": 0.6657016193140889
+      },
+      "trumpet": {
+        "precision": 0.9347826086956522,
+        "recall": 0.7166666666666667,
+        "f1": 0.8113207547169812,
+        "support": 60,
+        "auc_pr": 0.9158631403684679
+      },
+      "classical": {
+        "precision": 0.9024390243902439,
+        "recall": 0.5606060606060606,
+        "f1": 0.6915887850467289,
+        "support": 66,
+        "auc_pr": 0.8288927553399016
+      },
+      "calm": {
+        "precision": 1.0,
+        "recall": 0.20833333333333334,
+        "f1": 0.3448275862068966,
+        "support": 48,
+        "auc_pr": 0.5765451532688363
+      },
+      "slow": {
+        "precision": 0.9444444444444444,
+        "recall": 0.4358974358974359,
+        "f1": 0.5964912280701754,
+        "support": 39,
+        "auc_pr": 0.7488713979676005
+      },
+      "hip hop": {
+        "precision": 0.5,
+        "recall": 0.06,
+        "f1": 0.10714285714285714,
+        "support": 50,
+        "auc_pr": 0.4911176616288405
+      },
+      "folk": {
+        "precision": 1.0,
+        "recall": 0.9210526315789473,
+        "f1": 0.958904109589041,
+        "support": 38,
+        "auc_pr": 0.9725377503009082
+      },
+      "flute": {
+        "precision": 1.0,
+        "recall": 0.8076923076923077,
+        "f1": 0.8936170212765957,
+        "support": 26,
+        "auc_pr": 0.9576226679559627
+      },
+      "tense": {
+        "precision": 0.6666666666666666,
+        "recall": 0.09523809523809523,
+        "f1": 0.16666666666666666,
+        "support": 21,
+        "auc_pr": 0.42311896319631714
+      },
+      "romantic": {
+        "precision": 0.5,
+        "recall": 0.03125,
+        "f1": 0.058823529411764705,
+        "support": 32,
+        "auc_pr": 0.35706444253398406
+      },
+      "ambient": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 29,
+        "auc_pr": 0.5375016065989492
+      },
+      "sad": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 30,
+        "auc_pr": 0.16109369016476702
+      },
+      "funk": {
+        "precision": 1.0,
+        "recall": 0.43478260869565216,
+        "f1": 0.6060606060606061,
+        "support": 23,
+        "auc_pr": 0.8536727835873954
+      },
+      "soul": {
+        "precision": 1.0,
+        "recall": 0.21621621621621623,
+        "f1": 0.35555555555555557,
+        "support": 37,
+        "auc_pr": 0.8422302663670282
+      },
+      "metal": {
+        "precision": 1.0,
+        "recall": 0.64,
+        "f1": 0.7804878048780488,
+        "support": 25,
+        "auc_pr": 0.9479741379310346
+      },
+      "jazz": {
+        "precision": 0.9583333333333334,
+        "recall": 0.8846153846153846,
+        "f1": 0.92,
+        "support": 26,
+        "auc_pr": 0.959542044297745
+      },
+      "loop": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 20,
+        "auc_pr": 0.1644929626272954
+      },
+      "angry": {
+        "precision": 0.75,
+        "recall": 0.15,
+        "f1": 0.25,
+        "support": 20,
+        "auc_pr": 0.732954959285414
+      },
+      "latin": {
+        "precision": 0.9230769230769231,
+        "recall": 0.5714285714285714,
+        "f1": 0.7058823529411765,
+        "support": 21,
+        "auc_pr": 0.8713530877263447
+      },
+      "choir": {
+        "precision": 1.0,
+        "recall": 0.047619047619047616,
+        "f1": 0.09090909090909091,
+        "support": 21,
+        "auc_pr": 0.6021567311018557
+      },
+      "dark": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 28,
+        "auc_pr": 0.37216957123847044
+      },
+      "country": {
+        "precision": 1.0,
+        "recall": 0.3,
+        "f1": 0.46153846153846156,
+        "support": 20,
+        "auc_pr": 0.8022068222500129
+      },
+      "saxophone": {
+        "precision": 1.0,
+        "recall": 0.2857142857142857,
+        "f1": 0.4444444444444444,
+        "support": 14,
+        "auc_pr": 0.5387375253316574
+      },
+      "dreamy": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 21,
+        "auc_pr": 0.32691738287765676
+      },
+      "techno": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 10,
+        "auc_pr": 0.4801579343858755
+      },
+      "blues": {
+        "precision": 1.0,
+        "recall": 0.06666666666666667,
+        "f1": 0.125,
+        "support": 15,
+        "auc_pr": 0.7466185279852513
+      },
+      "reggae": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "support": 8,
+        "auc_pr": 0.9526289682539683
+      },
+      "r&b": {
+        "precision": 1.0,
+        "recall": 0.07142857142857142,
+        "f1": 0.13333333333333333,
+        "support": 14,
+        "auc_pr": 0.5485504674015191
+      },
+      "uplifting": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 9,
+        "auc_pr": 0.03344363057201959
+      },
+      "house": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 10,
+        "auc_pr": 0.2099820030253483
+      },
+      "disco": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 9,
+        "auc_pr": 0.16851569438339548
+      },
+      "punk": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4,
+        "auc_pr": 0.1634063461450154
+      }
+    },
+    "loss": 0.0752593920103409
+  }
+}

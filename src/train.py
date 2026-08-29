@@ -9,7 +9,7 @@ from torch.utils.data import DataLoader, Dataset
 from torch_geometric.data import Batch
 from .bert_encoder import BertTagClassifier, BertTextEncoder
 from .fusion_model import GNNBertFusion
-from .gnn_model import GNNClassifier, GraphSAGEEncoder
+from .task2.models import GNNClassifier, GraphSAGEEncoder
 
 class MusicDataset(Dataset):
     def __init__(self, split_file: str):
