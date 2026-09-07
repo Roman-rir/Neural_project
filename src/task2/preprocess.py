@@ -5,6 +5,7 @@ import argparse
 import hashlib
 import json
 import re
+import time
 from pathlib import Path
 from typing import Any
 
@@ -18,7 +19,10 @@ from .features import (
     extract_track_features_from_waveform,
     load_audio,
 )
-from .graphs import build_edge_variants
+from .graphs import GRAPH_VARIANTS, build_edge_variants, validate_graph_variants
+
+
+FEATURE_CACHE_VERSION = 2
 
 
 def safe_sample_filename(sample_id: str) -> str:
@@ -27,13 +31,31 @@ def safe_sample_filename(sample_id: str) -> str:
     return f"{readable[:80]}-{digest}.pt"
 
 
+def source_fingerprint(record: dict[str, Any], manifest_path: Path) -> dict[str, Any]:
+    """Identify source content, including edits that keep the same sample ID."""
+    path = resolve_record_path(manifest_path, record["audio_path"]).resolve()
+    digest = hashlib.sha256()
+    with path.open("rb") as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return {
+        "audio_path": str(path), "sha256": digest.hexdigest(),
+        "audio_offset_seconds": record.get("audio_offset_seconds", 0.0),
+        "audio_duration_seconds": record.get("audio_duration_seconds"),
+    }
+
+
 def extract_raw_sample(
     record: dict[str, Any], manifest_path: Path, config: AudioFeatureConfig
 ) -> dict[str, Any]:
     audio_path = resolve_record_path(manifest_path, record["audio_path"])
     if not audio_path.is_file():
         raise FileNotFoundError(f"Audio file not found for {record['sample_id']}: {audio_path}")
-    waveform = load_audio(audio_path, config.sample_rate)
+    waveform = load_audio(
+        audio_path, config.sample_rate,
+        offset_seconds=record.get("audio_offset_seconds", 0.0),
+        duration_seconds=record.get("audio_duration_seconds"),
+    )
     x = extract_track_features_from_waveform(waveform, config)
     mel = extract_log_mel_from_waveform(waveform, config)[None, ...]
     return {
@@ -44,25 +66,35 @@ def extract_raw_sample(
         "x_raw": torch.from_numpy(x),
         "mel": torch.from_numpy(mel),
         "feature_config": config.to_dict(),
+        "audio_samples": len(waveform),
+        "audio_offset_seconds": record.get("audio_offset_seconds", 0.0),
+        "audio_duration_seconds": len(waveform) / config.sample_rate,
     }
 
 
 def fit_train_normalizer(raw_paths: list[Path]) -> tuple[np.ndarray, np.ndarray, int]:
-    total: np.ndarray | None = None
-    total_squared: np.ndarray | None = None
+    mean: np.ndarray | None = None
+    squared_deviations: np.ndarray | None = None
     count = 0
     for path in raw_paths:
         sample = torch.load(path, map_location="cpu", weights_only=False)
         if sample["split"] != "train":
             continue
         x = torch.as_tensor(sample["x_raw"], dtype=torch.float64).numpy()
-        total = x.sum(axis=0) if total is None else total + x.sum(axis=0)
-        total_squared = (x * x).sum(axis=0) if total_squared is None else total_squared + (x * x).sum(axis=0)
+        if x.ndim != 2 or not len(x) or not np.isfinite(x).all():
+            raise ValueError(f"Invalid training-node features in {path}")
+        batch_mean = x.mean(axis=0)
+        batch_deviations = ((x - batch_mean) ** 2).sum(axis=0)
+        if mean is None:
+            mean, squared_deviations = batch_mean, batch_deviations
+        else:
+            delta = batch_mean - mean
+            squared_deviations += batch_deviations + delta ** 2 * count * len(x) / (count + len(x))
+            mean += delta * len(x) / (count + len(x))
         count += len(x)
-    if count == 0 or total is None or total_squared is None:
+    if count == 0 or mean is None or squared_deviations is None:
         raise ValueError("Cannot fit normalization: manifest has no training nodes")
-    mean = total / count
-    variance = np.maximum(total_squared / count - mean * mean, 1e-12)
+    variance = np.maximum(squared_deviations / count, 1e-12)
     return mean.astype(np.float32), np.sqrt(variance).astype(np.float32), count
 
 
@@ -76,6 +108,10 @@ def preprocess_manifest(
     overwrite: bool = False,
 ) -> Path:
     """Run resumable two-pass preprocessing and return the processed manifest path."""
+    started = time.perf_counter()
+    config.validate()
+    if top_k < 0:
+        raise ValueError("top_k must be non-negative")
     manifest_path = Path(manifest_path).resolve()
     manifest = load_manifest(manifest_path)
     if not manifest["records"]:
@@ -89,12 +125,23 @@ def preprocess_manifest(
     raw_paths: list[Path] = []
     for position, record in enumerate(manifest["records"], start=1):
         raw_path = raw_dir / safe_sample_filename(record["sample_id"])
+        fingerprint = source_fingerprint(record, manifest_path)
         reuse = False
         if raw_path.exists() and not overwrite:
             cached = torch.load(raw_path, map_location="cpu", weights_only=False)
-            reuse = cached.get("feature_config") == config.to_dict()
+            reuse = (
+                cached.get("feature_config") == config.to_dict()
+                and cached.get("source_fingerprint") == fingerprint
+                and cached.get("feature_cache_version") == FEATURE_CACHE_VERSION
+            )
         if not reuse:
-            torch.save(extract_raw_sample(record, manifest_path, config), raw_path)
+            cached = extract_raw_sample(record, manifest_path, config)
+        # Labels and splits belong to the current manifest, never to the cache.
+        cached["labels"] = torch.tensor(record["labels"], dtype=torch.float32)
+        cached["split"] = record["split"]
+        cached["source_fingerprint"] = fingerprint
+        cached["feature_cache_version"] = FEATURE_CACHE_VERSION
+        torch.save(cached, raw_path)
         raw_paths.append(raw_path)
         if position % 25 == 0 or position == len(manifest["records"]):
             print(f"Raw audio features: {position}/{len(manifest['records'])}", flush=True)
@@ -116,6 +163,7 @@ def preprocess_manifest(
         x = (torch.as_tensor(raw["x_raw"]).numpy() - mean) / std
         sample_seed = seed + int(hashlib.sha1(record["sample_id"].encode()).hexdigest()[:8], 16)
         edge_indices = build_edge_variants(x, top_k=top_k, seed=sample_seed)
+        validate_graph_variants(x, edge_indices)
         processed_path = sample_dir / safe_sample_filename(record["sample_id"])
         torch.save(
             {
@@ -129,32 +177,51 @@ def preprocess_manifest(
                 "feature_config": config.to_dict(),
                 "top_k": top_k,
                 "seed": sample_seed,
+                "source_fingerprint": raw["source_fingerprint"],
+                "feature_cache_version": FEATURE_CACHE_VERSION,
+                "audio_samples": raw.get("audio_samples"),
+                "audio_offset_seconds": record.get("audio_offset_seconds", 0.0),
+                "audio_duration_seconds": raw.get("audio_duration_seconds"),
             },
             processed_path,
         )
         processed_records.append(
             {
+                **record,
                 "sample_id": record["sample_id"],
                 "split": record["split"],
+                "audio_path": raw["audio_path"],
                 "processed_path": str(processed_path.relative_to(output_dir)),
+                "labels": record["labels"],
             }
         )
         if position % 25 == 0 or position == len(raw_paths):
             print(f"Normalized graph samples: {position}/{len(raw_paths)}", flush=True)
 
     processed_manifest = {
+        **{key: value for key, value in manifest.items() if key != "records"},
         "schema_version": 1,
         "source_manifest": str(manifest_path),
+        "source_manifest_sha256": hashlib.sha256(manifest_path.read_bytes()).hexdigest(),
         "label_names": manifest["label_names"],
         "feature_config": config.to_dict(),
         "normalization_path": "normalization.json",
-        "graph_variants": ["temporal", "temporal_similarity", "random"],
+        "graph_variants": list(GRAPH_VARIANTS),
+        "feature_cache_version": FEATURE_CACHE_VERSION,
+        "graph_audit_path": "graph_audit.json",
+        "preprocessing_seconds": time.perf_counter() - started,
         "top_k": top_k,
         "seed": seed,
         "records": processed_records,
     }
     destination = output_dir / "manifest.json"
     destination.write_text(json.dumps(processed_manifest, indent=2), encoding="utf-8")
+    # Import locally to keep graph/dataset utilities independent of preprocessing.
+    from .audit import audit_saved_graphs
+
+    audit = audit_saved_graphs(destination)
+    if not audit["valid"]:
+        raise ValueError(f"Saved graph audit failed; inspect {output_dir / 'graph_audit.json'}")
     return destination
 
 
@@ -193,4 +260,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

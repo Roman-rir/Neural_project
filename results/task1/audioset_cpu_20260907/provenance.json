@@ -1,0 +1,30 @@
+{
+  "source_sha256": {
+    "src\\task1\\audioset.py": "819298448d3e8335679cd232a9bc99caf5545f8ff5262c7ef2ad3603e3769596",
+    "src\\task1\\audit.py": "8620d0549e2caca679313684ed145b4c71dc058813e1bde49fe57cae3d1dc570",
+    "src\\task1\\baselines.py": "02723d11322624ac612f78698b0373e30bf0a4f6317db50f4e754daa8c5023a5",
+    "src\\task1\\data.py": "34d36eb9f6f81133310914bde4e852709764d28bee56ed3b354a09c524b5296f",
+    "src\\task1\\evaluate.py": "44151d68e33eb69eb071d731cc1e5967b51d73ca821d39ae444fb2b51acf6dec",
+    "src\\task1\\predict.py": "3e448930da6ec5f53355d6504660fedba05b6ff5c9e0f7d37aa7963191bc750a",
+    "src\\task1\\train.py": "7a2d70746c044d46958c6d9d57cc8f1a16eddd2c3b0fc393ef5ee435296a6671",
+    "src\\task1\\__init__.py": "33a8f4295ea3da98748aa05f2fa6cec9fd53b9f7a743777905ad9e77ffb79351",
+    "src\\task1\\__main__.py": "44c4513a438459f35d511419c5bf4088e5bdab65fe3de0b263fed12a5ab8fb05",
+    "src\\task1\\audioset_names.json": "9cc9749ff1773a6c5e537886fc00524bf60a37e9107a2e791b933c0c95fbda00"
+  },
+  "raw_csv_sha256": "8cc109ac507b5e5aed8ea73a5c8f897a9d0793f7397427e000adf4c05f6021c7",
+  "ontology_url": "https://storage.googleapis.com/us_audioset/youtube_corpus/v1/csv/class_labels_indices.csv",
+  "ontology_csv_sha256": "cdd1049833c4b86127c2773ac0d14a2754b6a6d0d1798002ed5c66e699708429",
+  "hardware": "Intel Core i5-12400, 6 cores/12 logical CPUs; Intel UHD 730; no CUDA",
+  "versions": {
+    "python": "3.14.4",
+    "torch": "2.13.0+cpu",
+    "transformers": "5.16.1",
+    "sklearn": "1.9.0",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5"
+  },
+  "model_revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+  "checkpoint_sha256": "a46c6800d35b1c0123cfc820256de8f1c21d252e1430e10fe868d1f6b553720f",
+  "source_snapshot_sha256": "995b0b1291f6577302fdc520542e5109b9e3a3261409d945bbe290bd212713e0",
+  "log_note": "PowerShell wrapped a Hugging Face informational stderr warning as NativeCommandError; training completed all epochs and all reports verified."
+}

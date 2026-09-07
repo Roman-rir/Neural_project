@@ -46,6 +46,7 @@ def similarity_edge_set(features: np.ndarray, top_k: int = 2) -> set[tuple[int, 
         raise ValueError("top_k must be non-negative")
     if top_k == 0 or len(features) < 3:
         return set()
+    features = features.astype(np.float64)
     norms = np.linalg.norm(features, axis=1, keepdims=True)
     normalized = features / np.maximum(norms, 1e-8)
     similarity = normalized @ normalized.T
@@ -93,7 +94,66 @@ def build_segment_graph(
     if variant not in GRAPH_VARIANTS:
         raise ValueError(f"variant must be one of {GRAPH_VARIANTS}")
     edge_index = build_edge_variants(features, top_k=top_k, seed=seed)[variant]
+    validate_graph(features, edge_index)
     return Data(x=torch.from_numpy(features), edge_index=edge_index)
+
+
+def validate_graph(features: np.ndarray | torch.Tensor, edge_index: torch.Tensor) -> dict:
+    """Reject malformed/disconnected graphs; one node with no edges is connected."""
+    x = _validate_features(torch.as_tensor(features).detach().cpu().numpy())
+    edges = torch.as_tensor(edge_index).detach().cpu()
+    if edges.ndim != 2 or edges.shape[0] != 2:
+        raise ValueError("edge_index must have shape [2, num_edges]")
+    if edges.dtype not in (torch.int8, torch.int16, torch.int32, torch.int64, torch.uint8):
+        raise ValueError("edge_index must contain integer node indices")
+    if edges.numel() and (int(edges.min()) < 0 or int(edges.max()) >= len(x)):
+        raise ValueError("edge_index contains out-of-range node indices")
+    pairs = [tuple(pair) for pair in edges.t().tolist()]
+    edge_set = set(pairs)
+    if len(edge_set) != len(pairs):
+        raise ValueError("edge_index contains duplicate edges")
+    if any(source == target for source, target in edge_set):
+        raise ValueError("edge_index contains unexpected self loops")
+    if any((target, source) not in edge_set for source, target in edge_set):
+        raise ValueError("edge_index must be symmetric")
+    adjacency: list[list[int]] = [[] for _ in range(len(x))]
+    for source, target in edge_set:
+        adjacency[source].append(target)
+    visited = {0}
+    pending = [0]
+    while pending:
+        for target in adjacency[pending.pop()]:
+            if target not in visited:
+                visited.add(target)
+                pending.append(target)
+    if len(visited) != len(x):
+        raise ValueError(f"Graph is disconnected: {len(visited)}/{len(x)} nodes reachable")
+    return {
+        "nodes": len(x),
+        "feature_dim": x.shape[1],
+        "directed_edges": len(edge_set),
+        "undirected_edges": len(edge_set) // 2,
+        "connected": True,
+        "finite_features": True,
+        "symmetric": True,
+    }
+
+
+def validate_graph_variants(features: np.ndarray | torch.Tensor, edge_indices: dict) -> dict:
+    """Check all three graphs and the edge-count-matched random control."""
+    if set(edge_indices) != set(GRAPH_VARIANTS):
+        raise ValueError(f"Expected exactly these graph variants: {GRAPH_VARIANTS}")
+    summaries = {name: validate_graph(features, edge_indices[name]) for name in GRAPH_VARIANTS}
+    temporal = temporal_edge_set(summaries["temporal"]["nodes"])
+    for name in GRAPH_VARIANTS:
+        edges = set(map(tuple, torch.as_tensor(edge_indices[name]).t().tolist()))
+        if not temporal.issubset(edges):
+            raise ValueError(f"{name} graph is missing temporal backbone edges")
+        if name == "temporal" and edges != temporal:
+            raise ValueError("Temporal graph contains non-temporal edges")
+    if summaries["random"]["directed_edges"] != summaries["temporal_similarity"]["directed_edges"]:
+        raise ValueError("Random and similarity graphs must have identical edge counts")
+    return summaries
 
 
 def main() -> None:

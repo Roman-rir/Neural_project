@@ -187,6 +187,44 @@ results/task2/comparison.csv
 
 ## Command-line equivalents
 
+Run from the repository root in your activated Python environment. The command
+`python -m src.task2` lists entry points; it does not start training.
+
+For real audio in `data/raw/musiccaps_audio/`, run these commands in order
+(stop if a command fails):
+
+```powershell
+python -m src.task2.manifest --metadata-csv data/raw/musiccaps-public.csv/musiccaps-public.csv --labels-csv data/processed/musiccaps_tags.csv --audio-dir data/raw/musiccaps_audio --output data/splits/task2_manifest.json
+python -m src.task2.preprocess --manifest data/splits/task2_manifest.json --output-dir data/processed/task2
+python -m src.task2.train --manifest data/processed/task2/manifest.json --output-dir results/task2/gnn_similarity --model gnn --graph-variant temporal_similarity --epochs 30 --device auto --skip-test
+```
+
+Compare CNN and MLP by changing `--model` to `cnn` or `mlp` and assigning each
+run a distinct `--output-dir`. For GNN graph ablations, set `--graph-variant`
+to `temporal` or `random`. Keep `--skip-test` while selecting configurations.
+After choosing the final configuration using validation results:
+
+```powershell
+python -m src.task2.evaluate --checkpoint results/task2/gnn_similarity/best_model.pt --manifest data/processed/task2/manifest.json --split test --device auto --output results/task2/gnn_similarity/final_test.json
+```
+
+Evaluation saves metrics, prediction arrays, and a matching `.sample_ids.json`
+file. It rejects manifests whose label names or order differ from the checkpoint.
+
+Preprocessing can be rerun after manifest edits: it refreshes labels and splits
+before fitting training normalization and hashes audio content to invalidate
+changed sources. Older caches without a source fingerprint are rebuilt once.
+Hashing requires reading each audio file even when its features are reused.
+
+For a quick terminal check after running the synthetic notebook once:
+
+```powershell
+python -m src.task2.train --manifest tmp/task2_notebook_demo/processed/manifest.json --output-dir tmp/task2_terminal/gnn --model gnn --hidden-dim 32 --batch-size 6 --epochs 2 --device auto
+```
+
+Synthetic results remain pipeline checks only. Use a fresh output directory for
+each experiment so saved artifacts from different runs do not get mixed.
+
 The notebook is the primary interface, but every stage is executable directly:
 
 ```powershell

@@ -5,6 +5,7 @@ import argparse
 import json
 import random
 import time
+import platform
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
@@ -16,7 +17,7 @@ from sklearn.metrics import average_precision_score, f1_score, precision_recall_
 from torch import nn
 from torch.utils.data import DataLoader
 
-from .dataset import ProcessedTask2Dataset, collate_task2, load_manifest
+from .dataset import ProcessedTask2Dataset, collate_task2, load_manifest, dataset_identity, file_sha256
 from .graphs import GRAPH_VARIANTS
 from .models import build_task2_model
 
@@ -40,6 +41,18 @@ class Task2TrainConfig:
     device: str = "auto"
     num_workers: int = 0
     evaluate_test: bool = True
+    cpu_threads: int = 6
+
+    def __post_init__(self) -> None:
+        for name in ("epochs", "batch_size", "patience", "hidden_dim", "layers", "cpu_threads"):
+            if getattr(self, name) <= 0:
+                raise ValueError(f"{name} must be positive")
+        if self.num_workers < 0:
+            raise ValueError("num_workers must be non-negative")
+        if not 0 <= self.dropout < 1:
+            raise ValueError("dropout must be in [0, 1)")
+        if not np.isfinite(self.learning_rate) or self.learning_rate <= 0 or not np.isfinite(self.weight_decay) or self.weight_decay < 0:
+            raise ValueError("learning_rate must be positive and weight_decay non-negative")
 
 
 def set_seed(seed: int) -> None:
@@ -82,6 +95,11 @@ def classification_metrics(
     label_names: list[str],
     threshold: float,
 ) -> dict[str, Any]:
+    targets, probabilities = np.asarray(targets), np.asarray(probabilities)
+    if targets.ndim != 2 or targets.shape != probabilities.shape or targets.shape[1] != len(label_names) or len(targets) == 0:
+        raise ValueError("Targets/probabilities must be non-empty matching [samples, labels] matrices")
+    if not np.isin(targets, [0, 1]).all() or not np.isfinite(probabilities).all() or np.any((probabilities < 0) | (probabilities > 1)):
+        raise ValueError("Metrics require binary targets and finite probabilities in [0, 1]")
     predictions = (probabilities >= threshold).astype(int)
     precision, recall, f1, support = precision_recall_fscore_support(
         targets, predictions, average=None, zero_division=0
@@ -101,6 +119,8 @@ def classification_metrics(
         "mean_average_precision": float(np.mean(valid_ap)) if valid_ap else None,
         "threshold": threshold,
         "samples": int(len(targets)),
+        "map_label_count": len(valid_ap),
+        "map_definition": "Mean per-label average precision over labels with positive support; not trapezoidal PR AUC",
         "per_label": {
             label: {
                 "precision": float(precision[index]),
@@ -131,6 +151,8 @@ def run_loader(
         with torch.set_grad_enabled(training):
             logits = forward_model(model, model_name, batch, device)
             loss = loss_fn(logits, targets)
+            if not torch.isfinite(logits).all() or not torch.isfinite(loss):
+                raise ValueError("Training/evaluation produced non-finite logits or loss")
             if training:
                 optimizer.zero_grad(set_to_none=True)
                 loss.backward()
@@ -196,10 +218,28 @@ def train_task2(config: Task2TrainConfig) -> dict[str, Any]:
     if config.graph_variant not in GRAPH_VARIANTS:
         raise ValueError(f"graph_variant must be one of {GRAPH_VARIANTS}")
     set_seed(config.seed)
+    torch.set_num_threads(config.cpu_threads)
     device = resolve_device(config.device)
     output_dir = Path(config.output_dir)
+    if output_dir.exists() and any(output_dir.iterdir()):
+        raise FileExistsError(f"Use a fresh training output directory: {output_dir}")
     output_dir.mkdir(parents=True, exist_ok=True)
     manifest = load_manifest(config.manifest)
+    from .audit import audit_saved_graphs
+    if not audit_saved_graphs(config.manifest)["valid"]:
+        raise ValueError("Graph audit failed; inspect graph_audit.json before training")
+    identity = dataset_identity(config.manifest)
+    split_ids = {split: [r["sample_id"] for r in manifest["records"] if r["split"] == split]
+                 for split in ("train", "validation", "test")}
+    provenance = {
+        "dataset_fingerprint": identity["sha256"], "synthetic": manifest.get("synthetic", False),
+        "python": platform.python_version(), "torch": str(torch.__version__),
+        "numpy": np.__version__, "device": str(device), "cpu_threads": torch.get_num_threads(),
+        "source_sha256": {path.name: file_sha256(path) for path in Path(__file__).parent.glob("*.py")},
+    }
+    for name, value in (("run_config.json", asdict(config)), ("dataset_identity.json", identity),
+                        ("split_ids.json", split_ids), ("provenance.json", provenance)):
+        (output_dir / name).write_text(json.dumps(value, indent=2), encoding="utf-8")
     train_dataset = ProcessedTask2Dataset(config.manifest, "train", config.graph_variant)
     validation_dataset = ProcessedTask2Dataset(
         config.manifest, "validation", config.graph_variant
@@ -282,6 +322,9 @@ def train_task2(config: Task2TrainConfig) -> dict[str, Any]:
                     "best_epoch": epoch,
                     "best_validation_macro_f1": best_macro_f1,
                     "parameter_count": parameter_count,
+                    "dataset_fingerprint": identity["sha256"],
+                    "split_ids": split_ids,
+                    "synthetic": provenance["synthetic"],
                 },
                 checkpoint_path,
             )
@@ -305,7 +348,16 @@ def train_task2(config: Task2TrainConfig) -> dict[str, Any]:
         "validation_threshold": checkpoint["threshold"],
         "history": history,
         "test": None,
+        "dataset_fingerprint": identity["sha256"],
+        "synthetic": provenance["synthetic"],
+        "device": str(device),
     }
+    validation_result = run_loader(model, config.model, validation_loader, device, loss_fn)
+    summary["validation"] = classification_metrics(
+        validation_result["targets"], validation_result["probabilities"],
+        manifest["label_names"], checkpoint["threshold"],
+    )
+    save_predictions(output_dir, "validation", validation_result, manifest["label_names"], checkpoint["threshold"])
     test_records = [record for record in manifest["records"] if record["split"] == "test"]
     if test_records and config.evaluate_test:
         test_dataset = ProcessedTask2Dataset(config.manifest, "test", config.graph_variant)
@@ -316,25 +368,33 @@ def train_task2(config: Task2TrainConfig) -> dict[str, Any]:
             seed=config.seed,
             num_workers=config.num_workers,
         )
+        test_start = time.perf_counter()
         test_result = run_loader(model, config.model, test_loader, device, loss_fn)
+        summary["test_seconds"] = time.perf_counter() - test_start
         summary["test"] = classification_metrics(
             test_result["targets"],
             test_result["probabilities"],
             manifest["label_names"],
             checkpoint["threshold"],
         )
-        np.savez_compressed(
-            output_dir / "test_predictions.npz",
-            probabilities=test_result["probabilities"],
-            targets=test_result["targets"],
-        )
-        (output_dir / "test_sample_ids.json").write_text(
-            json.dumps(test_result["sample_ids"], indent=2), encoding="utf-8"
-        )
+        save_predictions(output_dir, "test", test_result, manifest["label_names"], checkpoint["threshold"])
+    if dataset_identity(config.manifest)["sha256"] != identity["sha256"]:
+        raise ValueError("Dataset changed while training; this run cannot be compared")
+    (output_dir / "history.json").write_text(json.dumps(history, indent=2), encoding="utf-8")
     (output_dir / "metrics.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     save_history_plot(history, output_dir / "training_curves.png")
-    print(json.dumps({key: value for key, value in summary.items() if key != "history"}, indent=2))
+    print(json.dumps({key: summary[key] for key in ("model", "graph_variant", "parameter_count", "training_seconds", "best_epoch", "best_validation_macro_f1", "synthetic")}, indent=2))
     return summary
+
+
+def save_predictions(output_dir: Path, split: str, result: dict, label_names: list[str], threshold: float) -> None:
+    np.savez_compressed(
+        output_dir / f"{split}_predictions.npz", probabilities=result["probabilities"],
+        targets=result["targets"], sample_ids=np.asarray(result["sample_ids"]),
+        label_names=np.asarray(label_names), threshold=np.asarray(threshold),
+        predictions=(result["probabilities"] >= threshold).astype(np.int8),
+    )
+    (output_dir / f"{split}_sample_ids.json").write_text(json.dumps(result["sample_ids"], indent=2), encoding="utf-8")
 
 
 def main() -> None:
@@ -355,6 +415,7 @@ def main() -> None:
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--device", default="auto")
     parser.add_argument("--num-workers", type=int, default=0)
+    parser.add_argument("--cpu-threads", type=int, default=6)
     parser.add_argument(
         "--skip-test",
         action="store_true",
