@@ -4,6 +4,8 @@ from __future__ import annotations
 import argparse
 import json
 import random
+import time
+import platform
 from dataclasses import asdict, dataclass
 from pathlib import Path
 
@@ -16,6 +18,8 @@ from sklearn.model_selection import train_test_split
 from torch import nn
 from torch.utils.data import DataLoader, Dataset
 from transformers import AutoModel, AutoTokenizer, get_linear_schedule_with_warmup
+
+from .audioset import load_prepared_manifest, sha256_file, split_by_id
 
 
 @dataclass
@@ -37,6 +41,19 @@ class Task1Config:
     threshold: float = 0.5
     seed: int = 42
     device: str = "auto"
+    split_path: str | None = None
+    tune_thresholds: bool = True
+    cpu_threads: int = 6
+    run_baselines: bool = True
+
+    def __post_init__(self) -> None:
+        for name in ("epochs", "batch_size", "max_length", "patience", "cpu_threads"):
+            if getattr(self, name) <= 0:
+                raise ValueError(f"{name} must be positive")
+        if not 0 <= self.threshold <= 1:
+            raise ValueError("threshold must be between 0 and 1")
+        if not (self.val_size > 0 and self.test_size > 0 and self.val_size + self.test_size < 1):
+            raise ValueError("val_size and test_size must be positive and sum to less than 1")
 
 
 def resolve_device(value: str) -> torch.device:
@@ -59,7 +76,7 @@ def load_tag_data(path: str | Path, text_col: str = "text") -> tuple[list[str], 
     frame = pd.read_csv(path)
     if text_col not in frame.columns:
         raise ValueError(f"Text column {text_col!r} is missing from {path}")
-    tag_cols = [name for name in frame.columns if name != text_col]
+    tag_cols = [name for name in frame.columns if name not in {text_col, "ytid"}]
     if not tag_cols:
         raise ValueError("The CSV must contain at least one binary tag column")
     numeric = frame[tag_cols].apply(pd.to_numeric, errors="raise")
@@ -71,6 +88,8 @@ def load_tag_data(path: str | Path, text_col: str = "text") -> tuple[list[str], 
         raise ValueError("Text inputs must be non-empty")
     if texts.duplicated().any():
         raise ValueError("Duplicate captions detected; remove or group them before splitting")
+    if "ytid" in frame and (frame.ytid.isna().any() or frame.ytid.astype(str).str.strip().eq("").any()):
+        raise ValueError("ytid values must be non-empty")
     return texts.tolist(), numeric.to_numpy(dtype=np.float32), tag_cols
 
 
@@ -107,21 +126,14 @@ class TagDataset(Dataset):
     def __init__(self, texts, labels, indices, tokenizer, max_length: int) -> None:
         self.texts = [texts[index] for index in indices]
         self.labels = labels[np.asarray(indices)]
-        self.tokenizer = tokenizer
-        self.max_length = max_length
+        self.encoded = tokenizer(self.texts, truncation=True, padding="max_length",
+                                 max_length=max_length, return_tensors="pt")
 
     def __len__(self) -> int:
         return len(self.texts)
 
     def __getitem__(self, index: int) -> dict[str, torch.Tensor]:
-        encoded = self.tokenizer(
-            self.texts[index],
-            truncation=True,
-            padding="max_length",
-            max_length=self.max_length,
-            return_tensors="pt",
-        )
-        item = {name: value.squeeze(0) for name, value in encoded.items()}
+        item = {name: value[index] for name, value in self.encoded.items()}
         item["labels"] = torch.tensor(self.labels[index], dtype=torch.float32)
         return item
 
@@ -131,12 +143,19 @@ class BertTagClassifier(nn.Module):
 
     def __init__(self, model_name: str, num_labels: int, freeze_bert: bool = False) -> None:
         super().__init__()
+        self.freeze_bert = freeze_bert
         self.bert = AutoModel.from_pretrained(model_name)
         self.dropout = nn.Dropout(0.1)
         self.classifier = nn.Linear(self.bert.config.hidden_size, num_labels)
         if freeze_bert:
             for parameter in self.bert.parameters():
                 parameter.requires_grad = False
+
+    def train(self, mode: bool = True):
+        super().train(mode)
+        if self.freeze_bert:
+            self.bert.eval()
+        return self
 
     def forward(self, input_ids, attention_mask, token_type_ids=None) -> torch.Tensor:
         kwargs = {"input_ids": input_ids, "attention_mask": attention_mask}
@@ -180,6 +199,34 @@ def evaluate_epoch(model, loader, device, threshold: float, optimizer=None, sche
     }
 
 
+def select_thresholds(validation_targets, validation_probabilities) -> dict:
+    """Maximize per-label validation F1 on a fixed grid; ties favor sparsity.
+
+    A label without validation positives uses the validation-selected global
+    threshold. Test targets/probabilities are deliberately not accepted here.
+    """
+    targets = np.asarray(validation_targets)
+    probabilities = np.asarray(validation_probabilities)
+    if targets.shape != probabilities.shape or targets.ndim != 2 or len(targets) == 0:
+        raise ValueError("Validation arrays must be nonempty matching 2D matrices")
+    if not np.isfinite(probabilities).all() or np.any((probabilities < 0) | (probabilities > 1)) or not np.isin(targets, [0, 1]).all():
+        raise ValueError("Invalid validation probabilities or targets")
+    grid = np.round(np.arange(0.05, 1.0, 0.05), 2).tolist()
+    global_scores = [f1_score(targets, probabilities >= t, average="macro", zero_division=0) for t in grid]
+    global_threshold = grid[len(grid) - 1 - int(np.argmax(global_scores[::-1]))]
+    thresholds, unsupported = [], []
+    for column in range(targets.shape[1]):
+        if targets[:, column].sum() == 0:
+            thresholds.append(global_threshold)
+            unsupported.append(column)
+        else:
+            scores = [f1_score(targets[:, column], probabilities[:, column] >= t, zero_division=0) for t in grid]
+            thresholds.append(grid[len(grid) - 1 - int(np.argmax(scores[::-1]))])
+    return {"fit_split": "validation", "objective": "per_label_f1", "grid": grid,
+            "tie_break": "highest_threshold", "global_threshold": global_threshold,
+            "thresholds": thresholds, "no_validation_positives": unsupported}
+
+
 def classification_report(targets, probabilities, tags, threshold: float) -> dict:
     predictions = (probabilities >= threshold).astype(int)
     macro_precision, macro_recall, macro_f1, _ = precision_recall_fscore_support(
@@ -190,7 +237,7 @@ def classification_report(targets, probabilities, tags, threshold: float) -> dic
     )
     auc_pr = []
     for column in range(len(tags)):
-        if len(np.unique(targets[:, column])) < 2:
+        if targets[:, column].sum() == 0:
             auc_pr.append(None)
         else:
             auc_pr.append(float(average_precision_score(targets[:, column], probabilities[:, column])))
@@ -201,7 +248,9 @@ def classification_report(targets, probabilities, tags, threshold: float) -> dic
         "macro_precision": float(macro_precision),
         "macro_recall": float(macro_recall),
         "mean_auc_pr": float(np.mean(valid_auc_pr)) if valid_auc_pr else None,
-        "threshold": threshold,
+        "threshold": np.asarray(threshold).tolist(),
+        "mean_average_precision": float(np.mean(valid_auc_pr)) if valid_auc_pr else None,
+        "ap_label_count": len(valid_auc_pr),
         "samples": int(len(targets)),
         "per_tag": {
             tag: {
@@ -239,15 +288,45 @@ def save_curve(history: list[dict], destination: Path) -> None:
 
 
 def train(config: Task1Config) -> dict:
+    started = time.perf_counter()
     set_seed(config.seed)
     device = resolve_device(config.device)
+    torch.set_num_threads(config.cpu_threads)
     output_dir = Path(config.output_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
+    if output_dir.exists() and any(output_dir.iterdir()):
+        raise FileExistsError(f"Use a new output directory to preserve existing work: {output_dir}")
     texts, labels, tags = load_tag_data(config.data_path, config.text_col)
-    splits = make_split_indices(
-        len(texts), val_size=config.val_size, test_size=config.test_size, seed=config.seed
-    )
+    frame = pd.read_csv(config.data_path, dtype={"ytid": str})
+    manifest = load_prepared_manifest(config.data_path)
+    if "ytid" in frame and any(tag.startswith(("/m/", "/t/")) for tag in tags) and manifest is None:
+        raise ValueError("AudioSet training requires its preparation manifest")
+    if manifest:
+        splits = manifest["split_indices"]
+        if config.split_path and json.loads(Path(config.split_path).read_text(encoding="utf-8")) != splits:
+            raise ValueError("Explicit splits differ from the training-fitted vocabulary partition")
+    elif config.split_path:
+        splits = json.loads(Path(config.split_path).read_text(encoding="utf-8"))
+        if set(splits) != {"train", "validation", "test"} or not all(splits.values()):
+            raise ValueError("Explicit splits must define non-empty train, validation, and test")
+        flat = [i for indices in splits.values() for i in indices]
+        if any(type(i) is not int for i in flat) or sorted(flat) != list(range(len(texts))):
+            raise ValueError("Explicit splits must be disjoint and cover each CSV row exactly once")
+    elif "ytid" in frame:
+        id_splits = split_by_id(frame.ytid, seed=config.seed, val_size=config.val_size, test_size=config.test_size)
+        splits = {name: frame.index[frame.ytid.isin(ids)].tolist() for name, ids in id_splits.items()}
+    else:
+        splits = make_split_indices(
+            len(texts), val_size=config.val_size, test_size=config.test_size, seed=config.seed
+        )
+    if "ytid" in frame:
+        id_sets = [set(frame.iloc[indices].ytid) for indices in splits.values()]
+        if any(a & b for i, a in enumerate(id_sets) for b in id_sets[i + 1:]):
+            raise ValueError("ytid overlap across splits")
+    output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / "split_indices.json").write_text(json.dumps(splits, indent=2), encoding="utf-8")
+    if manifest:
+        (output_dir / "dataset_manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    (output_dir / "run_config.json").write_text(json.dumps(asdict(config), indent=2), encoding="utf-8")
 
     tokenizer = AutoTokenizer.from_pretrained(config.model_name)
     datasets = {
@@ -279,6 +358,7 @@ def train(config: Task1Config) -> dict:
 
     history: list[dict] = []
     best_f1 = -1.0
+    best_loss = float("inf")
     stale_epochs = 0
     checkpoint_path = output_dir / "best_model.pt"
     for epoch in range(1, config.epochs + 1):
@@ -301,7 +381,8 @@ def train(config: Task1Config) -> dict:
             f"val_loss={row['val_loss']:.4f} val_macro_f1={row['val_macro_f1']:.4f} "
             f"val_micro_f1={row['val_micro_f1']:.4f}"
         )
-        if row["val_macro_f1"] > best_f1:
+        if row["val_loss"] < best_loss:
+            best_loss = row["val_loss"]
             best_f1 = row["val_macro_f1"]
             stale_epochs = 0
             torch.save(
@@ -311,6 +392,8 @@ def train(config: Task1Config) -> dict:
                     "tags": tags,
                     "best_epoch": epoch,
                     "best_val_macro_f1": best_f1,
+                    "selection_metric": "validation_bce_loss",
+                    "best_val_loss": best_loss,
                 },
                 checkpoint_path,
             )
@@ -319,12 +402,33 @@ def train(config: Task1Config) -> dict:
             if stale_epochs >= config.patience:
                 print(f"Early stopping after {epoch} epochs")
                 break
+        (output_dir / "history.json").write_text(json.dumps(history, indent=2), encoding="utf-8")
 
-    checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
+    checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=True)
     model.load_state_dict(checkpoint["state_dict"])
-    test_epoch = evaluate_epoch(model, loaders["test"], device, config.threshold)
+    validation = evaluate_epoch(model, loaders["validation"], device, config.threshold)
+    calibration = select_thresholds(validation["targets"], validation["probabilities"]) if config.tune_thresholds else {
+        "fit_split": None, "thresholds": [config.threshold] * len(tags), "objective": "fixed"}
+    thresholds = np.asarray(calibration["thresholds"])
+    checkpoint["thresholds"] = thresholds.tolist()
+    checkpoint["calibration"] = calibration
+    checkpoint["dataset_sha256"] = sha256_file(config.data_path)
+    checkpoint["label_source"] = manifest["label_source"] if manifest else "legacy_unverified"
+    torch.save(checkpoint, checkpoint_path)
+    (output_dir / "thresholds.json").write_text(json.dumps(calibration, indent=2), encoding="utf-8")
+    baseline_models = None
+    if config.run_baselines and manifest:
+        from .baselines import fit_baselines
+        baseline_models = fit_baselines(texts, labels, tags, splits, config.seed)
+    # All fitting, checkpoint selection and calibration finish before test inference.
+    (output_dir / "selection.json").write_text(json.dumps({
+        "best_epoch": checkpoint["best_epoch"], "selection_metric": "validation_bce_loss",
+        "calibration": calibration, "test_used_for_selection": False,
+        "baseline_calibration": {name: value[1] for name, value in (baseline_models or {}).items()},
+    }, indent=2), encoding="utf-8")
+    test_epoch = evaluate_epoch(model, loaders["test"], device, thresholds)
     test_report = classification_report(
-        test_epoch["targets"], test_epoch["probabilities"], tags, config.threshold
+        test_epoch["targets"], test_epoch["probabilities"], tags, thresholds
     )
     test_report["loss"] = test_epoch["loss"]
     metrics = {
@@ -332,7 +436,9 @@ def train(config: Task1Config) -> dict:
             "path": config.data_path,
             "samples": len(texts),
             "num_tags": len(tags),
-            "proxy_label_warning": (
+            "label_source": manifest["label_source"] if manifest else "legacy_unverified",
+            "sha256": sha256_file(config.data_path),
+            "proxy_label_warning": None if manifest else (
                 "Labels are deterministic keyword matches from the same input captions; "
                 "scores measure recovery of lexical proxy rules, not independent semantic annotation."
             ),
@@ -340,8 +446,24 @@ def train(config: Task1Config) -> dict:
         "config": asdict(config),
         "split_sizes": {name: len(indices) for name, indices in splits.items()},
         "history": history,
+        "best_epoch": checkpoint["best_epoch"],
+        "selection_metric": "validation_bce_loss",
+        "calibration": calibration,
+        "validation": classification_report(validation["targets"], validation["probabilities"], tags, thresholds),
+        "test_fixed_0_5": classification_report(test_epoch["targets"], test_epoch["probabilities"], tags, 0.5),
         "test": test_report,
     }
+    for name, values in (("validation", validation), ("test", test_epoch)):
+        ids = frame.iloc[splits[name]].ytid.to_numpy(dtype=str) if "ytid" in frame else np.asarray(splits[name]).astype(str)
+        np.savez_compressed(output_dir / f"{name}_predictions.npz", ytid=ids,
+                            row_indices=np.asarray(splits[name]), tags=np.asarray(tags),
+                            targets=values["targets"], probabilities=values["probabilities"], thresholds=thresholds)
+    if baseline_models:
+        from .baselines import evaluate_baselines
+        metrics["baselines"] = evaluate_baselines(baseline_models, texts, labels, tags, splits, frame, output_dir)
+    metrics["runtime"] = {"seconds": time.perf_counter() - started, "device": str(device),
+                          "cpu_threads": torch.get_num_threads(), "platform": platform.platform(),
+                          "torch": str(torch.__version__)}
     (output_dir / "metrics.json").write_text(json.dumps(metrics, indent=2), encoding="utf-8")
     save_curve(history, output_dir / "f1_curve.png")
 
@@ -352,6 +474,7 @@ def train(config: Task1Config) -> dict:
         top_indices = np.argsort(-probabilities)[:5]
         examples.append(
             {
+                "ytid": str(frame.iloc[splits["test"][index]]["ytid"]) if "ytid" in frame else None,
                 "text": test_texts[index],
                 "top_predicted": [
                     {"tag": tags[i], "probability": round(float(probabilities[i]), 4)}
@@ -386,6 +509,10 @@ def main() -> None:
     parser.add_argument("--threshold", type=float, default=0.5)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--device", default="auto")
+    parser.add_argument("--split-path", help="Use explicit aligned train/validation/test row indices")
+    parser.add_argument("--no-tune-thresholds", dest="tune_thresholds", action="store_false")
+    parser.add_argument("--cpu-threads", type=int, default=6)
+    parser.add_argument("--no-baselines", dest="run_baselines", action="store_false")
     args = parser.parse_args()
     train(Task1Config(**vars(args)))
 

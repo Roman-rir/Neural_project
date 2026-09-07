@@ -1,0 +1,898 @@
+{
+  "selection": "Descriptive test analysis only; no model or threshold changes",
+  "five_highest_sample_f1": [
+    {
+      "ytid": "-DeAdhYKbGE",
+      "text": "A bagpipe ensemble playing a quick melody in unison, employing trills to ornament it.",
+      "sample_f1": 1.0,
+      "true_tags": [
+        "Wind instrument, woodwind instrument"
+      ],
+      "predicted_tags": [
+        "Wind instrument, woodwind instrument"
+      ],
+      "missed": [],
+      "extra": []
+    },
+    {
+      "ytid": "-SWaCArvQug",
+      "text": "Ambient sound still in the room with a mild background music playing.  A male singer sings a passionate melody with subtle background music. The audio quality is very poor with drawer sliding sound and general noise.",
+      "sample_f1": 1.0,
+      "true_tags": [
+        "Music"
+      ],
+      "predicted_tags": [
+        "Music"
+      ],
+      "missed": [],
+      "extra": []
+    },
+    {
+      "ytid": "0RgGrVklaao",
+      "text": "This clip is an instrumental of two separate tracks. The tempo is medium with the first clip of ambient nature sounds during a rainfall like, thunder, lightning and water flowing followed by  a rhythmic clanging of metal. The second clip is sinister music on the synthesiser followed by the buzzing of an electric circuit. The audio is dark, sinister, anticipatory, scary, suspenseful and spooky.",
+      "sample_f1": 1.0,
+      "true_tags": [
+        "Music"
+      ],
+      "predicted_tags": [
+        "Music"
+      ],
+      "missed": [],
+      "extra": []
+    },
+    {
+      "ytid": "0ZNFJz-eZTU",
+      "text": "The low quality recording features a jazz song cover that consists of a passionate saxophone melody played over soft hi hats and kick hits, snappy rimshots, smooth bass, organ keys chords and mellow piano chords. It sounds emotional, passionate and reverberant - as it was probably recorded in a medium size room.",
+      "sample_f1": 1.0,
+      "true_tags": [
+        "Brass instrument"
+      ],
+      "predicted_tags": [
+        "Brass instrument"
+      ],
+      "missed": [],
+      "extra": []
+    },
+    {
+      "ytid": "0lIETNZ_7sg",
+      "text": "The low quality recording features a Christmas song that consists of a widely spread, groovy piano melody, followed by synth choir keys. It sounds happy, joyful, fun and euphoric - as any Christmas song should sound.",
+      "sample_f1": 1.0,
+      "true_tags": [
+        "Music"
+      ],
+      "predicted_tags": [
+        "Music"
+      ],
+      "missed": [],
+      "extra": []
+    }
+  ],
+  "five_lowest_sample_f1": [
+    {
+      "ytid": "-7wUQP6G5EQ",
+      "text": "The low quality recording features a renaissance music that consists of soft wooden percussion and mellow, harmonized flute melody playing on top of it. The recording is a bit noisy, but it also sounds soulful, mellow, passionate, emotional and vintage - It really puts the listener in a period of renaissance.",
+      "sample_f1": 0.0,
+      "true_tags": [
+        "Music"
+      ],
+      "predicted_tags": [],
+      "missed": [
+        "Music"
+      ],
+      "extra": []
+    },
+    {
+      "ytid": "-FEPOSP7ay0",
+      "text": "The low quality recording features loud bells and metallic squeaking sounds. The recording is mono and noisy.",
+      "sample_f1": 0.0,
+      "true_tags": [],
+      "predicted_tags": [
+        "Music"
+      ],
+      "missed": [],
+      "extra": [
+        "Music"
+      ]
+    },
+    {
+      "ytid": "-f1DNyngKVY",
+      "text": "This is an instrumental sitar music piece. The sitar is being played at a medium-to-high range. There is a calming and relaxing atmosphere to this piece. This piece can be used in the background of a meditation video. It could also be played during a meditation session at a course.",
+      "sample_f1": 0.0,
+      "true_tags": [
+        "Music"
+      ],
+      "predicted_tags": [
+        "Percussion"
+      ],
+      "missed": [
+        "Music"
+      ],
+      "extra": [
+        "Percussion"
+      ]
+    },
+    {
+      "ytid": "0Wdh45yt7tY",
+      "text": "The song is an instrumental. The song is medium tempo with an accordion accompaniment, violin solo and a flute melody. The song is beautiful and nostalgic. The audio quality is poor. The song has an old gypsy soul to it.",
+      "sample_f1": 0.0,
+      "true_tags": [
+        "Wind instrument, woodwind instrument"
+      ],
+      "predicted_tags": [],
+      "missed": [
+        "Wind instrument, woodwind instrument"
+      ],
+      "extra": []
+    },
+    {
+      "ytid": "1GCOnj53QYM",
+      "text": "This music is two separate tracks. The first track is electronic music with turn table scratching. The second track is a soft, romantic, mellow, harmonious melody with keyboard harmony, electric guitar, groovy bass and steady drumming with a man talking at the end. The two tracks are unrelated.",
+      "sample_f1": 0.0,
+      "true_tags": [],
+      "predicted_tags": [
+        "Music"
+      ],
+      "missed": [],
+      "extra": [
+        "Music"
+      ]
+    }
+  ],
+  "exact_match_fraction": 0.2376357056694813,
+  "keyword_overlap_strata": {
+    "True": {
+      "macro_f1": 0.39562960794624025,
+      "micro_f1": 0.6388093875214653,
+      "macro_precision": 0.384133949064702,
+      "macro_recall": 0.4771541073498172,
+      "mean_auc_pr": 0.4438133720507101,
+      "threshold": [
+        0.45,
+        0.35,
+        0.55,
+        0.55,
+        0.05,
+        0.1,
+        0.25,
+        0.2,
+        0.1,
+        0.2,
+        0.05,
+        0.25,
+        0.3,
+        0.3,
+        0.2,
+        0.1,
+        0.05,
+        0.05,
+        0.05,
+        0.25,
+        0.2,
+        0.1,
+        0.1,
+        0.15,
+        0.7,
+        0.15,
+        0.05,
+        0.05,
+        0.05,
+        0.05
+      ],
+      "mean_average_precision": 0.4438133720507101,
+      "ap_label_count": 29,
+      "samples": 319,
+      "per_tag": {
+        "/m/04rlf": {
+          "precision": 0.9370860927152318,
+          "recall": 0.9625850340136054,
+          "f1": 0.9496644295302014,
+          "support": 294,
+          "auc_pr": 0.9418796074945898
+        },
+        "/m/04szw": {
+          "precision": 0.647887323943662,
+          "recall": 0.6216216216216216,
+          "f1": 0.6344827586206897,
+          "support": 74,
+          "auc_pr": 0.6165411720165156
+        },
+        "/m/0342h": {
+          "precision": 0.8392857142857143,
+          "recall": 0.6527777777777778,
+          "f1": 0.734375,
+          "support": 72,
+          "auc_pr": 0.7982013581500829
+        },
+        "/m/0fx80y": {
+          "precision": 0.7142857142857143,
+          "recall": 0.6666666666666666,
+          "f1": 0.6896551724137931,
+          "support": 60,
+          "auc_pr": 0.730909370302122
+        },
+        "/m/015lz1": {
+          "precision": 0.30927835051546393,
+          "recall": 0.8823529411764706,
+          "f1": 0.4580152671755725,
+          "support": 34,
+          "auc_pr": 0.3790927810768251
+        },
+        "/m/0l14md": {
+          "precision": 0.6,
+          "recall": 0.4090909090909091,
+          "f1": 0.4864864864864865,
+          "support": 22,
+          "auc_pr": 0.5535031746859174
+        },
+        "/m/085jw": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "support": 1,
+          "auc_pr": 1.0
+        },
+        "/m/01kcd": {
+          "precision": 0.3333333333333333,
+          "recall": 0.6666666666666666,
+          "f1": 0.4444444444444444,
+          "support": 3,
+          "auc_pr": 0.7023809523809523
+        },
+        "/m/09x0r": {
+          "precision": 0.21428571428571427,
+          "recall": 0.3333333333333333,
+          "f1": 0.2608695652173913,
+          "support": 9,
+          "auc_pr": 0.2796166278261226
+        },
+        "/m/026t6": {
+          "precision": 0.5714285714285714,
+          "recall": 0.3076923076923077,
+          "f1": 0.4,
+          "support": 13,
+          "auc_pr": 0.44891786582231263
+        },
+        "/m/074ft": {
+          "precision": 0.16216216216216217,
+          "recall": 0.35294117647058826,
+          "f1": 0.2222222222222222,
+          "support": 17,
+          "auc_pr": 0.18063883656625362
+        },
+        "/m/02rr_": {
+          "precision": 0.35714285714285715,
+          "recall": 0.7894736842105263,
+          "f1": 0.4918032786885246,
+          "support": 19,
+          "auc_pr": 0.5439768243201544
+        },
+        "/m/05148p4": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3,
+          "auc_pr": 0.011742424242424242
+        },
+        "/m/02sgy": {
+          "precision": 0.45454545454545453,
+          "recall": 0.20833333333333334,
+          "f1": 0.2857142857142857,
+          "support": 24,
+          "auc_pr": 0.37561524627541126
+        },
+        "/m/042v_gx": {
+          "precision": 0.4,
+          "recall": 0.23529411764705882,
+          "f1": 0.2962962962962963,
+          "support": 17,
+          "auc_pr": 0.4794083391129514
+        },
+        "/m/02lkt": {
+          "precision": 0.2727272727272727,
+          "recall": 0.375,
+          "f1": 0.3157894736842105,
+          "support": 8,
+          "auc_pr": 0.21092384597057492
+        },
+        "/m/06by7": {
+          "precision": 0.32432432432432434,
+          "recall": 0.6666666666666666,
+          "f1": 0.43636363636363634,
+          "support": 18,
+          "auc_pr": 0.5183044890724446
+        },
+        "/m/0164x2": {
+          "precision": 0.02702702702702703,
+          "recall": 0.5,
+          "f1": 0.05128205128205128,
+          "support": 2,
+          "auc_pr": 0.03631578947368421
+        },
+        "/m/064t9": {
+          "precision": 0.03571428571428571,
+          "recall": 0.2,
+          "f1": 0.06060606060606061,
+          "support": 5,
+          "auc_pr": 0.05955783434646927
+        },
+        "/m/0g12c5": {
+          "precision": 0.4666666666666667,
+          "recall": 0.6666666666666666,
+          "f1": 0.5490196078431373,
+          "support": 21,
+          "auc_pr": 0.4469984731961034
+        },
+        "/m/0l14_3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 4,
+          "auc_pr": 0.05003819709702063
+        },
+        "/m/0155w": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "support": 8,
+          "auc_pr": 0.6151150249296029
+        },
+        "/m/01lyv": {
+          "precision": 0.5,
+          "recall": 0.3333333333333333,
+          "f1": 0.4,
+          "support": 9,
+          "auc_pr": 0.3814846512917181
+        },
+        "/m/0glt670": {
+          "precision": 0.5,
+          "recall": 0.42857142857142855,
+          "f1": 0.46153846153846156,
+          "support": 7,
+          "auc_pr": 0.6765491452991452
+        },
+        "/m/02bxd": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 12,
+          "auc_pr": 1.0
+        },
+        "/t/dd00036": {
+          "precision": 0.2222222222222222,
+          "recall": 0.6666666666666666,
+          "f1": 0.3333333333333333,
+          "support": 3,
+          "auc_pr": 0.29074074074074074
+        },
+        "/m/02v2lh": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "auc_pr": null
+        },
+        "/m/02x8m": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 10,
+          "auc_pr": 0.10531129077972608
+        },
+        "/m/02p0sh1": {
+          "precision": 0.25,
+          "recall": 0.3333333333333333,
+          "f1": 0.2857142857142857,
+          "support": 9,
+          "auc_pr": 0.17078514745671666
+        },
+        "/m/05rwpb": {
+          "precision": 0.38461538461538464,
+          "recall": 0.5555555555555556,
+          "f1": 0.45454545454545453,
+          "support": 9,
+          "auc_pr": 0.2660385795440095
+        }
+      }
+    },
+    "False": {
+      "macro_f1": 0.23119713478409334,
+      "micro_f1": 0.5430316490838423,
+      "macro_precision": 0.24209742292791045,
+      "macro_recall": 0.31125516554309124,
+      "mean_auc_pr": 0.25616009389340144,
+      "threshold": [
+        0.45,
+        0.35,
+        0.55,
+        0.55,
+        0.05,
+        0.1,
+        0.25,
+        0.2,
+        0.1,
+        0.2,
+        0.05,
+        0.25,
+        0.3,
+        0.3,
+        0.2,
+        0.1,
+        0.05,
+        0.05,
+        0.05,
+        0.25,
+        0.2,
+        0.1,
+        0.1,
+        0.15,
+        0.7,
+        0.15,
+        0.05,
+        0.05,
+        0.05,
+        0.05
+      ],
+      "mean_average_precision": 0.25616009389340144,
+      "ap_label_count": 27,
+      "samples": 510,
+      "per_tag": {
+        "/m/04rlf": {
+          "precision": 0.8421052631578947,
+          "recall": 0.9558441558441558,
+          "f1": 0.8953771289537713,
+          "support": 385,
+          "auc_pr": 0.9275458951127794
+        },
+        "/m/04szw": {
+          "precision": 0.3684210526315789,
+          "recall": 0.20588235294117646,
+          "f1": 0.2641509433962264,
+          "support": 34,
+          "auc_pr": 0.23924951803775063
+        },
+        "/m/0342h": {
+          "precision": 0.125,
+          "recall": 0.125,
+          "f1": 0.125,
+          "support": 8,
+          "auc_pr": 0.2279580222515005
+        },
+        "/m/0fx80y": {
+          "precision": 0.25,
+          "recall": 0.2,
+          "f1": 0.2222222222222222,
+          "support": 10,
+          "auc_pr": 0.3541781025991553
+        },
+        "/m/015lz1": {
+          "precision": 0.10778443113772455,
+          "recall": 0.9,
+          "f1": 0.1925133689839572,
+          "support": 20,
+          "auc_pr": 0.16602023259557122
+        },
+        "/m/0l14md": {
+          "precision": 0.3103448275862069,
+          "recall": 0.5,
+          "f1": 0.3829787234042553,
+          "support": 18,
+          "auc_pr": 0.35775987821330846
+        },
+        "/m/085jw": {
+          "precision": 0.896551724137931,
+          "recall": 0.65,
+          "f1": 0.7536231884057971,
+          "support": 40,
+          "auc_pr": 0.8249306504865777
+        },
+        "/m/01kcd": {
+          "precision": 0.55,
+          "recall": 0.7333333333333333,
+          "f1": 0.6285714285714286,
+          "support": 15,
+          "auc_pr": 0.5270432730004015
+        },
+        "/m/09x0r": {
+          "precision": 0.6666666666666666,
+          "recall": 0.13333333333333333,
+          "f1": 0.2222222222222222,
+          "support": 15,
+          "auc_pr": 0.16824816171607812
+        },
+        "/m/026t6": {
+          "precision": 0.3,
+          "recall": 0.21428571428571427,
+          "f1": 0.25,
+          "support": 14,
+          "auc_pr": 0.17977743252804998
+        },
+        "/m/074ft": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "auc_pr": null
+        },
+        "/m/02rr_": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "auc_pr": null
+        },
+        "/m/05148p4": {
+          "precision": 0.75,
+          "recall": 0.4,
+          "f1": 0.5217391304347826,
+          "support": 15,
+          "auc_pr": 0.45870199814563467
+        },
+        "/m/02sgy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1,
+          "auc_pr": 0.038461538461538464
+        },
+        "/m/042v_gx": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 5,
+          "auc_pr": 0.1896969696969697
+        },
+        "/m/02lkt": {
+          "precision": 0.14705882352941177,
+          "recall": 0.2631578947368421,
+          "f1": 0.18867924528301888,
+          "support": 19,
+          "auc_pr": 0.2105583814121109
+        },
+        "/m/06by7": {
+          "precision": 0.16666666666666666,
+          "recall": 0.75,
+          "f1": 0.2727272727272727,
+          "support": 8,
+          "auc_pr": 0.2082289998773962
+        },
+        "/m/0164x2": {
+          "precision": 0.05454545454545454,
+          "recall": 0.42857142857142855,
+          "f1": 0.0967741935483871,
+          "support": 7,
+          "auc_pr": 0.09090423371340083
+        },
+        "/m/064t9": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 4,
+          "auc_pr": 0.01635230036840485
+        },
+        "/m/0g12c5": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "auc_pr": null
+        },
+        "/m/0l14_3": {
+          "precision": 0.3333333333333333,
+          "recall": 0.2,
+          "f1": 0.25,
+          "support": 10,
+          "auc_pr": 0.22702678624875766
+        },
+        "/m/0155w": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 5,
+          "auc_pr": 0.10184554400443822
+        },
+        "/m/01lyv": {
+          "precision": 0.2222222222222222,
+          "recall": 0.4,
+          "f1": 0.2857142857142857,
+          "support": 5,
+          "auc_pr": 0.20609246417013405
+        },
+        "/m/0glt670": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3,
+          "auc_pr": 0.09085337105139084
+        },
+        "/m/02bxd": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1,
+          "auc_pr": 0.009259259259259259
+        },
+        "/t/dd00036": {
+          "precision": 0.5333333333333333,
+          "recall": 0.5714285714285714,
+          "f1": 0.5517241379310345,
+          "support": 14,
+          "auc_pr": 0.4452198723714226
+        },
+        "/m/02v2lh": {
+          "precision": 0.1111111111111111,
+          "recall": 0.18181818181818182,
+          "f1": 0.13793103448275862,
+          "support": 11,
+          "auc_pr": 0.09045182183275619
+        },
+        "/m/02x8m": {
+          "precision": 0.07407407407407407,
+          "recall": 0.4,
+          "f1": 0.125,
+          "support": 5,
+          "auc_pr": 0.15077025028300406
+        },
+        "/m/02p0sh1": {
+          "precision": 0.037037037037037035,
+          "recall": 0.5,
+          "f1": 0.06896551724137931,
+          "support": 2,
+          "auc_pr": 0.02693089430894309
+        },
+        "/m/05rwpb": {
+          "precision": 0.4166666666666667,
+          "recall": 0.625,
+          "f1": 0.5,
+          "support": 8,
+          "auc_pr": 0.38225668337510443
+        }
+      }
+    }
+  },
+  "excluding_music_root_descriptive": {
+    "macro_f1": 0.36561274240827174,
+    "micro_f1": 0.37183098591549296,
+    "macro_precision": 0.3702017122800367,
+    "macro_recall": 0.4424965970435014,
+    "mean_auc_pr": 0.34911972033556277,
+    "threshold": [
+      0.35,
+      0.55,
+      0.55,
+      0.05,
+      0.1,
+      0.25,
+      0.2,
+      0.1,
+      0.2,
+      0.05,
+      0.25,
+      0.3,
+      0.3,
+      0.2,
+      0.1,
+      0.05,
+      0.05,
+      0.05,
+      0.25,
+      0.2,
+      0.1,
+      0.1,
+      0.15,
+      0.7,
+      0.15,
+      0.05,
+      0.05,
+      0.05,
+      0.05
+    ],
+    "mean_average_precision": 0.34911972033556277,
+    "ap_label_count": 29,
+    "samples": 829,
+    "per_tag": {
+      "/m/04szw": {
+        "precision": 0.5888888888888889,
+        "recall": 0.49074074074074076,
+        "f1": 0.5353535353535354,
+        "support": 108,
+        "auc_pr": 0.5058036242984286
+      },
+      "/m/0342h": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1": 0.6666666666666666,
+        "support": 80,
+        "auc_pr": 0.721015480755059
+      },
+      "/m/0fx80y": {
+        "precision": 0.65625,
+        "recall": 0.6,
+        "f1": 0.6268656716417911,
+        "support": 70,
+        "auc_pr": 0.6695085025703841
+      },
+      "/m/015lz1": {
+        "precision": 0.18181818181818182,
+        "recall": 0.8888888888888888,
+        "f1": 0.3018867924528302,
+        "support": 54,
+        "auc_pr": 0.23668058430578826
+      },
+      "/m/0l14md": {
+        "precision": 0.4090909090909091,
+        "recall": 0.45,
+        "f1": 0.42857142857142855,
+        "support": 40,
+        "auc_pr": 0.4375037530830249
+      },
+      "/m/085jw": {
+        "precision": 0.8709677419354839,
+        "recall": 0.6585365853658537,
+        "f1": 0.75,
+        "support": 41,
+        "auc_pr": 0.8082934957205433
+      },
+      "/m/01kcd": {
+        "precision": 0.5,
+        "recall": 0.7222222222222222,
+        "f1": 0.5909090909090909,
+        "support": 18,
+        "auc_pr": 0.5245469248417243
+      },
+      "/m/09x0r": {
+        "precision": 0.29411764705882354,
+        "recall": 0.20833333333333334,
+        "f1": 0.24390243902439024,
+        "support": 24,
+        "auc_pr": 0.17405093158724114
+      },
+      "/m/026t6": {
+        "precision": 0.4117647058823529,
+        "recall": 0.25925925925925924,
+        "f1": 0.3181818181818182,
+        "support": 27,
+        "auc_pr": 0.30364245816928753
+      },
+      "/m/074ft": {
+        "precision": 0.05357142857142857,
+        "recall": 0.35294117647058826,
+        "f1": 0.09302325581395349,
+        "support": 17,
+        "auc_pr": 0.0653655592710105
+      },
+      "/m/02rr_": {
+        "precision": 0.3191489361702128,
+        "recall": 0.7894736842105263,
+        "f1": 0.45454545454545453,
+        "support": 19,
+        "auc_pr": 0.5241763681370657
+      },
+      "/m/05148p4": {
+        "precision": 0.75,
+        "recall": 0.3333333333333333,
+        "f1": 0.46153846153846156,
+        "support": 18,
+        "auc_pr": 0.37427999542743
+      },
+      "/m/02sgy": {
+        "precision": 0.45454545454545453,
+        "recall": 0.2,
+        "f1": 0.2777777777777778,
+        "support": 25,
+        "auc_pr": 0.3496322732893628
+      },
+      "/m/042v_gx": {
+        "precision": 0.2857142857142857,
+        "recall": 0.18181818181818182,
+        "f1": 0.2222222222222222,
+        "support": 22,
+        "auc_pr": 0.3966644107429888
+      },
+      "/m/02lkt": {
+        "precision": 0.17777777777777778,
+        "recall": 0.2962962962962963,
+        "f1": 0.2222222222222222,
+        "support": 27,
+        "auc_pr": 0.19663378464794867
+      },
+      "/m/06by7": {
+        "precision": 0.2465753424657534,
+        "recall": 0.6923076923076923,
+        "f1": 0.36363636363636365,
+        "support": 26,
+        "auc_pr": 0.36108777761045524
+      },
+      "/m/0164x2": {
+        "precision": 0.043478260869565216,
+        "recall": 0.4444444444444444,
+        "f1": 0.07920792079207921,
+        "support": 9,
+        "auc_pr": 0.07046765264946968
+      },
+      "/m/064t9": {
+        "precision": 0.013157894736842105,
+        "recall": 0.1111111111111111,
+        "f1": 0.023529411764705882,
+        "support": 9,
+        "auc_pr": 0.02690248223458421
+      },
+      "/m/0g12c5": {
+        "precision": 0.45161290322580644,
+        "recall": 0.6666666666666666,
+        "f1": 0.5384615384615384,
+        "support": 21,
+        "auc_pr": 0.4294180983269846
+      },
+      "/m/0l14_3": {
+        "precision": 0.2857142857142857,
+        "recall": 0.14285714285714285,
+        "f1": 0.19047619047619047,
+        "support": 14,
+        "auc_pr": 0.1713089388960514
+      },
+      "/m/0155w": {
+        "precision": 0.36363636363636365,
+        "recall": 0.3076923076923077,
+        "f1": 0.3333333333333333,
+        "support": 13,
+        "auc_pr": 0.37673477880407036
+      },
+      "/m/01lyv": {
+        "precision": 0.3333333333333333,
+        "recall": 0.35714285714285715,
+        "f1": 0.3448275862068966,
+        "support": 14,
+        "auc_pr": 0.2550032231436156
+      },
+      "/m/0glt670": {
+        "precision": 0.25,
+        "recall": 0.3,
+        "f1": 0.2727272727272727,
+        "support": 10,
+        "auc_pr": 0.3286645741599302
+      },
+      "/m/02bxd": {
+        "precision": 1.0,
+        "recall": 0.9230769230769231,
+        "f1": 0.96,
+        "support": 13,
+        "auc_pr": 0.929137529137529
+      },
+      "/t/dd00036": {
+        "precision": 0.4166666666666667,
+        "recall": 0.5882352941176471,
+        "f1": 0.4878048780487805,
+        "support": 17,
+        "auc_pr": 0.3832345171421265
+      },
+      "/m/02v2lh": {
+        "precision": 0.08,
+        "recall": 0.18181818181818182,
+        "f1": 0.1111111111111111,
+        "support": 11,
+        "auc_pr": 0.07564892182048115
+      },
+      "/m/02x8m": {
+        "precision": 0.045454545454545456,
+        "recall": 0.13333333333333333,
+        "f1": 0.06779661016949153,
+        "support": 15,
+        "auc_pr": 0.08482643303480455
+      },
+      "/m/02p0sh1": {
+        "precision": 0.10256410256410256,
+        "recall": 0.36363636363636365,
+        "f1": 0.16,
+        "support": 11,
+        "auc_pr": 0.06894607673074439
+      },
+      "/m/05rwpb": {
+        "precision": 0.4,
+        "recall": 0.5882352941176471,
+        "f1": 0.47619047619047616,
+        "support": 17,
+        "auc_pr": 0.27529273919318686
+      }
+    }
+  }
+}

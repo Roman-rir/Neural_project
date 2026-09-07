@@ -51,35 +51,51 @@ python -m src.evaluate --config config.yaml --checkpoint results/checkpoints/bes
 
 ## Milestones
 
+Task 4 retrieval is available in `src/task4/` and
+[`notebooks/task4_retrieval.ipynb`](notebooks/task4_retrieval.ipynb).
+See [`docs/task4/README.md`](docs/task4/README.md) for training and evaluation.
+
+Task 3's standalone frozen-encoder implementation is available in
+[`notebooks/task3_fusion.ipynb`](notebooks/task3_fusion.ipynb), with terminal and
+real-data instructions in [`docs/task3/README.md`](docs/task3/README.md).
+Run an offline five-ablation check with:
+
+```powershell
+python -m src.task3 --demo --epochs 2 --device cpu --output-dir tmp/task3_demo
+```
+
 - Task 1: text-only BERT baseline (`--model bert`)
 - Task 2: GraphSAGE audio-graph baseline (`--model gnn`)
 - Task 3: GNN-BERT fusion (`--model fusion`)
 - Task 4: optional contrastive retrieval (`src/contrastive.py`)
 
-## Task 1: completed BERT baseline
+## Task 1: independent AudioSet text baseline
 
-Task 1 has a standalone, reproducible MusicCaps caption-to-tag pipeline in
-addition to the shared multi-modal training code:
+Task 1 now preserves MusicCaps `ytid`, splits by video ID before label selection,
+fits its 30-label AudioSet vocabulary on training rows only, and tunes thresholds
+on validation only. The executed
+[`notebooks/task1_bert_baseline.ipynb`](notebooks/task1_bert_baseline.ipynb) reviews
+the completed run, controls, per-label evidence, inference and optional retraining.
 
-Open `notebooks/task1_bert_baseline.ipynb` for the notebook-first walkthrough,
-measured artifacts, architecture, inference, and optional retraining.
+CPU fine-tuning of DistilBERT for two epochs on 3,864 training captions achieved
+held-out **Macro-F1 0.3840, Micro-F1 0.5902 and mAP 0.3686** on 829 test IDs.
+TF-IDF reached 0.3393 / 0.6530 / 0.3603 respectively. Saved predictions reproduce
+the metrics; all models share the same prepared vocabulary and ID split.
 
 ```bash
-python -m src.task1.data --hf-dataset --top-k 50 --output data/processed/musiccaps_tags.csv
-python -m src.task1.train --data-path data/processed/musiccaps_tags.csv --output-dir results/task1
-python -m src.task1.predict --checkpoint results/task1/best_model.pt --text "calm acoustic guitar with soft vocals"
+python -m src.task1.data --hf-dataset --top-k 30 --output data/processed/musiccaps_audioset_new.csv
+python -m src.task1.train --data-path data/processed/musiccaps_audioset_new.csv --output-dir results/task1/audioset_new --epochs 2 --device cpu --cpu-threads 6
+python -m src.task1.evaluate --run-dir results/task1/audioset_new
 ```
 
-The original completed experiment is preserved in `Task1_test/`, including its
-checkpoint, F1 curve, metrics, and five examples. The current trainer saves the
-exact split indices, model/tag metadata, per-tag metrics, and an inference-ready
-checkpoint for future runs.
-
-The MusicCaps labels used here are lexical proxies derived from the input
-caption itself. This is useful as a Task 1 pipeline baseline, but it creates
-target leakage and must not be interpreted as performance on independent music
-annotations. See `docs/task1/README.md` for the architecture and complete run
-guide, and `report/task1_results.md` for the result table and limitations.
+Use fresh paths; preparation and training preserve existing artifacts. Independent
+AudioSet labels replace caption-derived proxy targets for this run. The original
+work remains in `Task1_test/`, earlier `results/task1/` outputs,
+[`notebooks/task1_lexical_proxy.ipynb`](notebooks/task1_lexical_proxy.ipynb), and
+[`docs/task1/legacy_proxy.md`](docs/task1/legacy_proxy.md).
+See [the run guide](docs/task1/README.md) and [measured report](report/task1_results.md)
+for methods, limitations and reproduction. Existing audio/fusion artifacts have
+not been retrained or aligned to the new Task 1 manifest.
 
 ## Part 1: dataset viability audit
 

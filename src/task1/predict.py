@@ -22,6 +22,8 @@ def load_checkpoint(
             "model_name": saved["config"]["model_name"],
             "max_length": saved["config"]["max_length"],
             "threshold": saved["config"]["threshold"],
+            "thresholds": saved.get("thresholds", [saved["config"]["threshold"]] * len(saved["tags"])),
+            "label_source": saved.get("label_source", "legacy_unverified"),
             "tags": saved["tags"],
         }
         return saved["state_dict"], metadata
@@ -62,7 +64,9 @@ def predict(
     encoded = {name: value.to(device) for name, value in encoded.items()}
     with torch.no_grad():
         probabilities = torch.sigmoid(model(**encoded)).cpu()
-    threshold = float(metadata.get("threshold", 0.5))
+    thresholds = torch.tensor(metadata.get("thresholds", [metadata.get("threshold", 0.5)] * len(tags)))
+    names_path = Path(__file__).with_name("audioset_names.json")
+    names = json.loads(names_path.read_text(encoding="utf-8")) if names_path.exists() else {}
     results = []
     for text, row in zip(texts, probabilities):
         order = torch.argsort(row, descending=True)[:top_k].tolist()
@@ -70,15 +74,16 @@ def predict(
             {
                 "text": text,
                 "predicted_tags": [
-                    {"tag": tags[index], "probability": round(float(row[index]), 4)}
-                    for index in order
-                    if row[index] >= threshold
+                    {"tag": tags[index], "display_name": names.get(tags[index], tags[index]), "probability": round(float(row[index]), 4)}
+                    for index in torch.argsort(row, descending=True).tolist()
+                    if row[index] >= thresholds[index]
                 ],
                 "top_tags": [
-                    {"tag": tags[index], "probability": round(float(row[index]), 4)}
+                    {"tag": tags[index], "display_name": names.get(tags[index], tags[index]), "probability": round(float(row[index]), 4)}
                     for index in order
                 ],
-                "threshold": threshold,
+                "thresholds": thresholds.tolist(),
+                "label_source": metadata.get("label_source", "legacy_unverified"),
             }
         )
     return results

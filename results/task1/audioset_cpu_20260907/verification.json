@@ -1,0 +1,60 @@
+{
+  "verified": true,
+  "models": {
+    "distilbert": {
+      "method": "test-row percentile bootstrap; fixed fitted model and thresholds",
+      "repeats": 1000,
+      "seed": 2026,
+      "macro_f1_95_ci": [
+        0.3498785160972653,
+        0.41123077977916234
+      ],
+      "micro_f1_95_ci": [
+        0.5709408394146245,
+        0.6094618553043735
+      ]
+    },
+    "label_prior": {
+      "method": "test-row percentile bootstrap; fixed fitted model and thresholds",
+      "repeats": 1000,
+      "seed": 2026,
+      "macro_f1_95_ci": [
+        0.04962041634765275,
+        0.05616432374146275
+      ],
+      "micro_f1_95_ci": [
+        0.33687292540609765,
+        0.36958913128733367
+      ]
+    },
+    "ontology_keyword": {
+      "method": "test-row percentile bootstrap; fixed fitted model and thresholds",
+      "repeats": 1000,
+      "seed": 2026,
+      "macro_f1_95_ci": [
+        0.1352448379659017,
+        0.17715571293458945
+      ],
+      "micro_f1_95_ci": [
+        0.20827656661243749,
+        0.2452037043268856
+      ]
+    },
+    "tfidf_logistic": {
+      "method": "test-row percentile bootstrap; fixed fitted model and thresholds",
+      "repeats": 1000,
+      "seed": 2026,
+      "macro_f1_95_ci": [
+        0.3045800770980652,
+        0.3643527386429176
+      ],
+      "micro_f1_95_ci": [
+        0.6323396798322911,
+        0.6742412659746759
+      ]
+    }
+  },
+  "dataset_sha256": "1d5c892bd705d49be07d831655ea423e29f713ea7f3183c509172382b2996ead",
+  "test_ids": 829,
+  "labels": 30
+}

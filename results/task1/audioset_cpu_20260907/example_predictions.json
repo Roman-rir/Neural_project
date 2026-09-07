@@ -1,0 +1,145 @@
+[
+  {
+    "ytid": "-4NLarMj4xU",
+    "text": "The Pop song features a soft female vocal singing over sustained pulsating synth lead, mellow piano melody, sustained synth brass, punchy kick, claps. tinny wide hi hats and high pitched female vocal melody. It sounds emotional, sad, passionate and like something you would hear on a radio.",
+    "top_predicted": [
+      {
+        "tag": "/m/04rlf",
+        "probability": 0.9342
+      },
+      {
+        "tag": "/m/015lz1",
+        "probability": 0.1086
+      },
+      {
+        "tag": "/m/074ft",
+        "probability": 0.0644
+      },
+      {
+        "tag": "/m/0164x2",
+        "probability": 0.0611
+      },
+      {
+        "tag": "/m/064t9",
+        "probability": 0.0527
+      }
+    ],
+    "true_tags": [
+      "/m/04rlf"
+    ]
+  },
+  {
+    "ytid": "-6pcgdLfb_A",
+    "text": "This is an R&B/soul music piece. There is a male vocalist singing melodically and in a sensual manner over multiple tracks. The melody of the beat is provided by a string sample. There is a strong bass sound in the piece. The rhythm is provided by a groovy electronic drum beat. There is an urban feel to this piece. It could be used in the soundtrack of a TV series where two characters are sharing intimate moments.",
+    "top_predicted": [
+      {
+        "tag": "/m/04rlf",
+        "probability": 0.9427
+      },
+      {
+        "tag": "/m/0164x2",
+        "probability": 0.0808
+      },
+      {
+        "tag": "/m/015lz1",
+        "probability": 0.0647
+      },
+      {
+        "tag": "/m/0glt670",
+        "probability": 0.0595
+      },
+      {
+        "tag": "/m/02x8m",
+        "probability": 0.0358
+      }
+    ],
+    "true_tags": [
+      "/m/04rlf"
+    ]
+  },
+  {
+    "ytid": "-7wUQP6G5EQ",
+    "text": "The low quality recording features a renaissance music that consists of soft wooden percussion and mellow, harmonized flute melody playing on top of it. The recording is a bit noisy, but it also sounds soulful, mellow, passionate, emotional and vintage - It really puts the listener in a period of renaissance.",
+    "top_predicted": [
+      {
+        "tag": "/m/04rlf",
+        "probability": 0.2815
+      },
+      {
+        "tag": "/m/085jw",
+        "probability": 0.1594
+      },
+      {
+        "tag": "/m/01kcd",
+        "probability": 0.1084
+      },
+      {
+        "tag": "/m/05148p4",
+        "probability": 0.1012
+      },
+      {
+        "tag": "/m/0l14md",
+        "probability": 0.0504
+      }
+    ],
+    "true_tags": [
+      "/m/04rlf"
+    ]
+  },
+  {
+    "ytid": "-DeAdhYKbGE",
+    "text": "A bagpipe ensemble playing a quick melody in unison, employing trills to ornament it.",
+    "top_predicted": [
+      {
+        "tag": "/m/085jw",
+        "probability": 0.7647
+      },
+      {
+        "tag": "/m/01kcd",
+        "probability": 0.1723
+      },
+      {
+        "tag": "/m/04rlf",
+        "probability": 0.0803
+      },
+      {
+        "tag": "/m/0l14_3",
+        "probability": 0.0629
+      },
+      {
+        "tag": "/m/04szw",
+        "probability": 0.0544
+      }
+    ],
+    "true_tags": [
+      "/m/085jw"
+    ]
+  },
+  {
+    "ytid": "-FEPOSP7ay0",
+    "text": "The low quality recording features loud bells and metallic squeaking sounds. The recording is mono and noisy.",
+    "top_predicted": [
+      {
+        "tag": "/m/04rlf",
+        "probability": 0.494
+      },
+      {
+        "tag": "/m/0l14md",
+        "probability": 0.0569
+      },
+      {
+        "tag": "/m/026t6",
+        "probability": 0.0226
+      },
+      {
+        "tag": "/m/05148p4",
+        "probability": 0.0213
+      },
+      {
+        "tag": "/m/04szw",
+        "probability": 0.0212
+      }
+    ],
+    "true_tags": []
+  }
+]

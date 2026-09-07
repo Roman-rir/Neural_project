@@ -1,0 +1,10 @@
+{
+  "repository_unittest_tests": 40,
+  "repository_unittest_status": "passed",
+  "final_notebook_structural_tests": 3,
+  "notebook_code_cells_executed": 9,
+  "notebook_execution_errors": 0,
+  "notebook_sha256": "7386bb843fdfaee71ae5bba665e1fb75985a77a5306e75587697b8df4b339290",
+  "prediction_metric_recomputation": "all models and both validation/test splits matched exactly",
+  "source_snapshot_hash_check": "passed"
+}

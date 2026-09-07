@@ -1,0 +1,23 @@
+{
+  "data_path": "data/processed/musiccaps_audioset.csv",
+  "output_dir": "results/task1/audioset_cpu_20260907",
+  "model_name": "distilbert-base-uncased",
+  "text_col": "text",
+  "max_length": 128,
+  "batch_size": 16,
+  "epochs": 2,
+  "lr_bert": 2e-05,
+  "lr_head": 0.001,
+  "weight_decay": 1e-05,
+  "val_size": 0.15,
+  "test_size": 0.15,
+  "freeze_bert": false,
+  "patience": 3,
+  "threshold": 0.5,
+  "seed": 42,
+  "device": "cpu",
+  "split_path": null,
+  "tune_thresholds": true,
+  "cpu_threads": 6,
+  "run_baselines": true
+}

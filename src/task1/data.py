@@ -1,9 +1,9 @@
-"""Build the MusicCaps caption-to-tag proxy dataset used by Task 1.
+"""Build independent AudioSet targets (default) or the historical lexical proxy.
 
-The labels produced here are lexical proxy labels: a tag is positive when one
-of its configured expressions occurs in the caption.  This is useful for
-checking the BERT multi-label pipeline, but it is not independent human
-annotation and must be described as such when reporting results.
+The default CLI delegates ID-first preparation to ``audioset.py``. The legacy
+``extract_tags`` and ``build_tag_frame`` helpers below still implement lexical
+proxy labels and are retained for historical reproduction only; they do not
+implement the independent-label academic protocol.
 """
 from __future__ import annotations
 
@@ -113,7 +113,8 @@ def build_tag_frame(
 
     if not keep_untagged:
         frame = frame[frame[tags].sum(axis=1) > 0]
-    result = frame.rename(columns={caption_col: "text"})[["text", *tags]].reset_index(drop=True)
+    metadata = ["ytid"] if "ytid" in frame.columns else []
+    result = frame.rename(columns={caption_col: "text"})[[*metadata, "text", *tags]].reset_index(drop=True)
     return result, tags, {tag: counts[tag] for tag in tags}
 
 
@@ -132,12 +133,29 @@ def main() -> None:
     source.add_argument("--hf-dataset", action="store_true")
     source.add_argument("--input-csv", type=Path)
     parser.add_argument("--caption-col", default="caption")
-    parser.add_argument("--top-k", type=int, default=50)
+    parser.add_argument("--label-source", choices=["audioset", "proxy"], default="audioset")
+    parser.add_argument("--top-k", type=int, default=30)
+    parser.add_argument("--min-train-support", type=int, default=20)
+    parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--val-size", type=float, default=0.15)
+    parser.add_argument("--test-size", type=float, default=0.15)
     parser.add_argument("--keep-untagged", action="store_true")
-    parser.add_argument("--output", type=Path, default=Path("data/processed/musiccaps_tags.csv"))
+    parser.add_argument("--output", type=Path, default=Path("data/processed/musiccaps_audioset.csv"))
     args = parser.parse_args()
 
     raw = load_musiccaps() if args.hf_dataset else pd.read_csv(args.input_csv)
+    if args.label_source == "audioset":
+        from .audioset import save_audioset_dataset
+        result, manifest = save_audioset_dataset(
+            raw, args.output, caption_col=args.caption_col, top_k=args.top_k,
+            min_train_support=args.min_train_support, seed=args.seed,
+            val_size=args.val_size, test_size=args.test_size,
+        )
+        print(f"Saved {len(result)} captions with ytid and {len(manifest['tags'])} independent AudioSet labels")
+        print("ID split sizes:", {key: len(value) for key, value in manifest["split_ids"].items()})
+        return
+    if args.output.exists():
+        raise FileExistsError("Use a new output path to preserve existing data")
     result, tags, counts = build_tag_frame(
         raw,
         caption_col=args.caption_col,
