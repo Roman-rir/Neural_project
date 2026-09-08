@@ -28,9 +28,11 @@ and validation-derived thresholds without retraining:
 python -m src.task1.evaluate --run-dir results/task1/audioset_cpu_20260907
 ```
 
-`tests/task2/` checks segment-feature shapes, finite values, deterministic and
-connected graph variants, all model output shapes, and a complete synthetic
-audio -> preprocessing -> GraphSAGE -> checkpoint/predictions smoke run.
-
-Future tasks should add tests for audio feature shapes, temporal graph edges,
-model output dimensions, and one-batch smoke tests for every model mode.
+`tests/task2/` checks segment features, finite values, all model shapes, and
+complete synthetic audio -> graphs -> training -> prediction workflows.
+It also covers Task 1 AudioSet label/ID alignment, inherited video splits,
+source annotation/hash checks, audio interval handling, stale-cache rejection,
+disconnected/malformed graphs, and export of 20 distinct graph comparisons.
+The five-model suite test recomputes each saved test metric, verifies that
+thresholds came from validation, checks identical IDs/targets across models,
+rejects changed caches, and protects existing experiment directories.

@@ -1,0 +1,48 @@
+{
+  "synthetic": true,
+  "purpose": "Pipeline verification only; no real music-context accuracy claim",
+  "dataset_fingerprint": "9038ed628ae7efd7d354d61d63dd742c70af32dfba828f559e0a4aad6bc03385",
+  "cached_samples": 30,
+  "graphs_checked": 90,
+  "graphs_valid": true,
+  "distinct_graph_visualizations": 20,
+  "verified_models": [
+    {
+      "experiment": "mlp",
+      "checkpoint_sha256": "fc47a46b260915a08eee0ae17ea79f9b61785d190ed58c61bf4b2f5cf8bd042e",
+      "validation_and_test_metrics_recomputed": true,
+      "validation_threshold_verified": true,
+      "sample_ids_and_targets_match": true
+    },
+    {
+      "experiment": "cnn",
+      "checkpoint_sha256": "3abbddcb476fb948046b223d087f84bbe0e56d196e572e104ce001da741be485",
+      "validation_and_test_metrics_recomputed": true,
+      "validation_threshold_verified": true,
+      "sample_ids_and_targets_match": true
+    },
+    {
+      "experiment": "gnn_temporal",
+      "checkpoint_sha256": "56949e0fc0232145c76d8f493d07bd271a042c3d05957b359161234e5bf49998",
+      "validation_and_test_metrics_recomputed": true,
+      "validation_threshold_verified": true,
+      "sample_ids_and_targets_match": true
+    },
+    {
+      "experiment": "gnn_similarity",
+      "checkpoint_sha256": "f84ba368195a180c041e12f84a7150716f6f6ae9b6d2c4cd375ec5f32ca13ccb",
+      "validation_and_test_metrics_recomputed": true,
+      "validation_threshold_verified": true,
+      "sample_ids_and_targets_match": true
+    },
+    {
+      "experiment": "gnn_random",
+      "checkpoint_sha256": "579f591b7e11bb0771faab2e2d6f11b35a80d8baed274a9bd38c8f66fc6ff67c",
+      "validation_and_test_metrics_recomputed": true,
+      "validation_threshold_verified": true,
+      "sample_ids_and_targets_match": true
+    }
+  ],
+  "all_saved_metrics_recomputed": true,
+  "test_selection_unchanged": true
+}

@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "dataset": "Synthetic tones; pipeline verification only",
+  "synthetic": true,
+  "label_source": "synthetic waveform recipe; not MusicCaps or AudioSet",
+  "seed": 42,
+  "label_names": [
+    "synthetic_high_tone",
+    "synthetic_fast_pulse",
+    "synthetic_harmonic"
+  ],
+  "records": [
+    {
+      "sample_id": "synthetic_000",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_000.wav",
+      "labels": [
+        1,
+        1,
+        1
+      ],
+      "split": "train"
+    },
+    {
+      "sample_id": "synthetic_001",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_001.wav",
+      "labels": [
+        0,
+        0,
+        1
+      ],
+      "split": "train"
+    },
+    {
+      "sample_id": "synthetic_002",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_002.wav",
+      "labels": [
+        1,
+        0,
+        0
+      ],
+      "split": "train"
+    },
+    {
+      "sample_id": "synthetic_003",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_003.wav",
+      "labels": [
+        0,
+        1,
+        0
+      ],
+      "split": "train"
+    },
+    {
+      "sample_id": "synthetic_004",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_004.wav",
+      "labels": [
+        1,
+        0,
+        0
+      ],
+      "split": "train"
+    },
+    {
+      "sample_id": "synthetic_005",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_005.wav",
+      "labels": [
+        0,
+        0,
+        1
+      ],
+      "split": "validation"
+    },
+    {
+      "sample_id": "synthetic_006",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_006.wav",
+      "labels": [
+        1,
+        1,
+        1
+      ],
+      "split": "train"
+    },
+    {
+      "sample_id": "synthetic_007",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_007.wav",
+      "labels": [
+        0,
+        0,
+        0
+      ],
+      "split": "test"
+    },
+    {
+      "sample_id": "synthetic_008",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_008.wav",
+      "labels": [
+        1,
+        0,
+        0
+      ],
+      "split": "train"
+    },
+    {
+      "sample_id": "synthetic_009",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_009.wav",
+      "labels": [
+        0,
+        1,
+        0
+      ],
+      "split": "train"
+    },
+    {
+      "sample_id": "synthetic_010",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_010.wav",
+      "labels": [
+        1,
+        0,
+        1
+      ],
+      "split": "validation"
+    },
+    {
+      "sample_id": "synthetic_011",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_011.wav",
+      "labels": [
+        0,
+        0,
+        1
+      ],
+      "split": "train"
+    },
+    {
+      "sample_id": "synthetic_012",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_012.wav",
+      "labels": [
+        1,
+        1,
+        0
+      ],
+      "split": "train"
+    },
+    {
+      "sample_id": "synthetic_013",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_013.wav",
+      "labels": [
+        0,
+        0,
+        0
+      ],
+      "split": "train"
+    },
+    {
+      "sample_id": "synthetic_014",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_014.wav",
+      "labels": [
+        1,
+        0,
+        0
+      ],
+      "split": "train"
+    },
+    {
+      "sample_id": "synthetic_015",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_015.wav",
+      "labels": [
+        0,
+        1,
+        1
+      ],
+      "split": "train"
+    },
+    {
+      "sample_id": "synthetic_016",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_016.wav",
+      "labels": [
+        1,
+        0,
+        1
+      ],
+      "split": "test"
+    },
+    {
+      "sample_id": "synthetic_017",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_017.wav",
+      "labels": [
+        0,
+        0,
+        0
+      ],
+      "split": "train"
+    },
+    {
+      "sample_id": "synthetic_018",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_018.wav",
+      "labels": [
+        1,
+        1,
+        0
+      ],
+      "split": "train"
+    },
+    {
+      "sample_id": "synthetic_019",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_019.wav",
+      "labels": [
+        0,
+        0,
+        0
+      ],
+      "split": "validation"
+    },
+    {
+      "sample_id": "synthetic_020",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_020.wav",
+      "labels": [
+        1,
+        0,
+        1
+      ],
+      "split": "validation"
+    },
+    {
+      "sample_id": "synthetic_021",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_021.wav",
+      "labels": [
+        0,
+        1,
+        1
+      ],
+      "split": "validation"
+    },
+    {
+      "sample_id": "synthetic_022",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_022.wav",
+      "labels": [
+        1,
+        0,
+        0
+      ],
+      "split": "test"
+    },
+    {
+      "sample_id": "synthetic_023",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_023.wav",
+      "labels": [
+        0,
+        0,
+        0
+      ],
+      "split": "train"
+    },
+    {
+      "sample_id": "synthetic_024",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_024.wav",
+      "labels": [
+        1,
+        1,
+        0
+      ],
+      "split": "test"
+    },
+    {
+      "sample_id": "synthetic_025",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_025.wav",
+      "labels": [
+        0,
+        0,
+        1
+      ],
+      "split": "test"
+    },
+    {
+      "sample_id": "synthetic_026",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_026.wav",
+      "labels": [
+        1,
+        0,
+        1
+      ],
+      "split": "validation"
+    },
+    {
+      "sample_id": "synthetic_027",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_027.wav",
+      "labels": [
+        0,
+        1,
+        0
+      ],
+      "split": "train"
+    },
+    {
+      "sample_id": "synthetic_028",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_028.wav",
+      "labels": [
+        1,
+        0,
+        0
+      ],
+      "split": "train"
+    },
+    {
+      "sample_id": "synthetic_029",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_029.wav",
+      "labels": [
+        0,
+        0,
+        0
+      ],
+      "split": "test"
+    }
+  ]
+}

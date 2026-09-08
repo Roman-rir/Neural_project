@@ -1,0 +1,1090 @@
+{
+  "manifest": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\processed\\manifest.json",
+  "valid": true,
+  "sample_count": 30,
+  "valid_samples": 30,
+  "graphs_checked": 90,
+  "all_graphs_connected_and_finite": true,
+  "split_counts": {
+    "train": 18,
+    "validation": 6,
+    "test": 6
+  },
+  "all_splits_present": true,
+  "at_least_20_samples": true,
+  "random_similarity_identical_samples": 0,
+  "control_note": "Random graphs retain temporal edges and match similarity edge counts. Small or dense graphs can have identical controls.",
+  "variants": {
+    "temporal": {
+      "graphs_checked": 30,
+      "min_undirected_edges": 7,
+      "max_undirected_edges": 7,
+      "mean_undirected_edges": 7.0
+    },
+    "temporal_similarity": {
+      "graphs_checked": 30,
+      "min_undirected_edges": 11,
+      "max_undirected_edges": 13,
+      "mean_undirected_edges": 12.466666666666667
+    },
+    "random": {
+      "graphs_checked": 30,
+      "min_undirected_edges": 11,
+      "max_undirected_edges": 13,
+      "mean_undirected_edges": 12.466666666666667
+    }
+  },
+  "errors": [],
+  "samples": [
+    {
+      "sample_id": "synthetic_000",
+      "split": "train",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_001",
+      "split": "train",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_002",
+      "split": "train",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_003",
+      "split": "train",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_004",
+      "split": "train",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_005",
+      "split": "validation",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_006",
+      "split": "train",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_007",
+      "split": "test",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 22,
+          "undirected_edges": 11,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 22,
+          "undirected_edges": 11,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_008",
+      "split": "train",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_009",
+      "split": "train",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_010",
+      "split": "validation",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_011",
+      "split": "train",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_012",
+      "split": "train",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_013",
+      "split": "train",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_014",
+      "split": "train",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_015",
+      "split": "train",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_016",
+      "split": "test",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_017",
+      "split": "train",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_018",
+      "split": "train",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_019",
+      "split": "validation",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 22,
+          "undirected_edges": 11,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 22,
+          "undirected_edges": 11,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_020",
+      "split": "validation",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_021",
+      "split": "validation",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_022",
+      "split": "test",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_023",
+      "split": "train",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_024",
+      "split": "test",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_025",
+      "split": "test",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_026",
+      "split": "validation",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_027",
+      "split": "train",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_028",
+      "split": "train",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 26,
+          "undirected_edges": 13,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    },
+    {
+      "sample_id": "synthetic_029",
+      "split": "test",
+      "graphs": {
+        "temporal": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 14,
+          "undirected_edges": 7,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 8,
+          "feature_dim": 95,
+          "directed_edges": 24,
+          "undirected_edges": 12,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      },
+      "random_equals_similarity": false,
+      "mel_frames": 251
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "macro_f1": 0.5555555555555555,
+  "micro_f1": 0.7142857142857143,
+  "mean_average_precision": 0.6388888888888888,
+  "threshold": 0.44999999999999996,
+  "samples": 6,
+  "map_label_count": 3,
+  "map_definition": "Mean per-label average precision over labels with positive support; not trapezoidal PR AUC",
+  "per_label": {
+    "synthetic_high_tone": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 3,
+      "average_precision": 1.0
+    },
+    "synthetic_fast_pulse": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 1,
+      "average_precision": 0.3333333333333333
+    },
+    "synthetic_harmonic": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "support": 2,
+      "average_precision": 0.5833333333333333
+    }
+  },
+  "split": "test",
+  "inference_seconds": 0.00974069999938365,
+  "dataset_fingerprint": "9038ed628ae7efd7d354d61d63dd742c70af32dfba828f559e0a4aad6bc03385",
+  "synthetic": true,
+  "parameter_count": 8515
+}

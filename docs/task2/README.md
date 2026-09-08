@@ -1,242 +1,221 @@
-# Task 2 - Jupyter workflow, architecture, and real-data guide
+# Task 2 — Music graphs, GraphSAGE and audio baselines
 
-Task 2 is delivered through
-`notebooks/task2_gnn_cnn.ipynb`. The notebook calls reusable modules in
-`src/task2/`, so every interactive step uses the same tested code as command-line
-runs.
+Task 2's implementation is verified, but the real-data experiment is **not
+complete**. The repository has MusicCaps metadata and Task 1 labels, with no
+matching real audio clips. See [the requirement audit](../../report/task2_results.md)
+for completed outputs and remaining work. Synthetic results are pipeline checks.
 
-## Current completion status
+Open [the notebook](../../notebooks/task2_gnn_cnn.ipynb), or use the CLI below.
+Both use the same modules in `src/task2/`.
 
-- Audio feature extraction: implemented and tested.
-- Temporal, temporal+top-k-similarity, and density-matched random graphs:
-  implemented and tested.
-- GraphSAGE, pooled-node MLP, and compact log-mel CNN: implemented and tested.
-- Train-only node-feature normalization and optional class weights: implemented.
-- Validation-only checkpoint and global-threshold selection: implemented.
-- Macro-F1, Micro-F1, per-label AP/mAP, runtime, parameter counts, curves,
-  checkpoints, and prediction files: implemented.
-- Jupyter synthetic end-to-end workflow: executed successfully.
-- Real MusicCaps/FMA/GTZAN results: **not yet measured**, because no permitted
-  audio dataset is present in the repository.
+## What changed in this audit
 
-Synthetic notebook values are pipeline diagnostics and must not appear in the
-project report as experimental results.
+- Real manifests now join by MusicCaps `ytid`, use Task 1's independent 30-label
+  AudioSet vocabulary in its saved order, and inherit its video-level splits.
+  Missing audio is removed once, before all Task 2 comparisons.
+- Audio input explicitly distinguishes pretrimmed clips from full recordings.
+  Graph nodes and CNN inputs use the exact same requested interval.
+- Invalid waveforms and features fail validation. Silence maps to a zero CNN
+  image. Cached features include audio-content and crop fingerprints.
+- Every saved graph is checked for finite features, valid indices, symmetry,
+  duplicates, connectivity, temporal edges and matched random/similarity density.
+- Twenty distinct clips can be exported as three-panel graph comparisons.
+- A single runner trains pooled MLP, CNN, temporal GraphSAGE, similarity
+  GraphSAGE and random-control GraphSAGE on identical samples and splits.
+- Checkpoints bind to cached tensors, labels, normalization and splits by SHA-256.
+  Evaluation rejects a changed dataset. Existing training directories are preserved.
+- Validation predictions, histories, provenance, comparison and graph-ablation
+  tables are saved. Test evaluation uses frozen checkpoints and thresholds.
 
-## Architecture
+## Audio and graph construction
 
-```mermaid
-flowchart TD
-    A[Local audio + multi-label target] --> B[Mono 22.05 kHz waveform]
-    B --> C[1 second segments]
-    C --> D[Node features]
-    D --> D1[log-mel mean/std]
-    D --> D2[12-bin chroma]
-    D --> D3[MFCC + MFCC delta]
-    D --> D4[RMS + centroid + ZCR]
-    D --> E[Train-only normalization]
-    E --> F1[Temporal graph]
-    E --> F2[Temporal + top-k similarity]
-    E --> F3[Temporal + random control]
-    F1 --> G[GraphSAGE]
-    F2 --> G
-    F3 --> G
-    E --> H[Mean/max pooled MLP]
-    B --> I[Clip log-mel image]
-    I --> J[Compact 2D CNN]
-    G --> K[Multi-label logits]
-    H --> K
-    J --> K
-    K --> L[BCEWithLogitsLoss]
-    K --> M[Sigmoid + validation threshold]
-    M --> N[Macro/Micro-F1 and mAP]
-```
+Real-audio defaults: mono 22,050 Hz; peak normalization within the selected clip;
+non-overlapping 1-second segments; zero padding for the last partial segment.
+Silence is retained. Peak normalization makes RMS a relative energy descriptor,
+not a measure of original recording loudness.
 
-For default real-audio settings, every segment node has 311 features:
+Each segment has **311 features**: 128 log-mel means, 128 log-mel standard
+deviations, 12 chroma means, 20 MFCC means, 20 MFCC-delta means, and mean RMS,
+spectral centroid and zero-crossing rate. Mel power uses an 80 dB dynamic range.
+Feature-wise means and population standard deviations are fitted on training
+nodes only; tiny variances have a numerical floor. Validation and test features
+use the same saved normalization.
 
-```text
-128 log-mel means
-+ 128 log-mel standard deviations
-+ 12 chroma means
-+ 20 MFCC means
-+ 20 MFCC-delta means
-+ RMS, spectral centroid, zero-crossing rate
-= 311 features
-```
+All graphs are within a single clip; there are no edges across clips or splits.
 
-Temporal edges are bidirectional and always connect consecutive segments.
-Similarity edges connect each node to its top-k non-adjacent cosine neighbors
-and are made symmetric. The random control preserves temporal edges and adds the
-same number of symmetric non-adjacent edges as the similarity graph.
+| Variant | Edges |
+|---|---|
+| `temporal` | Bidirectional edges between consecutive segments |
+| `temporal_similarity` | Temporal chain plus each node's top-k non-adjacent cosine neighbors on normalized features, symmetrized |
+| `random` | Temporal chain plus uniformly sampled non-adjacent pairs, with exactly the same added edge count as that clip's similarity graph |
 
-## Repository layout
+Default k is 2. Similarity ties use segment index. Random edges use a stable
+sample-ID-derived seed. Every graph remains connected through the temporal
+chain, including the valid single-node case. The random control matches edge
+count, **not node degrees**. With very short clips or dense graphs, controls can
+coincide; `graph_audit.json` counts these cases. Similarity-only disconnected
+graphs are not used: this comparison measures the value of adding similarity
+edges to a connected temporal graph.
 
-```text
-notebooks/
-  task2_gnn_cnn.ipynb       interactive Task 2 workflow
-src/task2/
-  manifest.py               join MusicCaps metadata/labels to local audio
-  features.py               waveform, segments, node features, log-mel
-  graphs.py                 temporal/similarity/random graph variants
-  preprocess.py             resumable cache + train-only normalization
-  dataset.py                processed dataset and batch collation
-  models.py                 GraphSAGE, pooled MLP, mel-CNN
-  train.py                  training, thresholding, metrics, artifacts
-  evaluate.py               checkpoint re-evaluation
-tests/task2/
-  test_features_graphs_models.py
-  test_end_to_end.py
-```
+GraphSAGE uses mean-neighbor SAGEConv layers, LayerNorm, ReLU and dropout.
+Concatenated global mean/max pooling produces one graph embedding, followed by
+a multi-label linear head. The pooled MLP applies mean/max pooling directly to
+node features, with no message passing. The CNN uses three convolution blocks
+(16/32/64 channels), batch normalization, ReLU, max pooling and global average
+pooling on the clip-level log-mel image. Models use sigmoid outputs and
+BCEWithLogitsLoss. Parameter counts describe each complete classifier.
 
-## Run in Jupyter or VS Code
+## Real-data workflow
 
-1. Create/activate the environment and install dependencies:
+Run from the repository root with the project environment activated. Use fresh
+output directories for training.
+
+If you do not have the audio yet, follow
+[the audio download setup](downloading_audio.md). The downloader checks FFmpeg,
+ffprobe and a supported JavaScript runtime before making any media requests:
 
 ```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
+.\scripts\download_musiccaps.ps1 -Limit 1
+.\scripts\download_musiccaps.ps1
 ```
 
-2. Open `notebooks/task2_gnn_cnn.ipynb`.
-3. Select the `.venv` Python kernel.
-4. Leave `USE_SYNTHETIC = True` and run all cells once.
-5. Verify the notebook completes feature extraction, graph inspection, model
-   shape checks, five synthetic training runs, and a comparison table.
+The first command verifies one clip; the second processes the CSV and skips
+existing valid WAV clips. It resolves tool locations explicitly, so an older
+terminal PATH need not prevent downloads after installation.
 
-The synthetic workflow writes only to `tmp/task2_notebook_demo/`.
+Place local clips in `data/raw/musiccaps_audio/`. Supported formats are WAV,
+FLAC, MP3, M4A and OGG. Pretrimmed filenames may be `{ytid}.wav`,
+`{ytid}_{start_s}.wav`, `{ytid}_{start_s}_{end_s}.wav`, or
+`{ytid}-{start_s}.wav`. Exact interval names take precedence.
 
-## Switch to real MusicCaps audio
-
-The repository contains MusicCaps metadata but no usable audio. Obtain clips
-only when permitted, do not commit or redistribute them, and place them under:
-
-```text
-data/raw/musiccaps_audio/
-```
-
-Supported names include:
-
-```text
-{ytid}.wav
-{ytid}_{start_s}.wav
-{ytid}_{start_s}_{end_s}.wav
-{ytid}-{start_s}.wav
-```
-
-Then edit the notebook configuration cell:
-
-```python
-USE_SYNTHETIC = False
-```
-
-The real-data branch joins:
-
-- `data/raw/musiccaps-public.csv/musiccaps-public.csv`
-- `data/processed/musiccaps_tags.csv`
-- `data/raw/musiccaps_audio/*`
-
-It refuses to continue if no matching audio exists. This prevents accidental
-fabrication of Task 2 results.
-
-## Notebook stages
-
-1. **Environment:** resolve the repository root and import tested modules.
-2. **Mode selection:** choose synthetic smoke or real local audio.
-3. **Manifest:** bind each sample ID to audio, labels, and a fixed split.
-4. **Preprocess:** cache raw features, fit training normalization, then cache all
-   graph variants and mel images.
-5. **Visual inspection:** show one mel image and segment graph.
-6. **Shape check:** verify `[batch, labels]` output for MLP, GNN, and CNN.
-7. **Training:** run MLP, CNN, temporal GNN, similarity GNN, and random-edge GNN.
-8. **Comparison:** save a measured CSV and display validation/test metrics.
-9. **Interpretation:** check leakage, fairness, seeds, and negative results.
-
-## Generated real-data artifacts
-
-```text
-data/splits/task2_manifest.json
-data/processed/task2/
-  normalization.json
-  manifest.json
-  raw_features/*.pt
-  samples/*.pt
-results/task2/<model_variant>/
-  best_model.pt
-  metrics.json
-  training_curves.png
-  test_predictions.npz
-  test_sample_ids.json
-results/task2/comparison.csv
-```
-
-## Experimental discipline
-
-- Keep the exact same samples, label order, and splits for every model.
-- Select graph variant, hidden dimension, epoch, and threshold from validation
-  data only.
-- Use `evaluate_test=False` (or CLI `--skip-test`) during ablations and evaluate
-  the final frozen configuration on test once.
-- Run three seeds for selected GNN and CNN models.
-- Report parameter count and runtime with Macro-F1, Micro-F1, and mAP.
-- Compare temporal, similarity, and random edges; otherwise a GNN gain cannot be
-  attributed to meaningful graph structure.
-- Compare with the pooled MLP; otherwise a GNN gain may come only from node
-  features or parameter count.
-- If GraphSAGE does not beat CNN or the random graph, report the negative result
-  and analyze graph density, features, and oversmoothing.
-
-## Command-line equivalents
-
-Run from the repository root in your activated Python environment. The command
-`python -m src.task2` lists entry points; it does not start training.
-
-For real audio in `data/raw/musiccaps_audio/`, run these commands in order
-(stop if a command fails):
+For files already cropped to the MusicCaps interval:
 
 ```powershell
-python -m src.task2.manifest --metadata-csv data/raw/musiccaps-public.csv/musiccaps-public.csv --labels-csv data/processed/musiccaps_tags.csv --audio-dir data/raw/musiccaps_audio --output data/splits/task2_manifest.json
+python -m src.task2.manifest --metadata-csv data/raw/musiccaps_official.csv --labels-csv data/processed/musiccaps_audioset.csv --task1-manifest results/task1/audioset_cpu_20260907/dataset_manifest.json --audio-dir data/raw/musiccaps_audio --audio-mode pretrimmed --output data/splits/task2_manifest.json
 python -m src.task2.preprocess --manifest data/splits/task2_manifest.json --output-dir data/processed/task2
-python -m src.task2.train --manifest data/processed/task2/manifest.json --output-dir results/task2/gnn_similarity --model gnn --graph-variant temporal_similarity --epochs 30 --device auto --skip-test
+python -m src.task2.experiment --manifest data/processed/task2/manifest.json --output-dir results/task2/audioset_run1 --epochs 30 --seeds 42 43 44 --device auto
 ```
 
-Compare CNN and MLP by changing `--model` to `cnn` or `mlp` and assigning each
-run a distinct `--output-dir`. For GNN graph ablations, set `--graph-variant`
-to `temporal` or `random`. Keep `--skip-test` while selecting configurations.
-After choosing the final configuration using validation results:
+Stop if a command fails. If using complete recordings named `{ytid}.wav`,
+choose `--audio-mode full_source`; loading starts at `start_s` and lasts
+`end_s-start_s`. Short recordings are rejected. Do not mark whole recordings
+as pretrimmed clips.
+
+The manifest checks the Task 1 label CSV checksum and official annotation
+agreement. It reports missing clips, retained counts and label support by split.
+It does not reselect labels or move held-out videos into training after missing
+audio is removed. All three splits need available clips before training.
+
+The runner exports the graph gallery, then trains all five models for each
+declared seed. Model settings, sample membership, normalization and graph cache
+are shared. Training seeds change initialization and batch order; random-control
+edges stay fixed by the preprocessing seed.
+
+## Selection and frozen test evaluation
+
+Each epoch's global threshold is selected on validation Macro-F1 over
+0.05–0.95 in 0.05 increments. Lower thresholds break ties. Checkpoints are
+selected on that validation Macro-F1; early stopping defaults to patience 5.
+This differs from Task 1's per-label calibration and should be disclosed in
+cross-task comparisons. Learning curves show each epoch's validation-calibrated
+F1, not F1 at a constant threshold.
+
+The suite selects its overall model and GNN variant using mean validation
+Macro-F1 across declared seeds, with declaration order breaking ties.
+Training defaults to validation-only reporting in the experiment runner.
+Once configuration selection is finished:
 
 ```powershell
-python -m src.task2.evaluate --checkpoint results/task2/gnn_similarity/best_model.pt --manifest data/processed/task2/manifest.json --split test --device auto --output results/task2/gnn_similarity/final_test.json
+python -m src.task2.experiment --evaluate-run results/task2/audioset_run1/runs --device auto
 ```
 
-Evaluation saves metrics, prediction arrays, and a matching `.sample_ids.json`
-file. It rejects manifests whose label names or order differ from the checkpoint.
+This evaluates **all predeclared frozen controls** on the same test IDs, to make
+the required baseline/graph comparisons. It does not retrain, retune thresholds
+or change the validation selection. A completed test report cannot be silently
+overwritten by this command. Do not use the resulting test table to select
+another model or seed.
 
-Preprocessing can be rerun after manifest edits: it refreshes labels and splits
-before fitting training normalization and hashes audio content to invalidate
-changed sources. Older caches without a source fingerprint are rebuilt once.
-Hashing requires reading each audio file even when its features are reused.
-
-For a quick terminal check after running the synthetic notebook once:
+The lower-level `src.task2.train` command remains available and requires
+`--skip-test` during model selection. Standalone checkpoint evaluation is:
 
 ```powershell
-python -m src.task2.train --manifest tmp/task2_notebook_demo/processed/manifest.json --output-dir tmp/task2_terminal/gnn --model gnn --hidden-dim 32 --batch-size 6 --epochs 2 --device auto
+python -m src.task2.evaluate --checkpoint results/task2/audioset_run1/runs/seed42/gnn_similarity/best_model.pt --manifest data/processed/task2/manifest.json --split test --output results/task2/audioset_run1/standalone_test.json
 ```
 
-Synthetic results remain pipeline checks only. Use a fresh output directory for
-each experiment so saved artifacts from different runs do not get mixed.
+Old checkpoints without dataset fingerprints require retraining. Preserve the
+processed cache with new checkpoints. Reprocessing changes that alter serialized
+tensors may invalidate a checkpoint even if the new features are numerically
+equivalent.
 
-The notebook is the primary interface, but every stage is executable directly:
+## Offline demonstration and verification
+
+The delivered run is `results/task2/synthetic_verification/`: 30 generated
+2-second tone mixtures, three synthetic targets, eight nodes per clip, 95 node
+features, k=1, 18/6/6 train/validation/test samples, seed 42 and three epochs.
+These are **not AudioSet labels or evidence of music-context accuracy**.
+
+To reproduce into a new directory:
 
 ```powershell
-python -m src.task2
-python -m src.task2.manifest --help
-python -m src.task2.preprocess --help
-python -m src.task2.train --help
-python -m src.task2.evaluate --help
-```
-
-Run all offline tests with:
-
-```powershell
+python -m src.task2.experiment --demo --output-dir tmp/task2_demo_new --epochs 3 --hidden-dim 32 --batch-size 6 --device cpu --evaluate-test
 python -m unittest discover -s tests -v
 ```
+
+The notebook reviews the saved synthetic run when available and otherwise
+builds it. Real mode uses the aligned manifest above; no audio is downloaded.
+
+## Output files
+
+```text
+data/splits/task2_manifest.json       source audio, intervals, labels, inherited splits
+data/processed/task2/
+  raw_features/*.pt                  cached raw node features and CNN mel images
+  samples/*.pt                       normalized x and three edge_index tensors
+  normalization.json                 training-node statistics
+  manifest.json                      processed paths and source provenance
+  graph_audit.json                   all-sample connectivity/finiteness audit
+results/task2/<experiment>/
+  graph_examples/                    20 PNG comparisons + index.html/index.json
+  runs/
+    dataset_identity.json            exact cached-sample hashes
+    split_ids.json                   one cohort for every control
+    selection.json                   validation decision and checkpoint hashes
+    experiment.json                  complete suite report
+    comparison.csv                   every model/seed, validation and optional test
+    graph_ablation.csv               the three GNN structures
+    comparison_aggregate.csv         per-model means and across-seed standard deviations
+    seed42/<model>/                   also seed43 and seed44 when requested
+      best_model.pt
+      metrics.json
+      history.json
+      training_curves.png
+      validation_predictions.npz
+      validation_sample_ids.json
+      test_metrics.json              after frozen evaluation
+      test_predictions.npz
+      test_sample_ids.json
+      run_config.json
+      provenance.json
+      dataset_identity.json
+      split_ids.json
+```
+
+Saved graph objects are PyTorch dictionaries with node tensors and all three
+edge-index tensors; the dataset converts them into PyG Data/Batch objects.
+Checkpoints, audio and tensor caches are local artifacts; do not redistribute
+raw dataset audio.
+
+Macro-F1 averages all labels, including zero-support labels as zero.
+Micro-F1 pools all decisions. mAP averages per-label **average precision** over
+labels with evaluation positives; zero-support AP is null and excluded. mAP is
+not trapezoidal PR AUC. Prediction archives contain IDs, label order, targets,
+probabilities, decisions and the validation threshold.
+
+Runtime reports distinguish training epochs (including validation/checkpoint
+saving), test inference/data loading, preprocessing and total suite time.
+Training times exclude audio preprocessing and gallery rendering. No fair
+speed or accuracy advantage should be claimed from the tiny synthetic run.
+
+Task 1's published full-cohort scores use 829 test clips. An audio subset requires
+re-evaluation of text predictions on that same subset before cross-task numeric
+comparisons. Tasks 3/4 have not been retrained by this Task 2 update.

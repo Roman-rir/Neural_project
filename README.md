@@ -94,8 +94,9 @@ work remains in `Task1_test/`, earlier `results/task1/` outputs,
 [`notebooks/task1_lexical_proxy.ipynb`](notebooks/task1_lexical_proxy.ipynb), and
 [`docs/task1/legacy_proxy.md`](docs/task1/legacy_proxy.md).
 See [the run guide](docs/task1/README.md) and [measured report](report/task1_results.md)
-for methods, limitations and reproduction. Existing audio/fusion artifacts have
-not been retrained or aligned to the new Task 1 manifest.
+for methods, limitations and reproduction. Task 2's real-data manifest now
+inherits this vocabulary and video split; real audio/fusion models still need
+training on the available-audio cohort.
 
 ## Part 1: dataset viability audit
 
@@ -114,17 +115,25 @@ throttling; technical errors are reported separately from unavailable clips.
 
 ## Task 2: graph and CNN audio baselines
 
-Task 2 is notebook-first. Open `notebooks/task2_gnn_cnn.ipynb` in VS Code or
-Jupyter and run all cells. It defaults to a synthetic smoke dataset so the full
-workflow can be verified without downloading audio. Switch `USE_SYNTHETIC` to
-`False` only after placing permitted MusicCaps audio in
-`data/raw/musiccaps_audio/`.
+Task 2 now has an aligned AudioSet manifest, audio-interval loading, cached
+features, connected graph validation, a 20-example gallery, and one controlled
+suite for GraphSAGE (temporal/similarity/random), pooled MLP and mel-CNN.
+Checkpoints are bound to identical cached samples, labels and splits.
 
-Reusable Task 2 code is consolidated under `src/task2/` and includes manifest
-creation, train-only feature normalization, temporal/top-k/random graph
-variants, pooled MLP, compact mel-CNN, GraphSAGE, checkpointing, predictions,
-metrics, and evaluation. See `docs/task2/README.md` for the architecture and
-real-data workflow.
+The end-to-end synthetic verification includes 30 audio clips, 90 checked graphs,
+20 visualizations, five checkpoints, curves, prediction files and ablation
+tables. **Real-data Task 2 is not complete:** no matching MusicCaps audio exists
+in the project. Synthetic scores do not measure music-context performance.
+
+Open [`notebooks/task2_gnn_cnn.ipynb`](notebooks/task2_gnn_cnn.ipynb) to review the
+saved verification, or reproduce it in a fresh directory:
+
+```powershell
+python -m src.task2.experiment --demo --output-dir tmp/task2_demo_new --epochs 3 --hidden-dim 32 --batch-size 6 --device cpu --evaluate-test
+```
+
+See [the updated guide](docs/task2/README.md) for real-data commands and
+[the completion audit](report/task2_results.md) for evidence and remaining work.
 
 ## Collaboration
 

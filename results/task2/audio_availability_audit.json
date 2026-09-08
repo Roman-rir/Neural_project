@@ -39,7 +39,7 @@
   "source_task1_manifest": "results/task1/audioset_cpu_20260907/dataset_manifest.json",
   "source_csv_hash_verified": true,
   "source_csv_sha256": "1d5c892bd705d49be07d831655ea423e29f713ea7f3183c509172382b2996ead",
-  "audio_directory": "data/audio",
+  "audio_directory": "data/raw/musiccaps_audio",
   "audio_mode": "pretrimmed",
   "split_strategy": "inherited_task1_video_ids_available_audio_intersection",
   "source_split_counts": {
