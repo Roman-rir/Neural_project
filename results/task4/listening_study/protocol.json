@@ -1,0 +1,26 @@
+{
+  "study_id": "ad9f07d46a6ea4f8",
+  "status": "awaiting_human_ratings",
+  "required_listeners": 5,
+  "listener_ids": [
+    "L01",
+    "L02",
+    "L03",
+    "L04",
+    "L05"
+  ],
+  "queries": 10,
+  "trials_per_listener": 60,
+  "scale": {
+    "1": "no match",
+    "2": "weak",
+    "3": "partial",
+    "4": "good",
+    "5": "very strong"
+  },
+  "aggregation": "Mean of top-three ratings per query per method, then equal query mean per listener; mean/sample SD across listeners",
+  "sampling": "First ten test IDs, no quality selection; graph seed42, fixed CLAP",
+  "blinding": "Opaque clip IDs, no method/rank/candidate caption; deterministic shuffled order separately per listener",
+  "shared_candidates": "Same query/clip pair rated once and reused for both methods if applicable",
+  "selection_sha256": "ad9f07d46a6ea4f892c8b2b93517c295b17a8763686d54a4189a634df8be453d"
+}

@@ -1,0 +1,43 @@
+[
+  {
+    "sample_id": "-5xOcMJpTUk_70_80",
+    "text": "A male guitarist plays the guitar and speaks about technique in this online video tutorial. The male voice is strong and commanding, along with guitar string twang sounds, clearly demonstrating the technique. The audio quality is mediocre.",
+    "true_tags": [
+      "/m/04rlf",
+      "/m/04szw",
+      "/m/0342h",
+      "/m/0fx80y",
+      "/m/09x0r",
+      "/m/042v_gx"
+    ],
+    "predicted_tags": [
+      "/m/04rlf",
+      "/m/04szw",
+      "/m/0342h",
+      "/m/0fx80y",
+      "/m/09x0r",
+      "/m/042v_gx"
+    ]
+  },
+  {
+    "sample_id": "-8C-gydUbR8_30_40",
+    "text": "A children\u2019s choir sings this devotional melody. The song is medium tempo with a steady bass line, drumming rhythm and clapping percussion. The song is black gospel choral music played in front of a live congregation. The audio quality is very poor.",
+    "true_tags": [
+      "/m/04rlf"
+    ],
+    "predicted_tags": [
+      "/m/04rlf",
+      "/m/015lz1"
+    ]
+  },
+  {
+    "sample_id": "-Bu7YaslRW0_30_40",
+    "text": "A synth pad is playing a drone sound in the lower mid range. Cymbals are creating atmosphere while a flute/string/brass sound is playing a melody. The whole recording is full of reverb. This song may be playing in a forest documentary.",
+    "true_tags": [
+      "/m/04rlf"
+    ],
+    "predicted_tags": [
+      "/m/04rlf"
+    ]
+  }
+]

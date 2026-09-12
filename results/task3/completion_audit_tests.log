@@ -1,0 +1,116 @@
+test_checkpoint_and_inference_use_per_label_thresholds_without_top_k_cutoff (task1.test_academic.AcademicCalibrationTests.test_checkpoint_and_inference_use_per_label_thresholds_without_top_k_cutoff) ... ok
+test_tfidf_vocabulary_fitted_on_train_and_not_heldout (task1.test_academic.AcademicCalibrationTests.test_tfidf_vocabulary_fitted_on_train_and_not_heldout) ... ok
+test_thresholds_use_validation_and_handle_absent_labels (task1.test_academic.AcademicCalibrationTests.test_thresholds_use_validation_and_handle_absent_labels) ... ok
+test_caption_and_aspect_changes_do_not_create_labels (task1.test_academic.AcademicDataTests.test_caption_and_aspect_changes_do_not_create_labels) ... ok
+test_explicit_resplit_of_fitted_vocabulary_is_rejected_before_model_load (task1.test_academic.AcademicDataTests.test_explicit_resplit_of_fitted_vocabulary_is_rejected_before_model_load) ... ok
+test_heldout_labels_cannot_select_vocabulary_or_remove_rows (task1.test_academic.AcademicDataTests.test_heldout_labels_cannot_select_vocabulary_or_remove_rows) ... ok
+test_id_split_is_order_invariant_and_groups_repeated_ids (task1.test_academic.AcademicDataTests.test_id_split_is_order_invariant_and_groups_repeated_ids) ... ok
+test_invalid_fields_and_train_constant_targets (task1.test_academic.AcademicDataTests.test_invalid_fields_and_train_constant_targets) ... ok
+test_manifest_hash_id_and_support_checks (task1.test_academic.AcademicDataTests.test_manifest_hash_id_and_support_checks) ... ok
+test_availability_gate_handles_technical_errors (task1.test_audit.MusicCapsAuditTests.test_availability_gate_handles_technical_errors) ... ok
+test_list_parsing_and_normalization (task1.test_audit.MusicCapsAuditTests.test_list_parsing_and_normalization) ... ok
+test_metadata_audit_detects_duplicates_and_overlap (task1.test_audit.MusicCapsAuditTests.test_metadata_audit_detects_duplicates_and_overlap) ... ok
+test_example_cell_handles_legacy_and_current_predictions (task1.test_notebook.Task1NotebookTests.test_example_cell_handles_legacy_and_current_predictions) ... ok
+test_example_cell_runs_without_setup (task1.test_notebook.Task1NotebookTests.test_example_cell_runs_without_setup) ... ok
+test_notebook_has_expected_workflow_and_safe_defaults (task1.test_notebook.Task1NotebookTests.test_notebook_has_expected_workflow_and_safe_defaults) ... ok
+test_build_tag_frame_is_multihot (task1.test_pipeline.Task1DataTests.test_build_tag_frame_is_multihot) ... ok
+test_preserved_dataset_schema (task1.test_pipeline.Task1DataTests.test_preserved_dataset_schema) ... ok
+test_vocabulary_and_matching (task1.test_pipeline.Task1DataTests.test_vocabulary_and_matching) ... ok
+test_classification_report (task1.test_pipeline.Task1SplitAndMetricTests.test_classification_report) ... ok
+test_preserved_deliverables_and_metadata_agree (task1.test_pipeline.Task1SplitAndMetricTests.test_preserved_deliverables_and_metadata_agree) ... ok
+test_split_is_reproducible_disjoint_and_exhaustive (task1.test_pipeline.Task1SplitAndMetricTests.test_split_is_reproducible_disjoint_and_exhaustive) ... ok
+test_average_precision_includes_all_positive_labels (task1.test_training_safety.TrainingSafetyTests.test_average_precision_includes_all_positive_labels) ... ok
+test_frozen_encoder_stays_in_eval_but_head_trains (task1.test_training_safety.TrainingSafetyTests.test_frozen_encoder_stays_in_eval_but_head_trains) ... ok
+test_invalid_settings_fail_before_training (task1.test_training_safety.TrainingSafetyTests.test_invalid_settings_fail_before_training) ... ok
+test_cache_refreshes_labels_splits_and_changed_audio (task2.test_cache_safety.CacheSafetyTests.test_cache_refreshes_labels_splits_and_changed_audio) ... ok
+test_invalid_training_settings_rejected (task2.test_cache_safety.CacheSafetyTests.test_invalid_training_settings_rejected) ... ok
+test_reordered_labels_rejected_before_model_loading (task2.test_cache_safety.CacheSafetyTests.test_reordered_labels_rejected_before_model_loading) ... ok
+test_access_restrictions_take_precedence (task2.test_download_errors.DownloadErrorTests.test_access_restrictions_take_precedence) ... ok
+test_missing_videos_are_skippable (task2.test_download_errors.DownloadErrorTests.test_missing_videos_are_skippable) ... ok
+test_operational_errors_are_not_missing_media (task2.test_download_errors.DownloadErrorTests.test_operational_errors_are_not_missing_media) ... ok
+test_musiccaps_manifest_preserves_label_names_with_spaces (task2.test_end_to_end.Task2EndToEndTests.test_musiccaps_manifest_preserves_label_names_with_spaces) ... ok
+test_synthetic_preprocess_and_one_epoch_train (task2.test_end_to_end.Task2EndToEndTests.test_synthetic_preprocess_and_one_epoch_train) ... C:\Users\Roman\OneDrive\Documents\Neural_Project\.venv\Lib\site-packages\torch_geometric\inspector.py:433: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing._eval_type' is deprecated, as it leads to incorrect behaviour when calling typing._eval_type on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.
+  return typing._eval_type(value, _globals, None)  # type: ignore
+ok
+test_frozen_suite_predictions_and_changed_cache_rejection (task2.test_experiment.ExperimentTests.test_frozen_suite_predictions_and_changed_cache_rejection) ... C:\Users\Roman\OneDrive\Documents\Neural_Project\.venv\Lib\site-packages\torch_geometric\inspector.py:433: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing._eval_type' is deprecated, as it leads to incorrect behaviour when calling typing._eval_type on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.
+  return typing._eval_type(value, _globals, None)  # type: ignore
+C:\Users\Roman\OneDrive\Documents\Neural_Project\.venv\Lib\site-packages\torch_geometric\inspector.py:433: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing._eval_type' is deprecated, as it leads to incorrect behaviour when calling typing._eval_type on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.
+  return typing._eval_type(value, _globals, None)  # type: ignore
+C:\Users\Roman\OneDrive\Documents\Neural_Project\.venv\Lib\site-packages\torch_geometric\inspector.py:433: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing._eval_type' is deprecated, as it leads to incorrect behaviour when calling typing._eval_type on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.
+  return typing._eval_type(value, _globals, None)  # type: ignore
+C:\Users\Roman\OneDrive\Documents\Neural_Project\.venv\Lib\site-packages\torch_geometric\inspector.py:433: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing._eval_type' is deprecated, as it leads to incorrect behaviour when calling typing._eval_type on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.
+  return typing._eval_type(value, _globals, None)  # type: ignore
+C:\Users\Roman\OneDrive\Documents\Neural_Project\.venv\Lib\site-packages\torch_geometric\inspector.py:433: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing._eval_type' is deprecated, as it leads to incorrect behaviour when calling typing._eval_type on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.
+  return typing._eval_type(value, _globals, None)  # type: ignore
+C:\Users\Roman\OneDrive\Documents\Neural_Project\.venv\Lib\site-packages\torch_geometric\inspector.py:433: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing._eval_type' is deprecated, as it leads to incorrect behaviour when calling typing._eval_type on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.
+  return typing._eval_type(value, _globals, None)  # type: ignore
+ok
+test_invalid_manifest_and_metric_values (task2.test_experiment.ExperimentTests.test_invalid_manifest_and_metric_values) ... ok
+test_feature_shapes_and_finiteness (task2.test_features_graphs_models.Task2FeatureTests.test_feature_shapes_and_finiteness) ... ok
+test_all_model_output_shapes (task2.test_features_graphs_models.Task2GraphAndModelTests.test_all_model_output_shapes) ... C:\Users\Roman\OneDrive\Documents\Neural_Project\.venv\Lib\site-packages\torch_geometric\inspector.py:433: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing._eval_type' is deprecated, as it leads to incorrect behaviour when calling typing._eval_type on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.
+  return typing._eval_type(value, _globals, None)  # type: ignore
+ok
+test_graph_variants_are_deterministic_and_connected (task2.test_features_graphs_models.Task2GraphAndModelTests.test_graph_variants_are_deterministic_and_connected) ... ok
+test_crop_is_shared_by_node_and_cnn_features_and_fingerprinted (task2.test_graph_integrity.AudioIntervalTests.test_crop_is_shared_by_node_and_cnn_features_and_fingerprinted) ... ok
+test_invalid_inputs_are_rejected_and_silence_maps_to_zero (task2.test_graph_integrity.AudioIntervalTests.test_invalid_inputs_are_rejected_and_silence_maps_to_zero) ... ok
+test_graph_validator_rejects_disconnection_and_malformed_edges (task2.test_graph_integrity.GraphIntegrityTests.test_graph_validator_rejects_disconnection_and_malformed_edges) ... ok
+test_saved_audit_and_twenty_distinct_three_panel_examples (task2.test_graph_integrity.GraphIntegrityTests.test_saved_audit_and_twenty_distinct_three_panel_examples) ... ok
+test_audio_mode_preserves_fractional_crop_and_prefers_explicit_clip (task2.test_manifest_alignment.ManifestAlignmentTests.test_audio_mode_preserves_fractional_crop_and_prefers_explicit_clip) ... ok
+test_available_audio_intersection_inherits_ids_splits_and_zero_positive_labels (task2.test_manifest_alignment.ManifestAlignmentTests.test_available_audio_intersection_inherits_ids_splits_and_zero_positive_labels) ... ok
+test_cli_verifies_checksum_and_requires_explicit_audio_mode (task2.test_manifest_alignment.ManifestAlignmentTests.test_cli_verifies_checksum_and_requires_explicit_audio_mode) ... ok
+test_duplicate_ids_and_invalid_intervals_are_rejected (task2.test_manifest_alignment.ManifestAlignmentTests.test_duplicate_ids_and_invalid_intervals_are_rejected) ... ok
+test_full_source_does_not_apply_offset_to_segment_named_file (task2.test_manifest_alignment.ManifestAlignmentTests.test_full_source_does_not_apply_offset_to_segment_named_file) ... ok
+test_input_row_order_cannot_change_alignment (task2.test_manifest_alignment.ManifestAlignmentTests.test_input_row_order_cannot_change_alignment) ... ok
+test_nonbinary_labels_and_source_order_drift_are_rejected (task2.test_manifest_alignment.ManifestAlignmentTests.test_nonbinary_labels_and_source_order_drift_are_rejected) ... ok
+test_source_provenance_and_official_labels_are_verified (task2.test_manifest_alignment.ManifestAlignmentTests.test_source_provenance_and_official_labels_are_verified) ... ok
+test_split_overlap_and_missing_source_ids_are_rejected (task2.test_manifest_alignment.ManifestAlignmentTests.test_split_overlap_and_missing_source_ids_are_rejected) ... ok
+test_artifacts_restore_encoder_and_reject_changed_provenance (task3.test_cases.CaseEvidenceTests.test_artifacts_restore_encoder_and_reject_changed_provenance) ... C:\Users\Roman\OneDrive\Documents\Neural_Project\.venv\Lib\site-packages\torch_geometric\inspector.py:433: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing._eval_type' is deprecated, as it leads to incorrect behaviour when calling typing._eval_type on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.
+  return typing._eval_type(value, _globals, None)  # type: ignore
+ok
+test_cross_attention_sees_lexical_vectors_and_graph_only_does_not (task3.test_cases.CaseEvidenceTests.test_cross_attention_sees_lexical_vectors_and_graph_only_does_not) ... ok
+test_fixed_validation_selection_and_named_error_types (task3.test_cases.CaseEvidenceTests.test_fixed_validation_selection_and_named_error_types) ... ok
+test_signed_graph_effects_cls_limit_and_inputs_preserved (task3.test_cases.CaseEvidenceTests.test_signed_graph_effects_cls_limit_and_inputs_preserved) ... ok
+test_bad_checkpoint_rejected_before_test_inference (task3.test_experiment.ExperimentTests.test_bad_checkpoint_rejected_before_test_inference) ... ok
+test_saved_tables_and_declaration_cannot_drift (task3.test_experiment.ExperimentTests.test_saved_tables_and_declaration_cannot_drift) ... ok
+test_three_seed_suite_freezes_selection_and_verifies_saved_outputs (task3.test_experiment.ExperimentTests.test_three_seed_suite_freezes_selection_and_verifies_saved_outputs) ... ok
+test_alignment_and_mismatched_encoder_rejected (task3.test_fusion.FusionTests.test_alignment_and_mismatched_encoder_rejected) ... ok
+test_all_ablation_runs_and_artifacts (task3.test_fusion.FusionTests.test_all_ablation_runs_and_artifacts) ... ok
+test_early_stopping_and_invalid_learning_rate (task3.test_fusion.FusionTests.test_early_stopping_and_invalid_learning_rate) ... ok
+test_shapes_gradients_and_masks (task3.test_fusion.FusionTests.test_shapes_gradients_and_masks) ... ok
+test_concurrent_output_is_preserved_and_temporary_mapping_is_cleaned (task3.test_prepare.PrepareTests.test_concurrent_output_is_preserved_and_temporary_mapping_is_cleaned) ... C:\Users\Roman\OneDrive\Documents\Neural_Project\.venv\Lib\site-packages\torch_geometric\inspector.py:433: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing._eval_type' is deprecated, as it leads to incorrect behaviour when calling typing._eval_type on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.
+  return typing._eval_type(value, _globals, None)  # type: ignore
+C:\Users\Roman\OneDrive\Documents\Neural_Project\.venv\Lib\site-packages\torch_geometric\inspector.py:433: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing._eval_type' is deprecated, as it leads to incorrect behaviour when calling typing._eval_type on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.
+  return typing._eval_type(value, _globals, None)  # type: ignore
+ok
+test_graph_relocation_requires_exact_cached_dataset (task3.test_prepare.PrepareTests.test_graph_relocation_requires_exact_cached_dataset) ... C:\Users\Roman\OneDrive\Documents\Neural_Project\.venv\Lib\site-packages\torch_geometric\inspector.py:433: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing._eval_type' is deprecated, as it leads to incorrect behaviour when calling typing._eval_type on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.
+  return typing._eval_type(value, _globals, None)  # type: ignore
+ok
+test_independent_csv_hash_and_saved_manifest_are_required (task3.test_prepare.PrepareTests.test_independent_csv_hash_and_saved_manifest_are_required) ... C:\Users\Roman\OneDrive\Documents\Neural_Project\.venv\Lib\site-packages\torch_geometric\inspector.py:433: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing._eval_type' is deprecated, as it leads to incorrect behaviour when calling typing._eval_type on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.
+  return typing._eval_type(value, _globals, None)  # type: ignore
+ok
+test_independent_split_partition_and_paired_labels_are_verified (task3.test_prepare.PrepareTests.test_independent_split_partition_and_paired_labels_are_verified) ... C:\Users\Roman\OneDrive\Documents\Neural_Project\.venv\Lib\site-packages\torch_geometric\inspector.py:433: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing._eval_type' is deprecated, as it leads to incorrect behaviour when calling typing._eval_type on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.
+  return typing._eval_type(value, _globals, None)  # type: ignore
+ok
+test_independent_training_superset_preserves_paired_rows (task3.test_prepare.PrepareTests.test_independent_training_superset_preserves_paired_rows) ... C:\Users\Roman\OneDrive\Documents\Neural_Project\.venv\Lib\site-packages\torch_geometric\inspector.py:433: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing._eval_type' is deprecated, as it leads to incorrect behaviour when calling typing._eval_type on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.
+  return typing._eval_type(value, _globals, None)  # type: ignore
+ok
+test_legacy_graph_checkpoint_also_requires_identical_caches (task3.test_prepare.PrepareTests.test_legacy_graph_checkpoint_also_requires_identical_caches) ... C:\Users\Roman\OneDrive\Documents\Neural_Project\.venv\Lib\site-packages\torch_geometric\inspector.py:433: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing._eval_type' is deprecated, as it leads to incorrect behaviour when calling typing._eval_type on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.
+  return typing._eval_type(value, _globals, None)  # type: ignore
+ok
+test_memory_mapped_extraction_keeps_alignment_and_publishes_atomically (task3.test_prepare.PrepareTests.test_memory_mapped_extraction_keeps_alignment_and_publishes_atomically) ... C:\Users\Roman\OneDrive\Documents\Neural_Project\.venv\Lib\site-packages\torch_geometric\inspector.py:433: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing._eval_type' is deprecated, as it leads to incorrect behaviour when calling typing._eval_type on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.
+  return typing._eval_type(value, _globals, None)  # type: ignore
+C:\Users\Roman\OneDrive\Documents\Neural_Project\.venv\Lib\site-packages\torch_geometric\inspector.py:433: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing._eval_type' is deprecated, as it leads to incorrect behaviour when calling typing._eval_type on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.
+  return typing._eval_type(value, _globals, None)  # type: ignore
+ok
+test_meta_encoder_restores_nonpersistent_buffers_and_exact_weights (task3.test_prepare.PrepareTests.test_meta_encoder_restores_nonpersistent_buffers_and_exact_weights) ... C:\Users\Roman\OneDrive\Documents\Neural_Project\.venv\Lib\site-packages\torch_geometric\inspector.py:433: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing._eval_type' is deprecated, as it leads to incorrect behaviour when calling typing._eval_type on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.
+  return typing._eval_type(value, _globals, None)  # type: ignore
+ok
+test_known_ranks_and_ties (task4.test_retrieval.RetrievalTests.test_known_ranks_and_ties) ... ok
+test_loss_and_gradients (task4.test_retrieval.RetrievalTests.test_loss_and_gradients) ... ok
+test_recompute_rejects_duplicate_ids (task4.test_retrieval.RetrievalTests.test_recompute_rejects_duplicate_ids) ... ok
+test_training_reload_and_feature_guard (task4.test_retrieval.RetrievalTests.test_training_reload_and_feature_guard) ... ok
+
+----------------------------------------------------------------------
+Ran 73 tests in 24.302s
+
+OK

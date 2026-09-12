@@ -1,0 +1,163 @@
+{
+  "manifest": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\processed\\manifest.json",
+  "dataset_fingerprint": "9038ed628ae7efd7d354d61d63dd742c70af32dfba828f559e0a4aad6bc03385",
+  "synthetic": true,
+  "rows": [
+    {
+      "experiment": "mlp",
+      "model": "mlp",
+      "graph_variant": "temporal",
+      "seed": 42,
+      "synthetic": true,
+      "dataset_fingerprint": "9038ed628ae7efd7d354d61d63dd742c70af32dfba828f559e0a4aad6bc03385",
+      "validation_macro_f1": 0.7619047619047619,
+      "validation_micro_f1": 0.782608695652174,
+      "validation_map": 1.0,
+      "threshold": 0.39999999999999997,
+      "parameter_count": 6211,
+      "training_seconds": 0.28955880000285106,
+      "best_epoch": 2,
+      "device": "cpu",
+      "test_macro_f1": 0.5444444444444444,
+      "test_micro_f1": 0.5263157894736842,
+      "test_map": 1.0,
+      "test_seconds": 0.006755800000973977
+    },
+    {
+      "experiment": "cnn",
+      "model": "cnn",
+      "graph_variant": "temporal",
+      "seed": 42,
+      "synthetic": true,
+      "dataset_fingerprint": "9038ed628ae7efd7d354d61d63dd742c70af32dfba828f559e0a4aad6bc03385",
+      "validation_macro_f1": 0.6204906204906204,
+      "validation_micro_f1": 0.6666666666666666,
+      "validation_map": 0.75,
+      "threshold": 0.05,
+      "parameter_count": 23715,
+      "training_seconds": 0.3858923000007053,
+      "best_epoch": 1,
+      "device": "cpu",
+      "test_macro_f1": 0.48412698412698413,
+      "test_micro_f1": 0.5,
+      "test_map": 0.7777777777777777,
+      "test_seconds": 0.015691900000092573
+    },
+    {
+      "experiment": "gnn_temporal",
+      "model": "gnn",
+      "graph_variant": "temporal",
+      "seed": 42,
+      "synthetic": true,
+      "dataset_fingerprint": "9038ed628ae7efd7d354d61d63dd742c70af32dfba828f559e0a4aad6bc03385",
+      "validation_macro_f1": 0.9696969696969697,
+      "validation_micro_f1": 0.9473684210526315,
+      "validation_map": 0.9755555555555556,
+      "threshold": 0.39999999999999997,
+      "parameter_count": 8515,
+      "training_seconds": 0.27515390000189655,
+      "best_epoch": 3,
+      "device": "cpu",
+      "test_macro_f1": 0.746031746031746,
+      "test_micro_f1": 0.75,
+      "test_map": 1.0,
+      "test_seconds": 0.010966399997414555
+    },
+    {
+      "experiment": "gnn_similarity",
+      "model": "gnn",
+      "graph_variant": "temporal_similarity",
+      "seed": 42,
+      "synthetic": true,
+      "dataset_fingerprint": "9038ed628ae7efd7d354d61d63dd742c70af32dfba828f559e0a4aad6bc03385",
+      "validation_macro_f1": 0.9696969696969697,
+      "validation_micro_f1": 0.9473684210526315,
+      "validation_map": 0.9888888888888889,
+      "threshold": 0.44999999999999996,
+      "parameter_count": 8515,
+      "training_seconds": 0.32334979999723146,
+      "best_epoch": 2,
+      "device": "cpu",
+      "test_macro_f1": 0.5555555555555555,
+      "test_micro_f1": 0.7142857142857143,
+      "test_map": 0.6388888888888888,
+      "test_seconds": 0.00974069999938365
+    },
+    {
+      "experiment": "gnn_random",
+      "model": "gnn",
+      "graph_variant": "random",
+      "seed": 42,
+      "synthetic": true,
+      "dataset_fingerprint": "9038ed628ae7efd7d354d61d63dd742c70af32dfba828f559e0a4aad6bc03385",
+      "validation_macro_f1": 0.9696969696969697,
+      "validation_micro_f1": 0.9473684210526315,
+      "validation_map": 0.958888888888889,
+      "threshold": 0.49999999999999994,
+      "parameter_count": 8515,
+      "training_seconds": 0.2527025000017602,
+      "best_epoch": 1,
+      "device": "cpu",
+      "test_macro_f1": 0.5238095238095238,
+      "test_micro_f1": 0.6666666666666666,
+      "test_map": 0.5555555555555555,
+      "test_seconds": 0.008349099996848963
+    }
+  ],
+  "selection": {
+    "criterion": "Mean validation Macro-F1 over declared seeds; declaration order breaks ties",
+    "selected_experiment": "gnn_temporal",
+    "selected_gnn": "gnn_temporal",
+    "validation_means": {
+      "mlp": 0.7619047619047619,
+      "cnn": 0.6204906204906204,
+      "gnn_temporal": 0.9696969696969697,
+      "gnn_similarity": 0.9696969696969697,
+      "gnn_random": 0.9696969696969697
+    },
+    "seeds": [
+      42
+    ],
+    "runs": [
+      {
+        "experiment": "mlp",
+        "seed": 42,
+        "directory": "seed42/mlp",
+        "checkpoint": "seed42/mlp/best_model.pt",
+        "checkpoint_sha256": "fc47a46b260915a08eee0ae17ea79f9b61785d190ed58c61bf4b2f5cf8bd042e"
+      },
+      {
+        "experiment": "cnn",
+        "seed": 42,
+        "directory": "seed42/cnn",
+        "checkpoint": "seed42/cnn/best_model.pt",
+        "checkpoint_sha256": "3abbddcb476fb948046b223d087f84bbe0e56d196e572e104ce001da741be485"
+      },
+      {
+        "experiment": "gnn_temporal",
+        "seed": 42,
+        "directory": "seed42/gnn_temporal",
+        "checkpoint": "seed42/gnn_temporal/best_model.pt",
+        "checkpoint_sha256": "56949e0fc0232145c76d8f493d07bd271a042c3d05957b359161234e5bf49998"
+      },
+      {
+        "experiment": "gnn_similarity",
+        "seed": 42,
+        "directory": "seed42/gnn_similarity",
+        "checkpoint": "seed42/gnn_similarity/best_model.pt",
+        "checkpoint_sha256": "f84ba368195a180c041e12f84a7150716f6f6ae9b6d2c4cd375ec5f32ca13ccb"
+      },
+      {
+        "experiment": "gnn_random",
+        "seed": 42,
+        "directory": "seed42/gnn_random",
+        "checkpoint": "seed42/gnn_random/best_model.pt",
+        "checkpoint_sha256": "579f591b7e11bb0771faab2e2d6f11b35a80d8baed274a9bd38c8f66fc6ff67c"
+      }
+    ],
+    "graph_control": "Random edges are fixed by preprocessing seed; training seeds vary initialization/order",
+    "test_policy": "Evaluate all predeclared frozen controls; never choose configurations using test metrics"
+  },
+  "evaluated_test": true,
+  "suite_seconds": 3.7863107999946806
+}

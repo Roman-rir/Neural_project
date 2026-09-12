@@ -1,0 +1,14 @@
+[
+  {
+    "notebook": "notebooks\\task3_joint.ipynb",
+    "code_cells": 5,
+    "errors": 0,
+    "execution_seconds": 19.33402959999512
+  },
+  {
+    "notebook": "notebooks\\demo_context.ipynb",
+    "code_cells": 3,
+    "errors": 0,
+    "execution_seconds": 20.244277499994496
+  }
+]

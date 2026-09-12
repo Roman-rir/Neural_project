@@ -1,0 +1,20 @@
+{
+  "manifest": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\data\\processed\\task2_available\\manifest.json",
+  "output_dir": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\available_run1\\runs\\seed43\\mlp",
+  "model": "mlp",
+  "graph_variant": "temporal",
+  "hidden_dim": 128,
+  "layers": 2,
+  "dropout": 0.2,
+  "batch_size": 16,
+  "epochs": 30,
+  "learning_rate": 0.001,
+  "weight_decay": 1e-05,
+  "patience": 5,
+  "use_pos_weight": false,
+  "seed": 43,
+  "device": "auto",
+  "num_workers": 0,
+  "evaluate_test": false,
+  "cpu_threads": 6
+}

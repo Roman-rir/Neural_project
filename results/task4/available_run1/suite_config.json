@@ -1,0 +1,46 @@
+{
+  "features": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\data\\processed\\task3_available\\features.pt",
+  "feature_sha256": "77c667b7312a6579ef17f0a29da5170781829a1a7849154b024794fa9d6a7513",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "training_options": {
+    "epochs": 30,
+    "batch_size": 32,
+    "projection_dim": 64,
+    "temperature": 0.07,
+    "learning_rate": 0.001,
+    "patience": 5,
+    "device": "cpu",
+    "cpu_threads": 6
+  },
+  "synthetic": false,
+  "provenance": {
+    "label_source": "MusicCaps.audioset_positive_labels",
+    "independent_labels_verified": true,
+    "text_dataset_sha256": "1d5c892bd705d49be07d831655ea423e29f713ea7f3183c509172382b2996ead",
+    "text_split_indices_sha256": "dd49f2c674100261823e21a4b203e1cbc8a2c0f4eb9d776747cae73eef9561f4",
+    "text_training_samples": 3864,
+    "paired_training_samples": 2775,
+    "text_training_superset": true,
+    "text_training_scope": "Task 1 training partition; paired rows preserve video/caption splits",
+    "synthetic": false,
+    "text_checkpoint_sha256": "a46c6800d35b1c0123cfc820256de8f1c21d252e1430e10fe868d1f6b553720f",
+    "graph_checkpoint_sha256": "2d0490fc219e5a115b29ac9c04e7b78b8d34d3df0988bed15f4df2252a364af3",
+    "processed_manifest_sha256": "10810124a383efd1d3d13f0d29ee790c7e63dac4507253d2bdd5722e5ffd86d0",
+    "source_manifest_sha256": "5781759b2c64f89bd6cb269dbbd8421b1e5b986136f18cfa181cec55b039fc2a",
+    "graph_dataset_fingerprint": "1c37c2d2d5a476613291707596b271070abf555d592fa4f208b5949cd1f6f8fb",
+    "graph_variant": "temporal",
+    "tokenizer_name": "distilbert-base-uncased",
+    "max_length": 128,
+    "frozen_encoders": true,
+    "token_dtype": "float32",
+    "batch_size": 4,
+    "cpu_threads": 6
+  },
+  "seed_scope": "Projection initialization and batch order only; both encoders fixed",
+  "selection_metric": "Mean bidirectional validation Recall@1; earliest epoch breaks ties",
+  "test_policy": "All declared seeds and their exact initial projections; no test-based selection"
+}

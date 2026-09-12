@@ -1,0 +1,17 @@
+{
+  "label_source": "MusicCaps.audioset_positive_labels",
+  "independent_labels_verified": true,
+  "text_dataset_sha256": "1d5c892bd705d49be07d831655ea423e29f713ea7f3183c509172382b2996ead",
+  "text_split_indices_sha256": "dd49f2c674100261823e21a4b203e1cbc8a2c0f4eb9d776747cae73eef9561f4",
+  "text_training_samples": 3864,
+  "paired_training_samples": 2775,
+  "text_training_superset": true,
+  "text_training_scope": "Task 1 training partition; paired rows preserve video/caption splits",
+  "graph_dataset_fingerprint": "1c37c2d2d5a476613291707596b271070abf555d592fa4f208b5949cd1f6f8fb",
+  "text_checkpoint_sha256": "a46c6800d35b1c0123cfc820256de8f1c21d252e1430e10fe868d1f6b553720f",
+  "graph_checkpoint_sha256": "2d0490fc219e5a115b29ac9c04e7b78b8d34d3df0988bed15f4df2252a364af3",
+  "source_manifest_sha256": "5781759b2c64f89bd6cb269dbbd8421b1e5b986136f18cfa181cec55b039fc2a",
+  "processed_manifest_sha256": "10810124a383efd1d3d13f0d29ee790c7e63dac4507253d2bdd5722e5ffd86d0",
+  "synthetic": false,
+  "training": "Joint GNN, fusion/head and final transformer blocks; live encoder forward passes"
+}

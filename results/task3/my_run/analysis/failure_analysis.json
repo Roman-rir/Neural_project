@@ -1,0 +1,660 @@
+{
+  "selected_fusion": "gated",
+  "selected_mode": "bert",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "synthetic": false,
+  "feature_sha256": "77c667b7312a6579ef17f0a29da5170781829a1a7849154b024794fa9d6a7513",
+  "selection_sha256": "7f4a19643175c0b3ed60ac3fb69a43fb75bdf191923523e527f7b0922a32e4e7",
+  "experiment_sha256": "c4f332ac69384682181acf25216e8e99911aa1ea2fa732abfe86c548da954634",
+  "prediction_audit": "All declared predictions, checkpoints, metric values, validation thresholds, selection, and paired sample IDs/targets verified; no inference performed.",
+  "test_samples": 606,
+  "label_count": 30,
+  "metrics_by_mode": {
+    "bert": {
+      "validation_macro_f1": {
+        "mean": 0.46208150412569343,
+        "std": 0.004046670877557896
+      },
+      "validation_micro_f1": {
+        "mean": 0.6888045887189854,
+        "std": 0.011452255180805131
+      },
+      "validation_map": {
+        "mean": 0.455358528683476,
+        "std": 0.0011550023121908934
+      },
+      "test_macro_f1": {
+        "mean": 0.3850237089964909,
+        "std": 0.00578456647594141
+      },
+      "test_micro_f1": {
+        "mean": 0.6564169549225024,
+        "std": 0.010538317164474127
+      },
+      "test_map": {
+        "mean": 0.38917793526032973,
+        "std": 0.005800273132436722
+      }
+    },
+    "gnn": {
+      "validation_macro_f1": {
+        "mean": 0.29670425773584913,
+        "std": 0.0049733719812994895
+      },
+      "validation_micro_f1": {
+        "mean": 0.5703309716586423,
+        "std": 0.03553518295181786
+      },
+      "validation_map": {
+        "mean": 0.26476254961010054,
+        "std": 0.003133535641882422
+      },
+      "test_macro_f1": {
+        "mean": 0.2539008040262007,
+        "std": 0.011908924727782209
+      },
+      "test_micro_f1": {
+        "mean": 0.5632461919516722,
+        "std": 0.03516613463231968
+      },
+      "test_map": {
+        "mean": 0.26795875348746107,
+        "std": 0.003646759819631015
+      }
+    },
+    "concat": {
+      "validation_macro_f1": {
+        "mean": 0.42283068213952263,
+        "std": 0.007048011953664719
+      },
+      "validation_micro_f1": {
+        "mean": 0.6711807828345152,
+        "std": 0.006084498434240782
+      },
+      "validation_map": {
+        "mean": 0.42579138382086357,
+        "std": 0.007382305411236878
+      },
+      "test_macro_f1": {
+        "mean": 0.38390263420969556,
+        "std": 0.012449868795104365
+      },
+      "test_micro_f1": {
+        "mean": 0.656033204557335,
+        "std": 0.0034001519539910868
+      },
+      "test_map": {
+        "mean": 0.3994118881499313,
+        "std": 0.0037597139764471922
+      }
+    },
+    "gated": {
+      "validation_macro_f1": {
+        "mean": 0.43532278659362617,
+        "std": 0.004802385442369499
+      },
+      "validation_micro_f1": {
+        "mean": 0.6704083264056634,
+        "std": 0.015290833609400617
+      },
+      "validation_map": {
+        "mean": 0.4340987581433809,
+        "std": 0.009383025816005666
+      },
+      "test_macro_f1": {
+        "mean": 0.3705205982169378,
+        "std": 0.001317266976968389
+      },
+      "test_micro_f1": {
+        "mean": 0.6465925547810348,
+        "std": 0.014857653677844652
+      },
+      "test_map": {
+        "mean": 0.3994595216468806,
+        "std": 0.010991614370804738
+      }
+    },
+    "cross_attention": {
+      "validation_macro_f1": {
+        "mean": 0.42324541351255895,
+        "std": 0.00581890443721159
+      },
+      "validation_micro_f1": {
+        "mean": 0.6601152468269885,
+        "std": 0.014130784457283555
+      },
+      "validation_map": {
+        "mean": 0.4013549946654367,
+        "std": 0.0011766882809224743
+      },
+      "test_macro_f1": {
+        "mean": 0.3665466937672565,
+        "std": 0.010171820693041077
+      },
+      "test_micro_f1": {
+        "mean": 0.6453072412586337,
+        "std": 0.0060972717414300584
+      },
+      "test_map": {
+        "mean": 0.38607675126341245,
+        "std": 0.004831804909419867
+      }
+    }
+  },
+  "paired_comparisons": {
+    "bert": {
+      "per_seed": [
+        {
+          "seed": 42,
+          "fusion_threshold": 0.15,
+          "control_threshold": 0.15,
+          "metric_deltas": {
+            "macro_f1": -0.013958359200606785,
+            "micro_f1": -0.029585774714722346,
+            "map": 0.013228283847631805
+          },
+          "per_example_f1_delta_mean": -0.02203118663514703,
+          "improved": 123,
+          "worse": 158,
+          "tie": 325
+        },
+        {
+          "seed": 43,
+          "fusion_threshold": 0.15,
+          "control_threshold": 0.15,
+          "metric_deltas": {
+            "macro_f1": -0.009435580308779834,
+            "micro_f1": -0.002432261630588073,
+            "map": 0.025402120298850417
+          },
+          "per_example_f1_delta_mean": 0.010498256785385499,
+          "improved": 174,
+          "worse": 146,
+          "tie": 286
+        },
+        {
+          "seed": 44,
+          "fusion_threshold": 0.15,
+          "control_threshold": 0.15,
+          "metric_deltas": {
+            "macro_f1": -0.020115392829272605,
+            "micro_f1": 0.0025448359209075955,
+            "map": -0.007785644986829876
+          },
+          "per_example_f1_delta_mean": -0.0007354581612007341,
+          "improved": 141,
+          "worse": 148,
+          "tie": 317
+        }
+      ],
+      "metric_deltas": {
+        "macro_f1": {
+          "mean": -0.014503110779553074,
+          "std": 0.005360705604702789
+        },
+        "micro_f1": {
+          "mean": -0.009824400141467607,
+          "std": 0.01729383759544524
+        },
+        "map": {
+          "mean": 0.010281586386550782,
+          "std": 0.0167889609746913
+        }
+      },
+      "seed_example_counts": {
+        "improved": 438,
+        "worse": 452,
+        "tie": 928
+      },
+      "same_mode_comparison": false
+    },
+    "gnn": {
+      "per_seed": [
+        {
+          "seed": 42,
+          "fusion_threshold": 0.15,
+          "control_threshold": 0.1,
+          "metric_deltas": {
+            "macro_f1": 0.12596532849368713,
+            "micro_f1": 0.08633334023242412,
+            "map": 0.13725635147750026
+          },
+          "per_example_f1_delta_mean": 0.08474214637580973,
+          "improved": 252,
+          "worse": 106,
+          "tie": 248
+        },
+        {
+          "seed": 43,
+          "fusion_threshold": 0.15,
+          "control_threshold": 0.25,
+          "metric_deltas": {
+            "macro_f1": 0.12130782862444495,
+            "micro_f1": 0.03856135567272123,
+            "map": 0.13836021304311263
+          },
+          "per_example_f1_delta_mean": 0.04777807451074778,
+          "improved": 172,
+          "worse": 120,
+          "tie": 314
+        },
+        {
+          "seed": 44,
+          "fusion_threshold": 0.15,
+          "control_threshold": 0.1,
+          "metric_deltas": {
+            "macro_f1": 0.10258622545407925,
+            "micro_f1": 0.1251443925829424,
+            "map": 0.1188857399576454
+          },
+          "per_example_f1_delta_mean": 0.11754065516441753,
+          "improved": 291,
+          "worse": 72,
+          "tie": 243
+        }
+      ],
+      "metric_deltas": {
+        "macro_f1": {
+          "mean": 0.1166197941907371,
+          "std": 0.012374524834225896
+        },
+        "micro_f1": {
+          "mean": 0.08334636282936259,
+          "std": 0.04336873407944923
+        },
+        "map": {
+          "mean": 0.13150076815941944,
+          "std": 0.010938867856760804
+        }
+      },
+      "seed_example_counts": {
+        "improved": 715,
+        "worse": 298,
+        "tie": 805
+      },
+      "same_mode_comparison": false
+    },
+    "concat": {
+      "per_seed": [
+        {
+          "seed": 42,
+          "fusion_threshold": 0.15,
+          "control_threshold": 0.15,
+          "metric_deltas": {
+            "macro_f1": -0.015674787243904142,
+            "micro_f1": -0.018440897981457427,
+            "map": 0.006147063560187238
+          },
+          "per_example_f1_delta_mean": -0.007653759881482653,
+          "improved": 100,
+          "worse": 148,
+          "tie": 358
+        },
+        {
+          "seed": 43,
+          "fusion_threshold": 0.15,
+          "control_threshold": 0.15,
+          "metric_deltas": {
+            "macro_f1": -0.024646597161149475,
+            "micro_f1": -0.013366784161970013,
+            "map": 0.0078115149315440835
+          },
+          "per_example_f1_delta_mean": -0.004913421745104911,
+          "improved": 97,
+          "worse": 120,
+          "tie": 389
+        },
+        {
+          "seed": 44,
+          "fusion_threshold": 0.15,
+          "control_threshold": 0.15,
+          "metric_deltas": {
+            "macro_f1": 0.0001752764267803908,
+            "micro_f1": 0.0034857328145265765,
+            "map": -0.013815678000883402
+          },
+          "per_example_f1_delta_mean": 0.006432181679706431,
+          "improved": 70,
+          "worse": 64,
+          "tie": 472
+        }
+      ],
+      "metric_deltas": {
+        "macro_f1": {
+          "mean": -0.013382035992757743,
+          "std": 0.012568766181631257
+        },
+        "micro_f1": {
+          "mean": -0.009440649776300289,
+          "std": 0.011478466052857505
+        },
+        "map": {
+          "mean": 4.763349694930641e-05,
+          "std": 0.012034789314996684
+        }
+      },
+      "seed_example_counts": {
+        "improved": 267,
+        "worse": 332,
+        "tie": 1219
+      },
+      "same_mode_comparison": false
+    }
+  },
+  "strongest_ap_labels": [
+    {
+      "mode": "gated",
+      "label_id": "/m/04rlf",
+      "name": "Music",
+      "support": 497,
+      "test_samples": 606,
+      "precision_mean": 0.8525718736395329,
+      "precision_std": 0.013847867196852243,
+      "recall_mean": 0.9912810194500334,
+      "recall_std": 0.00646790795505897,
+      "f1_mean": 0.9166309259962183,
+      "f1_std": 0.00522944812522344,
+      "average_precision_mean": 0.9393570512128034,
+      "average_precision_std": 0.0032089013843643243
+    },
+    {
+      "mode": "gated",
+      "label_id": "/m/02bxd",
+      "name": "Didgeridoo",
+      "support": 9,
+      "test_samples": 606,
+      "precision_mean": 0.8888888888888888,
+      "precision_std": 0.0,
+      "recall_mean": 0.8888888888888888,
+      "recall_std": 0.0,
+      "f1_mean": 0.8888888888888888,
+      "f1_std": 0.0,
+      "average_precision_mean": 0.9040164534366996,
+      "average_precision_std": 0.016800066925959957
+    },
+    {
+      "mode": "gated",
+      "label_id": "/m/085jw",
+      "name": "Wind instrument, woodwind instrument",
+      "support": 30,
+      "test_samples": 606,
+      "precision_mean": 0.8511503928170595,
+      "precision_std": 0.031976377678204056,
+      "recall_mean": 0.6888888888888888,
+      "recall_std": 0.05091750772173154,
+      "f1_mean": 0.7601589443694707,
+      "f1_std": 0.025619642626963434,
+      "average_precision_mean": 0.8687640213609772,
+      "average_precision_std": 0.011080591265972018
+    },
+    {
+      "mode": "gated",
+      "label_id": "/m/01kcd",
+      "name": "Brass instrument",
+      "support": 14,
+      "test_samples": 606,
+      "precision_mean": 0.7244588744588745,
+      "precision_std": 0.17976148124352292,
+      "recall_mean": 0.7380952380952381,
+      "recall_std": 0.041239304942116105,
+      "f1_mean": 0.7204481792717088,
+      "f1_std": 0.07665659036299234,
+      "average_precision_mean": 0.7748897668961798,
+      "average_precision_std": 0.019518648318948045
+    },
+    {
+      "mode": "gated",
+      "label_id": "/m/0342h",
+      "name": "Guitar",
+      "support": 58,
+      "test_samples": 606,
+      "precision_mean": 0.6443833943833944,
+      "precision_std": 0.03423700269432234,
+      "recall_mean": 0.6954022988505747,
+      "recall_std": 0.019908629972056037,
+      "f1_mean": 0.6687366733591694,
+      "f1_std": 0.025207403414101867,
+      "average_precision_mean": 0.6776096912204969,
+      "average_precision_std": 0.009514188699343786
+    },
+    {
+      "mode": "gated",
+      "label_id": "/m/0fx80y",
+      "name": "Plucked string instrument",
+      "support": 48,
+      "test_samples": 606,
+      "precision_mean": 0.573359886984189,
+      "precision_std": 0.011756454812537375,
+      "recall_mean": 0.6805555555555555,
+      "recall_std": 0.043368041655544406,
+      "f1_mean": 0.6218623435082696,
+      "f1_std": 0.017747530085350936,
+      "average_precision_mean": 0.5998892621753268,
+      "average_precision_std": 0.027085706844840206
+    },
+    {
+      "mode": "gated",
+      "label_id": "/m/042v_gx",
+      "name": "Acoustic guitar",
+      "support": 16,
+      "test_samples": 606,
+      "precision_mean": 0.35812865497076024,
+      "precision_std": 0.05490004160822835,
+      "recall_mean": 0.4791666666666667,
+      "recall_std": 0.036084391824351615,
+      "f1_mean": 0.4085883793200866,
+      "f1_std": 0.04246587633370911,
+      "average_precision_mean": 0.4835213905625751,
+      "average_precision_std": 0.03514832548947576
+    },
+    {
+      "mode": "gated",
+      "label_id": "/m/02v2lh",
+      "name": "New-age music",
+      "support": 6,
+      "test_samples": 606,
+      "precision_mean": 0.19597069597069594,
+      "precision_std": 0.04673022279184277,
+      "recall_mean": 0.5,
+      "recall_std": 0.0,
+      "f1_mean": 0.2793372319688109,
+      "f1_std": 0.05008912180873992,
+      "average_precision_mean": 0.478056306406847,
+      "average_precision_std": 0.06373642829287314
+    },
+    {
+      "mode": "gated",
+      "label_id": "/m/05148p4",
+      "name": "Keyboard (musical)",
+      "support": 15,
+      "test_samples": 606,
+      "precision_mean": 0.48425925925925933,
+      "precision_std": 0.27772684718278595,
+      "recall_mean": 0.3333333333333333,
+      "recall_std": 0.06666666666666668,
+      "f1_mean": 0.36337569240795053,
+      "f1_std": 0.05265736248054951,
+      "average_precision_mean": 0.4446469169120584,
+      "average_precision_std": 0.021167757247573585
+    },
+    {
+      "mode": "gated",
+      "label_id": "/m/04szw",
+      "name": "Musical instrument",
+      "support": 80,
+      "test_samples": 606,
+      "precision_mean": 0.3717347992916175,
+      "precision_std": 0.01227762767136039,
+      "recall_mean": 0.5583333333333332,
+      "recall_std": 0.019094065395649326,
+      "f1_mean": 0.44599518433473656,
+      "f1_std": 0.0031944077733338963,
+      "average_precision_mean": 0.4408462782298946,
+      "average_precision_std": 0.0072012594367317
+    }
+  ],
+  "weakest_ap_labels": [
+    {
+      "mode": "gated",
+      "label_id": "/m/064t9",
+      "name": "Pop music",
+      "support": 7,
+      "test_samples": 606,
+      "precision_mean": 0.0,
+      "precision_std": 0.0,
+      "recall_mean": 0.0,
+      "recall_std": 0.0,
+      "f1_mean": 0.0,
+      "f1_std": 0.0,
+      "average_precision_mean": 0.0315576256499907,
+      "average_precision_std": 0.0050941977571494455
+    },
+    {
+      "mode": "gated",
+      "label_id": "/m/02x8m",
+      "name": "Funk",
+      "support": 11,
+      "test_samples": 606,
+      "precision_mean": 0.19444444444444442,
+      "precision_std": 0.1734721666221777,
+      "recall_mean": 0.06060606060606061,
+      "recall_std": 0.052486388108147805,
+      "f1_mean": 0.09206349206349207,
+      "f1_std": 0.07987140079624841,
+      "average_precision_mean": 0.15143764584641325,
+      "average_precision_std": 0.04075623097962929
+    },
+    {
+      "mode": "gated",
+      "label_id": "/m/074ft",
+      "name": "Song",
+      "support": 13,
+      "test_samples": 606,
+      "precision_mean": 0.17378917378917377,
+      "precision_std": 0.13922269769653123,
+      "recall_mean": 0.15384615384615385,
+      "recall_std": 0.07692307692307693,
+      "f1_mean": 0.15956086923828858,
+      "f1_std": 0.10140916057625908,
+      "average_precision_mean": 0.1691679628157778,
+      "average_precision_std": 0.00886035451703106
+    },
+    {
+      "mode": "gated",
+      "label_id": "/m/05rwpb",
+      "name": "Independent music",
+      "support": 12,
+      "test_samples": 606,
+      "precision_mean": 0.10822510822510822,
+      "precision_std": 0.09572876358223369,
+      "recall_mean": 0.2222222222222222,
+      "recall_std": 0.2545875386086578,
+      "f1_mean": 0.14017094017094017,
+      "f1_std": 0.1338582697466796,
+      "average_precision_mean": 0.2017165062678885,
+      "average_precision_std": 0.0374179765071547
+    },
+    {
+      "mode": "gated",
+      "label_id": "/m/0164x2",
+      "name": "Music of Africa",
+      "support": 4,
+      "test_samples": 606,
+      "precision_mean": 0.09444444444444444,
+      "precision_std": 0.1004618962223618,
+      "recall_mean": 0.3333333333333333,
+      "recall_std": 0.3818813079129867,
+      "f1_mean": 0.1469298245614035,
+      "f1_std": 0.15903281367820957,
+      "average_precision_mean": 0.20549872668118221,
+      "average_precision_std": 0.05589717398060136
+    },
+    {
+      "mode": "gated",
+      "label_id": "/m/0155w",
+      "name": "Blues",
+      "support": 9,
+      "test_samples": 606,
+      "precision_mean": 0.14317460317460315,
+      "precision_std": 0.023334952972618478,
+      "recall_mean": 0.25925925925925924,
+      "recall_std": 0.12830005981991682,
+      "f1_mean": 0.17456427015250545,
+      "f1_std": 0.048639137121574895,
+      "average_precision_mean": 0.2063635689945729,
+      "average_precision_std": 0.02370406612918084
+    },
+    {
+      "mode": "gated",
+      "label_id": "/m/02lkt",
+      "name": "Electronic music",
+      "support": 23,
+      "test_samples": 606,
+      "precision_mean": 0.2499157681940701,
+      "precision_std": 0.033721664624470994,
+      "recall_mean": 0.34782608695652173,
+      "recall_std": 0.1992424215198191,
+      "f1_mean": 0.27095564463985516,
+      "f1_std": 0.064528937610748,
+      "average_precision_mean": 0.21733623218051132,
+      "average_precision_std": 0.02114858289250597
+    },
+    {
+      "mode": "gated",
+      "label_id": "/m/06by7",
+      "name": "Rock music",
+      "support": 14,
+      "test_samples": 606,
+      "precision_mean": 0.315018315018315,
+      "precision_std": 0.16041070541866306,
+      "recall_mean": 0.16666666666666666,
+      "recall_std": 0.08247860988423225,
+      "f1_mean": 0.18716931216931218,
+      "f1_std": 0.0539862442781548,
+      "average_precision_mean": 0.2287985419308087,
+      "average_precision_std": 0.031188327445682836
+    },
+    {
+      "mode": "gated",
+      "label_id": "/m/02p0sh1",
+      "name": "Traditional music",
+      "support": 8,
+      "test_samples": 606,
+      "precision_mean": 0.18333333333333335,
+      "precision_std": 0.16072751268321592,
+      "recall_mean": 0.2916666666666667,
+      "recall_std": 0.26020824993326663,
+      "f1_mean": 0.2222222222222222,
+      "f1_std": 0.19245008972987526,
+      "average_precision_mean": 0.24944162791329028,
+      "average_precision_std": 0.06153209650441513
+    },
+    {
+      "mode": "gated",
+      "label_id": "/m/02sgy",
+      "name": "Electric guitar",
+      "support": 19,
+      "test_samples": 606,
+      "precision_mean": 0.2248931623931624,
+      "precision_std": 0.09540753820001228,
+      "recall_mean": 0.2456140350877193,
+      "recall_std": 0.19925994195790434,
+      "f1_mean": 0.22924430641821947,
+      "f1_std": 0.14225503796725195,
+      "average_precision_mean": 0.26149894019704795,
+      "average_precision_std": 0.010114317275836096
+    }
+  ],
+  "labels_without_test_positives": [],
+  "limitations": [
+    "All comparisons are descriptive; no statistical significance is claimed.",
+    "Seeds vary fusion-head initialization and training order only; encoders and features are fixed. Sample standard deviation across head seeds does not measure dataset or encoder uncertainty.",
+    "The selected fusion and every decision threshold were frozen using validation data before test evaluation. Test results are not used to select, retrain, or tune models.",
+    "Per-example F1 uses each run's saved validation threshold and zero_division=0. Seed-example counts repeat the same test examples across head seeds and are not independent observations.",
+    "Average precision is undefined for labels with no test positives; these labels are excluded from AP rankings and mAP, but retained in per_label.csv. Low-support label rankings can be unstable."
+  ]
+}

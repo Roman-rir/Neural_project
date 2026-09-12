@@ -1,0 +1,8 @@
+{
+  "command": "python -m unittest discover -s tests -v",
+  "returncode": 0,
+  "seconds": 39.15677699999651,
+  "tests_passed": 73,
+  "task3_tests": 19,
+  "log": "tests.log"
+}

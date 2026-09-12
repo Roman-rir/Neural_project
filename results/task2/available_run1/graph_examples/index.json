@@ -1,0 +1,692 @@
+{
+  "manifest": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\data\\processed\\task2_available\\manifest.json",
+  "seed": 42,
+  "requested_examples": 20,
+  "available_samples": 3964,
+  "examples_written": 20,
+  "at_least_20_examples": true,
+  "graph_panels_written": 60,
+  "note": "Each example is one distinct clip shown under all three graph constructions. These are data visualizations, not model results.",
+  "examples": [
+    {
+      "sample_id": "g75kz9ffcg0_30_40",
+      "split": "train",
+      "image": "graph_01_04b7fd828723.png",
+      "graphs": {
+        "temporal": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 18,
+          "undirected_edges": 9,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 44,
+          "undirected_edges": 22,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 44,
+          "undirected_edges": 22,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      }
+    },
+    {
+      "sample_id": "hdlnugbWjKA_30_40",
+      "split": "validation",
+      "image": "graph_02_4a47be19b542.png",
+      "graphs": {
+        "temporal": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 18,
+          "undirected_edges": 9,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 50,
+          "undirected_edges": 25,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 50,
+          "undirected_edges": 25,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      }
+    },
+    {
+      "sample_id": "fiAcNMpd2vM_270_280",
+      "split": "test",
+      "image": "graph_03_a3a53de8ca0b.png",
+      "graphs": {
+        "temporal": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 18,
+          "undirected_edges": 9,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 46,
+          "undirected_edges": 23,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 46,
+          "undirected_edges": 23,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      }
+    },
+    {
+      "sample_id": "6BitLl5Bnxw_30_40",
+      "split": "train",
+      "image": "graph_04_299fa75ca516.png",
+      "graphs": {
+        "temporal": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 18,
+          "undirected_edges": 9,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 48,
+          "undirected_edges": 24,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 48,
+          "undirected_edges": 24,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      }
+    },
+    {
+      "sample_id": "D-p9s8y2z_U_0_10",
+      "split": "validation",
+      "image": "graph_05_605798b46325.png",
+      "graphs": {
+        "temporal": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 18,
+          "undirected_edges": 9,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 52,
+          "undirected_edges": 26,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 52,
+          "undirected_edges": 26,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      }
+    },
+    {
+      "sample_id": "64auWicQqZY_40_50",
+      "split": "test",
+      "image": "graph_06_a7b0919ac6e1.png",
+      "graphs": {
+        "temporal": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 18,
+          "undirected_edges": 9,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 50,
+          "undirected_edges": 25,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 50,
+          "undirected_edges": 25,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      }
+    },
+    {
+      "sample_id": "0Olm321vgk8_30_40",
+      "split": "train",
+      "image": "graph_07_de3fe5f2a73f.png",
+      "graphs": {
+        "temporal": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 18,
+          "undirected_edges": 9,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 42,
+          "undirected_edges": 21,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 42,
+          "undirected_edges": 21,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      }
+    },
+    {
+      "sample_id": "ad6gQQ_0evk_30_40",
+      "split": "validation",
+      "image": "graph_08_4d73958d78fc.png",
+      "graphs": {
+        "temporal": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 18,
+          "undirected_edges": 9,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 46,
+          "undirected_edges": 23,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 46,
+          "undirected_edges": 23,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      }
+    },
+    {
+      "sample_id": "Hl8OrRlMwi4_10_20",
+      "split": "test",
+      "image": "graph_09_ad33e712fb78.png",
+      "graphs": {
+        "temporal": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 18,
+          "undirected_edges": 9,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 46,
+          "undirected_edges": 23,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 46,
+          "undirected_edges": 23,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      }
+    },
+    {
+      "sample_id": "GuYRF0no7hw_30_40",
+      "split": "train",
+      "image": "graph_10_db25c7d76915.png",
+      "graphs": {
+        "temporal": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 18,
+          "undirected_edges": 9,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 50,
+          "undirected_edges": 25,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 50,
+          "undirected_edges": 25,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      }
+    },
+    {
+      "sample_id": "CYZZIkEw_jY_30_40",
+      "split": "validation",
+      "image": "graph_11_bba22c7aaec9.png",
+      "graphs": {
+        "temporal": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 18,
+          "undirected_edges": 9,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 48,
+          "undirected_edges": 24,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 48,
+          "undirected_edges": 24,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      }
+    },
+    {
+      "sample_id": "dPM24O4my-Q_0_10",
+      "split": "test",
+      "image": "graph_12_b80eaadd9bdf.png",
+      "graphs": {
+        "temporal": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 18,
+          "undirected_edges": 9,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 44,
+          "undirected_edges": 22,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 44,
+          "undirected_edges": 22,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      }
+    },
+    {
+      "sample_id": "EaGhKzpkNso_30_40",
+      "split": "train",
+      "image": "graph_13_974325995581.png",
+      "graphs": {
+        "temporal": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 18,
+          "undirected_edges": 9,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 42,
+          "undirected_edges": 21,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 42,
+          "undirected_edges": 21,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      }
+    },
+    {
+      "sample_id": "NJGo2fmUAII_250_260",
+      "split": "validation",
+      "image": "graph_14_fabc4abb3d74.png",
+      "graphs": {
+        "temporal": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 18,
+          "undirected_edges": 9,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 46,
+          "undirected_edges": 23,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 46,
+          "undirected_edges": 23,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      }
+    },
+    {
+      "sample_id": "PKJMsnUJ994_30_40",
+      "split": "test",
+      "image": "graph_15_7bb2d0873b0b.png",
+      "graphs": {
+        "temporal": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 18,
+          "undirected_edges": 9,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 44,
+          "undirected_edges": 22,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 44,
+          "undirected_edges": 22,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      }
+    },
+    {
+      "sample_id": "CzHZNJEV-3o_50_60",
+      "split": "train",
+      "image": "graph_16_feac123233fe.png",
+      "graphs": {
+        "temporal": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 18,
+          "undirected_edges": 9,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 44,
+          "undirected_edges": 22,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 44,
+          "undirected_edges": 22,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      }
+    },
+    {
+      "sample_id": "JvvnL7UnCGA_20_30",
+      "split": "validation",
+      "image": "graph_17_1b414af75054.png",
+      "graphs": {
+        "temporal": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 18,
+          "undirected_edges": 9,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 42,
+          "undirected_edges": 21,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 42,
+          "undirected_edges": 21,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      }
+    },
+    {
+      "sample_id": "dCCh6POPUeA_130_140",
+      "split": "test",
+      "image": "graph_18_4f916ee32d01.png",
+      "graphs": {
+        "temporal": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 18,
+          "undirected_edges": 9,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 48,
+          "undirected_edges": 24,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 48,
+          "undirected_edges": 24,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      }
+    },
+    {
+      "sample_id": "8FawGISo8wY_60_70",
+      "split": "train",
+      "image": "graph_19_795f4f50b20a.png",
+      "graphs": {
+        "temporal": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 18,
+          "undirected_edges": 9,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 42,
+          "undirected_edges": 21,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 42,
+          "undirected_edges": 21,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      }
+    },
+    {
+      "sample_id": "-eDAoheZrY8_30_40",
+      "split": "validation",
+      "image": "graph_20_9b2269d923d3.png",
+      "graphs": {
+        "temporal": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 18,
+          "undirected_edges": 9,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "temporal_similarity": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 44,
+          "undirected_edges": 22,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        },
+        "random": {
+          "nodes": 10,
+          "feature_dim": 311,
+          "directed_edges": 44,
+          "undirected_edges": 22,
+          "connected": true,
+          "finite_features": true,
+          "symmetric": true
+        }
+      }
+    }
+  ]
+}

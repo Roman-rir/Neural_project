@@ -1,0 +1,89 @@
+{
+  "split": "test",
+  "best_epoch": 6,
+  "provenance": {
+    "label_source": "MusicCaps.audioset_positive_labels",
+    "independent_labels_verified": true,
+    "text_dataset_sha256": "1d5c892bd705d49be07d831655ea423e29f713ea7f3183c509172382b2996ead",
+    "text_split_indices_sha256": "dd49f2c674100261823e21a4b203e1cbc8a2c0f4eb9d776747cae73eef9561f4",
+    "text_training_samples": 3864,
+    "paired_training_samples": 2775,
+    "text_training_superset": true,
+    "text_training_scope": "Task 1 training partition; paired rows preserve video/caption splits",
+    "synthetic": false,
+    "text_checkpoint_sha256": "a46c6800d35b1c0123cfc820256de8f1c21d252e1430e10fe868d1f6b553720f",
+    "graph_checkpoint_sha256": "2d0490fc219e5a115b29ac9c04e7b78b8d34d3df0988bed15f4df2252a364af3",
+    "processed_manifest_sha256": "10810124a383efd1d3d13f0d29ee790c7e63dac4507253d2bdd5722e5ffd86d0",
+    "source_manifest_sha256": "5781759b2c64f89bd6cb269dbbd8421b1e5b986136f18cfa181cec55b039fc2a",
+    "graph_dataset_fingerprint": "1c37c2d2d5a476613291707596b271070abf555d592fa4f208b5949cd1f6f8fb",
+    "graph_variant": "temporal",
+    "tokenizer_name": "distilbert-base-uncased",
+    "max_length": 128,
+    "frozen_encoders": true,
+    "token_dtype": "float32",
+    "batch_size": 4,
+    "cpu_threads": 6
+  },
+  "feature_sha256": "77c667b7312a6579ef17f0a29da5170781829a1a7849154b024794fa9d6a7513",
+  "metrics": {
+    "gallery_size": 606,
+    "effective_k": {
+      "1": 1,
+      "5": 5,
+      "10": 10
+    },
+    "tie_policy": "pessimistic: tied negatives rank ahead of the paired positive",
+    "random_ranking_expected_recall": {
+      "1": 0.0016501650165016502,
+      "5": 0.00825082508250825,
+      "10": 0.0165016501650165
+    },
+    "random_ranking_expected_mrr": 0.01152627146296828,
+    "text_to_graph": {
+      "recall_at_1": 0.026402640264026403,
+      "recall_at_5": 0.11056105610561057,
+      "recall_at_10": 0.1782178217821782,
+      "median_rank": 52.0,
+      "mean_reciprocal_rank": 0.08092265556781843
+    },
+    "graph_to_text": {
+      "recall_at_1": 0.0297029702970297,
+      "recall_at_5": 0.10726072607260725,
+      "recall_at_10": 0.18811881188118812,
+      "median_rank": 51.5,
+      "mean_reciprocal_rank": 0.08369112868811879
+    },
+    "mean_recall_at_1": 0.028052805280528052
+  },
+  "untrained_projection_metrics": {
+    "gallery_size": 606,
+    "effective_k": {
+      "1": 1,
+      "5": 5,
+      "10": 10
+    },
+    "tie_policy": "pessimistic: tied negatives rank ahead of the paired positive",
+    "random_ranking_expected_recall": {
+      "1": 0.0016501650165016502,
+      "5": 0.00825082508250825,
+      "10": 0.0165016501650165
+    },
+    "random_ranking_expected_mrr": 0.01152627146296828,
+    "text_to_graph": {
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0033003300330033004,
+      "recall_at_10": 0.009900990099009901,
+      "median_rank": 320.5,
+      "mean_reciprocal_rank": 0.008155365672202193
+    },
+    "graph_to_text": {
+      "recall_at_1": 0.0016501650165016502,
+      "recall_at_5": 0.0049504950495049506,
+      "recall_at_10": 0.009900990099009901,
+      "median_rank": 334.0,
+      "mean_reciprocal_rank": 0.009500400377665762
+    },
+    "mean_recall_at_1": 0.0008250825082508251
+  },
+  "mean_recall_at_1_gain": 0.027227722772277228
+}

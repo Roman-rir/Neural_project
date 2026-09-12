@@ -1,0 +1,94 @@
+{
+  "config": {
+    "manifest": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\processed\\manifest.json",
+    "output_dir": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\runs\\seed42\\gnn_random",
+    "model": "gnn",
+    "graph_variant": "random",
+    "hidden_dim": 32,
+    "layers": 2,
+    "dropout": 0.2,
+    "batch_size": 6,
+    "epochs": 3,
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05,
+    "patience": 5,
+    "use_pos_weight": false,
+    "seed": 42,
+    "device": "cpu",
+    "num_workers": 0,
+    "evaluate_test": false,
+    "cpu_threads": 6
+  },
+  "model": "gnn",
+  "graph_variant": "random",
+  "parameter_count": 8515,
+  "training_seconds": 0.2527025000017602,
+  "best_epoch": 1,
+  "best_validation_macro_f1": 0.9696969696969697,
+  "validation_threshold": 0.49999999999999994,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6967442234357198,
+      "validation_loss": 0.5426156520843506,
+      "validation_macro_f1": 0.9696969696969697,
+      "validation_micro_f1": 0.9473684210526315,
+      "validation_map": 0.958888888888889,
+      "threshold": 0.49999999999999994
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.5675295988718668,
+      "validation_loss": 0.5085581541061401,
+      "validation_macro_f1": 0.9696969696969697,
+      "validation_micro_f1": 0.9473684210526315,
+      "validation_map": 0.9888888888888889,
+      "threshold": 0.44999999999999996
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.4867806037267049,
+      "validation_loss": 0.4858371913433075,
+      "validation_macro_f1": 0.9696969696969697,
+      "validation_micro_f1": 0.9473684210526315,
+      "validation_map": 1.0,
+      "threshold": 0.44999999999999996
+    }
+  ],
+  "test": null,
+  "dataset_fingerprint": "9038ed628ae7efd7d354d61d63dd742c70af32dfba828f559e0a4aad6bc03385",
+  "synthetic": true,
+  "device": "cpu",
+  "validation": {
+    "macro_f1": 0.9696969696969697,
+    "micro_f1": 0.9473684210526315,
+    "mean_average_precision": 0.958888888888889,
+    "threshold": 0.49999999999999994,
+    "samples": 6,
+    "map_label_count": 3,
+    "map_definition": "Mean per-label average precision over labels with positive support; not trapezoidal PR AUC",
+    "per_label": {
+      "synthetic_high_tone": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3,
+        "average_precision": 1.0
+      },
+      "synthetic_fast_pulse": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1,
+        "average_precision": 1.0
+      },
+      "synthetic_harmonic": {
+        "precision": 0.8333333333333334,
+        "recall": 1.0,
+        "f1": 0.9090909090909091,
+        "support": 5,
+        "average_precision": 0.8766666666666667
+      }
+    }
+  }
+}

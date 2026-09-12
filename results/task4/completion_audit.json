@@ -1,0 +1,29 @@
+{
+  "valid": true,
+  "feature_matches_task3_audit": true,
+  "checkpoints": 3,
+  "embedding_archives": 12,
+  "executed_notebook_code_cells": 7,
+  "notebook_errors": 0,
+  "local_links_checked": 22,
+  "source_sha256": {
+    "src/task4/analyze.py": "24bcd3b2142d6d042a00b9324149a17a676054d04d753b2298854f7d320e5823",
+    "src/task4/experiment.py": "731ca96a302b412ad69639543dd20f05feccbffbbc4a3685291f3b84b0b32dd7",
+    "src/task4/metrics.py": "9545b8ff430797ee9958bd872b5605e46652b6251e486347b1682a87bf0b95fa",
+    "src/task4/model.py": "804d4f02e3ea41fc0a116d56366077a29b0cd2c6b1c8cd2ecedcdee48afadd01",
+    "src/task4/train.py": "7c0c4f3e2fc25cbf42210997f352184cbaef570afb1984ac7850c6e07fb27ce9",
+    "src/task4/__init__.py": "42e2461db21153d370eb3418d729cccbf86bc159fd34a95c3905c6df456646fc",
+    "src/task4/__main__.py": "58ed838b115e569899a127ab7c3fa5dc95b71e825dc69af3cb94b92fde0b82bd",
+    "src/contrastive.py": "28c562cf8ce83628e9c0b755a13bf00b4923330d6b7714769a5d67f302051a21"
+  },
+  "tests": {
+    "command": ".venv/Scripts/python.exe -m unittest discover -s tests -v",
+    "date": "2026-09-10",
+    "tests_run": 77,
+    "task4_tests": 8,
+    "failures": 0,
+    "errors": 0,
+    "exit_code": 0,
+    "duration_seconds": 24.892
+  }
+}

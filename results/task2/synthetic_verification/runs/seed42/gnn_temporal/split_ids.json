@@ -1,0 +1,38 @@
+{
+  "train": [
+    "synthetic_000",
+    "synthetic_001",
+    "synthetic_002",
+    "synthetic_003",
+    "synthetic_004",
+    "synthetic_006",
+    "synthetic_008",
+    "synthetic_009",
+    "synthetic_011",
+    "synthetic_012",
+    "synthetic_013",
+    "synthetic_014",
+    "synthetic_015",
+    "synthetic_017",
+    "synthetic_018",
+    "synthetic_023",
+    "synthetic_027",
+    "synthetic_028"
+  ],
+  "validation": [
+    "synthetic_005",
+    "synthetic_010",
+    "synthetic_019",
+    "synthetic_020",
+    "synthetic_021",
+    "synthetic_026"
+  ],
+  "test": [
+    "synthetic_007",
+    "synthetic_016",
+    "synthetic_022",
+    "synthetic_024",
+    "synthetic_025",
+    "synthetic_029"
+  ]
+}

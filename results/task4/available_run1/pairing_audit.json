@@ -1,0 +1,15 @@
+{
+  "samples": 3964,
+  "split_counts": {
+    "train": 2775,
+    "validation": 583,
+    "test": 606
+  },
+  "unique_sample_ids": 3964,
+  "exact_caption_duplicates": [],
+  "normalized_caption_duplicates": [],
+  "repeated_videos": [],
+  "video_split_overlap": false,
+  "normalization": "Unicode NFKC, casefold, word tokens, whitespace collapse",
+  "limitation": "Distinct captions can still describe perceptually equivalent music; no listening judgments made."
+}

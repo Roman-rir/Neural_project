@@ -1,0 +1,12 @@
+{
+  "epochs": 20,
+  "batch_size": 16,
+  "hidden_dim": 64,
+  "seed": 42,
+  "device": "cpu",
+  "patience": 5,
+  "learning_rate": 0.001,
+  "cpu_threads": 6,
+  "features": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\data\\processed\\task3_available\\features.pt",
+  "feature_sha256": "77c667b7312a6579ef17f0a29da5170781829a1a7849154b024794fa9d6a7513"
+}

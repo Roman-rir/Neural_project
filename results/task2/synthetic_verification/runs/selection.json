@@ -1,0 +1,54 @@
+{
+  "criterion": "Mean validation Macro-F1 over declared seeds; declaration order breaks ties",
+  "selected_experiment": "gnn_temporal",
+  "selected_gnn": "gnn_temporal",
+  "validation_means": {
+    "mlp": 0.7619047619047619,
+    "cnn": 0.6204906204906204,
+    "gnn_temporal": 0.9696969696969697,
+    "gnn_similarity": 0.9696969696969697,
+    "gnn_random": 0.9696969696969697
+  },
+  "seeds": [
+    42
+  ],
+  "runs": [
+    {
+      "experiment": "mlp",
+      "seed": 42,
+      "directory": "seed42/mlp",
+      "checkpoint": "seed42/mlp/best_model.pt",
+      "checkpoint_sha256": "fc47a46b260915a08eee0ae17ea79f9b61785d190ed58c61bf4b2f5cf8bd042e"
+    },
+    {
+      "experiment": "cnn",
+      "seed": 42,
+      "directory": "seed42/cnn",
+      "checkpoint": "seed42/cnn/best_model.pt",
+      "checkpoint_sha256": "3abbddcb476fb948046b223d087f84bbe0e56d196e572e104ce001da741be485"
+    },
+    {
+      "experiment": "gnn_temporal",
+      "seed": 42,
+      "directory": "seed42/gnn_temporal",
+      "checkpoint": "seed42/gnn_temporal/best_model.pt",
+      "checkpoint_sha256": "56949e0fc0232145c76d8f493d07bd271a042c3d05957b359161234e5bf49998"
+    },
+    {
+      "experiment": "gnn_similarity",
+      "seed": 42,
+      "directory": "seed42/gnn_similarity",
+      "checkpoint": "seed42/gnn_similarity/best_model.pt",
+      "checkpoint_sha256": "f84ba368195a180c041e12f84a7150716f6f6ae9b6d2c4cd375ec5f32ca13ccb"
+    },
+    {
+      "experiment": "gnn_random",
+      "seed": 42,
+      "directory": "seed42/gnn_random",
+      "checkpoint": "seed42/gnn_random/best_model.pt",
+      "checkpoint_sha256": "579f591b7e11bb0771faab2e2d6f11b35a80d8baed274a9bd38c8f66fc6ff67c"
+    }
+  ],
+  "graph_control": "Random edges are fixed by preprocessing seed; training seeds vary initialization/order",
+  "test_policy": "Evaluate all predeclared frozen controls; never choose configurations using test metrics"
+}

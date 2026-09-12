@@ -1,0 +1,20 @@
+{
+  "selection_sha256": "918cc06e0bb7251634df0200714853cf816edc4b08fdf18343cfad8ab0b44b21",
+  "artifacts": {
+    "seed42/test/embeddings.npz": "334882058d9a4b1e8d31fc4baafd63513b76a4bbead018097902018df3c1a7fc",
+    "seed42/test/examples.json": "07a41fb2904ccaad85827f982fb5e604ff5fa33d1b21b3a83aa8a345bd5bd2b3",
+    "seed42/test/metrics.json": "7171a0f124d0a34ba2de5fa2b4c2538991ac606fb230f740c41802bc2b22a170",
+    "seed42/test/ranks.json": "d4aadf87da2dfe28cda60a61be00b71e9930cd697ba056f14c2bbe5e19cf405c",
+    "seed42/test/untrained_embeddings.npz": "37e96ecfe5b352dc63743b43624a9d7b7daab8ee4b55af273b88e527a9717dcd",
+    "seed43/test/embeddings.npz": "6fb8c87def559f4206e621413dd7e8ad6e3c9a516b0f86f00c3621a886f6721f",
+    "seed43/test/examples.json": "218fc96570a9415886ded8803d2e70b45f83415c2a83455f86e69f3c15e8ca78",
+    "seed43/test/metrics.json": "ea3f97a3b2d6666bfbb7e9e21f8b0b2a55c90b31ee0c6c2ecf0db793fd83a897",
+    "seed43/test/ranks.json": "52bdb59c15e7f5c26b7485479993e3e49e16bf14f4920c1de2d7e1d8a8dc31cb",
+    "seed43/test/untrained_embeddings.npz": "7a29fdbed5fb87e950c79769b69c06f643308feaabfb02e7c4a7f559fb758305",
+    "seed44/test/embeddings.npz": "421c332c17f3b3c6cc0e341a1b496e999e4081d0da3e0106b85c7adf870d89f3",
+    "seed44/test/examples.json": "54f5f78a899898e9fe32d7ad45d1b3620c8c2405fd491a351d31c430cebe3cd8",
+    "seed44/test/metrics.json": "e54e97ab23c8c87270576b670298012a2dcf8bda68b77f335bf143389d1a7c5b",
+    "seed44/test/ranks.json": "503255d71a214f8011d31dd39ec737d8fb254cc3a8fb15a0518d248959709048",
+    "seed44/test/untrained_embeddings.npz": "2b03d0bf611f5377342ecc3a7fd2fbd4d3b6390c04960bd77ba9e882084c7d5b"
+  }
+}

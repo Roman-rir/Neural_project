@@ -1,0 +1,23 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 0.06106400729568155,
+    "validation_loss": 0.09828799962997437,
+    "validation_macro_f1": 0.44957338274486947,
+    "threshold": 0.15
+  },
+  {
+    "epoch": 2,
+    "train_loss": 0.05868577244045498,
+    "validation_loss": 0.09868220239877701,
+    "validation_macro_f1": 0.4424756171696104,
+    "threshold": 0.2
+  },
+  {
+    "epoch": 3,
+    "train_loss": 0.05569320817251463,
+    "validation_loss": 0.10025421530008316,
+    "validation_macro_f1": 0.4404433824814645,
+    "threshold": 0.2
+  }
+]

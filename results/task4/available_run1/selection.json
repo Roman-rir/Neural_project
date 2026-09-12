@@ -1,0 +1,71 @@
+{
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "feature_sha256": "77c667b7312a6579ef17f0a29da5170781829a1a7849154b024794fa9d6a7513",
+  "suite_config_sha256": "522307de37751dd036e492f1e99ecfe8fc0005362ecced5f7d3ef8bf4d294ca1",
+  "runs": [
+    {
+      "seed": 42,
+      "checkpoint": "seed42/best_model.pt",
+      "best_epoch": 6,
+      "feature_sha256": "77c667b7312a6579ef17f0a29da5170781829a1a7849154b024794fa9d6a7513",
+      "validation_mean_recall_at_1": 0.036020583190394515,
+      "artifacts": {
+        "seed42/best_model.pt": "5be2c918c9593808fd2b60405d8f16d852a909593e6dba4b327d4d1846d874e4",
+        "seed42/config.json": "5ec104344ddde38a9dfb66e76173cad2819d6481567567c0af32b77ce5990818",
+        "seed42/history.json": "79fec966c8930e941e402fd28fa7a59925a6a6404726d1c4eaaec1eb9bc6cf4b",
+        "seed42/initial_validation.json": "bcff771f32bf065a59d6534a5174caa2148bd8f4a501d7922bc94e28a8e150d9",
+        "seed42/learning_curves.png": "ea4be3c4acff13b94d6f501323124bc1f306dd8879cc5302f65e5a2fd2f2fc04",
+        "seed42/timing.json": "bb8873fc555050960fac2beec09d29f4d74a2b80f19fd7e60d003b9d255c2850",
+        "seed42/validation/embeddings.npz": "f315c7e31ce2b2612762a900fc7e2796e6449e5e0160942b93254cac80ecc0e3",
+        "seed42/validation/examples.json": "59bb883f12c856ad848c46d8f16fa8a843bb10a01a2e66bb8f9523164e49d5e3",
+        "seed42/validation/metrics.json": "3466c54a11dbd7a5df21f8df60c525cded0986358a28867549727ae8289dd492",
+        "seed42/validation/ranks.json": "a0e55c5fa8a4ab4956d60126863c2a22c0ea3d9b7a4ec01fb133c704a9f5a5c5",
+        "seed42/validation/untrained_embeddings.npz": "713ed2e9a6f4c4a6b2a2d5aef4d2721483447e14d6841d6b7ba436bc0d4b56aa"
+      }
+    },
+    {
+      "seed": 43,
+      "checkpoint": "seed43/best_model.pt",
+      "best_epoch": 9,
+      "feature_sha256": "77c667b7312a6579ef17f0a29da5170781829a1a7849154b024794fa9d6a7513",
+      "validation_mean_recall_at_1": 0.03516295025728988,
+      "artifacts": {
+        "seed43/best_model.pt": "e8288b48cd5e004daebb342f32f0dddf38eb37c1741508f4fb20fce125accbfb",
+        "seed43/config.json": "0884c1f211d57a5c5d3de7a01440109df2278865b2c27edc15667d925e7743c8",
+        "seed43/history.json": "e96b5298f8ab627fccf3b5a3171c8bb6a4391d946c95cce5442139f2c3dad583",
+        "seed43/initial_validation.json": "77bae7f10d5e82f0110224f72c6a81f0cb2d00b45a4638cffe4b20285421da86",
+        "seed43/learning_curves.png": "f57cc1029e24cfd92439f0b469fbcf35adce1d37dc9c5633062d2a8255e8ef0a",
+        "seed43/timing.json": "118459a5e659a3ea009b7469f9fdab7e4004ba5d885c3a7e1a9a5054b84497cb",
+        "seed43/validation/embeddings.npz": "28f870fb0b4e8c217be63c8e7fefca26e395b5de1d550cc1ff3e40251b41e0c6",
+        "seed43/validation/examples.json": "170bc265d175125a6940c74411afb79ed0cdc13fdc8dcce1680a64c71e72b11f",
+        "seed43/validation/metrics.json": "b8324c1415d8ea94af7940c05d0e54797adc17b05bde84634d421c4c5a5d89c4",
+        "seed43/validation/ranks.json": "cb648fa8ae3d11a908d8fbd80a2548858a4bedb87f02759caef5dfbe3bfbda72",
+        "seed43/validation/untrained_embeddings.npz": "b87a199ec6be2cc028125939c5a50f249def930a764b79b44b4c44217d96b6ad"
+      }
+    },
+    {
+      "seed": 44,
+      "checkpoint": "seed44/best_model.pt",
+      "best_epoch": 12,
+      "feature_sha256": "77c667b7312a6579ef17f0a29da5170781829a1a7849154b024794fa9d6a7513",
+      "validation_mean_recall_at_1": 0.03859348198970841,
+      "artifacts": {
+        "seed44/best_model.pt": "ca49038e043bc2c980b82a5363adcb50e8d011704d58c0383ced5904d2c18783",
+        "seed44/config.json": "471e81e62d3be380ba91b1f8005973fd96d8ff29be62d811b1daa5d554ede6de",
+        "seed44/history.json": "321e52bcd99f996a06057ed675496e5ee6f98bdbea0fe3494ed27e2413817b5c",
+        "seed44/initial_validation.json": "99088eb340788900ed54f075ffb9b840d8e61dafc4af24a66060d823f4a7f997",
+        "seed44/learning_curves.png": "b125e98a10161d2a085493689f64ce745f44b389eb73361d13737666727d7dd8",
+        "seed44/timing.json": "ba95669026f560a020cda1ae39ff2932a0ea26f1a59c5b3f0e85f35e5fa94920",
+        "seed44/validation/embeddings.npz": "b05eed5792ffc04a9dd7ba34bdacf2e68a61ec774e5066856106cefc0565e3ab",
+        "seed44/validation/examples.json": "1a587df8bea3389a4953781a82f41085ce670a4d154449bcf89a9cd0f17a11ee",
+        "seed44/validation/metrics.json": "bc4cdc072acbb57ed5fa1cc050a72053cda7485cbb1bab1ada7fc4448e11eda2",
+        "seed44/validation/ranks.json": "26a1d3c70d62542c35bb33a3aa869c1885ca4e9559ba2013fddba97f97214b50",
+        "seed44/validation/untrained_embeddings.npz": "1a689c7d2903a41673478216fa7fef7c7dbc30201c239e448606ccb9336b04f2"
+      }
+    }
+  ]
+}

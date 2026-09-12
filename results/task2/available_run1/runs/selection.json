@@ -1,0 +1,126 @@
+{
+  "criterion": "Mean validation Macro-F1 over declared seeds; declaration order breaks ties",
+  "selected_experiment": "gnn_temporal",
+  "selected_gnn": "gnn_temporal",
+  "validation_means": {
+    "mlp": 0.2798991465066305,
+    "cnn": 0.24168862560298388,
+    "gnn_temporal": 0.28171672900708217,
+    "gnn_similarity": 0.2775757225699811,
+    "gnn_random": 0.27330508657772756
+  },
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "runs": [
+    {
+      "experiment": "mlp",
+      "seed": 42,
+      "directory": "seed42/mlp",
+      "checkpoint": "seed42/mlp/best_model.pt",
+      "checkpoint_sha256": "1248fecde89b3d276834853986174f97fe18ea32b0fa1bae1928416b2a488eaf"
+    },
+    {
+      "experiment": "cnn",
+      "seed": 42,
+      "directory": "seed42/cnn",
+      "checkpoint": "seed42/cnn/best_model.pt",
+      "checkpoint_sha256": "2552608b0fbfabf2ab99ddfd6d4c2a8c600bf74e0cf8ffb52429ef54fc6373d2"
+    },
+    {
+      "experiment": "gnn_temporal",
+      "seed": 42,
+      "directory": "seed42/gnn_temporal",
+      "checkpoint": "seed42/gnn_temporal/best_model.pt",
+      "checkpoint_sha256": "2d0490fc219e5a115b29ac9c04e7b78b8d34d3df0988bed15f4df2252a364af3"
+    },
+    {
+      "experiment": "gnn_similarity",
+      "seed": 42,
+      "directory": "seed42/gnn_similarity",
+      "checkpoint": "seed42/gnn_similarity/best_model.pt",
+      "checkpoint_sha256": "0f1d0f76c22e860ecd324ee4a072b1cf57a4e77d43f388a5aa228dd2f35bf62d"
+    },
+    {
+      "experiment": "gnn_random",
+      "seed": 42,
+      "directory": "seed42/gnn_random",
+      "checkpoint": "seed42/gnn_random/best_model.pt",
+      "checkpoint_sha256": "a3f94e5f0618acc2c1c933ea6ba8d6fac0529e472fc022e017e445b689ccdbbe"
+    },
+    {
+      "experiment": "mlp",
+      "seed": 43,
+      "directory": "seed43/mlp",
+      "checkpoint": "seed43/mlp/best_model.pt",
+      "checkpoint_sha256": "8e98a703a2e317875544d65cf8d38fc779ff16661412615bdda4ab8965ccbda2"
+    },
+    {
+      "experiment": "cnn",
+      "seed": 43,
+      "directory": "seed43/cnn",
+      "checkpoint": "seed43/cnn/best_model.pt",
+      "checkpoint_sha256": "f0c7f7c7496357c39cf14cd44e34ad38994f2cf2562a2d24458b7d6e38e8efa6"
+    },
+    {
+      "experiment": "gnn_temporal",
+      "seed": 43,
+      "directory": "seed43/gnn_temporal",
+      "checkpoint": "seed43/gnn_temporal/best_model.pt",
+      "checkpoint_sha256": "d1507decf20110058e3c0898b5f9531882a7fb76937327441c8597cd77b9bc14"
+    },
+    {
+      "experiment": "gnn_similarity",
+      "seed": 43,
+      "directory": "seed43/gnn_similarity",
+      "checkpoint": "seed43/gnn_similarity/best_model.pt",
+      "checkpoint_sha256": "09ffe31dfe3697856da69fb495825142c0d9b65e278933ad692d7c96c950caad"
+    },
+    {
+      "experiment": "gnn_random",
+      "seed": 43,
+      "directory": "seed43/gnn_random",
+      "checkpoint": "seed43/gnn_random/best_model.pt",
+      "checkpoint_sha256": "cee3f8297aec3024978fa9034521bd889a58c6b8d2b9bc614020b95a3c174e90"
+    },
+    {
+      "experiment": "mlp",
+      "seed": 44,
+      "directory": "seed44/mlp",
+      "checkpoint": "seed44/mlp/best_model.pt",
+      "checkpoint_sha256": "d00be7c508575c2208bf303c81e94521c317145d5f6f44c057b22fabef34242c"
+    },
+    {
+      "experiment": "cnn",
+      "seed": 44,
+      "directory": "seed44/cnn",
+      "checkpoint": "seed44/cnn/best_model.pt",
+      "checkpoint_sha256": "61656f92d336172e5890054a5823075750fced51d9fc2dd7e3670d5448d6780e"
+    },
+    {
+      "experiment": "gnn_temporal",
+      "seed": 44,
+      "directory": "seed44/gnn_temporal",
+      "checkpoint": "seed44/gnn_temporal/best_model.pt",
+      "checkpoint_sha256": "1b878d57cb04a6593e26aa7a72aef60a9e28430c9d2ad75c2a21f36dc5ff830d"
+    },
+    {
+      "experiment": "gnn_similarity",
+      "seed": 44,
+      "directory": "seed44/gnn_similarity",
+      "checkpoint": "seed44/gnn_similarity/best_model.pt",
+      "checkpoint_sha256": "2f9431bf3ffc5806a536a5f750301da60534977e44df1290ee90618d14702dc9"
+    },
+    {
+      "experiment": "gnn_random",
+      "seed": 44,
+      "directory": "seed44/gnn_random",
+      "checkpoint": "seed44/gnn_random/best_model.pt",
+      "checkpoint_sha256": "b7f5f16872e68dac6f59ebdc0d2d634c4205788830745aca5b63c94a1acd311d"
+    }
+  ],
+  "graph_control": "Random edges are fixed by preprocessing seed; training seeds vary initialization/order",
+  "test_policy": "Evaluate all predeclared frozen controls; never choose configurations using test metrics"
+}

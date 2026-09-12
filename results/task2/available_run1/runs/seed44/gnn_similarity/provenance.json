@@ -1,0 +1,24 @@
+{
+  "dataset_fingerprint": "1c37c2d2d5a476613291707596b271070abf555d592fa4f208b5949cd1f6f8fb",
+  "synthetic": false,
+  "python": "3.14.4",
+  "torch": "2.13.0+cpu",
+  "numpy": "2.5.2",
+  "device": "cpu",
+  "cpu_threads": 6,
+  "source_sha256": {
+    "audit.py": "2b51abc7fa5d1e03e9c880612e4f2141f40622ff224602a1d8d37a036e4218be",
+    "dataset.py": "43573474409c9c98a272bc4cd50127a3a73644185cee613b0522df6c4c5cdf5c",
+    "evaluate.py": "1ce040f63d53f98655a3832c73f52714f1c57fc9c75a73e14e59b4fc1a4eefe5",
+    "experiment.py": "88689f9825cf503a62fed948f3cf9a2998921bbe197fb928f02a5dd074008406",
+    "features.py": "5220a082d1aebbd3cf00ca5283f1c7985f505af2806151fde396cd66d2c279de",
+    "graphs.py": "6dd9f0b42a0fe15a48571bdb36eb54f5947ca98bb0cb5c94bc429cef58c91a67",
+    "manifest.py": "bee5a3a64f408a542488a42b2552294c9684816d1c3c820915427c0720a7025e",
+    "models.py": "d1e7680e39928db23369cd4c3990319715bc8bf4ead2a50737ceb1d9e325a2fa",
+    "preprocess.py": "5dbbeb13b70161ceeaaf359fce943bda7b3e732b1facec13b383a5a74d0bc545",
+    "train.py": "2200d6b993b3065f1dab629865406f4e84da3f8aa9faa4fa04899e3ec13ee1ee",
+    "visualize.py": "495e66b0dafdff7dcb5dc1ad17641cc13214b771bf31c9dbc281125e1d98ba38",
+    "__init__.py": "5c870fd7fa070290fe3431b85fe8096ac4dfa4eecc8130d3e134fdb20cd32c1c",
+    "__main__.py": "4008c2363d1f7c6d1ea3aa66b94d76718ca35ecfc0c3871aa77e0f90772d3587"
+  }
+}

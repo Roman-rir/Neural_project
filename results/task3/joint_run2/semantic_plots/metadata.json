@@ -1,0 +1,92 @@
+{
+  "source_predictions": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task3\\joint_run2\\gated\\validation_predictions.npz",
+  "predictions_sha256": "0325210fc25da4f1a0031567fb2c7b70595ae72b40383dd2fe7712abb8010129",
+  "seed": 42,
+  "samples": 583,
+  "label_names": [
+    "/m/04rlf",
+    "/m/04szw",
+    "/m/0342h",
+    "/m/0fx80y",
+    "/m/015lz1",
+    "/m/0l14md",
+    "/m/085jw",
+    "/m/01kcd",
+    "/m/09x0r",
+    "/m/026t6",
+    "/m/074ft",
+    "/m/02rr_",
+    "/m/05148p4",
+    "/m/02sgy",
+    "/m/042v_gx",
+    "/m/02lkt",
+    "/m/06by7",
+    "/m/0164x2",
+    "/m/064t9",
+    "/m/0g12c5",
+    "/m/0l14_3",
+    "/m/0155w",
+    "/m/01lyv",
+    "/m/0glt670",
+    "/m/02bxd",
+    "/t/dd00036",
+    "/m/02v2lh",
+    "/m/02x8m",
+    "/m/02p0sh1",
+    "/m/05rwpb"
+  ],
+  "mapping": {
+    "source": "Existing independent MusicCaps AudioSet positive targets; display names match src/task1/audioset_names.json",
+    "mapping_policy": "Explicit genre/style subset of the existing target vocabulary. Mood uses only the explicitly annotated Angry music target. Genre is never converted into mood, and captions are not used to manufacture labels.",
+    "multilabel_policy": "Overview: one selected annotation gets its named color; multiple selected annotations get a separate overlap color; zero selected annotations means no selected annotation, not a confirmed negative. Per-label genre panels retain every overlapping positive.",
+    "genre": {
+      "/m/02lkt": "Electronic music",
+      "/m/06by7": "Rock music",
+      "/m/064t9": "Pop music",
+      "/m/0155w": "Blues",
+      "/m/01lyv": "Country",
+      "/m/0glt670": "Hip hop music",
+      "/m/02v2lh": "New-age music",
+      "/m/02x8m": "Funk",
+      "/m/02p0sh1": "Traditional music",
+      "/m/05rwpb": "Independent music"
+    },
+    "mood": {
+      "/t/dd00036": "Angry music"
+    },
+    "limitations": [
+      "The chosen genre group includes music styles; it is an explicit analysis mapping, not a newly annotated genre taxonomy.",
+      "Only Angry music is an explicit mood target in the selected vocabulary. This view cannot establish broader mood separation.",
+      "Missing positive annotations must not be interpreted as confirmed absence of a genre or mood.",
+      "t-SNE is a descriptive projection and does not establish causal explanations or generalization."
+    ]
+  },
+  "mapping_sha256": "3e2cb6c3239eec46f1112e7bb694e2a921cf381a87512b7b018bf736ca6e7577",
+  "title": "Joint gated, seed 42",
+  "labels": "Ground-truth positive annotations, not predictions",
+  "genre": {
+    "annotated_samples": 95,
+    "unannotated_samples": 488,
+    "overlapping_samples": 7,
+    "per_label_positive_support": {
+      "Electronic music": 15,
+      "Rock music": 9,
+      "Pop music": 7,
+      "Blues": 7,
+      "Country": 16,
+      "Hip hop music": 9,
+      "New-age music": 12,
+      "Funk": 9,
+      "Traditional music": 9,
+      "Independent music": 9
+    }
+  },
+  "mood": {
+    "annotated_samples": 12,
+    "unannotated_samples": 571,
+    "overlapping_samples": 0,
+    "per_label_positive_support": {
+      "Angry music": 12
+    }
+  }
+}

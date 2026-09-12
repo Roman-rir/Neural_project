@@ -1,0 +1,10 @@
+{
+  "command": ".venv/Scripts/python.exe -m unittest discover -s tests -v",
+  "date": "2026-09-10",
+  "tests_run": 77,
+  "task4_tests": 8,
+  "failures": 0,
+  "errors": 0,
+  "exit_code": 0,
+  "duration_seconds": 24.892
+}

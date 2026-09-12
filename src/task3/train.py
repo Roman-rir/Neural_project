@@ -18,12 +18,16 @@ from .models import FusionClassifier, MODES
 
 
 def run_experiments(features, output_dir, epochs=20, batch_size=16, hidden_dim=64,
-                    seed=42, device="auto", evaluate_test=False, patience=5, learning_rate=1e-3):
+                    seed=42, device="auto", evaluate_test=False, patience=5, learning_rate=1e-3,
+                    cpu_threads=6):
     if min(epochs, batch_size, hidden_dim) < 1:
         raise ValueError("epochs, batch_size, and hidden_dim must be positive")
     if patience < 1 or not math.isfinite(learning_rate) or learning_rate <= 0:
         raise ValueError("patience and learning_rate must be positive and finite")
-    data = load_features(features)
+    if cpu_threads < 1:
+        raise ValueError("cpu_threads must be positive")
+    torch.set_num_threads(cpu_threads)
+    data = load_features(features, mmap=True)
     output = Path(output_dir)
     # Keep checkpoints and reports from different invocations separate.
     if output.exists() and any(output.iterdir()):
@@ -32,7 +36,7 @@ def run_experiments(features, output_dir, epochs=20, batch_size=16, hidden_dim=6
     device = resolve_device(device)
     fingerprint = feature_fingerprint(features)
     config = dict(epochs=epochs, batch_size=batch_size, hidden_dim=hidden_dim, seed=seed,
-                  device=str(device), patience=patience, learning_rate=learning_rate,
+                  device=str(device), patience=patience, learning_rate=learning_rate, cpu_threads=cpu_threads,
                   features=str(Path(features).resolve()), feature_sha256=fingerprint)
     (output / "run_config.json").write_text(json.dumps(config, indent=2), encoding="utf-8")
     inputs = [data["tokens"].float(), data["mask"].bool(), data["graph"].float(), data["labels"].float()]
@@ -41,13 +45,18 @@ def run_experiments(features, output_dir, epochs=20, batch_size=16, hidden_dim=6
     dims = dict(text_dim=inputs[0].shape[-1], graph_dim=inputs[2].shape[-1],
                 num_labels=len(data["label_names"]), hidden_dim=hidden_dim)
 
+    def mode_inputs(mode):
+        if mode == "cross_attention":
+            return inputs
+        return [inputs[0][:, :1], inputs[1][:, :1], *inputs[2:]]
+
     def infer(model, split):
         model.eval()
         indices = split_indices[split]
         probs, embeddings = [], []
         with torch.no_grad():
             for chunk in indices.split(batch_size):
-                logits, embedding = model(*(x[chunk].to(device) for x in inputs[:3]), return_embedding=True)
+                logits, embedding = model(*(x[chunk].to(device) for x in mode_inputs(model.mode)[:3]), return_embedding=True)
                 probs.append(logits.sigmoid().cpu())
                 embeddings.append(embedding.cpu())
         return torch.cat(probs).numpy(), torch.cat(embeddings).numpy()
@@ -57,7 +66,7 @@ def run_experiments(features, output_dir, epochs=20, batch_size=16, hidden_dim=6
         set_seed(seed)
         model = FusionClassifier(**dims, mode=mode).to(device)
         optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
-        loader = DataLoader(Subset(TensorDataset(*inputs), split_indices["train"].tolist()),
+        loader = DataLoader(Subset(TensorDataset(*mode_inputs(mode)), split_indices["train"].tolist()),
                             batch_size=batch_size, shuffle=True,
                             generator=torch.Generator().manual_seed(seed))
         best, history, stale_epochs = -1.0, [], 0
@@ -92,16 +101,31 @@ def run_experiments(features, output_dir, epochs=20, batch_size=16, hidden_dim=6
                 stale_epochs += 1
                 if stale_epochs >= patience:
                     break
+        training_seconds = time.perf_counter() - started
+        saved = torch.load(output / f"{mode}.pt", map_location=device, weights_only=True)
+        model.load_state_dict(saved["state_dict"])
+        probabilities, embeddings = infer(model, "validation")
+        validation_indices = split_indices["validation"].tolist()
+        np.savez_compressed(output / f"{mode}_validation_predictions.npz", probabilities=probabilities,
+                            targets=targets, embeddings=embeddings,
+                            sample_ids=np.array([data["sample_ids"][i] for i in validation_indices]))
+        (output / f"{mode}_validation_metrics.json").write_text(json.dumps(best_metrics, indent=2), encoding="utf-8")
         (output / f"{mode}_history.json").write_text(json.dumps(history, indent=2), encoding="utf-8")
         plt.plot([r["epoch"] for r in history], [r["validation_macro_f1"] for r in history], label=mode)
         rows.append(dict(mode=mode, validation_macro_f1=best,
                          epochs_run=len(history),
                          validation_micro_f1=best_metrics["micro_f1"],
                          validation_map=best_metrics["mean_average_precision"],
-                         seconds=time.perf_counter() - started,
+                         best_epoch=saved["best_epoch"], threshold=saved["threshold"],
+                         seconds=training_seconds,
                          parameters=sum(p.numel() for p in model.parameters())))
     plt.xlabel("Epoch"); plt.ylabel("Validation Macro-F1"); plt.legend(); plt.tight_layout()
     plt.savefig(output / "validation_curves.png"); plt.close()
+    for mode in MODES:
+        history = json.loads((output / f"{mode}_history.json").read_text(encoding="utf-8"))
+        plt.plot([row["epoch"] for row in history], [row["train_loss"] for row in history], label=mode)
+    plt.xlabel("Epoch"); plt.ylabel("Training BCE loss"); plt.legend(); plt.tight_layout()
+    plt.savefig(output / "training_curves.png"); plt.close()
     with (output / "comparison.csv").open("w", newline="", encoding="utf-8") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
         writer.writeheader(); writer.writerows(rows)
@@ -149,6 +173,7 @@ def main():
     parser.add_argument("--learning-rate", type=float, default=1e-3)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--device", default="auto")
+    parser.add_argument("--cpu-threads", type=int, default=6)
     parser.add_argument("--evaluate-test", action="store_true")
     args = parser.parse_args()
     if args.demo == bool(args.features):
@@ -158,6 +183,7 @@ def main():
                                     batch_size=args.batch_size, seed=args.seed, device=args.device,
                                     hidden_dim=args.hidden_dim, patience=args.patience,
                                     learning_rate=args.learning_rate,
+                                    cpu_threads=args.cpu_threads,
                                     evaluate_test=args.evaluate_test), indent=2))
 
 

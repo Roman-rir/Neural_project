@@ -1,0 +1,146 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 0.17014342470212027,
+    "validation_loss": 0.13201013672617656,
+    "validation_macro_f1": 0.15826147971631913,
+    "validation_micro_f1": 0.34161886551943915,
+    "validation_map": 0.1576049674012566,
+    "threshold": 0.05
+  },
+  {
+    "epoch": 2,
+    "train_loss": 0.13226169549667083,
+    "validation_loss": 0.12685222962094825,
+    "validation_macro_f1": 0.19263862206277013,
+    "validation_micro_f1": 0.5246410554908809,
+    "validation_map": 0.19468374902791444,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 3,
+    "train_loss": 0.1260576635357496,
+    "validation_loss": 0.12455237172480103,
+    "validation_macro_f1": 0.2008066439604613,
+    "validation_micro_f1": 0.4816272965879265,
+    "validation_map": 0.2126824503109044,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 4,
+    "train_loss": 0.12038883753188022,
+    "validation_loss": 0.12297980392776672,
+    "validation_macro_f1": 0.21624428682175742,
+    "validation_micro_f1": 0.5003408316291752,
+    "validation_map": 0.23055550832017763,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 5,
+    "train_loss": 0.11668612249531188,
+    "validation_loss": 0.12144434840560572,
+    "validation_macro_f1": 0.21552251887075105,
+    "validation_micro_f1": 0.5367837338262477,
+    "validation_map": 0.23285658355572278,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 6,
+    "train_loss": 0.11381886194149653,
+    "validation_loss": 0.12431665240286963,
+    "validation_macro_f1": 0.24174789873303693,
+    "validation_micro_f1": 0.5591739475774424,
+    "validation_map": 0.23766705045608008,
+    "threshold": 0.15
+  },
+  {
+    "epoch": 7,
+    "train_loss": 0.10969456176768552,
+    "validation_loss": 0.12288218340477036,
+    "validation_macro_f1": 0.25951997087702866,
+    "validation_micro_f1": 0.4942566458811946,
+    "validation_map": 0.25616007376955935,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 8,
+    "train_loss": 0.1077699557134697,
+    "validation_loss": 0.12329839599377909,
+    "validation_macro_f1": 0.2513123324912066,
+    "validation_micro_f1": 0.5309144761199556,
+    "validation_map": 0.2506350043970132,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 9,
+    "train_loss": 0.10468719805683102,
+    "validation_loss": 0.12264360806954254,
+    "validation_macro_f1": 0.2619785500546338,
+    "validation_micro_f1": 0.5198019801980198,
+    "validation_map": 0.2532029096904109,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 10,
+    "train_loss": 0.10379411207394557,
+    "validation_loss": 0.12383013922804216,
+    "validation_macro_f1": 0.2525141460854815,
+    "validation_micro_f1": 0.5248480514837326,
+    "validation_map": 0.2613250246473618,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 11,
+    "train_loss": 0.10109447862650897,
+    "validation_loss": 0.12432442385684156,
+    "validation_macro_f1": 0.271158060317288,
+    "validation_micro_f1": 0.5500770416024653,
+    "validation_map": 0.26570653191572774,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 12,
+    "train_loss": 0.09852511540323765,
+    "validation_loss": 0.12292479177997616,
+    "validation_macro_f1": 0.2658722838813913,
+    "validation_micro_f1": 0.5930434782608696,
+    "validation_map": 0.26001831483561655,
+    "threshold": 0.15
+  },
+  {
+    "epoch": 13,
+    "train_loss": 0.09556430188116727,
+    "validation_loss": 0.12522863186448557,
+    "validation_macro_f1": 0.2505595040436909,
+    "validation_micro_f1": 0.518545192653943,
+    "validation_map": 0.2577101839784521,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 14,
+    "train_loss": 0.09431455405982765,
+    "validation_loss": 0.12370279173192601,
+    "validation_macro_f1": 0.25540471009648136,
+    "validation_micro_f1": 0.5028648466464443,
+    "validation_map": 0.25934313138406667,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 15,
+    "train_loss": 0.09104738034912058,
+    "validation_loss": 0.12928780276922583,
+    "validation_macro_f1": 0.26107351174057863,
+    "validation_micro_f1": 0.5305660377358491,
+    "validation_map": 0.25208504538661,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 16,
+    "train_loss": 0.08985102803723233,
+    "validation_loss": 0.12827185373976954,
+    "validation_macro_f1": 0.2588087878263256,
+    "validation_micro_f1": 0.5065926439972241,
+    "validation_map": 0.26239535396323066,
+    "threshold": 0.1
+  }
+]

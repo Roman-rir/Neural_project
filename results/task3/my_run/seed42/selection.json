@@ -1,0 +1,6 @@
+{
+  "mode": "bert",
+  "checkpoint": "bert.pt",
+  "selected_on": "validation_macro_f1",
+  "feature_sha256": "77c667b7312a6579ef17f0a29da5170781829a1a7849154b024794fa9d6a7513"
+}

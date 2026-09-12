@@ -1,0 +1,18 @@
+{
+  "selected_fusion": "gated",
+  "controls": {
+    "bert": {
+      "fusion_better": 124,
+      "fusion_worse": 159,
+      "tied": 323,
+      "test_macro_f1_delta": 0.03465154503603618
+    },
+    "gnn": {
+      "fusion_better": 286,
+      "fusion_worse": 85,
+      "tied": 235,
+      "test_macro_f1_delta": 0.137353319429875
+    }
+  },
+  "definition": "Per-example F1 at each model's validation-selected threshold; zero denominator returns zero"
+}

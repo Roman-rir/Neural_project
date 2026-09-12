@@ -1,0 +1,221 @@
+{
+  "macro_f1": 0.41776948850262347,
+  "micro_f1": 0.6781002638522428,
+  "mean_average_precision": 0.4314863403975424,
+  "threshold": 0.15,
+  "samples": 583,
+  "map_label_count": 30,
+  "map_definition": "Mean per-label average precision over labels with positive support; not trapezoidal PR AUC",
+  "per_label": {
+    "/m/04rlf": {
+      "precision": 0.8397887323943662,
+      "recall": 0.9958246346555324,
+      "f1": 0.9111747851002865,
+      "support": 479,
+      "average_precision": 0.9272335328273015
+    },
+    "/m/04szw": {
+      "precision": 0.44715447154471544,
+      "recall": 0.6962025316455697,
+      "f1": 0.5445544554455446,
+      "support": 79,
+      "average_precision": 0.5825287074323414
+    },
+    "/m/0342h": {
+      "precision": 0.582089552238806,
+      "recall": 0.7647058823529411,
+      "f1": 0.6610169491525424,
+      "support": 51,
+      "average_precision": 0.7413023496090436
+    },
+    "/m/0fx80y": {
+      "precision": 0.5675675675675675,
+      "recall": 0.8235294117647058,
+      "f1": 0.672,
+      "support": 51,
+      "average_precision": 0.7291573846133172
+    },
+    "/m/015lz1": {
+      "precision": 0.21875,
+      "recall": 0.358974358974359,
+      "f1": 0.27184466019417475,
+      "support": 39,
+      "average_precision": 0.24754333004609305
+    },
+    "/m/0l14md": {
+      "precision": 0.4827586206896552,
+      "recall": 0.5185185185185185,
+      "f1": 0.5,
+      "support": 27,
+      "average_precision": 0.5242529956215846
+    },
+    "/m/085jw": {
+      "precision": 1.0,
+      "recall": 0.7222222222222222,
+      "f1": 0.8387096774193549,
+      "support": 18,
+      "average_precision": 0.9180506962290644
+    },
+    "/m/01kcd": {
+      "precision": 0.6666666666666666,
+      "recall": 0.45454545454545453,
+      "f1": 0.5405405405405406,
+      "support": 22,
+      "average_precision": 0.6246662048633898
+    },
+    "/m/09x0r": {
+      "precision": 0.45,
+      "recall": 0.42857142857142855,
+      "f1": 0.43902439024390244,
+      "support": 21,
+      "average_precision": 0.3529299796331006
+    },
+    "/m/026t6": {
+      "precision": 0.38461538461538464,
+      "recall": 0.5263157894736842,
+      "f1": 0.4444444444444444,
+      "support": 19,
+      "average_precision": 0.5310995299791058
+    },
+    "/m/074ft": {
+      "precision": 0.14285714285714285,
+      "recall": 0.06666666666666667,
+      "f1": 0.09090909090909091,
+      "support": 15,
+      "average_precision": 0.15393082654124954
+    },
+    "/m/02rr_": {
+      "precision": 0.5,
+      "recall": 0.7272727272727273,
+      "f1": 0.5925925925925926,
+      "support": 11,
+      "average_precision": 0.5901604722768511
+    },
+    "/m/05148p4": {
+      "precision": 0.5,
+      "recall": 0.1,
+      "f1": 0.16666666666666666,
+      "support": 10,
+      "average_precision": 0.31637163928877343
+    },
+    "/m/02sgy": {
+      "precision": 0.45454545454545453,
+      "recall": 0.38461538461538464,
+      "f1": 0.4166666666666667,
+      "support": 13,
+      "average_precision": 0.3943917193917194
+    },
+    "/m/042v_gx": {
+      "precision": 0.18421052631578946,
+      "recall": 0.7,
+      "f1": 0.2916666666666667,
+      "support": 10,
+      "average_precision": 0.3354001976284585
+    },
+    "/m/02lkt": {
+      "precision": 0.23809523809523808,
+      "recall": 0.6666666666666666,
+      "f1": 0.3508771929824561,
+      "support": 15,
+      "average_precision": 0.3269985946979691
+    },
+    "/m/06by7": {
+      "precision": 0.5,
+      "recall": 0.1111111111111111,
+      "f1": 0.18181818181818182,
+      "support": 9,
+      "average_precision": 0.20139495513406522
+    },
+    "/m/0164x2": {
+      "precision": 0.21428571428571427,
+      "recall": 0.75,
+      "f1": 0.3333333333333333,
+      "support": 8,
+      "average_precision": 0.4171989803568751
+    },
+    "/m/064t9": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 7,
+      "average_precision": 0.10659695011496567
+    },
+    "/m/0g12c5": {
+      "precision": 0.5,
+      "recall": 0.5555555555555556,
+      "f1": 0.5263157894736842,
+      "support": 9,
+      "average_precision": 0.4707729612681424
+    },
+    "/m/0l14_3": {
+      "precision": 0.46153846153846156,
+      "recall": 0.4,
+      "f1": 0.42857142857142855,
+      "support": 15,
+      "average_precision": 0.40648831466126056
+    },
+    "/m/0155w": {
+      "precision": 0.125,
+      "recall": 0.14285714285714285,
+      "f1": 0.13333333333333333,
+      "support": 7,
+      "average_precision": 0.10474894563564516
+    },
+    "/m/01lyv": {
+      "precision": 0.4375,
+      "recall": 0.4375,
+      "f1": 0.4375,
+      "support": 16,
+      "average_precision": 0.40938571320053013
+    },
+    "/m/0glt670": {
+      "precision": 0.6,
+      "recall": 0.3333333333333333,
+      "f1": 0.42857142857142855,
+      "support": 9,
+      "average_precision": 0.378017402499657
+    },
+    "/m/02bxd": {
+      "precision": 0.8888888888888888,
+      "recall": 0.6666666666666666,
+      "f1": 0.7619047619047619,
+      "support": 12,
+      "average_precision": 0.7154145006858758
+    },
+    "/t/dd00036": {
+      "precision": 0.39285714285714285,
+      "recall": 0.9166666666666666,
+      "f1": 0.55,
+      "support": 12,
+      "average_precision": 0.589102435550417
+    },
+    "/m/02v2lh": {
+      "precision": 0.5,
+      "recall": 0.3333333333333333,
+      "f1": 0.4,
+      "support": 12,
+      "average_precision": 0.21388280715494976
+    },
+    "/m/02x8m": {
+      "precision": 0.6666666666666666,
+      "recall": 0.2222222222222222,
+      "f1": 0.3333333333333333,
+      "support": 9,
+      "average_precision": 0.34242360697372476
+    },
+    "/m/02p0sh1": {
+      "precision": 0.4,
+      "recall": 0.2222222222222222,
+      "f1": 0.2857142857142857,
+      "support": 9,
+      "average_precision": 0.24093742714327906
+    },
+    "/m/05rwpb": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9,
+      "average_precision": 0.052207050867519436
+    }
+  }
+}

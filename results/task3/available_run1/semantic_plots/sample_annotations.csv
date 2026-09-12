@@ -1,0 +1,584 @@
+sample_id,tsne_x,tsne_y,genre_labels,genre_category,mood_labels,mood_category
+-5xOcMJpTUk_70_80,-25.418715,-17.924015,,No selected genre annotation,,No selected mood annotation
+-8C-gydUbR8_30_40,-2.1909735,3.9905107,,No selected genre annotation,,No selected mood annotation
+-Bu7YaslRW0_30_40,21.267935,11.742133,,No selected genre annotation,,No selected mood annotation
+-FlvaZQOr2I_90_100,15.551689,-10.165063,,No selected genre annotation,,No selected mood annotation
+-IZbvEO9wzU_30_40,9.856523,8.386327,,No selected genre annotation,,No selected mood annotation
+-M6K3QoHh40_30_40,3.968268,14.240128,,No selected genre annotation,,No selected mood annotation
+-QuWdnmn-kM_30_40,5.5243664,0.81062543,,No selected genre annotation,,No selected mood annotation
+-R0267o4lLk_60_70,23.660952,-7.369378,,No selected genre annotation,,No selected mood annotation
+-RYtUAsNhF0_30_40,-16.819996,-9.520906,New-age music,New-age music,,No selected mood annotation
+-UuEBhule84_350_360,-17.897196,-14.073793,Country,Country,,No selected mood annotation
+-ZHpNr_KRXU_30_40,-0.9178402,-13.123612,,No selected genre annotation,,No selected mood annotation
+-_6RxZyi30Q_70_80,8.223609,8.423271,,No selected genre annotation,,No selected mood annotation
+-_OzT7Xyvok_30_40,-26.620895,-19.351328,Blues | Independent music,Multiple selected genre labels,,No selected mood annotation
+-cLzki-B06o_30_40,7.3050838,-3.1721117,,No selected genre annotation,,No selected mood annotation
+-e4wXAy1iVo_0_10,-9.391798,-6.05821,,No selected genre annotation,,No selected mood annotation
+-eDAoheZrY8_30_40,11.3842745,-10.0441,,No selected genre annotation,Angry music,Angry music
+-i9gpG3vPwA_30_40,12.852858,15.452539,,No selected genre annotation,,No selected mood annotation
+-r7iz-9v9bA_30_40,3.4679062,2.9089959,,No selected genre annotation,,No selected mood annotation
+-taO6N-rxv4_30_40,-26.366194,4.7598505,,No selected genre annotation,,No selected mood annotation
+-v5hgCh3M2w_30_40,-19.846962,3.4675262,,No selected genre annotation,,No selected mood annotation
+-zOybsEdM5E_100_110,0.24421364,-19.033674,Traditional music,Traditional music,,No selected mood annotation
+01PzcPKT3_E_30_40,15.413089,-12.600449,,No selected genre annotation,,No selected mood annotation
+0298WjE3_tk_20_30,-14.222629,10.216178,,No selected genre annotation,Angry music,Angry music
+07-3grCQ8EU_30_40,5.3588758,-4.141592,Traditional music,Traditional music,,No selected mood annotation
+07-vpXo91XM_70_80,-12.276407,1.5511119,Hip hop music,Hip hop music,,No selected mood annotation
+0DYH0sqDXB8_30_40,11.885357,14.700643,Funk,Funk,,No selected mood annotation
+0JbGxIR8JTk_200_210,-9.6413145,-2.111944,,No selected genre annotation,,No selected mood annotation
+0LE6Ll1rVlg_30_40,-19.426388,3.2852008,,No selected genre annotation,,No selected mood annotation
+0LLlcPiatiU_210_220,5.292787,16.414057,,No selected genre annotation,,No selected mood annotation
+0M7nETLOsKQ_30_40,-13.321046,-9.75988,,No selected genre annotation,,No selected mood annotation
+0MzrXd8CUCg_30_40,11.69289,-13.998009,,No selected genre annotation,,No selected mood annotation
+0ZXWSO_Y2C0_160_170,-22.96233,3.8035693,,No selected genre annotation,Angry music,Angry music
+0a6uLBmqZgA_30_40,12.06009,-21.31299,,No selected genre annotation,,No selected mood annotation
+0cNYPgD6cEA_30_40,-19.102547,-3.423308,,No selected genre annotation,,No selected mood annotation
+0dPx94RPy2M_30_40,13.909708,7.191537,,No selected genre annotation,,No selected mood annotation
+0fiOM---7QI_140_150,-2.3822827,-12.698943,,No selected genre annotation,,No selected mood annotation
+0hw_BB4QN34_220_230,26.618317,-7.6249485,,No selected genre annotation,,No selected mood annotation
+0nk7utNkHOY_190_200,5.440367,-18.74375,,No selected genre annotation,,No selected mood annotation
+0s0Uy0-zBa0_30_40,15.252498,2.2844217,,No selected genre annotation,,No selected mood annotation
+10dur7jhFQM_30_40,13.218654,20.263042,,No selected genre annotation,,No selected mood annotation
+17AtKbQ7glU_590_600,10.390527,-9.038993,,No selected genre annotation,,No selected mood annotation
+18mS4cLPOb8_50_60,5.940775,6.7241263,,No selected genre annotation,,No selected mood annotation
+19-GI2LzOtc_140_150,1.6016085,-16.868162,,No selected genre annotation,,No selected mood annotation
+1FU5odlgLmo_30_40,0.9416333,-10.853386,,No selected genre annotation,,No selected mood annotation
+1IK4OeOqAEo_30_40,1.8512809,3.1234362,,No selected genre annotation,,No selected mood annotation
+1IMi7yfZVVM_40_50,11.575975,17.88403,,No selected genre annotation,,No selected mood annotation
+1JqNiV03kog_30_40,-1.9157038,-0.95940477,,No selected genre annotation,,No selected mood annotation
+1KN3GrwhY8c_420_430,3.8693457,18.571997,,No selected genre annotation,,No selected mood annotation
+1WlvXneu6oY_30_40,6.933668,-14.725344,,No selected genre annotation,,No selected mood annotation
+1Ziku4FLka4_30_40,-6.2665668,14.386692,,No selected genre annotation,,No selected mood annotation
+1a_nvi4sW64_30_40,2.565114,17.418571,Pop music,Pop music,,No selected mood annotation
+1bSP4wLfMpA_0_10,8.270395,1.3325865,,No selected genre annotation,,No selected mood annotation
+1cqcTbDxsHM_130_140,18.356121,11.1887245,,No selected genre annotation,,No selected mood annotation
+1cwGW0cBdRs_30_40,-18.212696,-9.631187,,No selected genre annotation,,No selected mood annotation
+1heMbyumHAo_30_40,-11.169541,13.47334,,No selected genre annotation,,No selected mood annotation
+1kYDbl5Y9Sg_490_500,1.5351164,-9.57978,,No selected genre annotation,,No selected mood annotation
+1ls3ectO1F4_30_40,-26.355145,3.087458,,No selected genre annotation,,No selected mood annotation
+1yGWdegJjA4_30_40,11.900396,16.109894,,No selected genre annotation,,No selected mood annotation
+2-K-7T8ZIWA_20_30,7.841158,-13.822605,,No selected genre annotation,,No selected mood annotation
+20Vh6z6Ie0E_30_40,-6.2775645,9.457539,,No selected genre annotation,,No selected mood annotation
+26jTWRMRoxY_30_40,-14.698657,8.828012,,No selected genre annotation,,No selected mood annotation
+28pkN4m1x6I_80_90,2.919118,10.381463,,No selected genre annotation,,No selected mood annotation
+2BGzxAuetOA_30_40,-7.2800393,12.042267,,No selected genre annotation,,No selected mood annotation
+2Gja9wBkz6U_460_470,11.627766,-15.29452,,No selected genre annotation,,No selected mood annotation
+2JnlmS1zzls_30_40,-4.2624907,12.258613,,No selected genre annotation,,No selected mood annotation
+2T1P9ovsl4A_30_40,-29.527945,-14.165515,,No selected genre annotation,,No selected mood annotation
+2U8Dvh7nwFI_30_40,-8.011985,10.194749,,No selected genre annotation,,No selected mood annotation
+2WxUIkF2zEw_10_20,17.481861,-10.226652,,No selected genre annotation,,No selected mood annotation
+2ZB7DUGOdZw_30_40,-25.518448,-0.9108647,,No selected genre annotation,,No selected mood annotation
+2ZfthfWQowE_30_40,3.0678487,-6.079417,,No selected genre annotation,,No selected mood annotation
+2kORDnISun4_30_40,4.4846835,2.2795026,,No selected genre annotation,,No selected mood annotation
+2uagA3ujRtM_0_10,7.3774753,1.1176089,,No selected genre annotation,,No selected mood annotation
+2vQTq4QLP8U_100_110,1.826401,19.475677,,No selected genre annotation,,No selected mood annotation
+2wZCoeq9Ppc_80_90,12.833442,-15.728221,,No selected genre annotation,,No selected mood annotation
+2x9735gU01s_30_40,-25.48237,-13.6679,,No selected genre annotation,,No selected mood annotation
+2zrPFxxT1VM_30_40,-9.502656,-11.473042,New-age music,New-age music,,No selected mood annotation
+3-_QS346VWo_30_40,-15.704777,-9.432673,,No selected genre annotation,,No selected mood annotation
+31O2j4aAgYU_30_40,-27.495169,-16.971283,,No selected genre annotation,,No selected mood annotation
+33LJ36nAozM_30_40,-23.619154,-12.996817,,No selected genre annotation,,No selected mood annotation
+390At7lW4iw_0_10,9.1773205,21.439749,,No selected genre annotation,,No selected mood annotation
+3ClbaJYWVO4_30_40,-30.699154,-14.23924,,No selected genre annotation,,No selected mood annotation
+3IYd8cCmUkQ_60_70,-1.8656521,17.368382,,No selected genre annotation,,No selected mood annotation
+3NAqH9LYDyU_30_40,-2.1131938,14.573064,,No selected genre annotation,,No selected mood annotation
+3XRjrSOVBnQ_240_250,13.700208,14.244665,,No selected genre annotation,,No selected mood annotation
+3Xoz87_SUdw_430_440,-4.309193,-5.542487,,No selected genre annotation,,No selected mood annotation
+3Yc7_n6mDsI_40_50,25.49144,-6.6270843,,No selected genre annotation,,No selected mood annotation
+3b3s0TvjGwA_0_10,15.672332,8.858998,,No selected genre annotation,,No selected mood annotation
+3m4QSVVBMss_60_70,-4.403093,16.409283,,No selected genre annotation,,No selected mood annotation
+3mNOJpN_qOQ_190_200,-13.139588,-3.3501797,,No selected genre annotation,,No selected mood annotation
+3pU34vUoO9g_70_80,-6.6902804,-8.190944,,No selected genre annotation,,No selected mood annotation
+3rbWoeUg9yo_30_40,-4.252967,11.900907,,No selected genre annotation,,No selected mood annotation
+3rvqiSZB4pA_110_120,6.067504,17.956322,Funk,Funk,,No selected mood annotation
+40kbMyL2Wgo_30_40,-1.7394775,20.460085,,No selected genre annotation,,No selected mood annotation
+42QgE4mM55I_30_40,5.7718434,7.299442,,No selected genre annotation,,No selected mood annotation
+46WpyRUqwXU_30_40,-8.138554,9.078064,,No selected genre annotation,,No selected mood annotation
+4HhJneiP-hY_0_10,13.670386,-9.997903,,No selected genre annotation,,No selected mood annotation
+4Psj5jYa7a4_20_30,21.671125,2.9504628,,No selected genre annotation,,No selected mood annotation
+4QJktFv916o_170_180,-20.527973,3.9790156,,No selected genre annotation,Angry music,Angry music
+4Y5VcH7iK3Q_30_40,-26.561344,-0.86946076,Blues,Blues,,No selected mood annotation
+4cg3MsrvJqw_210_220,-8.131804,-11.976516,,No selected genre annotation,,No selected mood annotation
+4i11P4OCRfk_30_40,-2.3407772,-14.729725,,No selected genre annotation,,No selected mood annotation
+4i9DgH80kDg_30_40,-14.205689,-15.376866,,No selected genre annotation,,No selected mood annotation
+4kKVGPDCIK8_30_40,15.82079,12.891956,New-age music | Traditional music,Multiple selected genre labels,,No selected mood annotation
+4kZ0EZg5JRU_10_20,-7.688841,9.613053,,No selected genre annotation,,No selected mood annotation
+4lcZkOMhKv8_330_340,7.65854,21.326088,Electronic music,Electronic music,,No selected mood annotation
+50fuQm8B2Yg_110_120,16.15573,-11.598829,,No selected genre annotation,,No selected mood annotation
+52GYcHTcCgs_30_40,-16.15208,5.256553,Funk,Funk,,No selected mood annotation
+5D4siJjh1j0_30_40,-10.783425,2.061082,Funk,Funk,,No selected mood annotation
+5JRvGMTjEzQ_30_40,-12.893954,-12.260445,,No selected genre annotation,,No selected mood annotation
+5JqTvKNXzOw_30_40,-4.7156305,16.673256,Pop music,Pop music,,No selected mood annotation
+5NCUtndrsHg_30_40,-19.180447,7.5377784,,No selected genre annotation,,No selected mood annotation
+5fPxUI0Fl-4_30_40,-15.9831915,-0.71430606,,No selected genre annotation,,No selected mood annotation
+5hEt87nd7os_50_60,-11.89631,-15.823381,Country,Country,,No selected mood annotation
+5i0zq91Ocz0_40_50,-17.03022,2.1315203,Independent music,Independent music,,No selected mood annotation
+5n8I-br2n1U_70_80,0.57299066,17.414846,,No selected genre annotation,,No selected mood annotation
+5qVc9y3TNnY_30_40,0.27502346,1.5690968,,No selected genre annotation,,No selected mood annotation
+5tNOauvQWQQ_470_480,18.751272,11.6422,,No selected genre annotation,,No selected mood annotation
+5xAzHL8Zlcs_480_490,16.494312,-14.937691,,No selected genre annotation,,No selected mood annotation
+5xBfKiQcMZQ_100_110,-16.971817,5.8288865,,No selected genre annotation,,No selected mood annotation
+5y2M_K3bUcQ_20_30,22.209936,1.6733084,,No selected genre annotation,,No selected mood annotation
+6-MdbipzKS0_30_40,-3.0539143,12.478232,,No selected genre annotation,,No selected mood annotation
+62L5kn1qFeY_150_160,-17.025501,-10.56423,,No selected genre annotation,,No selected mood annotation
+67S7s_jFXhc_30_40,0.26097876,18.71188,,No selected genre annotation,,No selected mood annotation
+6F8qv0JBWkE_110_120,10.504184,-11.266443,,No selected genre annotation,,No selected mood annotation
+6FQ1nQ0FvgQ_30_40,-3.1217177,1.3101698,,No selected genre annotation,,No selected mood annotation
+6JJMlY3Go9s_30_40,-17.741037,1.3240861,Blues,Blues,,No selected mood annotation
+6L8066DGqcA_210_220,11.749829,21.633776,,No selected genre annotation,,No selected mood annotation
+6PquRVe1Wa4_310_320,8.225675,-4.0198293,,No selected genre annotation,,No selected mood annotation
+6Q5N1DfzGj0_230_240,-3.049274,-15.211731,,No selected genre annotation,,No selected mood annotation
+6SB2FIU9SBc_200_210,-15.408993,-6.1959457,,No selected genre annotation,,No selected mood annotation
+6Sdu56gquJE_0_10,3.8393102,21.001091,,No selected genre annotation,,No selected mood annotation
+6TSluKI0X54_30_40,-26.606243,-13.816816,,No selected genre annotation,,No selected mood annotation
+6ieXDFjLKNo_230_240,14.573034,0.7013282,,No selected genre annotation,,No selected mood annotation
+6uIOGE36tWo_110_120,-10.44397,-16.992802,,No selected genre annotation,,No selected mood annotation
+6yB6plsrjO0_30_40,5.755675,0.8813834,New-age music,New-age music,,No selected mood annotation
+7-mNJ4IUY5Q_30_40,6.913331,18.629875,,No selected genre annotation,,No selected mood annotation
+71KE7B1vvdI_30_40,1.2676655,21.15957,,No selected genre annotation,,No selected mood annotation
+769EHEG4Mqc_0_10,15.418194,17.730272,,No selected genre annotation,,No selected mood annotation
+76ON0Ixrr9s_30_40,-28.005445,-15.174541,,No selected genre annotation,,No selected mood annotation
+770ZkZhGy6A_30_40,18.150106,14.478015,,No selected genre annotation,,No selected mood annotation
+7LlKoQAvXUc_30_40,-6.5378013,-0.6086847,,No selected genre annotation,,No selected mood annotation
+7NF2kcEfMBI_420_430,-25.232876,-18.924366,,No selected genre annotation,,No selected mood annotation
+7OgH3B49_E4_30_40,-22.190096,4.3202095,Pop music,Pop music,,No selected mood annotation
+7OjXHfVoI64_200_210,11.115153,-9.910685,,No selected genre annotation,,No selected mood annotation
+7YtKrL6ScXA_30_40,5.516568,17.548458,,No selected genre annotation,,No selected mood annotation
+7lG2zPKo9e4_30_40,-10.83733,-7.576694,,No selected genre annotation,,No selected mood annotation
+7uKkUTml-DA_260_270,3.0149837,-15.429602,,No selected genre annotation,,No selected mood annotation
+7wSTdp1hiTA_30_40,18.530695,14.060664,,No selected genre annotation,,No selected mood annotation
+86YDiQjYU1U_40_50,16.678423,-17.222153,,No selected genre annotation,,No selected mood annotation
+89eBh_Djflw_240_250,-20.088545,-15.613749,,No selected genre annotation,,No selected mood annotation
+8DQbnR7hwpc_30_40,0.7993302,-14.704804,,No selected genre annotation,,No selected mood annotation
+8KUV2TFTpGo_410_420,-14.861224,4.3547235,Country,Country,,No selected mood annotation
+8XGXHDMIJw4_150_160,10.190724,13.824183,,No selected genre annotation,,No selected mood annotation
+8fInAz_GICs_0_10,25.893372,-8.588239,,No selected genre annotation,,No selected mood annotation
+8zDbEfC6Uf0_30_40,10.760315,11.742991,,No selected genre annotation,,No selected mood annotation
+91AmOKytRUM_0_10,-6.9409566,-5.848702,,No selected genre annotation,,No selected mood annotation
+99ZgIQwLC60_20_30,9.524494,-18.903954,,No selected genre annotation,,No selected mood annotation
+9K8EePrEDdo_330_340,14.130719,-13.799485,,No selected genre annotation,,No selected mood annotation
+9NJEKpPeWpE_0_10,8.878396,20.41181,,No selected genre annotation,,No selected mood annotation
+9PQZSLa_A8A_130_140,4.3490653,-20.050003,,No selected genre annotation,,No selected mood annotation
+9QEm6u4bowQ_30_40,-30.540565,-15.230343,,No selected genre annotation,,No selected mood annotation
+9Tl2l3bsLpE_60_70,-27.56149,3.9369502,,No selected genre annotation,,No selected mood annotation
+9YnYlDFKn-U_30_40,9.160777,11.073971,Electronic music,Electronic music,,No selected mood annotation
+9ZAmdxKLnhs_50_60,-3.2283235,16.672411,,No selected genre annotation,,No selected mood annotation
+9ZWmZdgrE78_80_90,-17.776243,-14.384033,,No selected genre annotation,,No selected mood annotation
+9ZilD_4pi7E_0_10,14.805362,20.979292,,No selected genre annotation,,No selected mood annotation
+9ZinCW4jTeE_30_40,-9.692313,1.7370499,Country,Country,,No selected mood annotation
+9gkppwB5CXA_30_40,-24.164581,1.9866594,,No selected genre annotation,,No selected mood annotation
+9mIDP_OT1uM_30_40,-22.90652,-17.610481,,No selected genre annotation,,No selected mood annotation
+9oiSwXk8Nsk_590_600,-2.5260942,13.669546,Hip hop music,Hip hop music,,No selected mood annotation
+9x7jWb4lE7c_220_230,-27.849169,-16.38906,,No selected genre annotation,,No selected mood annotation
+9zW-E0XdWdw_160_170,-8.88594,-8.233814,Country,Country,,No selected mood annotation
+A-7dmBdsFXc_70_80,14.6574955,14.068617,,No selected genre annotation,,No selected mood annotation
+A9ECxUIqw6s_30_40,-13.558105,8.015595,,No selected genre annotation,,No selected mood annotation
+AAFsg91kje4_30_40,13.969937,17.017262,Electronic music,Electronic music,,No selected mood annotation
+ADPSmeFofpo_30_40,16.531208,16.721039,,No selected genre annotation,,No selected mood annotation
+ADxuhHNZVCc_30_40,-5.3491373,-6.736852,,No selected genre annotation,,No selected mood annotation
+AF7sah5a_DE_30_40,-23.288593,-11.501258,,No selected genre annotation,,No selected mood annotation
+AH6Xnyj6Ykc_30_40,1.8752699,9.918083,,No selected genre annotation,,No selected mood annotation
+AJj6GGLaIfI_30_40,12.061505,11.396448,,No selected genre annotation,,No selected mood annotation
+AUNK8dJzjLo_30_40,4.1143346,-4.4628196,Traditional music,Traditional music,,No selected mood annotation
+AVmJF1uaRuE_30_40,-3.50419,-1.1088833,,No selected genre annotation,,No selected mood annotation
+AeDNy6Ff7VE_30_40,3.3665931,10.341119,,No selected genre annotation,,No selected mood annotation
+AgCSBCsHkMk_60_70,2.9416335,-7.9897227,,No selected genre annotation,,No selected mood annotation
+Akg1n9IWSrw_0_10,10.240614,-0.56454045,,No selected genre annotation,,No selected mood annotation
+An-4jPvUT14_60_70,0.095136255,20.351625,,No selected genre annotation,,No selected mood annotation
+AqSV_WKZxEc_30_40,4.302023,3.4444702,New-age music,New-age music,,No selected mood annotation
+Aro-HcWNsHI_30_40,-24.025398,-10.045308,Country,Country,,No selected mood annotation
+AuZNuyR2OJs_30_40,17.149757,8.313366,,No selected genre annotation,,No selected mood annotation
+AuwwPMrH5sE_170_180,-24.339025,-2.9070623,,No selected genre annotation,,No selected mood annotation
+AzGtPHlrlzU_70_80,8.826433,20.485035,,No selected genre annotation,,No selected mood annotation
+AzhfZ8rNhRk_30_40,-23.371569,-1.2649472,,No selected genre annotation,,No selected mood annotation
+B1ixRtiUJ-U_30_40,5.128184,-19.539059,,No selected genre annotation,,No selected mood annotation
+B32m9Jqqrpo_30_40,7.8279123,22.463755,,No selected genre annotation,,No selected mood annotation
+B4lGhVjoMTk_210_220,9.084594,-13.857724,,No selected genre annotation,,No selected mood annotation
+BEhIGoq9tow_160_170,18.26422,7.238579,New-age music,New-age music,,No selected mood annotation
+BEwNrjvNiYs_30_40,-18.295681,4.7605186,,No selected genre annotation,,No selected mood annotation
+BHu95Y_kVQA_30_40,-17.052753,3.1767132,Independent music,Independent music,,No selected mood annotation
+BTMWpYzpu5g_60_70,6.8059783,-3.8860128,,No selected genre annotation,,No selected mood annotation
+B_tbkQYT9N0_30_40,15.661464,17.190536,,No selected genre annotation,,No selected mood annotation
+BfUoopDpmmY_30_40,-5.417454,10.081491,,No selected genre annotation,,No selected mood annotation
+BlhUt8AJJO8_30_40,4.6848607,19.130905,,No selected genre annotation,,No selected mood annotation
+BpLUOKHl51E_0_10,-5.7912607,-6.9990788,,No selected genre annotation,,No selected mood annotation
+BrCW3BA8TIQ_30_40,-12.945238,-5.2034507,,No selected genre annotation,,No selected mood annotation
+BsLFQV8HVZE_30_40,-28.323492,3.8174386,,No selected genre annotation,,No selected mood annotation
+C0AQyOVGvFM_100_110,-3.8491573,13.368758,,No selected genre annotation,,No selected mood annotation
+C6roSYqchkk_60_70,-5.777411,13.324999,,No selected genre annotation,,No selected mood annotation
+C8Euv69GR3U_0_10,-24.167545,6.9404044,,No selected genre annotation,,No selected mood annotation
+CAbNGe1PWoY_130_140,-24.66069,0.83731264,,No selected genre annotation,,No selected mood annotation
+CKEPPcaCjbw_60_70,-26.655983,-16.771603,,No selected genre annotation,,No selected mood annotation
+CPX6f-Awx-0_60_70,-2.4449286,16.37016,,No selected genre annotation,,No selected mood annotation
+CVgLrsBPt4o_140_150,21.2404,2.110067,,No selected genre annotation,,No selected mood annotation
+CWKBzt-v8w4_30_40,-5.6897116,12.743234,,No selected genre annotation,,No selected mood annotation
+CYZZIkEw_jY_30_40,25.595732,-8.106145,,No selected genre annotation,,No selected mood annotation
+CgK0DU3KFBc_30_40,-11.242742,-4.889134,,No selected genre annotation,,No selected mood annotation
+ChqJYrmQIN4_50_60,-11.40527,-13.844408,Traditional music,Traditional music,,No selected mood annotation
+Cn3xoxvbkF0_30_40,-1.2694682,5.9558077,,No selected genre annotation,,No selected mood annotation
+CqtknE729Lw_310_320,7.8335395,-16.020395,,No selected genre annotation,,No selected mood annotation
+CrbZHPkHeV4_30_40,-1.0387579,18.728699,Hip hop music,Hip hop music,,No selected mood annotation
+CuUu6L5hhMs_30_40,16.091743,-10.507589,Funk,Funk,,No selected mood annotation
+Cy3HWnwMLyI_20_30,21.842897,3.6913724,,No selected genre annotation,,No selected mood annotation
+CyiPyjYX6AE_30_40,6.0785446,-11.001231,,No selected genre annotation,,No selected mood annotation
+D-p9s8y2z_U_0_10,-16.076246,-16.717678,,No selected genre annotation,,No selected mood annotation
+D3q_stCeCA8_30_40,4.935885,-3.1180625,,No selected genre annotation,,No selected mood annotation
+D4ccFYk3bhU_30_40,12.048597,10.278585,,No selected genre annotation,,No selected mood annotation
+D6xrH93lnoc_30_40,-16.196321,3.0420957,,No selected genre annotation,,No selected mood annotation
+D712KM8PE3I_30_40,2.9783528,3.2815983,,No selected genre annotation,,No selected mood annotation
+DEnayQZiPGc_260_270,16.805408,-3.7712104,,No selected genre annotation,,No selected mood annotation
+DNYDyXn6qso_30_40,-11.160981,-1.023085,,No selected genre annotation,,No selected mood annotation
+DU5pD63Pv30_20_30,11.186411,-0.415377,,No selected genre annotation,,No selected mood annotation
+DW3z-ByrfWY_380_390,13.719573,-3.2341862,,No selected genre annotation,,No selected mood annotation
+DX4_QlYLq30_30_40,8.642012,-14.659538,New-age music,New-age music,,No selected mood annotation
+DXd83S6NHLg_80_90,6.4782343,-10.272379,,No selected genre annotation,,No selected mood annotation
+DdxW_JziHTA_30_40,1.2260482,16.389399,Funk,Funk,,No selected mood annotation
+Dg8BLvkzdr0_30_40,16.403065,-13.108288,,No selected genre annotation,,No selected mood annotation
+DgqPgNqW2hE_50_60,-4.7950044,6.683464,Blues,Blues,,No selected mood annotation
+DhnNZn8JjEQ_30_40,-25.294003,-14.94591,,No selected genre annotation,,No selected mood annotation
+DkZ1Or_D-g8_100_110,16.588032,-4.9123,,No selected genre annotation,,No selected mood annotation
+DlVgHV1UobM_30_40,11.515696,20.336397,,No selected genre annotation,,No selected mood annotation
+DroAzooK4yw_30_40,-19.099953,-13.610121,,No selected genre annotation,,No selected mood annotation
+E7D42u8a5gc_30_40,-23.329922,2.7650259,,No selected genre annotation,,No selected mood annotation
+E7q_QwLYI8U_210_220,-21.133123,-16.799286,,No selected genre annotation,,No selected mood annotation
+EFlGHxV5WsY_240_250,-26.990688,-1.4680934,Country,Country,,No selected mood annotation
+EJMUwh1vY2s_30_40,-11.260012,-11.55218,,No selected genre annotation,,No selected mood annotation
+EKZvq0dUk50_30_40,-2.134829,12.2383995,,No selected genre annotation,,No selected mood annotation
+EOaQnfDjVyo_30_40,3.3406346,-18.306612,,No selected genre annotation,,No selected mood annotation
+EQHrQIaQNv8_30_40,-24.542511,-11.932648,,No selected genre annotation,,No selected mood annotation
+ETl0hYRlVmg_30_40,-4.3455257,4.8898244,,No selected genre annotation,,No selected mood annotation
+EXRKJRL0TDU_50_60,-26.137203,5.2327294,,No selected genre annotation,,No selected mood annotation
+EZAwPnGOJPE_60_70,-3.0270023,6.3615003,,No selected genre annotation,,No selected mood annotation
+EZi80fUpBfE_30_40,-25.117449,-11.372613,,No selected genre annotation,,No selected mood annotation
+EgwGYmAH0BA_0_10,16.279327,8.7317,,No selected genre annotation,,No selected mood annotation
+EkMgPJfSL04_30_40,9.346435,-17.837729,,No selected genre annotation,,No selected mood annotation
+Euu6zlJQSD0_30_40,-1.3912917,13.105751,,No selected genre annotation,,No selected mood annotation
+EwoCbcSXlSM_210_220,-6.448886,6.919549,,No selected genre annotation,,No selected mood annotation
+F5e-SEICJP4_60_70,17.082209,-10.814205,,No selected genre annotation,,No selected mood annotation
+F5xnAYHuGlo_30_40,6.658376,12.942063,,No selected genre annotation,,No selected mood annotation
+F7Y1T-rQ2JU_410_420,8.964901,-19.776375,,No selected genre annotation,,No selected mood annotation
+F8MCOgWhgvY_30_40,10.8716345,18.425467,,No selected genre annotation,,No selected mood annotation
+F8wGRd9332s_30_40,9.484411,-22.393362,,No selected genre annotation,,No selected mood annotation
+FKBryvLMTY4_30_40,-0.8220435,-2.5709987,,No selected genre annotation,,No selected mood annotation
+FTdcanPJw6E_70_80,-21.457193,1.5800369,,No selected genre annotation,Angry music,Angry music
+FYFapDVOFHg_440_450,11.180088,-21.940086,,No selected genre annotation,,No selected mood annotation
+Fa1KdG8niq0_30_40,-25.1394,-0.7707625,,No selected genre annotation,,No selected mood annotation
+FdvGsAq99r0_30_40,4.812889,-6.3876085,,No selected genre annotation,,No selected mood annotation
+Fg8yzA7zifw_30_40,-6.7649126,-1.2895409,,No selected genre annotation,,No selected mood annotation
+FkpJaXzgMBQ_180_190,-10.154736,-7.875758,,No selected genre annotation,,No selected mood annotation
+FsCQmTluSDw_30_40,-0.93962765,12.223293,,No selected genre annotation,,No selected mood annotation
+G13NEVAm6-o_30_40,25.705048,-9.1045885,,No selected genre annotation,,No selected mood annotation
+G9gsCU85c8k_160_170,-1.0003952,14.529532,,No selected genre annotation,,No selected mood annotation
+GFT6TeQx_0U_30_40,17.53428,15.942075,,No selected genre annotation,,No selected mood annotation
+GPwzpw_47Dg_260_270,2.0593276,-13.292738,,No selected genre annotation,,No selected mood annotation
+GQPOpFX20Gw_30_40,9.065618,17.972773,Hip hop music,Hip hop music,,No selected mood annotation
+GWcMqKYOJR4_20_30,26.443995,-8.901728,,No selected genre annotation,,No selected mood annotation
+GWcTd6XrQj4_380_390,11.029346,-19.164942,,No selected genre annotation,,No selected mood annotation
+GWxiiDBK5s8_30_40,-2.0098627,-15.992073,,No selected genre annotation,,No selected mood annotation
+GXLeUXSVFYU_30_40,-12.855611,-17.05915,,No selected genre annotation,,No selected mood annotation
+GcqCHmHXEjo_30_40,1.0823753,-6.128039,,No selected genre annotation,,No selected mood annotation
+GglIHiqClGM_30_40,24.899384,-7.4138784,,No selected genre annotation,,No selected mood annotation
+GrbrWNohr6Y_30_40,-19.187561,0.5496106,,No selected genre annotation,,No selected mood annotation
+Grtmre_r9yI_250_260,0.37443015,0.36211035,,No selected genre annotation,,No selected mood annotation
+GxeDIuOzxmU_30_40,9.209347,-16.763714,,No selected genre annotation,,No selected mood annotation
+H-bTMbePj0A_30_40,23.562326,-8.687398,,No selected genre annotation,,No selected mood annotation
+H18aK9HhNSM_30_40,-9.928198,-4.3513803,,No selected genre annotation,,No selected mood annotation
+HDSV7Pzq8CA_80_90,-1.0804553,11.130044,,No selected genre annotation,,No selected mood annotation
+HHTgjmgTV6c_30_40,5.6940312,19.648687,,No selected genre annotation,,No selected mood annotation
+HVsXJDR1_Lw_30_40,-4.5111876,-1.455308,,No selected genre annotation,,No selected mood annotation
+HYjSrwSm0T4_250_260,-21.956644,-4.8541627,,No selected genre annotation,,No selected mood annotation
+HdRPdh-cSTw_140_150,-2.734683,2.7870634,,No selected genre annotation,,No selected mood annotation
+He63KV_9Pwg_60_70,-11.415197,2.5851307,Pop music,Pop music,,No selected mood annotation
+Hp-lgcs4VXY_50_60,2.274941,17.170748,,No selected genre annotation,,No selected mood annotation
+I368EWBLIs4_230_240,-24.17739,-13.080819,,No selected genre annotation,,No selected mood annotation
+I4Jp0kB2Ns0_30_40,-26.764458,-2.580425,,No selected genre annotation,,No selected mood annotation
+I5CBPhpimtg_30_40,12.328737,-22.042053,,No selected genre annotation,,No selected mood annotation
+IAeYandwJqc_70_80,-8.777917,-18.944744,,No selected genre annotation,,No selected mood annotation
+IDHHAwqDpzU_30_40,-4.353128,-3.7543557,,No selected genre annotation,,No selected mood annotation
+IJcLW4arT6s_70_80,20.06461,15.624195,,No selected genre annotation,,No selected mood annotation
+IJw2o_Yg00Q_30_40,14.274338,18.62454,,No selected genre annotation,,No selected mood annotation
+IKfmu7tAyUE_30_40,-23.386581,-15.864898,,No selected genre annotation,,No selected mood annotation
+In44gO8Ej90_30_40,6.701727,20.619467,,No selected genre annotation,,No selected mood annotation
+J1gZRam89EE_100_110,-5.662881,-3.608587,,No selected genre annotation,,No selected mood annotation
+J2R8Ab25reU_110_120,13.163606,16.988274,Electronic music,Electronic music,,No selected mood annotation
+J9PJI1UwIQ4_30_40,10.808337,14.5764065,,No selected genre annotation,,No selected mood annotation
+JFGNmPzPXeA_30_40,-7.6572647,19.142374,,No selected genre annotation,,No selected mood annotation
+JIoA1KsfioQ_30_40,12.794257,13.12156,,No selected genre annotation,,No selected mood annotation
+JRmfjBDKCpE_100_110,-22.506292,2.5043342,,No selected genre annotation,Angry music,Angry music
+JZnOGRCBW0I_30_40,-26.424208,-14.698845,,No selected genre annotation,,No selected mood annotation
+JbWaSZPOh18_30_40,16.077477,-9.197482,,No selected genre annotation,,No selected mood annotation
+Jdy08IPLKdw_30_40,-12.527466,-6.3834414,Independent music,Independent music,,No selected mood annotation
+JtLNRHVGQuw_30_40,11.985537,-22.517538,,No selected genre annotation,,No selected mood annotation
+JvvnL7UnCGA_20_30,12.2630825,9.455375,,No selected genre annotation,,No selected mood annotation
+K1PzpuR6CqY_10_20,18.119635,-17.493093,,No selected genre annotation,,No selected mood annotation
+K2h6UiZSoZ4_30_40,14.655197,19.666199,,No selected genre annotation,,No selected mood annotation
+KJHqQ5aKu8U_100_110,-8.842551,-15.321871,,No selected genre annotation,,No selected mood annotation
+KOb-tRHYK68_420_430,12.872357,17.925495,Electronic music,Electronic music,,No selected mood annotation
+KXuB62SMFvA_30_40,7.588054,-14.990623,,No selected genre annotation,,No selected mood annotation
+KbDLu4VozGg_130_140,-21.21084,3.5545685,,No selected genre annotation,Angry music,Angry music
+Kd7aHdOwh0I_30_40,-26.895748,-16.057184,,No selected genre annotation,,No selected mood annotation
+KoAGZ_dB8MM_60_70,5.065358,3.065191,,No selected genre annotation,,No selected mood annotation
+KxZ0yDfyaJw_30_40,-1.1408373,21.072094,Hip hop music,Hip hop music,,No selected mood annotation
+KyRJP_fDrbk_180_190,-16.894785,-16.570395,,No selected genre annotation,,No selected mood annotation
+L1s7KZgWXGc_30_40,-4.2662106,9.632196,,No selected genre annotation,,No selected mood annotation
+L2-EGNKzUAQ_40_50,-4.9401793,13.750803,,No selected genre annotation,,No selected mood annotation
+L9GXrmmlYhE_460_470,17.307127,-17.148474,,No selected genre annotation,,No selected mood annotation
+L9j9fCHHPeg_90_100,-14.28876,2.9832428,,No selected genre annotation,,No selected mood annotation
+LGrAwQnZ6Bs_100_110,7.4809837,-10.033883,,No selected genre annotation,,No selected mood annotation
+LJsYl38zPOQ_140_150,-25.07057,-15.809483,,No selected genre annotation,,No selected mood annotation
+LkzyG2F8mTM_80_90,6.627133,-2.864542,,No selected genre annotation,,No selected mood annotation
+LpcvkXs49Zo_300_310,-29.05678,-16.738049,,No selected genre annotation,,No selected mood annotation
+LqP4F4a-HOc_60_70,-5.596777,-4.4043303,,No selected genre annotation,,No selected mood annotation
+LvpImXJMryI_30_40,3.159825,15.69847,Hip hop music,Hip hop music,,No selected mood annotation
+Lwvf17xUxhE_40_50,15.500394,-16.176592,,No selected genre annotation,,No selected mood annotation
+LzSWdj4izHM_20_30,-14.004593,2.5881126,,No selected genre annotation,,No selected mood annotation
+MWS-Uxf1MRw_90_100,6.205488,-15.619315,,No selected genre annotation,,No selected mood annotation
+MrMXYO2fzJ4_140_150,25.814913,-5.417198,,No selected genre annotation,,No selected mood annotation
+MsjeOXuUYG4_170_180,13.15963,10.008183,,No selected genre annotation,,No selected mood annotation
+Mv90uA0tmgc_280_290,-7.757593,14.951119,,No selected genre annotation,,No selected mood annotation
+MyH8zQw9csc_30_40,-8.8863735,-18.64318,,No selected genre annotation,,No selected mood annotation
+N1Mxns_JJTk_30_40,-13.388292,11.098074,,No selected genre annotation,,No selected mood annotation
+N4eMppEnPE0_260_270,8.637151,-12.834107,,No selected genre annotation,,No selected mood annotation
+NJGo2fmUAII_250_260,-24.997246,2.2449706,,No selected genre annotation,Angry music,Angry music
+NKDBwJIwWoU_30_40,-28.408293,0.18294266,,No selected genre annotation,,No selected mood annotation
+NP5iO_HB-f0_190_200,23.518354,-5.181531,Electronic music,Electronic music,,No selected mood annotation
+NX3KJ-tVdMI_330_340,24.481579,-6.0381727,Electronic music,Electronic music,,No selected mood annotation
+NZn4-gP2GiI_80_90,2.2795148,15.553561,Funk,Funk,,No selected mood annotation
+N_41Y2vH6eA_0_10,14.371515,3.1946557,,No selected genre annotation,,No selected mood annotation
+NnmJ1UHWlas_30_40,19.863804,9.712753,,No selected genre annotation,,No selected mood annotation
+NwA9JSlK_lM_30_40,-6.5384426,-15.61063,Traditional music,Traditional music,,No selected mood annotation
+O0sDg-yLvlE_30_40,-13.447698,-13.174654,,No selected genre annotation,,No selected mood annotation
+O8EMm4QJjeo_0_10,8.2238455,15.71193,,No selected genre annotation,,No selected mood annotation
+OBJM1TqPvu4_470_480,1.1054044,-5.9828777,,No selected genre annotation,,No selected mood annotation
+OFP5MYVDa4g_30_40,-19.32063,6.042687,,No selected genre annotation,,No selected mood annotation
+ONfd_rHtL74_30_40,0.52320874,11.261696,Funk,Funk,,No selected mood annotation
+OPimGlHcSRQ_30_40,-9.013032,-2.3432333,,No selected genre annotation,,No selected mood annotation
+OQz8reoVQEI_30_40,-1.653009,-0.08057466,,No selected genre annotation,,No selected mood annotation
+OZv8mtQEgA0_30_40,16.465717,20.234993,,No selected genre annotation,,No selected mood annotation
+Occ4uW0lw0k_30_40,1.1951199,5.4128356,New-age music,New-age music,,No selected mood annotation
+OgqDO1wxQ8E_0_10,-2.8528864,-8.528525,New-age music,New-age music,,No selected mood annotation
+OhZmxS5DUKU_30_40,-13.176495,10.518474,,No selected genre annotation,,No selected mood annotation
+OjoDuBkPDM8_30_40,-21.045357,-7.0157423,,No selected genre annotation,,No selected mood annotation
+Ok-ia7ziJy0_30_40,-24.162514,-7.468109,Country,Country,,No selected mood annotation
+OseeYF_ud7g_120_130,-2.067138,-14.833484,,No selected genre annotation,,No selected mood annotation
+OvjmfGU4y_M_190_200,-12.572014,-0.19014533,Pop music,Pop music,,No selected mood annotation
+OxxRnDpN9cc_30_40,5.322069,-20.244799,,No selected genre annotation,,No selected mood annotation
+P3ZPbGjHFXE_220_230,-20.349716,2.2861857,,No selected genre annotation,,No selected mood annotation
+P5tsRM1iokA_30_40,-23.77457,-11.83394,,No selected genre annotation,,No selected mood annotation
+P9fh7rOIKcM_270_280,9.114135,-2.1057582,,No selected genre annotation,,No selected mood annotation
+PF5LgwJjYuA_90_100,-7.756611,7.576466,,No selected genre annotation,,No selected mood annotation
+PFtcnQqLdEc_270_280,0.23990276,-19.335197,,No selected genre annotation,,No selected mood annotation
+PKsdjH0RmsU_30_40,9.972064,-17.805191,,No selected genre annotation,,No selected mood annotation
+PuJxL6tLxm4_110_120,-5.908237,8.645458,,No selected genre annotation,,No selected mood annotation
+Puu8SEqYN0k_60_70,13.756909,9.057345,,No selected genre annotation,,No selected mood annotation
+Py8Vd0-qxYU_20_30,-10.046187,13.074152,,No selected genre annotation,,No selected mood annotation
+Q1pjymZOm6Q_140_150,-2.2599182,18.412172,,No selected genre annotation,,No selected mood annotation
+Q7oWXOByo28_30_40,2.925216,18.894217,,No selected genre annotation,,No selected mood annotation
+Q9gWfok9Q5c_110_120,13.3726845,3.9021082,,No selected genre annotation,,No selected mood annotation
+QCbUlDMu7Hk_420_430,-7.7100096,-2.1613696,,No selected genre annotation,,No selected mood annotation
+QJzveo6IBsU_0_10,12.397085,-10.441673,,No selected genre annotation,,No selected mood annotation
+QS3DabGF41Y_120_130,-24.39124,-16.766678,,No selected genre annotation,,No selected mood annotation
+QSaX7QfeWog_30_40,-10.15165,9.455635,Country,Country,,No selected mood annotation
+QT1SjY9mQxc_20_30,13.291091,-10.191197,,No selected genre annotation,,No selected mood annotation
+Qt8Ze-k2h2o_40_50,2.2755368,-13.162094,,No selected genre annotation,,No selected mood annotation
+QtjMlA_7dds_30_40,-11.763358,-4.189065,Country,Country,,No selected mood annotation
+R6mhBqTU0Tc_30_40,18.363611,18.363249,,No selected genre annotation,,No selected mood annotation
+RDCXvJPzT5k_520_530,12.962925,-16.941893,,No selected genre annotation,,No selected mood annotation
+RIe1omxr7nc_0_10,13.788203,2.1306264,,No selected genre annotation,,No selected mood annotation
+RIiN9Ed1fqU_30_40,12.620665,10.738143,,No selected genre annotation,,No selected mood annotation
+RPqz3vJYMLQ_40_50,-11.625781,7.414539,Pop music,Pop music,,No selected mood annotation
+RQbNC1J4Jfk_30_40,15.707067,20.244642,,No selected genre annotation,,No selected mood annotation
+RSryuuvUfDM_50_60,-24.789083,-17.369827,Blues,Blues,,No selected mood annotation
+RUUZzoeVrK4_20_30,15.402466,7.2991257,,No selected genre annotation,,No selected mood annotation
+RmDfwz0OG8E_230_240,3.5709257,21.47203,Hip hop music,Hip hop music,,No selected mood annotation
+RtgHU1UMo5o_30_40,1.4908469,11.268496,Funk,Funk,,No selected mood annotation
+SCcryBmDGPw_30_40,17.92832,-3.4085953,,No selected genre annotation,,No selected mood annotation
+SGcjdZ19R1k_30_40,-11.44441,0.14737342,,No selected genre annotation,,No selected mood annotation
+SLdVSirZMSI_30_40,-19.068144,-3.7844322,,No selected genre annotation,,No selected mood annotation
+SWcEG8RLKsw_150_160,-11.787696,-8.264551,,No selected genre annotation,,No selected mood annotation
+SijRZIQUa08_180_190,11.153713,-4.7533717,,No selected genre annotation,,No selected mood annotation
+T0OFKHj6878_30_40,2.9015346,21.761866,Hip hop music,Hip hop music,,No selected mood annotation
+T0oF8MyYhBM_30_40,-1.4605383,-4.6968555,,No selected genre annotation,,No selected mood annotation
+T5YZwhC7Br8_220_230,12.517672,3.1019275,,No selected genre annotation,,No selected mood annotation
+T78nMdsJMmk_170_180,-13.131246,-4.923915,,No selected genre annotation,,No selected mood annotation
+T9dKp1EN4p8_30_40,22.578554,1.9828097,,No selected genre annotation,,No selected mood annotation
+TArWNq2retM_200_210,6.561961,-17.85133,,No selected genre annotation,,No selected mood annotation
+TIAj-fi_R7c_120_130,18.043148,-15.662714,,No selected genre annotation,,No selected mood annotation
+TObYoD2pGb0_0_10,-27.303085,-11.503174,,No selected genre annotation,,No selected mood annotation
+TPYNIc_M1ng_30_40,9.87711,16.474066,,No selected genre annotation,,No selected mood annotation
+TZGDukKAVS8_240_250,10.275385,17.46388,,No selected genre annotation,,No selected mood annotation
+TgCv5a22YUU_50_60,3.7372227,12.814793,,No selected genre annotation,,No selected mood annotation
+U0xhbrULfNY_330_340,4.9514585,-10.308649,,No selected genre annotation,,No selected mood annotation
+U4UtZeTl2DE_30_40,0.023068236,-13.506039,,No selected genre annotation,,No selected mood annotation
+U6aLiMIlqCc_60_70,-9.32727,-0.3691899,,No selected genre annotation,,No selected mood annotation
+UBfHLeCBBsA_30_40,5.8358808,19.232878,,No selected genre annotation,,No selected mood annotation
+UDN11Q90Fa4_30_40,-12.957147,-9.319932,,No selected genre annotation,,No selected mood annotation
+URM1QgX5Ar4_150_160,-28.030684,-17.543856,,No selected genre annotation,,No selected mood annotation
+UWl99yJsb8M_30_40,5.5863814,-16.077143,,No selected genre annotation,,No selected mood annotation
+UXDzDV_f1jw_120_130,-26.271538,6.070984,,No selected genre annotation,,No selected mood annotation
+Ubj0jlheyvk_30_40,14.688345,11.394833,,No selected genre annotation,,No selected mood annotation
+UfZP677y3Dc_30_40,5.63947,5.0381513,,No selected genre annotation,,No selected mood annotation
+UjDh1OlOwuE_60_70,25.36567,-5.3915944,,No selected genre annotation,,No selected mood annotation
+UoSID1KzWuI_30_40,-23.262503,-17.336449,,No selected genre annotation,,No selected mood annotation
+Utl5it7YMUs_330_340,-22.65663,1.6634445,,No selected genre annotation,,No selected mood annotation
+V5xL8hLFY58_30_40,-15.300518,-13.640922,,No selected genre annotation,,No selected mood annotation
+VCIN1OJkNbg_30_40,6.782161,-17.632353,,No selected genre annotation,,No selected mood annotation
+VCozi4GDpxQ_20_30,21.377241,2.1991794,,No selected genre annotation,,No selected mood annotation
+VJ-dpTx_3Cg_30_40,-9.059912,9.576097,,No selected genre annotation,,No selected mood annotation
+VZJfkEet6EQ_30_40,-27.340307,-12.936462,,No selected genre annotation,,No selected mood annotation
+Vbcy6KBJsAA_20_30,8.380734,23.3627,,No selected genre annotation,,No selected mood annotation
+VjbRot21Hq0_30_40,-26.012394,-12.505999,,No selected genre annotation,,No selected mood annotation
+VzYc-c-uHjI_30_40,-6.744769,7.085448,,No selected genre annotation,,No selected mood annotation
+W7KbboEOmeM_30_40,-29.58855,-15.369727,,No selected genre annotation,,No selected mood annotation
+WPguqXCBQCI_328_338,-10.456782,6.1312413,,No selected genre annotation,,No selected mood annotation
+WYxXUBP_XaM_210_220,11.71146,-22.113028,,No selected genre annotation,,No selected mood annotation
+WditOomsdRU_70_80,1.2598191,1.1134105,,No selected genre annotation,,No selected mood annotation
+WeDA1mDFSCo_60_70,-11.635343,5.38044,Rock music | Independent music,Multiple selected genre labels,,No selected mood annotation
+WhNun_U3cRU_30_40,19.906067,15.80351,,No selected genre annotation,,No selected mood annotation
+WmTDKYYH5OU_180_190,-2.8440757,6.0461636,,No selected genre annotation,,No selected mood annotation
+WoXgPQQjcJU_60_70,23.764015,3.3685713,,No selected genre annotation,,No selected mood annotation
+WqC-fx3uNVE_70_80,3.1833367,19.746859,,No selected genre annotation,,No selected mood annotation
+WvaIypMvAHY_490_500,-26.20035,-17.242842,,No selected genre annotation,,No selected mood annotation
+Wvg5rlMbjJc_10_20,-24.033438,0.9279025,,No selected genre annotation,Angry music,Angry music
+WySgNm8qH-I_30_40,-15.618311,-2.2556493,Country,Country,,No selected mood annotation
+X2gHQb5ubco_280_290,-6.519184,-5.7208357,,No selected genre annotation,,No selected mood annotation
+XPGtOugQ69U_290_300,12.057976,17.370667,Electronic music | Independent music,Multiple selected genre labels,,No selected mood annotation
+XUD-9HkQuTE_30_40,-6.915369,4.161895,,No selected genre annotation,,No selected mood annotation
+XW6tS4zAZ5E_10_20,12.9879265,-12.408136,,No selected genre annotation,,No selected mood annotation
+XZurp_Ex9No_30_40,17.071941,17.87223,,No selected genre annotation,,No selected mood annotation
+Xe59DpKa-O4_30_40,15.6270685,18.8582,,No selected genre annotation,Angry music,Angry music
+XfLI8gHCuFE_90_100,13.996777,15.733363,,No selected genre annotation,,No selected mood annotation
+XfdySM4X9Xo_30_40,-25.94124,1.8894749,Rock music | Independent music,Multiple selected genre labels,,No selected mood annotation
+XgXOW3lX25Y_110_120,-24.823605,0.32975042,Rock music,Rock music,,No selected mood annotation
+Ximk6BHj9nE_30_40,-1.8402342,4.4974523,,No selected genre annotation,,No selected mood annotation
+XmMN-6g1L8w_130_140,3.8974717,-12.374566,,No selected genre annotation,,No selected mood annotation
+XzTBNfQ7_GA_30_40,18.032347,8.338943,Traditional music,Traditional music,,No selected mood annotation
+Y02VBGoTi9w_240_250,10.732964,-15.231755,,No selected genre annotation,,No selected mood annotation
+Y8ULUSXWTcY_390_400,-3.4052002,17.17219,Electronic music,Electronic music,,No selected mood annotation
+Y8plCTF8xsY_20_30,1.4250793,-16.782583,,No selected genre annotation,,No selected mood annotation
+YEwikeeqF38_330_340,20.57094,15.394352,,No selected genre annotation,,No selected mood annotation
+YGWweVRzFrw_110_120,9.009073,-15.859235,,No selected genre annotation,,No selected mood annotation
+YMq4wE6KxmQ_30_40,20.00626,11.305991,,No selected genre annotation,,No selected mood annotation
+YODoF8e7Jlk_170_180,23.801876,2.7152765,,No selected genre annotation,,No selected mood annotation
+YbLR6dgY-K4_30_40,-15.203364,-16.727179,,No selected genre annotation,,No selected mood annotation
+YcWJUHWt-64_0_10,-6.415408,12.099661,,No selected genre annotation,,No selected mood annotation
+YgX85tZf1ts_300_310,17.636969,-5.2040353,,No selected genre annotation,,No selected mood annotation
+Yk2ZrS0ZS6g_30_40,1.8569732,14.193403,,No selected genre annotation,,No selected mood annotation
+YpOHemscGCk_0_10,13.267506,2.281635,,No selected genre annotation,,No selected mood annotation
+YvFY7xU2kGk_30_40,-29.385288,-17.144495,,No selected genre annotation,,No selected mood annotation
+Z0O2r0Dl2T4_120_130,18.509699,-15.34182,,No selected genre annotation,,No selected mood annotation
+ZOzavOPeuJQ_100_110,-20.464813,6.001106,Independent music,Independent music,,No selected mood annotation
+Zbmm_hXcrA0_160_170,-9.605317,2.2184,,No selected genre annotation,,No selected mood annotation
+ZgooDijn2as_30_40,-11.09325,-3.682085,,No selected genre annotation,,No selected mood annotation
+Zhurw43-Y1g_30_40,-4.9667115,8.163371,,No selected genre annotation,,No selected mood annotation
+ZwLfj7tvpdc_110_120,-7.773873,11.026164,,No selected genre annotation,,No selected mood annotation
+_5w5TVK5B90_370_380,11.529938,-19.8365,,No selected genre annotation,,No selected mood annotation
+_AVegKwklcg_30_40,-13.669722,5.246092,Country,Country,,No selected mood annotation
+_IP6zlayY7k_30_40,10.505219,-19.230087,,No selected genre annotation,,No selected mood annotation
+_KaRkSyELy4_490_500,-26.456781,-15.687951,,No selected genre annotation,,No selected mood annotation
+_Ra1Y6K7nSs_0_10,5.735669,14.336309,,No selected genre annotation,,No selected mood annotation
+_RrA-0lfIiU_30_40,-12.090123,-15.460172,Traditional music,Traditional music,,No selected mood annotation
+_Slo8QXYOp8_0_10,6.0462685,4.4040747,,No selected genre annotation,,No selected mood annotation
+_dF-ZGquRNY_40_50,14.844121,3.2270153,,No selected genre annotation,,No selected mood annotation
+_pU2KbHMN4Q_30_40,18.090433,-18.441185,,No selected genre annotation,,No selected mood annotation
+_yXtw_z2xf4_40_50,1.5251992,20.013222,,No selected genre annotation,,No selected mood annotation
+aCTm1TcL7z8_30_40,-27.03758,-18.353582,,No selected genre annotation,,No selected mood annotation
+aGMdcxeF6Ak_270_280,-12.803142,-0.84346956,Electronic music,Electronic music,,No selected mood annotation
+aJHv6TV7JpY_30_40,-1.4472361,1.2296895,New-age music,New-age music,,No selected mood annotation
+aUH12rRIVDw_30_40,17.50716,-11.690234,,No selected genre annotation,,No selected mood annotation
+aW6greyYuO4_50_60,4.2490377,-10.332209,Traditional music,Traditional music,,No selected mood annotation
+ac_8oRMgDz0_110_120,16.209553,13.540591,,No selected genre annotation,,No selected mood annotation
+ad6UhYwTXXQ_30_40,-0.98510057,-4.02145,,No selected genre annotation,,No selected mood annotation
+ad6gQQ_0evk_30_40,-11.339911,-16.546822,,No selected genre annotation,,No selected mood annotation
+ajy9PM2SJ6c_190_200,4.918477,18.035675,,No selected genre annotation,,No selected mood annotation
+aqhhfkXKJ1o_10_20,-22.75702,-14.454845,,No selected genre annotation,,No selected mood annotation
+as7MhTe961k_170_180,14.484196,-15.315491,,No selected genre annotation,,No selected mood annotation
+azyNUtTHvaE_30_40,-8.660948,-8.208369,,No selected genre annotation,,No selected mood annotation
+b6hr31Qaemg_130_140,-5.7762947,0.6799984,,No selected genre annotation,,No selected mood annotation
+b98BJ36K1wo_200_210,26.008896,-7.217103,Electronic music,Electronic music,,No selected mood annotation
+bAJrcYJgllE_30_40,15.680954,1.4564141,,No selected genre annotation,,No selected mood annotation
+bHiRX6QYwEk_150_160,-15.061875,-0.20130521,,No selected genre annotation,,No selected mood annotation
+bNvp4y9WSGM_30_40,2.1359456,-6.8017116,,No selected genre annotation,,No selected mood annotation
+bPYbRSI16IY_0_10,18.45584,10.246503,,No selected genre annotation,,No selected mood annotation
+bSX5-VPL8rE_80_90,2.6014824,20.866331,Hip hop music,Hip hop music,,No selected mood annotation
+bZuXMxR2S4U_40_50,2.2700527,5.314347,,No selected genre annotation,,No selected mood annotation
+bkzGHRpx5MM_30_40,-28.444363,-15.399601,Rock music,Rock music,,No selected mood annotation
+bl8PgmZ9iOc_30_40,25.843027,-9.963397,,No selected genre annotation,,No selected mood annotation
+bm5IT7e2vvI_120_130,3.5284586,-4.2156034,,No selected genre annotation,,No selected mood annotation
+bqeVxA97TQU_120_130,13.119127,18.62695,Electronic music,Electronic music,,No selected mood annotation
+br4A2uNud50_200_210,14.502074,-11.77975,,No selected genre annotation,,No selected mood annotation
+bxZeGrM_0ac_400_410,16.381905,-12.036446,,No selected genre annotation,,No selected mood annotation
+by57LpTlGbs_20_30,-0.9851626,9.69549,,No selected genre annotation,,No selected mood annotation
+c2akbbdS7I4_30_40,13.402853,19.220976,,No selected genre annotation,,No selected mood annotation
+cFIZraIPAXE_250_260,13.222861,17.37272,Electronic music,Electronic music,,No selected mood annotation
+cGorUmWMrwo_30_40,-20.41635,-16.741938,Blues | Country,Multiple selected genre labels,,No selected mood annotation
+cLIump75aC0_30_40,6.7361517,12.890674,,No selected genre annotation,,No selected mood annotation
+cT-KZPVpU9M_310_320,3.5535202,-15.241149,,No selected genre annotation,,No selected mood annotation
+cWOohqFud6g_30_40,15.2466755,21.20182,,No selected genre annotation,,No selected mood annotation
+chwqnnaiYXw_30_40,15.115082,-15.559247,,No selected genre annotation,,No selected mood annotation
+cnmedj0fYTQ_10_20,-22.725761,-0.065764725,,No selected genre annotation,,No selected mood annotation
+cp8t27oT_ww_0_10,-23.716057,-18.926542,,No selected genre annotation,,No selected mood annotation
+dKJk3JavNzo_30_40,-2.8778033,11.551553,,No selected genre annotation,,No selected mood annotation
+dO3VsX4rKNc_30_40,-24.47802,3.5932307,Rock music,Rock music,,No selected mood annotation
+dbBlYyaFKTQ_30_40,14.191071,-14.739724,,No selected genre annotation,,No selected mood annotation
+dbldb9tq8ng_30_40,-17.69246,3.3769488,Rock music,Rock music,,No selected mood annotation
+drqKxGmdf8Y_30_40,9.312209,-22.038034,,No selected genre annotation,,No selected mood annotation
+dsU3B0W3TMs_30_40,19.798296,9.642647,,No selected genre annotation,,No selected mood annotation
+dvDSgmqbrM0_190_200,0.4589641,12.832525,,No selected genre annotation,,No selected mood annotation
+dwSj0Rr3vFc_110_120,0.81317794,-1.164301,,No selected genre annotation,,No selected mood annotation
+dy_yFZ6dL34_130_140,11.874094,1.1950835,New-age music,New-age music,,No selected mood annotation
+dzPPmuFUicc_30_40,-14.247693,-12.838446,Country,Country,,No selected mood annotation
+eQHQWb6FCio_60_70,-6.1158,14.8195715,,No selected genre annotation,,No selected mood annotation
+eSIxvnEQ6R0_420_430,7.768138,-5.630027,,No selected genre annotation,,No selected mood annotation
+eW8se7t0s-U_30_40,6.061917,-14.196086,New-age music,New-age music,,No selected mood annotation
+evy2azZk3kE_40_50,-0.67400855,-1.3382057,,No selected genre annotation,,No selected mood annotation
+f1UMPPWbCrU_350_360,15.148738,-17.30063,,No selected genre annotation,,No selected mood annotation
+f4jW2H6V7gk_30_40,0.07730641,19.537424,,No selected genre annotation,,No selected mood annotation
+f6wrXzvByrg_30_40,-12.010242,-13.398923,Country,Country,,No selected mood annotation
+f7OQTtTdgrA_0_10,16.17972,-5.093203,,No selected genre annotation,,No selected mood annotation
+fAHYe-qmFnU_0_10,14.646487,-0.4607514,,No selected genre annotation,,No selected mood annotation
+fAfk9yrGhWw_200_210,-26.918886,-14.980354,,No selected genre annotation,,No selected mood annotation
+fBEGBuO3RXg_30_40,0.51148653,-6.0889335,,No selected genre annotation,,No selected mood annotation
+fESsP6ZnVKA_20_30,17.343315,11.93933,Electronic music,Electronic music,,No selected mood annotation
+fH9CY48sfJY_330_340,-4.708791,2.0389435,Pop music,Pop music,,No selected mood annotation
+fJ6ZeWYfLjA_380_390,-3.8432188,1.685257,,No selected genre annotation,,No selected mood annotation
+fPYxUa1ZVAY_30_40,11.006893,-18.280737,,No selected genre annotation,,No selected mood annotation
+fQiSoVDFRjo_30_40,-19.485752,4.725453,,No selected genre annotation,,No selected mood annotation
+fU9woCZqemw_40_50,8.176363,-12.151989,,No selected genre annotation,,No selected mood annotation
+fUC45bzOOJw_30_40,17.307943,15.450039,,No selected genre annotation,,No selected mood annotation
+fWypK9RHJJI_30_40,-0.7752913,8.947588,,No selected genre annotation,,No selected mood annotation
+fmHbWq-7-iQ_160_170,-20.890278,6.2041044,,No selected genre annotation,Angry music,Angry music
+fpdgtpBOh-c_40_50,4.876822,-14.9904585,,No selected genre annotation,,No selected mood annotation
+fsXfBoNcLeM_30_40,-1.0695093,18.105154,,No selected genre annotation,,No selected mood annotation
+fvpDYGzdRmo_120_130,5.326329,-11.204445,,No selected genre annotation,,No selected mood annotation
+g0aOPWwNMFQ_80_90,3.8837373,1.7104962,,No selected genre annotation,,No selected mood annotation
+gWRfk8nCcPs_150_160,-1.108662,15.972532,,No selected genre annotation,,No selected mood annotation
+gcdqffsCWI8_30_40,23.756311,-7.7859235,,No selected genre annotation,,No selected mood annotation
+ggBivmG6yHQ_250_260,-13.316238,8.159426,,No selected genre annotation,,No selected mood annotation
+gp7j9o2x9co_30_40,-24.187128,-7.8521457,Rock music,Rock music,,No selected mood annotation
+grE0lwTsSPg_30_40,-3.1998422,15.21249,,No selected genre annotation,,No selected mood annotation
+guYWKdxrtIg_30_40,-24.479649,-13.860759,,No selected genre annotation,,No selected mood annotation
+h0-6U948u7Y_50_60,0.39405325,-14.842361,,No selected genre annotation,,No selected mood annotation
+h2f_CKjQQg8_70_80,-25.604664,0.95881987,,No selected genre annotation,,No selected mood annotation
+h7DOBV43UPQ_90_100,8.711952,-5.299702,,No selected genre annotation,,No selected mood annotation
+hCIB1E60Nbw_230_240,11.782814,19.153072,Electronic music,Electronic music,,No selected mood annotation
+hDsA_ky9Hfw_30_40,9.139253,-2.2078052,,No selected genre annotation,,No selected mood annotation
+hFqZZrj0rnM_30_40,-7.037833,-2.6000707,,No selected genre annotation,,No selected mood annotation
+hH6thMA3640_120_130,-13.628508,-16.120003,,No selected genre annotation,,No selected mood annotation
+hHb0Eq1I7Fk_0_10,-14.535374,10.141974,,No selected genre annotation,,No selected mood annotation
+hOSzGYKaJGE_150_160,-16.94631,-0.9119613,,No selected genre annotation,,No selected mood annotation
+hRQJgZVxRX0_30_40,-28.03943,-12.84399,Rock music,Rock music,,No selected mood annotation
+hSSzn4bIwZg_40_50,9.703128,-16.450607,,No selected genre annotation,,No selected mood annotation
+hVVrl9FkKnY_240_250,-23.75701,-8.556312,Blues,Blues,,No selected mood annotation
+hWiAoE4u4y8_180_190,-22.202759,3.9000916,,No selected genre annotation,Angry music,Angry music
+hdlnugbWjKA_30_40,-9.778919,8.4850445,,No selected genre annotation,,No selected mood annotation
+hhVFK9tYu84_40_50,-6.465012,-18.612825,,No selected genre annotation,,No selected mood annotation
+hnlVKC7rxdg_30_40,16.866526,-13.921389,,No selected genre annotation,,No selected mood annotation
+hoPnrbKOEl8_110_120,6.8827195,1.5664419,,No selected genre annotation,,No selected mood annotation
+hu6sChY-Yps_30_40,11.513004,22.431324,,No selected genre annotation,,No selected mood annotation
+hvmCuosF0Xo_10_20,-26.564106,-0.20115443,Rock music | Independent music,Multiple selected genre labels,,No selected mood annotation
+i6k1yiyO5jQ_30_40,-8.381563,6.956211,,No selected genre annotation,,No selected mood annotation
+iDvva_WCo-I_30_40,23.752966,3.2590113,,No selected genre annotation,,No selected mood annotation
+iFWtsT5zRKo_40_50,-16.157822,1.1520138,Country,Country,,No selected mood annotation
+iSw-5EjXgXc_30_40,-25.872139,-16.244001,,No selected genre annotation,,No selected mood annotation
+ieEPKa3HiGo_30_40,-28.753868,-11.47629,,No selected genre annotation,,No selected mood annotation

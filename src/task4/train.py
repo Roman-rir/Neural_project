@@ -3,6 +3,7 @@ import argparse
 import json
 import math
 import copy
+import time
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -12,16 +13,16 @@ import torch
 from src.task2.train import resolve_device, set_seed
 from src.task3.data import load_features, feature_fingerprint, make_demo
 from .model import RetrievalModel, contrastive_loss
-from .metrics import retrieval_metrics
+from .metrics import retrieval_metrics, normalized_pairs, paired_ranks
 
 
 def paired_inputs(features):
-    data = load_features(features)
+    data = load_features(features, mmap=True)
     for split in ("train", "validation", "test"):
         if data["splits"].count(split) < 2:
             raise ValueError(f"Retrieval needs at least two pairs in {split}")
     # CLS pooling matches the Task 1 encoder convention; labels never enter the loss.
-    return data, data["tokens"][:, 0].float(), data["graph"].float()
+    return data, data["tokens"][:, 0].detach().float().contiguous(), data["graph"].detach().float().contiguous()
 
 
 def encode(model, text, graph, indices, device, batch_size=256):
@@ -72,25 +73,38 @@ def evaluate(checkpoint, features, output_dir, split="test", device="auto"):
     if baseline_embeddings is not None:
         np.savez_compressed(output / "untrained_embeddings.npz", text=baseline_embeddings[0],
                             graph=baseline_embeddings[1], sample_ids=np.asarray(ids))
-    examples = []
-    for direction, queries, gallery in (("text_to_graph", t, g), ("graph_to_text", g, t)):
-        for query in range(min(3, len(ids))):
+    examples, rank_records = [], {}
+    nt, ng = normalized_pairs(t, g)
+    for direction, queries, gallery in (("text_to_graph", nt, ng), ("graph_to_text", ng, nt)):
+        ranks = paired_ranks(queries, gallery)
+        rank_records[direction] = ranks.tolist()
+        # Fixed queries plus explicitly outcome-selected best/worst diagnostics.
+        selected = {i: "fixed_first_three" for i in range(min(3, len(ids)))}
+        selected.setdefault(int(np.argmin(ranks)), "best_rank_diagnostic")
+        selected.setdefault(int(np.argmax(ranks)), "worst_rank_diagnostic")
+        for query, selection in selected.items():
             scores = queries[query] @ gallery.T
-            order = np.argsort(-scores, kind="stable")[:min(10, len(ids))]
+            # Put tied negatives before this positive, matching aggregate metrics.
+            order = np.lexsort((np.arange(len(ids)) == query, -scores))[:min(10, len(ids))]
             examples.append(dict(direction=direction, query_id=ids[query], caption=data["texts"][indices[query]],
-                                 paired_rank=int(np.sum(scores >= scores[query])),
+                                 selection=selection, paired_rank=int(ranks[query]),
                                  ranked_matches=[dict(sample_id=ids[i], score=float(scores[i]),
-                                                      is_paired_positive=bool(i == query)) for i in order]))
+                                                      caption=data["texts"][indices[i]], rank=rank,
+                                                      is_paired_positive=bool(i == query)) for rank, i in enumerate(order, 1)]))
     (output / "examples.json").write_text(json.dumps(examples, indent=2), encoding="utf-8")
+    (output / "ranks.json").write_text(json.dumps(dict(sample_ids=ids, **rank_records), indent=2), encoding="utf-8")
     return report
 
 
 def train(features, output_dir, epochs=20, batch_size=16, projection_dim=64,
-          temperature=0.07, learning_rate=1e-3, patience=5, seed=42, device="auto"):
+          temperature=0.07, learning_rate=1e-3, patience=5, seed=42, device="auto", cpu_threads=6):
     if min(epochs, projection_dim, patience) < 1 or batch_size < 2:
         raise ValueError("Positive epochs/dimensions/patience and batch_size >= 2 required")
     if any(not math.isfinite(v) or v <= 0 for v in (temperature, learning_rate)):
         raise ValueError("Temperature and learning rate must be positive and finite")
+    if cpu_threads < 1:
+        raise ValueError("cpu_threads must be positive")
+    torch.set_num_threads(cpu_threads)
     data, text, graph = paired_inputs(features)
     output = empty_output(output_dir)
     set_seed(seed)
@@ -101,8 +115,10 @@ def train(features, output_dir, epochs=20, batch_size=16, projection_dim=64,
     optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
     train_ids = torch.tensor([i for i, s in enumerate(data["splits"]) if s == "train"])
     val_ids = [i for i, s in enumerate(data["splits"]) if s == "validation"]
-    config = dict(epochs=epochs, batch_size=batch_size, temperature=temperature, learning_rate=learning_rate,
-                  patience=patience, seed=seed, device=str(device), dimensions=dims)
+    config = dict(epochs=epochs, batch_size=batch_size, projection_dim=projection_dim, temperature=temperature, learning_rate=learning_rate,
+                  patience=patience, seed=seed, device=str(device), dimensions=dims,
+                  cpu_threads=cpu_threads, weight_decay=0.01,
+                  parameter_count=sum(p.numel() for p in model.parameters()), frozen_encoders=True)
     fingerprint = feature_fingerprint(features)
     (output / "config.json").write_text(json.dumps(config, indent=2), encoding="utf-8")
     initial_t, initial_g = encode(model, text, graph, val_ids, device)
@@ -110,6 +126,7 @@ def train(features, output_dir, epochs=20, batch_size=16, projection_dim=64,
     (output / "initial_validation.json").write_text(json.dumps(initial_metrics, indent=2), encoding="utf-8")
     best, stale, history = -1.0, 0, []
     generator = torch.Generator().manual_seed(seed)
+    started = time.perf_counter()
     for epoch in range(1, epochs + 1):
         model.train()
         shuffled = train_ids[torch.randperm(len(train_ids), generator=generator)]
@@ -141,15 +158,17 @@ def train(features, output_dir, epochs=20, batch_size=16, projection_dim=64,
             stale += 1
             if stale >= patience:
                 break
+    (output / "timing.json").write_text(json.dumps(dict(training_seconds=time.perf_counter() - started)), encoding="utf-8")
     (output / "history.json").write_text(json.dumps(history, indent=2), encoding="utf-8")
     fig, axes = plt.subplots(1, 2, figsize=(10, 4))
     axes[0].plot([r["epoch"] for r in history], [r["train_loss"] for r in history])
     axes[0].set(xlabel="Epoch", ylabel="InfoNCE loss")
-    axes[1].plot([r["epoch"] for r in history], [r["validation"]["mean_recall_at_1"] for r in history])
+    for direction in ("text_to_graph", "graph_to_text"):
+        axes[1].plot([r["epoch"] for r in history], [r["validation"][direction]["recall_at_1"] for r in history], label=direction)
     axes[1].axhline(initial_metrics["mean_recall_at_1"], linestyle="--", color="gray", label="Untrained projections")
     axes[1].axhline(1 / len(val_ids), linestyle=":", color="orange", label="Random ranking expectation")
     axes[1].legend()
-    axes[1].set(xlabel="Epoch", ylabel="Validation mean Recall@1", ylim=(0, 1))
+    axes[1].set(xlabel="Epoch", ylabel="Validation Recall@1", ylim=(0, None))
     fig.tight_layout(); fig.savefig(output / "learning_curves.png"); plt.close(fig)
     return evaluate(output / "best_model.pt", features, output / "validation", split="validation", device=str(device))
 
@@ -161,7 +180,7 @@ def main():
     group = training.add_mutually_exclusive_group(required=True)
     group.add_argument("--features", type=Path)
     group.add_argument("--demo", action="store_true")
-    for name, default in (("epochs", 20), ("batch-size", 16), ("projection-dim", 64), ("patience", 5), ("seed", 42)):
+    for name, default in (("epochs", 20), ("batch-size", 16), ("projection-dim", 64), ("patience", 5), ("seed", 42), ("cpu-threads", 6)):
         training.add_argument(f"--{name}", type=int, default=default)
     training.add_argument("--temperature", type=float, default=0.07)
     training.add_argument("--learning-rate", type=float, default=1e-3)

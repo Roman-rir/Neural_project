@@ -1,0 +1,76 @@
+{
+  "checked_at_utc": "2026-09-10T09:34:21.603706+00:00",
+  "verdict": "complete within documented frozen DistilBERT-GraphSAGE paired-cohort scope",
+  "primary_run": "results/task3/available_run1",
+  "alignment": {
+    "aligned_pairs": 3964,
+    "label_count": 30,
+    "source_caption_targets_splits_verified": true,
+    "encoder_hashes_verified": true,
+    "graph_dataset_fingerprint": "1c37c2d2d5a476613291707596b271070abf555d592fa4f208b5949cd1f6f8fb",
+    "text_training_samples": 3864,
+    "paired_training_samples": 2775,
+    "text_training_superset": true
+  },
+  "runs": {
+    "available_run1": {
+      "valid": true,
+      "runs_checked": 15,
+      "evaluated_test": true,
+      "validation_only_selection": true,
+      "suite_declaration_verified": true,
+      "comparison_tables_verified": true,
+      "feature_sha256": "77c667b7312a6579ef17f0a29da5170781829a1a7849154b024794fa9d6a7513",
+      "selection_sha256": "7f4a19643175c0b3ed60ac3fb69a43fb75bdf191923523e527f7b0922a32e4e7",
+      "checkpoints_present": 15
+    },
+    "my_run": {
+      "valid": true,
+      "runs_checked": 15,
+      "evaluated_test": true,
+      "validation_only_selection": true,
+      "suite_declaration_verified": true,
+      "comparison_tables_verified": true,
+      "feature_sha256": "77c667b7312a6579ef17f0a29da5170781829a1a7849154b024794fa9d6a7513",
+      "selection_sha256": "7f4a19643175c0b3ed60ac3fb69a43fb75bdf191923523e527f7b0922a32e4e7",
+      "checkpoints_present": 15
+    }
+  },
+  "tests": {
+    "passed": 73,
+    "task3_tests": 19,
+    "returncode": 0,
+    "log": "completion_audit_tests.log"
+  },
+  "notebook": {
+    "path": "notebooks/task3_fusion.ipynb",
+    "executed_code_cells": 7,
+    "errors": 0,
+    "cached_real_pair_inference": true,
+    "corrected_report_rendered": true
+  },
+  "presentation_fixes": [
+    "Restored plus-minus symbols and segment interval dashes",
+    "Corrected singular/plural case counts",
+    "Refreshed executed notebook report output"
+  ],
+  "limitations": [
+    "Text encoder is DistilBERT; encoders remain frozen",
+    "Task 3 heads share 2775 training pairs; pretrained task text encoder saw 1089 additional training-only captions",
+    "Available-audio cohort only",
+    "Inference demonstration uses cached paired features"
+  ],
+  "source_sha256": {
+    "src/task3/__init__.py": "324d854c1b56afd418529e4c4d9869ea61132865ef04a4c42b282430684e5b72",
+    "src/task3/__main__.py": "58ed838b115e569899a127ab7c3fa5dc95b71e825dc69af3cb94b92fde0b82bd",
+    "src/task3/align.py": "6130c4861b33afa79d4e8d64468f8d35fe7989c12f4bd0e9b4b35caff5ac779a",
+    "src/task3/analyze.py": "4abffd9ce9cb0a951c0ca2bdc72427cb8a0aea67066b30efcc7bb1873320162b",
+    "src/task3/cases.py": "d056d91cd3df1be51908dc230d7197f81a781da9cf241f09364bd99718384738",
+    "src/task3/data.py": "5b1457c829f9bfe6a78a7632ab59dc41b3f325923410a2e5366caa89c1a0174b",
+    "src/task3/evaluate.py": "8277072783d17f7790cae282121c390a1e7a89027274293ab0e3278b51b89123",
+    "src/task3/experiment.py": "9f9779d67585299be0d48769d15423503a7f4873177652f9c4a36d334f17f5d4",
+    "src/task3/models.py": "81f1d7d2c70c2a6488f95d38efca04c2b555c5f2899e5077c668dc61db5da25d",
+    "src/task3/prepare.py": "6f0c59f94a0887a770ed355047c0df1b4008679c30a1ec749514fda5619b1e86",
+    "src/task3/train.py": "a636967d17a48ff2464a3dd33b8a21d2bbe119e72f5c2dbdca3af10866e564e6"
+  }
+}

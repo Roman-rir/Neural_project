@@ -1,0 +1,30 @@
+{
+  "first_optimizer_step": {
+    "gradient_l2": {
+      "graph": 0.1920499172045503,
+      "head": 0.20431670297133267
+    },
+    "changes": {
+      "graph": {
+        "parameter": "graph_encoder.convs.0.lin_l.weight",
+        "max_abs_change": 0.00010031461715698242
+      },
+      "head": {
+        "parameter": "head.graph_projection.weight",
+        "max_abs_change": 0.00010025501251220703
+      }
+    }
+  },
+  "selected_checkpoint_changes": {
+    "graph": {
+      "parameter": "graph_encoder.convs.0.lin_l.weight",
+      "max_abs_change": 0.010730274021625519
+    },
+    "head": {
+      "parameter": "head.graph_projection.weight",
+      "max_abs_change": 0.009550854563713074
+    }
+  },
+  "frozen_text_sha256_before": null,
+  "frozen_text_sha256_after": null
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 0.12989703535228161,
+    "validation_macro_f1": 0.3374146478895605,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 2,
+    "train_loss": 0.09723718354830871,
+    "validation_macro_f1": 0.4043944740548096,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 3,
+    "train_loss": 0.09181907645082689,
+    "validation_macro_f1": 0.4149584434148974,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 4,
+    "train_loss": 0.0890664091652578,
+    "validation_macro_f1": 0.38895066437095616,
+    "threshold": 0.15
+  },
+  {
+    "epoch": 5,
+    "train_loss": 0.0880998551201176,
+    "validation_macro_f1": 0.42301670306714917,
+    "threshold": 0.2
+  },
+  {
+    "epoch": 6,
+    "train_loss": 0.08645485675012743,
+    "validation_macro_f1": 0.4344948508123546,
+    "threshold": 0.25
+  },
+  {
+    "epoch": 7,
+    "train_loss": 0.08417561745589917,
+    "validation_macro_f1": 0.41616334183617776,
+    "threshold": 0.2
+  },
+  {
+    "epoch": 8,
+    "train_loss": 0.08339657811968176,
+    "validation_macro_f1": 0.4481699572380417,
+    "threshold": 0.15
+  },
+  {
+    "epoch": 9,
+    "train_loss": 0.0829816108230535,
+    "validation_macro_f1": 0.40593298787239274,
+    "threshold": 0.2
+  },
+  {
+    "epoch": 10,
+    "train_loss": 0.0820491672313965,
+    "validation_macro_f1": 0.41806701766556864,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 11,
+    "train_loss": 0.08062080031848169,
+    "validation_macro_f1": 0.46671509870214056,
+    "threshold": 0.15
+  },
+  {
+    "epoch": 12,
+    "train_loss": 0.07996565849797145,
+    "validation_macro_f1": 0.4382685191691288,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 13,
+    "train_loss": 0.07956140380856153,
+    "validation_macro_f1": 0.43775311783995274,
+    "threshold": 0.15
+  },
+  {
+    "epoch": 14,
+    "train_loss": 0.0779894600338764,
+    "validation_macro_f1": 0.4429180506558476,
+    "threshold": 0.2
+  },
+  {
+    "epoch": 15,
+    "train_loss": 0.0783735995357101,
+    "validation_macro_f1": 0.4490637272316388,
+    "threshold": 0.25
+  },
+  {
+    "epoch": 16,
+    "train_loss": 0.07731406960334326,
+    "validation_macro_f1": 0.4306251434699664,
+    "threshold": 0.15
+  }
+]

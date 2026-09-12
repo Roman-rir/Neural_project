@@ -1,0 +1,35 @@
+{
+  "run_dir": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task3\\joint_run2",
+  "selected_fusion": "gated",
+  "case_ids": [
+    "-5xOcMJpTUk_70_80",
+    "-8C-gydUbR8_30_40",
+    "-Bu7YaslRW0_30_40"
+  ],
+  "selection_sha256": "db6b0869f4e74d219e06cc93046aaf937af7f6112b901790f517ac7941526f96",
+  "comparison_sha256": "5abf3fe0a12d10f6495a5b28ebdb5f81443a593cea4e6cf6053fda264c57baac",
+  "case_selection": "First validation IDs in processed-manifest order",
+  "test_inference": false,
+  "source_prediction_hashes": {
+    "bert": {
+      "validation": "596832752cced3c7501a6f5d0d640b10a2ec9096088f2238df76b363d57a4a57",
+      "test": "804f01104dd7370735ceb745a2b9e5aaaae0cd7c74965a267c7791a1e4f63f12"
+    },
+    "gnn": {
+      "validation": "0b3e12c1e21d8a5778ae7a360de7b327e5f89a1100c6bb2b2963bfe1fedab3fd",
+      "test": "ce5b85d663bfc1955f940f7649dbeb232a9da8eeaa8c6f4f557314faabd6f6ec"
+    },
+    "concat": {
+      "validation": "6d53ba27d039ee0fdb50e1515781e8585017c7200ba5dec0d6547b34032ca371",
+      "test": "64676a7e4ed88b429ba8b3a8226c41f8413fd550dbbacc76c4efeb744242ac8a"
+    },
+    "gated": {
+      "validation": "0325210fc25da4f1a0031567fb2c7b70595ae72b40383dd2fe7712abb8010129",
+      "test": "88d525e02bc3dd0618a7f0ef700db027b938a7ae08ef58e49b2354ec73628ed4"
+    },
+    "cross_attention": {
+      "validation": "dff37c622739e07b79047514bb73ea5e2b695eb7702e4e9d34360c578179f309",
+      "test": "e388c1ecfdfe773a1a0c66720c38ced5bf553e3ffb7eb923f1e51f3907ef5b68"
+    }
+  }
+}

@@ -4,24 +4,37 @@ import argparse
 import json
 
 
-def retrieval_metrics(text, graph, query_batch_size=256):
-    text, graph = np.asarray(text), np.asarray(graph)
-    if text.ndim != 2 or text.shape != graph.shape or len(text) < 2 or text.shape[1] < 1 or query_batch_size < 1:
-        raise ValueError("Require at least two aligned pairs and a positive query batch size")
+def normalized_pairs(text, graph):
+    # Float64 scoring keeps near-ties consistent across saved examples and metrics.
+    text, graph = np.asarray(text, dtype=np.float64), np.asarray(graph, dtype=np.float64)
+    if text.ndim != 2 or text.shape != graph.shape or len(text) < 2 or text.shape[1] < 1:
+        raise ValueError("Require at least two aligned pairs")
     if not np.isfinite(text).all() or not np.isfinite(graph).all():
         raise ValueError("Embeddings must be finite")
     text = text / np.maximum(np.linalg.norm(text, axis=1, keepdims=True), 1e-12)
     graph = graph / np.maximum(np.linalg.norm(graph, axis=1, keepdims=True), 1e-12)
+    return text, graph
+
+
+def paired_ranks(queries, gallery, query_batch_size=256):
+    if query_batch_size < 1:
+        raise ValueError("Require a positive query batch size")
+    ranks = []
+    for start in range(0, len(queries), query_batch_size):
+        scores = queries[start:start + query_batch_size] @ gallery.T
+        positive = scores[np.arange(len(scores)), np.arange(start, start + len(scores))]
+        ranks.extend((scores >= positive[:, None]).sum(1).tolist())
+    return np.asarray(ranks)
+
+
+def retrieval_metrics(text, graph, query_batch_size=256):
+    text, graph = normalized_pairs(text, graph)
     report = {"gallery_size": len(text), "effective_k": {str(k): min(k, len(text)) for k in (1, 5, 10)},
               "tie_policy": "pessimistic: tied negatives rank ahead of the paired positive"}
     report["random_ranking_expected_recall"] = {str(k): min(k, len(text)) / len(text) for k in (1, 5, 10)}
+    report["random_ranking_expected_mrr"] = float(np.mean(1.0 / np.arange(1, len(text) + 1)))
     for direction, queries, gallery in (("text_to_graph", text, graph), ("graph_to_text", graph, text)):
-        ranks = []
-        for start in range(0, len(queries), query_batch_size):
-            scores = queries[start:start + query_batch_size] @ gallery.T
-            positive = scores[np.arange(len(scores)), np.arange(start, start + len(scores))]
-            ranks.extend((scores >= positive[:, None]).sum(1).tolist())
-        ranks = np.asarray(ranks)
+        ranks = paired_ranks(queries, gallery, query_batch_size)
         report[direction] = {f"recall_at_{k}": float(np.mean(ranks <= min(k, len(text)))) for k in (1, 5, 10)}
         report[direction]["median_rank"] = float(np.median(ranks))
         report[direction]["mean_reciprocal_rank"] = float(np.mean(1.0 / ranks))

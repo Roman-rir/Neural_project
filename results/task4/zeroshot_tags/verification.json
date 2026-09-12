@@ -1,0 +1,13 @@
+{
+  "valid": true,
+  "identical_test_ids_and_targets": true,
+  "supervised_metrics_recomputed": true,
+  "zero_shot_metrics_recomputed": true,
+  "task3_selected_fusion": "gated",
+  "artifacts": {
+    "comparison.csv": "9e0c49aebab969d51336b0ddf62c7eec1c8fd8fcf574d0c871b7c5a4185f7bc1",
+    "config.json": "8228fe95a4856e3d5c59e2a022ac391c4502b7a429afa868b9c6c12ea0be9f2f",
+    "metrics.json": "5ad292af9c62850235b5abe40b0c049e16830091c26a4ac0cc6d0f6e6d100f66",
+    "predictions.npz": "4dc8e4f57e0612e8e7285f844f74404e07be0d5b879db840e8af3efd5d8fafc6"
+  }
+}

@@ -1,0 +1,364 @@
+{
+  "schema_version": 1,
+  "dataset": "Synthetic tones; pipeline verification only",
+  "synthetic": true,
+  "label_source": "synthetic waveform recipe; not MusicCaps or AudioSet",
+  "seed": 42,
+  "label_names": [
+    "synthetic_high_tone",
+    "synthetic_fast_pulse",
+    "synthetic_harmonic"
+  ],
+  "source_manifest": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\manifest.json",
+  "source_manifest_sha256": "c2983c20ee41616ac90988527d6b9259a7a221baeaaa712fb07692b49a79c230",
+  "feature_config": {
+    "sample_rate": 8000,
+    "segment_seconds": 0.25,
+    "n_mels": 32,
+    "n_mfcc": 8,
+    "n_fft": 256,
+    "hop_length": 64
+  },
+  "normalization_path": "normalization.json",
+  "graph_variants": [
+    "temporal",
+    "temporal_similarity",
+    "random"
+  ],
+  "feature_cache_version": 2,
+  "graph_audit_path": "graph_audit.json",
+  "preprocessing_seconds": 2.6903170000005048,
+  "top_k": 1,
+  "records": [
+    {
+      "sample_id": "synthetic_000",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_000.wav",
+      "labels": [
+        1,
+        1,
+        1
+      ],
+      "split": "train",
+      "processed_path": "samples\\synthetic_000-8c3f764e66.pt"
+    },
+    {
+      "sample_id": "synthetic_001",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_001.wav",
+      "labels": [
+        0,
+        0,
+        1
+      ],
+      "split": "train",
+      "processed_path": "samples\\synthetic_001-4ce137350d.pt"
+    },
+    {
+      "sample_id": "synthetic_002",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_002.wav",
+      "labels": [
+        1,
+        0,
+        0
+      ],
+      "split": "train",
+      "processed_path": "samples\\synthetic_002-1a09d895c7.pt"
+    },
+    {
+      "sample_id": "synthetic_003",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_003.wav",
+      "labels": [
+        0,
+        1,
+        0
+      ],
+      "split": "train",
+      "processed_path": "samples\\synthetic_003-062a53b538.pt"
+    },
+    {
+      "sample_id": "synthetic_004",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_004.wav",
+      "labels": [
+        1,
+        0,
+        0
+      ],
+      "split": "train",
+      "processed_path": "samples\\synthetic_004-2007aced9f.pt"
+    },
+    {
+      "sample_id": "synthetic_005",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_005.wav",
+      "labels": [
+        0,
+        0,
+        1
+      ],
+      "split": "validation",
+      "processed_path": "samples\\synthetic_005-9632862966.pt"
+    },
+    {
+      "sample_id": "synthetic_006",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_006.wav",
+      "labels": [
+        1,
+        1,
+        1
+      ],
+      "split": "train",
+      "processed_path": "samples\\synthetic_006-d50e004e09.pt"
+    },
+    {
+      "sample_id": "synthetic_007",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_007.wav",
+      "labels": [
+        0,
+        0,
+        0
+      ],
+      "split": "test",
+      "processed_path": "samples\\synthetic_007-d8b4a2e24d.pt"
+    },
+    {
+      "sample_id": "synthetic_008",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_008.wav",
+      "labels": [
+        1,
+        0,
+        0
+      ],
+      "split": "train",
+      "processed_path": "samples\\synthetic_008-797219d718.pt"
+    },
+    {
+      "sample_id": "synthetic_009",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_009.wav",
+      "labels": [
+        0,
+        1,
+        0
+      ],
+      "split": "train",
+      "processed_path": "samples\\synthetic_009-bada9963aa.pt"
+    },
+    {
+      "sample_id": "synthetic_010",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_010.wav",
+      "labels": [
+        1,
+        0,
+        1
+      ],
+      "split": "validation",
+      "processed_path": "samples\\synthetic_010-32f11a0adc.pt"
+    },
+    {
+      "sample_id": "synthetic_011",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_011.wav",
+      "labels": [
+        0,
+        0,
+        1
+      ],
+      "split": "train",
+      "processed_path": "samples\\synthetic_011-1cda1d2f76.pt"
+    },
+    {
+      "sample_id": "synthetic_012",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_012.wav",
+      "labels": [
+        1,
+        1,
+        0
+      ],
+      "split": "train",
+      "processed_path": "samples\\synthetic_012-a545c168ca.pt"
+    },
+    {
+      "sample_id": "synthetic_013",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_013.wav",
+      "labels": [
+        0,
+        0,
+        0
+      ],
+      "split": "train",
+      "processed_path": "samples\\synthetic_013-f420419046.pt"
+    },
+    {
+      "sample_id": "synthetic_014",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_014.wav",
+      "labels": [
+        1,
+        0,
+        0
+      ],
+      "split": "train",
+      "processed_path": "samples\\synthetic_014-9a19c5a2c7.pt"
+    },
+    {
+      "sample_id": "synthetic_015",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_015.wav",
+      "labels": [
+        0,
+        1,
+        1
+      ],
+      "split": "train",
+      "processed_path": "samples\\synthetic_015-472f464843.pt"
+    },
+    {
+      "sample_id": "synthetic_016",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_016.wav",
+      "labels": [
+        1,
+        0,
+        1
+      ],
+      "split": "test",
+      "processed_path": "samples\\synthetic_016-ff00b65ff8.pt"
+    },
+    {
+      "sample_id": "synthetic_017",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_017.wav",
+      "labels": [
+        0,
+        0,
+        0
+      ],
+      "split": "train",
+      "processed_path": "samples\\synthetic_017-de6b4a05e6.pt"
+    },
+    {
+      "sample_id": "synthetic_018",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_018.wav",
+      "labels": [
+        1,
+        1,
+        0
+      ],
+      "split": "train",
+      "processed_path": "samples\\synthetic_018-1a29e06a8e.pt"
+    },
+    {
+      "sample_id": "synthetic_019",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_019.wav",
+      "labels": [
+        0,
+        0,
+        0
+      ],
+      "split": "validation",
+      "processed_path": "samples\\synthetic_019-938fc5f090.pt"
+    },
+    {
+      "sample_id": "synthetic_020",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_020.wav",
+      "labels": [
+        1,
+        0,
+        1
+      ],
+      "split": "validation",
+      "processed_path": "samples\\synthetic_020-c29955b4da.pt"
+    },
+    {
+      "sample_id": "synthetic_021",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_021.wav",
+      "labels": [
+        0,
+        1,
+        1
+      ],
+      "split": "validation",
+      "processed_path": "samples\\synthetic_021-5107d6f737.pt"
+    },
+    {
+      "sample_id": "synthetic_022",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_022.wav",
+      "labels": [
+        1,
+        0,
+        0
+      ],
+      "split": "test",
+      "processed_path": "samples\\synthetic_022-8d0cf7b6b7.pt"
+    },
+    {
+      "sample_id": "synthetic_023",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_023.wav",
+      "labels": [
+        0,
+        0,
+        0
+      ],
+      "split": "train",
+      "processed_path": "samples\\synthetic_023-7994d2eb8b.pt"
+    },
+    {
+      "sample_id": "synthetic_024",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_024.wav",
+      "labels": [
+        1,
+        1,
+        0
+      ],
+      "split": "test",
+      "processed_path": "samples\\synthetic_024-8247ce9143.pt"
+    },
+    {
+      "sample_id": "synthetic_025",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_025.wav",
+      "labels": [
+        0,
+        0,
+        1
+      ],
+      "split": "test",
+      "processed_path": "samples\\synthetic_025-0c05caada5.pt"
+    },
+    {
+      "sample_id": "synthetic_026",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_026.wav",
+      "labels": [
+        1,
+        0,
+        1
+      ],
+      "split": "validation",
+      "processed_path": "samples\\synthetic_026-ef6cf7bb37.pt"
+    },
+    {
+      "sample_id": "synthetic_027",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_027.wav",
+      "labels": [
+        0,
+        1,
+        0
+      ],
+      "split": "train",
+      "processed_path": "samples\\synthetic_027-88ba22d1f7.pt"
+    },
+    {
+      "sample_id": "synthetic_028",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_028.wav",
+      "labels": [
+        1,
+        0,
+        0
+      ],
+      "split": "train",
+      "processed_path": "samples\\synthetic_028-441da6116c.pt"
+    },
+    {
+      "sample_id": "synthetic_029",
+      "audio_path": "C:\\Users\\Roman\\OneDrive\\Documents\\Neural_Project\\results\\task2\\synthetic_verification\\demo_data\\audio\\synthetic_029.wav",
+      "labels": [
+        0,
+        0,
+        0
+      ],
+      "split": "test",
+      "processed_path": "samples\\synthetic_029-a11bb425d0.pt"
+    }
+  ]
+}
