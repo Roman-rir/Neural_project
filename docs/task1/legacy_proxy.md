@@ -1,5 +1,7 @@
 # Task 1 - Architecture, workflow, and run guide
 
+> **Historical lexical-proxy guide.** Current results use independently supplied AudioSet labels; see [Task 1 guide](README.md). The brief permits a MusicCaps caption-to-tag proxy (p. 3), but its near-perfect scores do not establish general music understanding. Commands and counts below describe that earlier experiment.
+
 This guide covers the standalone Task 1 BERT baseline. The notebook-first entry
 point is `notebooks/task1_bert_baseline.ipynb`. Active code lives in
 `src/task1/`; offline tests live in `tests/task1/`; generated outputs go to

@@ -1,5 +1,7 @@
 # Task 4 extension results and outstanding human work
 
+> **Assignment mapping:** ten queries and zero-shot caption tags address p. 5; five-listener relevance ratings address p. 6 and remain pending. CLAP retrieval is additional. This Markdown report records extension evidence; the final PDF remains unchanged.
+
 Updated 2026-09-11. This supplements the original frozen-head retrieval report
 and corrects its earlier broad completion claim. Zero-shot comparisons and ten
 caption queries are now measured/generated. **Human evaluation remains pending
@@ -55,7 +57,7 @@ the threshold were fixed before scoring; no test-driven prompt search occurred.
 | Method | Macro-F1 | Micro-F1 | mAP |
 |---|---:|---:|---:|
 | Zero-shot caption prompt similarity | 0.1090 | 0.1530 | 0.1025 |
-| Task 3 supervised gated fusion, three-seed mean | 0.3705 | 0.6466 | 0.3995 |
+| Task 3 frozen supervised gated fusion, three-seed mean | 0.3705 | 0.6466 | 0.3995 |
 
 The simple zero-shot tag baseline performs poorly. CLAP was contrastively
 trained for audio/text alignment, not textual entailment, and its representation
@@ -85,7 +87,7 @@ separately for each listener. Ratings use the proposal's 1–5 scale. Analysis
 averages within query and listener before reporting the mean/sample standard
 deviation across five listeners.
 
-**No human ratings have been collected.** The user confirmed there are none.
+**No human ratings have been collected.** No returned human-rating artifacts were found in the reviewed study directory.
 The generated forms and unit-test responses do not count as listener evidence.
 Follow the [step-by-step listening guide](task4_listening_guide.md) and return
 the five downloaded JSON files. The summary script rejects incomplete responses;

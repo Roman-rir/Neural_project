@@ -1,5 +1,7 @@
 # Task 2 — Completion audit and verified pipeline
 
+> **Historical record (8 September 2026), superseded for current status.** Missing-audio and unfinished-training statements below describe the synthetic-stage audit only. Real training/evaluation later completed on 3,964 clips; see [Task 2 results](task2_results.md) and the [current audit](submission_readiness_audit.md).
+
 Audit date: 8 September 2026.
 
 **Task 2 is not yet complete as a real-data experiment.** The implementation

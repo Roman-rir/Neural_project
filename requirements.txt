@@ -1,16 +1,37 @@
-torch>=2.2
-torch-geometric>=2.5
-transformers>=4.40
-datasets>=2.18
-librosa>=0.10
-soundfile>=0.12
-scikit-learn>=1.4
-pandas>=2.2
-PyYAML>=6.0
-numpy>=1.26
-matplotlib>=3.8
-tqdm>=4.66
-yt-dlp[default]>=2026.8.19
-ipykernel>=7.0
-nbformat>=5.10
-nbclient>=0.10
+# Environment used for the completed project runs: Python 3.14.4 on Windows.
+# Install with: python -m pip install -r requirements.txt
+# These pins capture direct dependencies, not a complete transitive lockfile.
+# For CPU/CUDA-specific PyTorch builds, install the matching torch 2.13.0
+# build from the appropriate PyTorch wheel index for your machine.
+
+# Neural models: DistilBERT, GraphSAGE, fusion and CLAP
+torch==2.13.0
+torch-geometric==2.8.0.post1
+transformers==5.16.1
+
+# Dataset loading and numerical processing
+datasets==5.0.1
+numpy==2.5.2
+pandas==3.0.5
+PyYAML==6.0.3
+
+# Audio decoding and feature extraction
+librosa==1.0.0
+soundfile==0.14.0
+
+# Classical baselines, evaluation and plots
+scikit-learn==1.9.0
+joblib==1.5.3
+matplotlib==3.11.1
+tqdm==4.70.0
+
+# Notebook generation, execution and interactive audio/display
+ipython==9.17.0
+ipykernel==7.3.0
+nbformat==5.11.1
+nbclient==0.11.0
+
+# MusicCaps audio acquisition (not needed to review saved results)
+# Also requires external FFmpeg/ffprobe and a supported JavaScript runtime.
+# Setup instructions: docs/task2/downloading_audio.md
+yt-dlp[default]==2026.8.19

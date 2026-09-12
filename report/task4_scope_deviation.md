@@ -20,8 +20,9 @@ nor is it a from-scratch dual-encoder experiment.
 “Update encoders to minimize” the contrastive loss. Frozen-backbone projection
 training is a **scope deviation from that algorithm**. The original proposal's
 Task 3 algorithm likewise includes encoder backpropagation, whereas the historical
-`available_run1` Task 3 comparison reused here uses frozen encoders. This statement
-does not assess any later Task 3 joint-training implementation or experiment.
+`available_run1` Task 3 comparison reused here uses frozen encoders. The later Task 3 `joint_run2` updates the final DistilBERT block, GraphSAGE and
+active heads; see the [joint report](task3_joint_results.md). Those supervised
+updates do not satisfy Task 4 contrastive encoder updates.
 
 The revised plan (`CSE425_GNN_BERT_Music_Project_Plan.md`, full boundary and
 Part 6) intentionally narrows Task 4 to frozen encoders plus projection heads.

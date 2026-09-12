@@ -1,5 +1,11 @@
 # Task 3: joint and frozen GNN-BERT fusion
 
+## Assignment coverage (12 September 2026)
+
+[Brief](../../CSE425_Project_GNN_BERT_Music_Context.pdf), p. 4 and Algorithm 3 (p. 7): `joint_run2` provides live/partial-encoder training, five ablations and separate mAP/trapezoidal PR-AUC. Genre/mood plots and joint prediction cases are saved; graph-path/token-sensitivity visualizations belong to the separate frozen experiment. Named FMA-medium/MagnaTagATune results are not supplied; mood coverage is limited. Validation selects **BERT-only overall and gated among fusion modes**. See the [audit](../../report/submission_readiness_audit.md).
+
+Historical run paths may reference another drive. The YAML is relative to the project root, but checkpoint provenance must remain tied to matching artifacts. Verify path resolution before claiming copied-demo execution. Reproduction examples need unused `joint_run3` or `frozen_reproduction` paths; use verification to review existing runs.
+
 Task 3 compares BERT-only, GNN-only, concatenation, gated fusion and graph-query
 cross-attention on identical paired samples. See [the measured report](../../report/task3_results.md)
 and [review notebook](../../notebooks/task3_fusion.ipynb) for the completed real-data run.
@@ -124,12 +130,12 @@ need the completed Task 1/2 local artifacts; use fresh output paths when rerunni
 No API key or audio download is required.
 
 ```powershell
-python -m src.task3.prepare --processed-manifest data/processed/task2_available/manifest.json --source-manifest data/splits/task2_available.json --text-checkpoint results/task1/audioset_cpu_20260907/best_model.pt --graph-checkpoint results/task2/available_run1/runs/seed42/gnn_temporal/best_model.pt --output data/processed/task3_available/features.pt --batch-size 4 --cpu-threads 6 --device cpu
-python -m src.task3.experiment --features data/processed/task3_available/features.pt --output-dir results/task3/available_run1 --seeds 42 43 44 --epochs 20 --batch-size 16 --hidden-dim 64 --patience 5 --learning-rate 0.001 --cpu-threads 6 --device cpu
-python -m src.task3.experiment --evaluate-run results/task3/available_run1 --device cpu
-python -m src.task3.experiment --verify-run results/task3/available_run1
-python -m src.task3.analyze --run-dir results/task3/available_run1
-python -m src.task3.cases --checkpoint results/task3/available_run1/seed42/cross_attention.pt --features data/processed/task3_available/features.pt --processed-manifest data/processed/task2_available/manifest.json --graph-checkpoint results/task2/available_run1/runs/seed42/gnn_temporal/best_model.pt --output-dir results/task3/available_run1/case_studies --device cpu
+python -m src.task3.prepare --processed-manifest data/processed/task2_available/manifest.json --source-manifest data/splits/task2_available.json --text-checkpoint results/task1/audioset_cpu_20260907/best_model.pt --graph-checkpoint results/task2/available_run1/runs/seed42/gnn_temporal/best_model.pt --output data/processed/task3_reproduction/features.pt --batch-size 4 --cpu-threads 6 --device cpu
+python -m src.task3.experiment --features data/processed/task3_reproduction/features.pt --output-dir results/task3/frozen_reproduction --seeds 42 43 44 --epochs 20 --batch-size 16 --hidden-dim 64 --patience 5 --learning-rate 0.001 --cpu-threads 6 --device cpu
+python -m src.task3.experiment --evaluate-run results/task3/frozen_reproduction --device cpu
+python -m src.task3.experiment --verify-run results/task3/frozen_reproduction
+python -m src.task3.analyze --run-dir results/task3/frozen_reproduction
+python -m src.task3.cases --checkpoint results/task3/frozen_reproduction/seed42/cross_attention.pt --features data/processed/task3_reproduction/features.pt --processed-manifest data/processed/task2_available/manifest.json --graph-checkpoint results/task2/available_run1/runs/seed42/gnn_temporal/best_model.pt --output-dir results/task3/frozen_reproduction/case_studies --device cpu
 ```
 
 The suite freezes mode selection using mean validation Macro-F1 before evaluating

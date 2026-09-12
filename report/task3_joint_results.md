@@ -1,5 +1,9 @@
 # Task 3: measured joint GNN-BERT fusion
 
+## Assignment deliverables
+
+Current Task 3 evidence for p. 4 and Algorithm 3 (p. 7): live-encoder fusion, unimodal/concat/cross-attention ablations plus gated fusion, and distinct F1/mAP/PR-AUC. [Genre/mood plots](../results/task3/joint_run2/semantic_plots/README.md) and [three joint prediction cases](../results/task3/joint_run2/analysis/cases.md) are available. [Graph-path/token-sensitivity cases](../results/task3/available_run1/case_studies/cases.md) belong to the separate frozen experiment, not this joint model. Dataset substitution and limited mood coverage remain qualifications; see the [audit](submission_readiness_audit.md).
+
 **Training and held-out test evaluation are complete for all five models.**
 The run is `results/task3/joint_run2`, seed 42, on 2,775 training, 583 validation
 and 606 test MusicCaps clips with the same ordered 30-label AudioSet vocabulary.
