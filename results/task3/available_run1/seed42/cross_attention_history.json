@@ -1,0 +1,92 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 0.12840892175027915,
+    "validation_macro_f1": 0.3432057410504129,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 2,
+    "train_loss": 0.08049097190837602,
+    "validation_macro_f1": 0.3778852858987391,
+    "threshold": 0.15
+  },
+  {
+    "epoch": 3,
+    "train_loss": 0.06985240867814502,
+    "validation_macro_f1": 0.38902273162359063,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 4,
+    "train_loss": 0.06409715297791335,
+    "validation_macro_f1": 0.4000813236741864,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 5,
+    "train_loss": 0.060869320091363546,
+    "validation_macro_f1": 0.39170166893016106,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 6,
+    "train_loss": 0.05778687586118509,
+    "validation_macro_f1": 0.39191408221720775,
+    "threshold": 0.1
+  },
+  {
+    "epoch": 7,
+    "train_loss": 0.0552914593979582,
+    "validation_macro_f1": 0.3980415604682532,
+    "threshold": 0.15
+  },
+  {
+    "epoch": 8,
+    "train_loss": 0.05307133083407943,
+    "validation_macro_f1": 0.4096776174358324,
+    "threshold": 0.15
+  },
+  {
+    "epoch": 9,
+    "train_loss": 0.05167253867462949,
+    "validation_macro_f1": 0.39577714243750495,
+    "threshold": 0.15
+  },
+  {
+    "epoch": 10,
+    "train_loss": 0.04967178321636475,
+    "validation_macro_f1": 0.41723762756733895,
+    "threshold": 0.15
+  },
+  {
+    "epoch": 11,
+    "train_loss": 0.04892932354329942,
+    "validation_macro_f1": 0.39149270723338286,
+    "threshold": 0.15
+  },
+  {
+    "epoch": 12,
+    "train_loss": 0.046434041348932024,
+    "validation_macro_f1": 0.39617874365224115,
+    "threshold": 0.15
+  },
+  {
+    "epoch": 13,
+    "train_loss": 0.045006041440206604,
+    "validation_macro_f1": 0.3919934987177873,
+    "threshold": 0.25
+  },
+  {
+    "epoch": 14,
+    "train_loss": 0.04437719642243407,
+    "validation_macro_f1": 0.37468757606758707,
+    "threshold": 0.2
+  },
+  {
+    "epoch": 15,
+    "train_loss": 0.04279241208289121,
+    "validation_macro_f1": 0.39921883618718834,
+    "threshold": 0.1
+  }
+]

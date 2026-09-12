@@ -1,0 +1,16 @@
+{
+  "artifacts_valid": true,
+  "date": "2026-09-11",
+  "clap_pairs": 606,
+  "clap_and_tag_metrics_recomputed": true,
+  "fixed_caption_queries": 10,
+  "listener_forms": 5,
+  "trials_per_listener": 60,
+  "verified_audio_files": 55,
+  "form_javascript_syntax_valid": true,
+  "browser_preview": "Unavailable: no browser connected to CUA",
+  "executed_notebook_code_cells": 8,
+  "task4_tests_passed": 11,
+  "human_evaluation": "Pending: no human responses collected",
+  "full_original_proposal": "Pending human ratings and resolution of frozen-encoder scope deviation"
+}

@@ -1,0 +1,792 @@
+[
+  {
+    "direction": "text_to_graph",
+    "query_id": "-5xOcMJpTUk_70_80",
+    "caption": "A male guitarist plays the guitar and speaks about technique in this online video tutorial. The male voice is strong and commanding, along with guitar string twang sounds, clearly demonstrating the technique. The audio quality is mediocre.",
+    "selection": "fixed_first_three",
+    "paired_rank": 2,
+    "ranked_matches": [
+      {
+        "sample_id": "7NF2kcEfMBI_420_430",
+        "score": 0.7453885412104209,
+        "caption": "An instructional guitar lesson featuring a male instructor speaking over nylon string guitar playing a picked single note melody featuring slurring, or hammer-ons and pull-offs.",
+        "rank": 1,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "-5xOcMJpTUk_70_80",
+        "score": 0.7019786661824012,
+        "caption": "A male guitarist plays the guitar and speaks about technique in this online video tutorial. The male voice is strong and commanding, along with guitar string twang sounds, clearly demonstrating the technique. The audio quality is mediocre.",
+        "rank": 2,
+        "is_paired_positive": true
+      },
+      {
+        "sample_id": "9ZWmZdgrE78_80_90",
+        "score": 0.6838881120371512,
+        "caption": "The low quality video features a cover of a kids song and it consists of a sweet girl vocal singing over acoustic rhythm guitar. The recording is in mono, noisy and it sounds fun and happy.",
+        "rank": 3,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "IAeYandwJqc_70_80",
+        "score": 0.6733621351701107,
+        "caption": "The low quality recording features a harmonica solo melody played over funky acoustic rhythm guitar. It sounds passionate and easygoing, even though the recording is a bit noisy and in mono.",
+        "rank": 4,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "89eBh_Djflw_240_250",
+        "score": 0.6670882588733914,
+        "caption": "The low quality recording features a cover of a boogie song sung by a passionate male vocalist, followed by funky electric guitar melodies. It sounds passionate, groovy, funky and the recording is in mono and noisy.",
+        "rank": 5,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "CKEPPcaCjbw_60_70",
+        "score": 0.6428749652408854,
+        "caption": "solo electric guitar music with a clean tone. The guitar is slightly out of tune. The music mostly consists of single notes as opposed to chords. The guitar plays blues licks.",
+        "rank": 6,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "hRQJgZVxRX0_30_40",
+        "score": 0.6229841914746691,
+        "caption": "This is the recording of a gear showcase. There is a male voice advertising an effect amp. The distorted electric guitar is playing a crunchy-sounding riff with the added effect of the chorus amp. The atmosphere is hard-hitting. Some parts of this recording could be used in heavy guitar samples for beat-making. Such parts could also work in sections of an advertisement jingle.",
+        "rank": 7,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "iSw-5EjXgXc_30_40",
+        "score": 0.6165820521426215,
+        "caption": "This file contains a guitar tuner playing every single string repeating it for a while before jumping to the next one. This tune may be playing at home tuning your guitar.",
+        "rank": 8,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "-_OzT7Xyvok_30_40",
+        "score": 0.6141936118347391,
+        "caption": "Amateur recording of two nylon string guitars playing in flamenco style. The playing is technically challenging yet sloppy.",
+        "rank": 9,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "YgX85tZf1ts_300_310",
+        "score": 0.6056755501945713,
+        "caption": "The tune is played by two vibraphones at the same time. The bright character of the instrument gives the piece a playful aura. It could be used as a ringtone or an alarm tone due to its generic, repeated nature.",
+        "rank": 10,
+        "is_paired_positive": false
+      }
+    ]
+  },
+  {
+    "direction": "text_to_graph",
+    "query_id": "-8C-gydUbR8_30_40",
+    "caption": "A children\u2019s choir sings this devotional melody. The song is medium tempo with a steady bass line, drumming rhythm and clapping percussion. The song is black gospel choral music played in front of a live congregation. The audio quality is very poor.",
+    "selection": "fixed_first_three",
+    "paired_rank": 83,
+    "ranked_matches": [
+      {
+        "sample_id": "AVmJF1uaRuE_30_40",
+        "score": 0.7510768457160587,
+        "caption": "This classical Indian song features a male voice singing in vocables without any lyrics. This is accompanied by a harmonium playing the same melody as the voice and continuing to play after the voice has rested. Sitars are playing in the background. There is no percussion in this song. This song can be played in a retro movie in which a classical singer is performing in front of a live audience.",
+        "rank": 1,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "T9dKp1EN4p8_30_40",
+        "score": 0.7047279288231146,
+        "caption": "The low quality recording features a low didgeridoo solo melody. The recording is noisy, mono and reverberant as it was probably recorded in a room with a bad quality microphone.",
+        "rank": 2,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "0cNYPgD6cEA_30_40",
+        "score": 0.6605889204656206,
+        "caption": "The male mid to high range voice sings loudly and full of emotions pouring out of his soul while strumming some minor chords on the guitar. This recording is of poor quality. This song may be played in an open mic, poetry bar.",
+        "rank": 3,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "UfZP677y3Dc_30_40",
+        "score": 0.6125689985477264,
+        "caption": "A male vocalist sings this animated song. The tempo is fast with a flute \nOr recorder and keyboard harmony with the sound of clapping and tapping in the background. The song is animated, spirited, enthusiastic, catchy and upbeat with rhythmic speech and childish lyrics. This is a Children\u2019s Song.",
+        "rank": 4,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "HdRPdh-cSTw_140_150",
+        "score": 0.6104378609509987,
+        "caption": "A female vocalist sings this Hindi Devotion song. The tempo is slow with keyboard harmony,tambourine beats, violin melody and rhythmic tanpura accompaniment. This clip is the song introduction with slow chants like singing. The song is a Hindu Devotion song to the God Shiva. It is emotional, sentimental, devotional, prayerful praise and worship. There are ambient sounds of people talking and cheering, indicating that this is a live performance.",
+        "rank": 5,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "cWOohqFud6g_30_40",
+        "score": 0.6083727722542835,
+        "caption": "The low quality recording features a DJ scratching a vinyl of a jungle song that consists of punchy kick and snare hits layered with energetic crash cymbal and groovy bass. The song sounds thin as it is probably playing on a speaker. The recording itself is noisy and in mono. It sounds energetic and aggressive overall.",
+        "rank": 6,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "hFqZZrj0rnM_30_40",
+        "score": 0.6049297356221796,
+        "caption": "The low quality recording features a live performance of shoe tapping over a jazz song that consists of passionate female vocal singing over smooth bass and groovy key chords. There are crowd clapping sounds in the background. The actual sounds of shoe tappings is widely spread in the stereo image and it is reverberant, as it was probably performed in a huge space.",
+        "rank": 7,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "QCbUlDMu7Hk_420_430",
+        "score": 0.5998965440444458,
+        "caption": "This is Samoan folk music. There is a choir singing melodically with male and female voices mixed. The electric guitar is playing a simple tune in the melodic background.",
+        "rank": 8,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "bAJrcYJgllE_30_40",
+        "score": 0.5935797804711495,
+        "caption": "This clip is an instrumental. The tempo is fast with high pitched, dissonant sounds that are digitally and electronically arranged. There is no melody or beat to this music.",
+        "rank": 9,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "390At7lW4iw_0_10",
+        "score": 0.5908282214449184,
+        "caption": "Mostly ambient sounds of a rotary phone ringing and someone picking up the phone. In the background there is an ethereal sounding high, gliding synth melody and muffled autotuned vocals. Sounds like an intro to a hip hop song.",
+        "rank": 10,
+        "is_paired_positive": false
+      }
+    ]
+  },
+  {
+    "direction": "text_to_graph",
+    "query_id": "-Bu7YaslRW0_30_40",
+    "caption": "A synth pad is playing a drone sound in the lower mid range. Cymbals are creating atmosphere while a flute/string/brass sound is playing a melody. The whole recording is full of reverb. This song may be playing in a forest documentary.",
+    "selection": "fixed_first_three",
+    "paired_rank": 64,
+    "ranked_matches": [
+      {
+        "sample_id": "6yB6plsrjO0_30_40",
+        "score": 0.6106987498697866,
+        "caption": "Music that promotes focus. The music is instrumental and the instruments are all electronic. Synthesized string harmonies, harp plucks and bell sounds blend over a driving bass. The music is tranquil, yet focused. Good for an IT training video.",
+        "rank": 1,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "B4lGhVjoMTk_210_220",
+        "score": 0.5984581032627381,
+        "caption": "The soundtrack has a bell ringing producing several overtones and a man speaking the benefits of the therapy. The music produced is healing in nature and helps in the overall well-being. The sound quality is pretty average. The tempo is slow.",
+        "rank": 2,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "YMq4wE6KxmQ_30_40",
+        "score": 0.5741249550599452,
+        "caption": "A synth pad is playing an evolving drone chord along with some glittering sounds. In the background of the recording you can hear wind, running and birds chirping. The whole scenario sounds calming and meditative. This song may be playing for a documentary.",
+        "rank": 3,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "QT1SjY9mQxc_20_30",
+        "score": 0.5732050515079469,
+        "caption": "The low quality recording features a classical song that consists of a suspenseful brass melody, sustained strings and dynamic low percussion roll, after which there is an alarm sound. It sounds suspenseful, dramatic and intense.",
+        "rank": 4,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "Puu8SEqYN0k_60_70",
+        "score": 0.5648763754860596,
+        "caption": "This is an excerpt from a horror movie trailer. There are ominous sound effects related to the movie such as heartbeat, a man beating a woman and a terrified female voice sounding like she is dying. There is cinematic sounding synth and a piano hitting the same high pitch note repeatedly in the theme. The atmosphere is bleak. Sounds from this track could be used as samples in beat-making. They could also be used in violent video games.",
+        "rank": 5,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "NnmJ1UHWlas_30_40",
+        "score": 0.5593522441135153,
+        "caption": "The low quality recording features a commercial song that consists of wooden percussion, soft kick hits, echoing bells, toms and buzzy synth lead. There is a very weird pause in the song, which was supposed to be a break. It sounds weird and minimal.",
+        "rank": 6,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "hSSzn4bIwZg_40_50",
+        "score": 0.5570545169064951,
+        "caption": "The low quality recording features an orchestra playing arpeggiated harp melody, low sustained strings and mellow flute melody. It sounds mystical, mellow and calming. The recording is a bit noisy too.",
+        "rank": 7,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "BEhIGoq9tow_160_170",
+        "score": 0.547840720469145,
+        "caption": "The low quality recording features a mellow synth pad, mellow snare hits, soft kick hits, reverberant tinny bells, groovy bass and there is a flat male vocal singing over it. It sounds calming and relaxing.",
+        "rank": 8,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "KoAGZ_dB8MM_60_70",
+        "score": 0.5477853851264269,
+        "caption": "A female singer sings this eerie melody. The song is medium tempo with a rolling bells keyboard harmony, and other ambient echo tones and harp tones. The song is haunting and unsettling. The audio quality is very poor and not enjoyable.",
+        "rank": 9,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "-QuWdnmn-kM_30_40",
+        "score": 0.5476256376153112,
+        "caption": "This is a lullaby that features a main melody made with a xylophone that has a bright sound. A sustained piano synth creates a dreamy and sleepy ambience sound. A subtle cello plays single chords that bounce from one beat to the next. This is a song a baby could fall asleep to.",
+        "rank": 10,
+        "is_paired_positive": false
+      }
+    ]
+  },
+  {
+    "direction": "text_to_graph",
+    "query_id": "-ZHpNr_KRXU_30_40",
+    "caption": "Someone is playing a percussive instrument that reminds a little bit of a tabla while someone else is playing a fast melody on an accordion. A male voice is singing at a higher pitch. This song may be playing live.",
+    "selection": "best_rank_diagnostic",
+    "paired_rank": 1,
+    "ranked_matches": [
+      {
+        "sample_id": "-ZHpNr_KRXU_30_40",
+        "score": 0.6424878395507615,
+        "caption": "Someone is playing a percussive instrument that reminds a little bit of a tabla while someone else is playing a fast melody on an accordion. A male voice is singing at a higher pitch. This song may be playing live.",
+        "rank": 1,
+        "is_paired_positive": true
+      },
+      {
+        "sample_id": "U4UtZeTl2DE_30_40",
+        "score": 0.6319395249094769,
+        "caption": "A accordion-like wind instrument is playing a melody along with someone playing a rhythm on the tablas. This song may be playing at a music school jamming with the teacher.",
+        "rank": 2,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "fH9CY48sfJY_330_340",
+        "score": 0.5494708376029164,
+        "caption": "The low quality recording features a compilation of a few different recordings that mostly consist of female vocals talking with each other and a loud crowd talking in the background. However, in the first section, there are also some claps and female vocals mumbling a song. The arrangement of the recordings is weird, but in context it probably makes sense.",
+        "rank": 3,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "FYFapDVOFHg_440_450",
+        "score": 0.5435970303030261,
+        "caption": "This music is an enthusiastic instrumental. The tempo is fast with an amplified harmonica solo. The music is lively, animated, happy, cheerful, energetic, enthusiastic and peppy.",
+        "rank": 4,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "QtjMlA_7dds_30_40",
+        "score": 0.5383055269498057,
+        "caption": "The low quality recording features a live performance of an indie song and it features a passionate male vocal singing over acoustic rhythm guitar and soft double bass, There are laughing and crowd chattering noises in the background. It sounds emotional and sad, even though the recording is a bit noisy.",
+        "rank": 5,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "aJHv6TV7JpY_30_40",
+        "score": 0.5381786292676765,
+        "caption": "This pop song features a female voice singing the main melody in a foreign language. This is accompanied by an accordion playing a harmonized melody in the background. There is no percussion in this song. Minimal instruments are used in this song. The theme of this song feels romantic.",
+        "rank": 6,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "GXLeUXSVFYU_30_40",
+        "score": 0.5372159397398092,
+        "caption": "someone is strumming a melody on a banjo along with some chords. In the background you can hear people talking. This is an amateur recording. This song may be playing outside at a bonfire surrounded by friends and family.",
+        "rank": 7,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "Y8plCTF8xsY_20_30",
+        "score": 0.5270059461884722,
+        "caption": "The low quality recording features a live performance of an orchestra playing sustained brass melody, shimmering cymbals and sustained strings melody. It sounds muddy and muffled, as it was probably recorded with a poor quality microphone, but also passionate. The recording is noisy and in mono.",
+        "rank": 8,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "gcdqffsCWI8_30_40",
+        "score": 0.5249385666521251,
+        "caption": "This is an instrumental latin music piece. There is a keyboard playing a few notes. The acoustic drums start playing initially by hitting a small cymbal repeatedly and then performing drum rolls on the snare drum. The drum rolls sound very much alike to the style of a marching band. Parts of this recording can be sampled for use in beat-making.",
+        "rank": 9,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "RDCXvJPzT5k_520_530",
+        "score": 0.5242308329942904,
+        "caption": "This is a home recording of a conch shell being blown. There is a horn-like sound coming from the conch shell. The recording can be sampled for use in beat-making.",
+        "rank": 10,
+        "is_paired_positive": false
+      }
+    ]
+  },
+  {
+    "direction": "text_to_graph",
+    "query_id": "hDsA_ky9Hfw_30_40",
+    "caption": "The song is an upbeat, soulful song which has a motif repeated on a woodwind instrument. The song would be suitable for some mellow dancing. The singer has a raspy voice.",
+    "selection": "worst_rank_diagnostic",
+    "paired_rank": 568,
+    "ranked_matches": [
+      {
+        "sample_id": "5xAzHL8Zlcs_480_490",
+        "score": 0.7168978086424878,
+        "caption": "This audio contains a male voice talking. Then a short section of an orchestra is playing with a brass section and a lot of percussive hits. It instantly changes to someone playing a long note on a horn in a higher key. This is an amateur recording and may be playing during a documentary.",
+        "rank": 1,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "_5w5TVK5B90_370_380",
+        "score": 0.7023145586551507,
+        "caption": "This song contains someone playing a transverse flute in a very high pitch. Breathing sounds can be heard. This song may be playing in a live orchestra solo.",
+        "rank": 2,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "N_41Y2vH6eA_0_10",
+        "score": 0.6934063637911908,
+        "caption": "The low quality recording features squeaky toys sound effects, followed by noisy tinny bells melody. It sounds like a lullaby - like something kids would listen to.",
+        "rank": 3,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "NKDBwJIwWoU_30_40",
+        "score": 0.6753928638321263,
+        "caption": "This song features a distortion guitar playing a guitar solo. The solo is played at a high pitch. It is a slow tempo solo. The guitarist plays a lot of vibrato when the notes are allowed to ring for a while. The pattern follows three ascending notes followed by three strikes on a lower note. This is followed by one higher note, the lower note and a hammer on to a higher note. A synth plays backing chords. There are no other instruments in this song. The mood of this song is romantic.",
+        "rank": 4,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "GWcTd6XrQj4_380_390",
+        "score": 0.6691795401015019,
+        "caption": "The low quality recording features a breathy flute melody played over mellow strings melody. It sounds soulful and passionate. The recording is noisy and slightly distorted.",
+        "rank": 5,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "_IP6zlayY7k_30_40",
+        "score": 0.6634451544695054,
+        "caption": "This is an amateur flute cover of a pop music piece. The flute is playing a gentle melody in the major key. There is a backing track that has a mellow acoustic guitar playing. The atmosphere is calming and easygoing. Although the audio quality is not that great, this piece could be sampled for use in beat-making.",
+        "rank": 6,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "ADxuhHNZVCc_30_40",
+        "score": 0.6602040885361824,
+        "caption": "The low quality recording features a live opera performance sung by passionate female vocalists and followed by sustained and plucked strings melody. The recording is very noisy and the stereo image is unbalanced, since the audio from the left channel is occasionally cut out. It sounds emotional, mellow and passionate.",
+        "rank": 7,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "PKsdjH0RmsU_30_40",
+        "score": 0.6388812789422587,
+        "caption": "This music is a beautiful ,soothing instrumental. The tempo is slow with a wind instrument like a recorder/flute  solo and an acoustic guitar accompaniment. The music is dulcet, serene,calming, soothing, mellifluous,soulful, therapeutic and idyllic. This is a folk song instrumental.",
+        "rank": 8,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "18mS4cLPOb8_50_60",
+        "score": 0.6288128439840133,
+        "caption": "This piece is a parody of an ad theme. There are female vocals singing at a high-pitch in the major scale, resulting in an epic atmosphere resembling an anthem. The resolution is interrupted by an implied bear attack, breaking the seriousness of the piece.",
+        "rank": 9,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "fvpDYGzdRmo_120_130",
+        "score": 0.6202078472760923,
+        "caption": "The song is an instrumental. The tempo is medium with a recorder being played with a lot of heart, accompanied by  string section harmony. The song is emotional and has a lot of spirit. The song is a western classical music masterpiece.",
+        "rank": 10,
+        "is_paired_positive": false
+      }
+    ]
+  },
+  {
+    "direction": "graph_to_text",
+    "query_id": "-5xOcMJpTUk_70_80",
+    "caption": "A male guitarist plays the guitar and speaks about technique in this online video tutorial. The male voice is strong and commanding, along with guitar string twang sounds, clearly demonstrating the technique. The audio quality is mediocre.",
+    "selection": "fixed_first_three",
+    "paired_rank": 2,
+    "ranked_matches": [
+      {
+        "sample_id": "31O2j4aAgYU_30_40",
+        "score": 0.70959733217045,
+        "caption": "This song features an electric guitar. The guitar plays a blues progression by first descending three chords and then ending the song on a higher register. The guitar tone has a lot of added reverb. There are no other instruments in this audio. This is an instrumental song with no voices.",
+        "rank": 1,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "-5xOcMJpTUk_70_80",
+        "score": 0.7019786661824012,
+        "caption": "A male guitarist plays the guitar and speaks about technique in this online video tutorial. The male voice is strong and commanding, along with guitar string twang sounds, clearly demonstrating the technique. The audio quality is mediocre.",
+        "rank": 2,
+        "is_paired_positive": true
+      },
+      {
+        "sample_id": "WvaIypMvAHY_490_500",
+        "score": 0.699996971031251,
+        "caption": "This is the recording of a guitar lesson video. There is a male speaking in an instructive manner, giving the name of the chord he is about to play next. The chords are being played gently on a clean sounding electric guitar. There is a mellow feel to the sound. Parts of this recording can be sampled for use in beat-making.",
+        "rank": 3,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "ieEPKa3HiGo_30_40",
+        "score": 0.6918588340364009,
+        "caption": "The low quality recording features a tutorial where a flat male vocalist is talking, after which he plays an arpeggiated acoustic guitar melody. The recording is extremely noisy.",
+        "rank": 4,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "_KaRkSyELy4_490_500",
+        "score": 0.6912300266203658,
+        "caption": "The low quality recording features a tutorial where a fruity male vocalist is talking in-between electric guitar chords. There is a very buzzy guitar amp in the background and the recording is very noisy.",
+        "rank": 5,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "CKEPPcaCjbw_60_70",
+        "score": 0.6825662512768221,
+        "caption": "solo electric guitar music with a clean tone. The guitar is slightly out of tune. The music mostly consists of single notes as opposed to chords. The guitar plays blues licks.",
+        "rank": 6,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "76ON0Ixrr9s_30_40",
+        "score": 0.6807675564300337,
+        "caption": "The low quality recording features an electric guitar melody playing. The melody fades out in the beginning and it starts playing again in the second part of the loop, where it has an echoing effect on. It gives off psychedelic vibes. The recording is noisy and in mono.",
+        "rank": 7,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "IKfmu7tAyUE_30_40",
+        "score": 0.675786152504386,
+        "caption": "The low quality recording features an arpeggiated acoustic flamenco guitar melody. The recording is noisy, in mono, and it sounds sad, easygoing and emotional.",
+        "rank": 8,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "fAfk9yrGhWw_200_210",
+        "score": 0.6661884791036465,
+        "caption": "This instrumental song features a guitar playing a lick. This is a joyful melody played on the guitar with a delay effect. There is no percussion and no other instruments in this song. There are no voices in this song. At the end, the noise threshold of the guitar is crossed and the hum can be heard. This song is relaxing and can be played in a coffee shop.",
+        "rank": 9,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "Kd7aHdOwh0I_30_40",
+        "score": 0.6640521838148093,
+        "caption": "This is an instrumental jam. The only instrument being played is a clean sounding electric guitar. The guitar solo has simple, groovy tunes played in an improvised manner. The atmosphere is easygoing. Parts of this recording could be sampled to be used in beat-making.",
+        "rank": 10,
+        "is_paired_positive": false
+      }
+    ]
+  },
+  {
+    "direction": "graph_to_text",
+    "query_id": "-8C-gydUbR8_30_40",
+    "caption": "A children\u2019s choir sings this devotional melody. The song is medium tempo with a steady bass line, drumming rhythm and clapping percussion. The song is black gospel choral music played in front of a live congregation. The audio quality is very poor.",
+    "selection": "fixed_first_three",
+    "paired_rank": 116,
+    "ranked_matches": [
+      {
+        "sample_id": "AzhfZ8rNhRk_30_40",
+        "score": 0.6086178738232417,
+        "caption": "This is the noise of a fire alarm with rock music faintly playing in the background. The rock music piece has a shouting vocal, electric guitar and drums. The fire alarm makes a very disturbing sound.",
+        "rank": 1,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "OFP5MYVDa4g_30_40",
+        "score": 0.5895012883924996,
+        "caption": "The punk-rock music features a male voice singing a static melody. An electric guitar with a distortion effect accompanies the singer with repetitive chords. The drums play a simple and repetitive rhythm.",
+        "rank": 2,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "5n8I-br2n1U_70_80",
+        "score": 0.5888225260337394,
+        "caption": "a female voice is singing to a digital drum set along with a bass and old disco synthesizer sounds. The singer gets backed by a male singer and the crowd is singing along. There is clapping from the crowd. This song may be playing live at a concert.",
+        "rank": 3,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "26jTWRMRoxY_30_40",
+        "score": 0.5835462616606242,
+        "caption": "The song is an instrumental with separate audio tracks. The tempos are medium with female vocals, backup  singers, groovy drum rhythms, keyboard harmony, guitar accompaniment and various percussive hits. The song is energetic and exciting. The song is an ad jingle for a software product. The audio quality is poor with hissing tones.",
+        "rank": 4,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "0dPx94RPy2M_30_40",
+        "score": 0.5750265686357121,
+        "caption": "This is a jingle piece played in the background of an advertisement video. There are sounds coming from a drill. The piece in the background is an instrumental rock music piece. There is a keyboard and an electric guitar playing the melody while an acoustic sounding drum beat provides the rhythm. The sounds are bland and generic. The piece could be of some use as an advertisement jingle or it could be playing in the background of an instructive/tutorial video.",
+        "rank": 5,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "hHb0Eq1I7Fk_0_10",
+        "score": 0.5685987027418763,
+        "caption": "This is a synth-pop piece played in the background of a skateboarding video. There is a male vocalist singing in an emotionally distant manner. There is a keyboard and an electric guitar playing the melody with the bass guitar playing a repetitive bass line in the background. The acoustic drums are playing a simple beat. Skateboarding sounds from the video can be heard very clearly. The recording has an urban atmosphere.",
+        "rank": 6,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "07-vpXo91XM_70_80",
+        "score": 0.5489724961201827,
+        "caption": "Low fidelity recording of a live concert. The crowd noise is very loud and the audience is screaming. The audio is distorting. Amidst the crowd noise, beat boxing can be heard performing a house music style beat.",
+        "rank": 7,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "OvjmfGU4y_M_190_200",
+        "score": 0.5469204836890538,
+        "caption": "This is the compilation of live performances from a pop music boy band. There are teen male vocalists singing melodically. The melody is being played by an acoustic guitar and a bass guitar while an acoustic drum beat is playing in the rhythmic background. There are sounds of a crowd singing and cheering. The recording quality is poor.",
+        "rank": 8,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "SGcjdZ19R1k_30_40",
+        "score": 0.5452859377581951,
+        "caption": "This rock and roll song features a male voice singing the main melody. This is accompanied by percussion playing a fast tempo beat. Guitars play chords. The bass plays the root notes of the chords. The vocal melody follows a gospel style call and response theme. The main voice sings one line and the crowd responds by singing another line. The tempo of this song is fast. This is a low quality audio and other instruments cannot be identified.",
+        "rank": 9,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "0298WjE3_tk_20_30",
+        "score": 0.5411361819325377,
+        "caption": "A female singer sings and chants with Emily. The tempo is fast with a quick drumming rhythm, percussive bass line, strong drumming rhythm and keyboard accompaniment. The song is exciting  and energetic. The song is an anime show soundtrack.",
+        "rank": 10,
+        "is_paired_positive": false
+      }
+    ]
+  },
+  {
+    "direction": "graph_to_text",
+    "query_id": "-Bu7YaslRW0_30_40",
+    "caption": "A synth pad is playing a drone sound in the lower mid range. Cymbals are creating atmosphere while a flute/string/brass sound is playing a melody. The whole recording is full of reverb. This song may be playing in a forest documentary.",
+    "selection": "fixed_first_three",
+    "paired_rank": 49,
+    "ranked_matches": [
+      {
+        "sample_id": "OBJM1TqPvu4_470_480",
+        "score": 0.6176024098125001,
+        "caption": "Sinister sounding orchestral music with a foreboding low string melody using a tritone interval while the high strings and female choir hold a dissonant chord.",
+        "rank": 1,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "EFlGHxV5WsY_240_250",
+        "score": 0.5945456168409156,
+        "caption": "Heavily effected, instrumental psychedelic rock music featuring phaser effects, strummed acoustic guitars, and bass guitar played in a compound meter. The feeling is airy.",
+        "rank": 2,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "GrbrWNohr6Y_30_40",
+        "score": 0.5919995134769656,
+        "caption": "A female vocalist sings this mellow song. The tempo is slow with a subtle electric guitar accompaniment. The audio quality is inferior making it difficult to hear the song well. There is another track superimposed over the song which has sound so footsteps, metal being dragged, crickets, cricket chirping, breeze and some rustling. This is an audio of a song being played outdoors.",
+        "rank": 3,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "AgCSBCsHkMk_60_70",
+        "score": 0.567634639647964,
+        "caption": "The low quality recording features water and some metallic sound effects, followed by a dynamic orchestra that consists of a mellow string section, simple plucked harp and mystical woodwinds playing in the background. In the first part of the loop, the sound is completely muffled. It sounds like something you would hear in old movies.",
+        "rank": 4,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "fBEGBuO3RXg_30_40",
+        "score": 0.5649060389563412,
+        "caption": "This song is an orchestral piece. The tempo is slow with the vocalist singing in soprano,alto, mezzo, treble and bass harmony. The song is intense, grim, sinister, indicative of danger, eerie, enigmatic, out worldly and mesmerising. There are incoherent vocal riffs and sounds towards the end of this clip.",
+        "rank": 5,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "6F8qv0JBWkE_110_120",
+        "score": 0.5631868197007996,
+        "caption": "This piece is full of orchestra instruments playing a sequence full of rapid changes with a little darker emotions. Sounding gigantic, dangerous and heroic. This song may be playing at a live concert or for a scene in a movie.",
+        "rank": 6,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "1bSP4wLfMpA_0_10",
+        "score": 0.5358381937577082,
+        "caption": "A cello section is playing a short stroke melody with the bow while other strings, probably violins are playing a one note drone in a high key. Timpani hits and rolls are adding depth to the musical scenario. In the background you can hear sound effects opening up the soundscape for a deeper male voice screaming/crying along to a chainsaw sound. This song may be playing in a movie scene where someone is getting tortured.",
+        "rank": 7,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "hoPnrbKOEl8_110_120",
+        "score": 0.522901829818611,
+        "caption": "The instrumental music features a sort of calm before the storm. In the low register one can barely hear a double bass playing a long note softly. Another stringed instrument plays a short melody that fades out. A bigger group of strings then play a short long-note melody. The music is playing softly, almost quiet. This could work well as music for a movie scene.",
+        "rank": 8,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "AqSV_WKZxEc_30_40",
+        "score": 0.5031895838224872,
+        "caption": "The song is an instrumental. The tempo is slow with a string section harmony with sweeping lines of music, piano playing poignantly and emotional chord changes. The song is a movie soundtrack that has an air of suspense and hope. The song audio quality is very poor with hissing tones.",
+        "rank": 9,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "3-_QS346VWo_30_40",
+        "score": 0.5024546511077032,
+        "caption": "This is a new-age music piece. There is no singer in this piece. The acoustic guitar is playing the main melody. The piano is playing the chords of the piece while in the background a faint synth string sound can be heard. The atmosphere is relaxing and soothing. This piece would make the perfect background music for a meditation video. It could also be playing in the background at a spa or a wellness center.",
+        "rank": 10,
+        "is_paired_positive": false
+      }
+    ]
+  },
+  {
+    "direction": "graph_to_text",
+    "query_id": "1WlvXneu6oY_30_40",
+    "caption": "The song is instrumental music. The song is medium tempo with just a piano playing pensively and no other instrumentation. The song is emotional and poignant. The song is a western classical masterpiece, but with bad audio quality issues.",
+    "selection": "best_rank_diagnostic",
+    "paired_rank": 1,
+    "ranked_matches": [
+      {
+        "sample_id": "1WlvXneu6oY_30_40",
+        "score": 0.5895835498235328,
+        "caption": "The song is instrumental music. The song is medium tempo with just a piano playing pensively and no other instrumentation. The song is emotional and poignant. The song is a western classical masterpiece, but with bad audio quality issues.",
+        "rank": 1,
+        "is_paired_positive": true
+      },
+      {
+        "sample_id": "3-_QS346VWo_30_40",
+        "score": 0.5866400833597789,
+        "caption": "This is a new-age music piece. There is no singer in this piece. The acoustic guitar is playing the main melody. The piano is playing the chords of the piece while in the background a faint synth string sound can be heard. The atmosphere is relaxing and soothing. This piece would make the perfect background music for a meditation video. It could also be playing in the background at a spa or a wellness center.",
+        "rank": 2,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "OgqDO1wxQ8E_0_10",
+        "score": 0.585782553220501,
+        "caption": "This audio contains an acoustic piano playing a minor key melody that sounds like being in a dream along with strings rising up from the background playing a melody in the low to the higher register. This song may be playing for a lovely movie scene where birds are flying in slow motion and kids are playing outside.",
+        "rank": 3,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "dy_yFZ6dL34_130_140",
+        "score": 0.5618902706885646,
+        "caption": "This is a meditation piece. There are waves in the background sounding similar to sine waves. There is an evolving synth signifying a passage. There are various sound effects, especially in high pitch. There is a hypnotizing aura. This piece could be used in the background of a meditation video.",
+        "rank": 4,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "-QuWdnmn-kM_30_40",
+        "score": 0.5595442557878664,
+        "caption": "This is a lullaby that features a main melody made with a xylophone that has a bright sound. A sustained piano synth creates a dreamy and sleepy ambience sound. A subtle cello plays single chords that bounce from one beat to the next. This is a song a baby could fall asleep to.",
+        "rank": 5,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "CqtknE729Lw_310_320",
+        "score": 0.5460666675574982,
+        "caption": "This is an instrumental classical music piece with clear Italian influences. There is a piano playing a gentle melody and a mandolin being strummed rapidly but with low velocity. The atmosphere is relaxing. This piece can be used during the scenery shots of a romance movie taking place in a Mediterranean country.",
+        "rank": 6,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "MWS-Uxf1MRw_90_100",
+        "score": 0.5359802017538686,
+        "caption": "This is a classical music piece. There is a piano playing an arpeggio in the background while a violin gently plays the main tune. The atmosphere of the piece is sentimental. This piece could be used in the background of tutorial videos. It could also be playing in the background at a coffee shop.",
+        "rank": 7,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "eW8se7t0s-U_30_40",
+        "score": 0.5317640114612299,
+        "caption": "The low quality recording features a classical song that consists of arpeggiated, soft piano melody, wide sustained string melody and a tom hit at the very beginning of the recording. The song is slowly fading in, by which we can conclude that it is an intro section of the song. It sounds cinematic, emotional, soft, mellow and passionate.",
+        "rank": 8,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "1FU5odlgLmo_30_40",
+        "score": 0.5198830532667993,
+        "caption": "This music is a pensive instrumental.The tempo is medium with a melancholic cello, rhythmic ukulele and a percussion instrument. The song is pensive, contemplative, meditative, melancholic ,solemn and dreamy.",
+        "rank": 9,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "-eDAoheZrY8_30_40",
+        "score": 0.5179115289954912,
+        "caption": "The song is an instrumental. The song is slow tempo with building crescendo , string section harmony, horn section, drums playing steadily and piano accompaniment. The song is suspenseful and builds anticipation. The song is a movie soundtrack and has an average audio quality.",
+        "rank": 10,
+        "is_paired_positive": false
+      }
+    ]
+  },
+  {
+    "direction": "graph_to_text",
+    "query_id": "VjbRot21Hq0_30_40",
+    "caption": "The low quality recording features an electric guitar changing pitch as it is being tuned, string by string. The recording is very noisy.",
+    "selection": "worst_rank_diagnostic",
+    "paired_rank": 557,
+    "ranked_matches": [
+      {
+        "sample_id": "hoPnrbKOEl8_110_120",
+        "score": 0.6075826431744676,
+        "caption": "The instrumental music features a sort of calm before the storm. In the low register one can barely hear a double bass playing a long note softly. Another stringed instrument plays a short melody that fades out. A bigger group of strings then play a short long-note melody. The music is playing softly, almost quiet. This could work well as music for a movie scene.",
+        "rank": 1,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "AgCSBCsHkMk_60_70",
+        "score": 0.5976943080426812,
+        "caption": "The low quality recording features water and some metallic sound effects, followed by a dynamic orchestra that consists of a mellow string section, simple plucked harp and mystical woodwinds playing in the background. In the first part of the loop, the sound is completely muffled. It sounds like something you would hear in old movies.",
+        "rank": 2,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "7OjXHfVoI64_200_210",
+        "score": 0.5936754239851483,
+        "caption": "This song is an instrumental interlude of the Gospel song \u2018Thorns in the Straw. The music is slow with a melancholic trombone and tuba harmony, acoustic guitar accompaniment , bass, steady drumming,and synthesiser arrangements. The music is soft, mellow, poignant,pensive, sentimental,emotional, reflective and serene. This song is a Gospel Instrumental.",
+        "rank": 3,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "1bSP4wLfMpA_0_10",
+        "score": 0.5858928791946021,
+        "caption": "A cello section is playing a short stroke melody with the bow while other strings, probably violins are playing a one note drone in a high key. Timpani hits and rolls are adding depth to the musical scenario. In the background you can hear sound effects opening up the soundscape for a deeper male voice screaming/crying along to a chainsaw sound. This song may be playing in a movie scene where someone is getting tortured.",
+        "rank": 4,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "fBEGBuO3RXg_30_40",
+        "score": 0.5844117279789816,
+        "caption": "This song is an orchestral piece. The tempo is slow with the vocalist singing in soprano,alto, mezzo, treble and bass harmony. The song is intense, grim, sinister, indicative of danger, eerie, enigmatic, out worldly and mesmerising. There are incoherent vocal riffs and sounds towards the end of this clip.",
+        "rank": 5,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "6yB6plsrjO0_30_40",
+        "score": 0.5653846391126907,
+        "caption": "Music that promotes focus. The music is instrumental and the instruments are all electronic. Synthesized string harmonies, harp plucks and bell sounds blend over a driving bass. The music is tranquil, yet focused. Good for an IT training video.",
+        "rank": 6,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "-QuWdnmn-kM_30_40",
+        "score": 0.5576712537923136,
+        "caption": "This is a lullaby that features a main melody made with a xylophone that has a bright sound. A sustained piano synth creates a dreamy and sleepy ambience sound. A subtle cello plays single chords that bounce from one beat to the next. This is a song a baby could fall asleep to.",
+        "rank": 7,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "KoAGZ_dB8MM_60_70",
+        "score": 0.5328045210227986,
+        "caption": "A female singer sings this eerie melody. The song is medium tempo with a rolling bells keyboard harmony, and other ambient echo tones and harp tones. The song is haunting and unsettling. The audio quality is very poor and not enjoyable.",
+        "rank": 8,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "A-7dmBdsFXc_70_80",
+        "score": 0.5317784739511742,
+        "caption": "The low quality recording features a dark tinny bells melody played over synth pad chords, followed by echoing whispering male and haunting whispering female vocals. It sounds haunting, hypnotic, creepy, scary and like something that belongs to a horror movie.",
+        "rank": 9,
+        "is_paired_positive": false
+      },
+      {
+        "sample_id": "iDvva_WCo-I_30_40",
+        "score": 0.5287291307780216,
+        "caption": "The low quality recording features a didgeridoo melody played on top of shimmering shakers, plucked strings melody and low percussive hits. It sounds groovy, passionate and on an average ear, weird.",
+        "rank": 10,
+        "is_paired_positive": false
+      }
+    ]
+  }
+]

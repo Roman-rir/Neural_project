@@ -1,0 +1,17 @@
+{
+  "valid": true,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "feature_sha256": "77c667b7312a6579ef17f0a29da5170781829a1a7849154b024794fa9d6a7513",
+  "evaluated_test": true,
+  "validation_only_selection": true,
+  "unit_embeddings_verified": true,
+  "metrics_recomputed": true,
+  "baseline_metrics_recomputed": true,
+  "split_ids_verified": true,
+  "checkpoint_hashes_verified": true,
+  "comparison_tables_verified": true
+}

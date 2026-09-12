@@ -1,0 +1,2231 @@
+[
+  {
+    "sample_id": "-5xOcMJpTUk_70_80",
+    "ytid": "-5xOcMJpTUk",
+    "caption": "A male guitarist plays the guitar and speaks about technique in this online video tutorial. The male voice is strong and commanding, along with guitar string twang sounds, clearly demonstrating the technique. The audio quality is mediocre.",
+    "selection": "First validation IDs in processed-manifest order",
+    "models": {
+      "bert": {
+        "threshold": 0.2,
+        "labels": [
+          {
+            "label_id": "/m/04rlf",
+            "name": "Music",
+            "probability": 0.9881300926208496,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/04szw",
+            "name": "Musical instrument",
+            "probability": 0.9168547987937927,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/0342h",
+            "name": "Guitar",
+            "probability": 0.9526071548461914,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/0fx80y",
+            "name": "Plucked string instrument",
+            "probability": 0.9509720206260681,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/015lz1",
+            "name": "Singing",
+            "probability": 0.011400063522160053,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0l14md",
+            "name": "Percussion",
+            "probability": 0.004586551804095507,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/085jw",
+            "name": "Wind instrument, woodwind instrument",
+            "probability": 0.0016043572686612606,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/01kcd",
+            "name": "Brass instrument",
+            "probability": 0.0007708229823037982,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/09x0r",
+            "name": "Speech",
+            "probability": 0.6657653450965881,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/026t6",
+            "name": "Drum",
+            "probability": 0.002037310041487217,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/074ft",
+            "name": "Song",
+            "probability": 0.010176192969083786,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02rr_",
+            "name": "Effects unit",
+            "probability": 0.08114694058895111,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/05148p4",
+            "name": "Keyboard (musical)",
+            "probability": 0.0006392249488271773,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02sgy",
+            "name": "Electric guitar",
+            "probability": 0.19863633811473846,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/042v_gx",
+            "name": "Acoustic guitar",
+            "probability": 0.5983524918556213,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/02lkt",
+            "name": "Electronic music",
+            "probability": 6.485371704911813e-05,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/06by7",
+            "name": "Rock music",
+            "probability": 0.005800287704914808,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0164x2",
+            "name": "Music of Africa",
+            "probability": 0.0012563816271722317,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/064t9",
+            "name": "Pop music",
+            "probability": 0.00420041847974062,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0g12c5",
+            "name": "Distortion",
+            "probability": 0.17316244542598724,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0l14_3",
+            "name": "Bowed string instrument",
+            "probability": 0.011916374787688255,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0155w",
+            "name": "Blues",
+            "probability": 0.11938751488924026,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/01lyv",
+            "name": "Country",
+            "probability": 0.035178299993276596,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0glt670",
+            "name": "Hip hop music",
+            "probability": 0.0002407204156043008,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02bxd",
+            "name": "Didgeridoo",
+            "probability": 0.0005210153758525848,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/t/dd00036",
+            "name": "Angry music",
+            "probability": 7.78788307798095e-05,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02v2lh",
+            "name": "New-age music",
+            "probability": 0.0009318268275819719,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02x8m",
+            "name": "Funk",
+            "probability": 0.0021097129210829735,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02p0sh1",
+            "name": "Traditional music",
+            "probability": 0.004614644218236208,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/05rwpb",
+            "name": "Independent music",
+            "probability": 0.0036583305336534977,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          }
+        ]
+      },
+      "gnn": {
+        "threshold": 0.1,
+        "labels": [
+          {
+            "label_id": "/m/04rlf",
+            "name": "Music",
+            "probability": 0.9835190176963806,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/04szw",
+            "name": "Musical instrument",
+            "probability": 0.9062806367874146,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/0342h",
+            "name": "Guitar",
+            "probability": 0.9576516151428223,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/0fx80y",
+            "name": "Plucked string instrument",
+            "probability": 0.9360162019729614,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/015lz1",
+            "name": "Singing",
+            "probability": 0.007157314568758011,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0l14md",
+            "name": "Percussion",
+            "probability": 0.0007633155910298228,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/085jw",
+            "name": "Wind instrument, woodwind instrument",
+            "probability": 0.011102672666311264,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/01kcd",
+            "name": "Brass instrument",
+            "probability": 0.002315788296982646,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/09x0r",
+            "name": "Speech",
+            "probability": 0.2929733991622925,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/026t6",
+            "name": "Drum",
+            "probability": 0.0008418513461947441,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/074ft",
+            "name": "Song",
+            "probability": 0.002153930487111211,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02rr_",
+            "name": "Effects unit",
+            "probability": 0.3933136761188507,
+            "target": 0,
+            "predicted": 1,
+            "status": "false_positive"
+          },
+          {
+            "label_id": "/m/05148p4",
+            "name": "Keyboard (musical)",
+            "probability": 0.0064314561896026134,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02sgy",
+            "name": "Electric guitar",
+            "probability": 0.25860169529914856,
+            "target": 0,
+            "predicted": 1,
+            "status": "false_positive"
+          },
+          {
+            "label_id": "/m/042v_gx",
+            "name": "Acoustic guitar",
+            "probability": 0.18339741230010986,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/02lkt",
+            "name": "Electronic music",
+            "probability": 0.0012927595525979996,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/06by7",
+            "name": "Rock music",
+            "probability": 0.009704452008008957,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0164x2",
+            "name": "Music of Africa",
+            "probability": 0.0007498061168007553,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/064t9",
+            "name": "Pop music",
+            "probability": 0.0011281680781394243,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0g12c5",
+            "name": "Distortion",
+            "probability": 0.3568926751613617,
+            "target": 0,
+            "predicted": 1,
+            "status": "false_positive"
+          },
+          {
+            "label_id": "/m/0l14_3",
+            "name": "Bowed string instrument",
+            "probability": 0.020282672718167305,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0155w",
+            "name": "Blues",
+            "probability": 0.014757213182747364,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/01lyv",
+            "name": "Country",
+            "probability": 0.002856206614524126,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0glt670",
+            "name": "Hip hop music",
+            "probability": 0.0008243002812378109,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02bxd",
+            "name": "Didgeridoo",
+            "probability": 0.0008172861416824162,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/t/dd00036",
+            "name": "Angry music",
+            "probability": 0.0035095149651169777,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02v2lh",
+            "name": "New-age music",
+            "probability": 0.00016623093688394874,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02x8m",
+            "name": "Funk",
+            "probability": 0.0013666305458173156,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02p0sh1",
+            "name": "Traditional music",
+            "probability": 0.0005802559317089617,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/05rwpb",
+            "name": "Independent music",
+            "probability": 0.0017395695904269814,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          }
+        ]
+      },
+      "gated": {
+        "threshold": 0.15,
+        "labels": [
+          {
+            "label_id": "/m/04rlf",
+            "name": "Music",
+            "probability": 0.9948785305023193,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/04szw",
+            "name": "Musical instrument",
+            "probability": 0.9645677208900452,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/0342h",
+            "name": "Guitar",
+            "probability": 0.9741884469985962,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/0fx80y",
+            "name": "Plucked string instrument",
+            "probability": 0.989628791809082,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/015lz1",
+            "name": "Singing",
+            "probability": 0.005172049626708031,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0l14md",
+            "name": "Percussion",
+            "probability": 0.0003170272393617779,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/085jw",
+            "name": "Wind instrument, woodwind instrument",
+            "probability": 0.0003491546958684921,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/01kcd",
+            "name": "Brass instrument",
+            "probability": 0.0003126471128780395,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/09x0r",
+            "name": "Speech",
+            "probability": 0.561639130115509,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/026t6",
+            "name": "Drum",
+            "probability": 0.00023561048146802932,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/074ft",
+            "name": "Song",
+            "probability": 0.0025062141939997673,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02rr_",
+            "name": "Effects unit",
+            "probability": 0.08683336526155472,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/05148p4",
+            "name": "Keyboard (musical)",
+            "probability": 0.0011417624773457646,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02sgy",
+            "name": "Electric guitar",
+            "probability": 0.14298118650913239,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/042v_gx",
+            "name": "Acoustic guitar",
+            "probability": 0.5769168138504028,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/02lkt",
+            "name": "Electronic music",
+            "probability": 0.000379915873054415,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/06by7",
+            "name": "Rock music",
+            "probability": 0.002601644257083535,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0164x2",
+            "name": "Music of Africa",
+            "probability": 0.00016521157522220165,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/064t9",
+            "name": "Pop music",
+            "probability": 0.0022820972371846437,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0g12c5",
+            "name": "Distortion",
+            "probability": 0.12491172552108765,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0l14_3",
+            "name": "Bowed string instrument",
+            "probability": 0.02092732861638069,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0155w",
+            "name": "Blues",
+            "probability": 0.02571682631969452,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/01lyv",
+            "name": "Country",
+            "probability": 0.014406140893697739,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0glt670",
+            "name": "Hip hop music",
+            "probability": 0.00024327992286998779,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02bxd",
+            "name": "Didgeridoo",
+            "probability": 0.0009929867228493094,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/t/dd00036",
+            "name": "Angry music",
+            "probability": 0.0002303959772689268,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02v2lh",
+            "name": "New-age music",
+            "probability": 0.00019777081615757197,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02x8m",
+            "name": "Funk",
+            "probability": 0.0010480498895049095,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02p0sh1",
+            "name": "Traditional music",
+            "probability": 0.001661766436882317,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/05rwpb",
+            "name": "Independent music",
+            "probability": 0.0024230957496911287,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "sample_id": "-8C-gydUbR8_30_40",
+    "ytid": "-8C-gydUbR8",
+    "caption": "A children\u2019s choir sings this devotional melody. The song is medium tempo with a steady bass line, drumming rhythm and clapping percussion. The song is black gospel choral music played in front of a live congregation. The audio quality is very poor.",
+    "selection": "First validation IDs in processed-manifest order",
+    "models": {
+      "bert": {
+        "threshold": 0.2,
+        "labels": [
+          {
+            "label_id": "/m/04rlf",
+            "name": "Music",
+            "probability": 0.8714699745178223,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/04szw",
+            "name": "Musical instrument",
+            "probability": 0.0105300797149539,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0342h",
+            "name": "Guitar",
+            "probability": 0.0036308737471699715,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0fx80y",
+            "name": "Plucked string instrument",
+            "probability": 0.0017220096196979284,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/015lz1",
+            "name": "Singing",
+            "probability": 0.17171084880828857,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0l14md",
+            "name": "Percussion",
+            "probability": 0.028216848149895668,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/085jw",
+            "name": "Wind instrument, woodwind instrument",
+            "probability": 0.00032532509067095816,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/01kcd",
+            "name": "Brass instrument",
+            "probability": 0.002164829522371292,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/09x0r",
+            "name": "Speech",
+            "probability": 0.015401157550513744,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/026t6",
+            "name": "Drum",
+            "probability": 0.02988269180059433,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/074ft",
+            "name": "Song",
+            "probability": 0.035601988434791565,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02rr_",
+            "name": "Effects unit",
+            "probability": 0.0013708227779716253,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/05148p4",
+            "name": "Keyboard (musical)",
+            "probability": 0.003813597373664379,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02sgy",
+            "name": "Electric guitar",
+            "probability": 0.0015435676323249936,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/042v_gx",
+            "name": "Acoustic guitar",
+            "probability": 0.0005380446091294289,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02lkt",
+            "name": "Electronic music",
+            "probability": 0.001505947089754045,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/06by7",
+            "name": "Rock music",
+            "probability": 0.009754299186170101,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0164x2",
+            "name": "Music of Africa",
+            "probability": 0.004001822788268328,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/064t9",
+            "name": "Pop music",
+            "probability": 0.003473341930657625,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0g12c5",
+            "name": "Distortion",
+            "probability": 0.000742820673622191,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0l14_3",
+            "name": "Bowed string instrument",
+            "probability": 0.0007370863459073007,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0155w",
+            "name": "Blues",
+            "probability": 0.0010166163556277752,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/01lyv",
+            "name": "Country",
+            "probability": 0.0007315054535865784,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0glt670",
+            "name": "Hip hop music",
+            "probability": 0.0012279476504772902,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02bxd",
+            "name": "Didgeridoo",
+            "probability": 0.0008292351267300546,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/t/dd00036",
+            "name": "Angry music",
+            "probability": 0.0028916934970766306,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02v2lh",
+            "name": "New-age music",
+            "probability": 0.006193759385496378,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02x8m",
+            "name": "Funk",
+            "probability": 0.001963081071153283,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02p0sh1",
+            "name": "Traditional music",
+            "probability": 0.004320214036852121,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/05rwpb",
+            "name": "Independent music",
+            "probability": 0.006561351474374533,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          }
+        ]
+      },
+      "gnn": {
+        "threshold": 0.1,
+        "labels": [
+          {
+            "label_id": "/m/04rlf",
+            "name": "Music",
+            "probability": 0.9900644421577454,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/04szw",
+            "name": "Musical instrument",
+            "probability": 0.027129830792546272,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0342h",
+            "name": "Guitar",
+            "probability": 0.0004093924071639776,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0fx80y",
+            "name": "Plucked string instrument",
+            "probability": 0.0007330012740567327,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/015lz1",
+            "name": "Singing",
+            "probability": 0.041379183530807495,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0l14md",
+            "name": "Percussion",
+            "probability": 0.0005671097314916551,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/085jw",
+            "name": "Wind instrument, woodwind instrument",
+            "probability": 0.0009962189942598343,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/01kcd",
+            "name": "Brass instrument",
+            "probability": 0.00031344458693638444,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/09x0r",
+            "name": "Speech",
+            "probability": 0.010507150553166866,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/026t6",
+            "name": "Drum",
+            "probability": 0.0012131949188187718,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/074ft",
+            "name": "Song",
+            "probability": 0.005765371955931187,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02rr_",
+            "name": "Effects unit",
+            "probability": 0.0004037429753225297,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/05148p4",
+            "name": "Keyboard (musical)",
+            "probability": 0.0005159254651516676,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02sgy",
+            "name": "Electric guitar",
+            "probability": 0.0002921748091466725,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/042v_gx",
+            "name": "Acoustic guitar",
+            "probability": 0.0004075183533132076,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02lkt",
+            "name": "Electronic music",
+            "probability": 0.022791152819991112,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/06by7",
+            "name": "Rock music",
+            "probability": 0.008834030479192734,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0164x2",
+            "name": "Music of Africa",
+            "probability": 0.006201906595379114,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/064t9",
+            "name": "Pop music",
+            "probability": 0.03569876775145531,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0g12c5",
+            "name": "Distortion",
+            "probability": 0.00019936534226872027,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0l14_3",
+            "name": "Bowed string instrument",
+            "probability": 0.0001239529810845852,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0155w",
+            "name": "Blues",
+            "probability": 0.0018376687075942755,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/01lyv",
+            "name": "Country",
+            "probability": 0.0009574266732670367,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0glt670",
+            "name": "Hip hop music",
+            "probability": 0.006603545974940062,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02bxd",
+            "name": "Didgeridoo",
+            "probability": 0.00016868732927832752,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/t/dd00036",
+            "name": "Angry music",
+            "probability": 0.019932057708501816,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02v2lh",
+            "name": "New-age music",
+            "probability": 0.0002200047456426546,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02x8m",
+            "name": "Funk",
+            "probability": 0.015786537900567055,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02p0sh1",
+            "name": "Traditional music",
+            "probability": 0.001374852261506021,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/05rwpb",
+            "name": "Independent music",
+            "probability": 0.007438311353325844,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          }
+        ]
+      },
+      "gated": {
+        "threshold": 0.15,
+        "labels": [
+          {
+            "label_id": "/m/04rlf",
+            "name": "Music",
+            "probability": 0.9796985387802124,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/04szw",
+            "name": "Musical instrument",
+            "probability": 0.017618654295802116,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0342h",
+            "name": "Guitar",
+            "probability": 0.0006164740188978612,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0fx80y",
+            "name": "Plucked string instrument",
+            "probability": 0.0011043308768421412,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/015lz1",
+            "name": "Singing",
+            "probability": 0.04219276085495949,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0l14md",
+            "name": "Percussion",
+            "probability": 0.00022856790747027844,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/085jw",
+            "name": "Wind instrument, woodwind instrument",
+            "probability": 0.0002766364486888051,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/01kcd",
+            "name": "Brass instrument",
+            "probability": 0.00021768303122371435,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/09x0r",
+            "name": "Speech",
+            "probability": 0.02218744531273842,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/026t6",
+            "name": "Drum",
+            "probability": 0.0004011862329207361,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/074ft",
+            "name": "Song",
+            "probability": 0.004696236457675695,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02rr_",
+            "name": "Effects unit",
+            "probability": 0.00023917187354527414,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/05148p4",
+            "name": "Keyboard (musical)",
+            "probability": 0.0025261177215725183,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02sgy",
+            "name": "Electric guitar",
+            "probability": 0.00027199898613616824,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/042v_gx",
+            "name": "Acoustic guitar",
+            "probability": 0.0004176428774371743,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02lkt",
+            "name": "Electronic music",
+            "probability": 0.0014185652835294604,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/06by7",
+            "name": "Rock music",
+            "probability": 0.004986098501831293,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0164x2",
+            "name": "Music of Africa",
+            "probability": 0.005068366415798664,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/064t9",
+            "name": "Pop music",
+            "probability": 0.005729431752115488,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0g12c5",
+            "name": "Distortion",
+            "probability": 0.0002462459960952401,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0l14_3",
+            "name": "Bowed string instrument",
+            "probability": 0.00029918161453679204,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0155w",
+            "name": "Blues",
+            "probability": 0.0016831628745421767,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/01lyv",
+            "name": "Country",
+            "probability": 0.000527861644513905,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0glt670",
+            "name": "Hip hop music",
+            "probability": 0.0016343513270840049,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02bxd",
+            "name": "Didgeridoo",
+            "probability": 0.00043656048364937305,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/t/dd00036",
+            "name": "Angry music",
+            "probability": 0.0016419298481196165,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02v2lh",
+            "name": "New-age music",
+            "probability": 0.00028172502061352134,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02x8m",
+            "name": "Funk",
+            "probability": 0.0012257781345397234,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02p0sh1",
+            "name": "Traditional music",
+            "probability": 0.0011002906830981374,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/05rwpb",
+            "name": "Independent music",
+            "probability": 0.0028883791528642178,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "sample_id": "-Bu7YaslRW0_30_40",
+    "ytid": "-Bu7YaslRW0",
+    "caption": "A synth pad is playing a drone sound in the lower mid range. Cymbals are creating atmosphere while a flute/string/brass sound is playing a melody. The whole recording is full of reverb. This song may be playing in a forest documentary.",
+    "selection": "First validation IDs in processed-manifest order",
+    "models": {
+      "bert": {
+        "threshold": 0.2,
+        "labels": [
+          {
+            "label_id": "/m/04rlf",
+            "name": "Music",
+            "probability": 0.7675592303276062,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/04szw",
+            "name": "Musical instrument",
+            "probability": 0.054523665457963943,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0342h",
+            "name": "Guitar",
+            "probability": 0.004620406311005354,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0fx80y",
+            "name": "Plucked string instrument",
+            "probability": 0.0032095478381961584,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/015lz1",
+            "name": "Singing",
+            "probability": 0.0013934285379946232,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0l14md",
+            "name": "Percussion",
+            "probability": 0.07574121654033661,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/085jw",
+            "name": "Wind instrument, woodwind instrument",
+            "probability": 0.012347586452960968,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/01kcd",
+            "name": "Brass instrument",
+            "probability": 0.0834297388792038,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/09x0r",
+            "name": "Speech",
+            "probability": 0.010491828434169292,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/026t6",
+            "name": "Drum",
+            "probability": 0.058470916002988815,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/074ft",
+            "name": "Song",
+            "probability": 0.0008605204639025033,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02rr_",
+            "name": "Effects unit",
+            "probability": 0.004468273837119341,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/05148p4",
+            "name": "Keyboard (musical)",
+            "probability": 0.004102541133761406,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02sgy",
+            "name": "Electric guitar",
+            "probability": 0.0014640570152550936,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/042v_gx",
+            "name": "Acoustic guitar",
+            "probability": 0.0009685488766990602,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02lkt",
+            "name": "Electronic music",
+            "probability": 0.009508198127150536,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/06by7",
+            "name": "Rock music",
+            "probability": 0.0027866221498697996,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0164x2",
+            "name": "Music of Africa",
+            "probability": 0.0006957786390557885,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/064t9",
+            "name": "Pop music",
+            "probability": 0.0013013044372200966,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0g12c5",
+            "name": "Distortion",
+            "probability": 0.0007713123923167586,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0l14_3",
+            "name": "Bowed string instrument",
+            "probability": 0.0004629083850886673,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0155w",
+            "name": "Blues",
+            "probability": 0.0037232753820717335,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/01lyv",
+            "name": "Country",
+            "probability": 7.747077324893326e-05,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0glt670",
+            "name": "Hip hop music",
+            "probability": 0.000363880128134042,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02bxd",
+            "name": "Didgeridoo",
+            "probability": 0.0015357184456661344,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/t/dd00036",
+            "name": "Angry music",
+            "probability": 0.003031144617125392,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02v2lh",
+            "name": "New-age music",
+            "probability": 0.07101830840110779,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02x8m",
+            "name": "Funk",
+            "probability": 0.0004016167367808521,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02p0sh1",
+            "name": "Traditional music",
+            "probability": 0.03637002035975456,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/05rwpb",
+            "name": "Independent music",
+            "probability": 0.0008020951063372195,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          }
+        ]
+      },
+      "gnn": {
+        "threshold": 0.1,
+        "labels": [
+          {
+            "label_id": "/m/04rlf",
+            "name": "Music",
+            "probability": 0.9686349034309387,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/04szw",
+            "name": "Musical instrument",
+            "probability": 0.00834397692233324,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0342h",
+            "name": "Guitar",
+            "probability": 0.000372059439541772,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0fx80y",
+            "name": "Plucked string instrument",
+            "probability": 0.0004930447321385145,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/015lz1",
+            "name": "Singing",
+            "probability": 0.07455475628376007,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0l14md",
+            "name": "Percussion",
+            "probability": 6.929943197064858e-07,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/085jw",
+            "name": "Wind instrument, woodwind instrument",
+            "probability": 0.00040223533869720995,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/01kcd",
+            "name": "Brass instrument",
+            "probability": 0.004550002049654722,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/09x0r",
+            "name": "Speech",
+            "probability": 0.013424142263829708,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/026t6",
+            "name": "Drum",
+            "probability": 1.1832888958451804e-05,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/074ft",
+            "name": "Song",
+            "probability": 0.011620325036346912,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02rr_",
+            "name": "Effects unit",
+            "probability": 0.01760115660727024,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/05148p4",
+            "name": "Keyboard (musical)",
+            "probability": 0.0033043234143406153,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02sgy",
+            "name": "Electric guitar",
+            "probability": 0.003975780215114355,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/042v_gx",
+            "name": "Acoustic guitar",
+            "probability": 5.716698069591075e-05,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02lkt",
+            "name": "Electronic music",
+            "probability": 0.010593589395284653,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/06by7",
+            "name": "Rock music",
+            "probability": 0.0008956160163506866,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0164x2",
+            "name": "Music of Africa",
+            "probability": 0.0003769762406591326,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/064t9",
+            "name": "Pop music",
+            "probability": 0.028166502714157104,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0g12c5",
+            "name": "Distortion",
+            "probability": 0.015707047656178474,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0l14_3",
+            "name": "Bowed string instrument",
+            "probability": 0.006204348988831043,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0155w",
+            "name": "Blues",
+            "probability": 0.0022552846930921078,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/01lyv",
+            "name": "Country",
+            "probability": 0.001659171306528151,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0glt670",
+            "name": "Hip hop music",
+            "probability": 0.0013224971480667591,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02bxd",
+            "name": "Didgeridoo",
+            "probability": 0.005130595527589321,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/t/dd00036",
+            "name": "Angry music",
+            "probability": 0.004805869422852993,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02v2lh",
+            "name": "New-age music",
+            "probability": 0.8306213021278381,
+            "target": 0,
+            "predicted": 1,
+            "status": "false_positive"
+          },
+          {
+            "label_id": "/m/02x8m",
+            "name": "Funk",
+            "probability": 0.000576561491470784,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02p0sh1",
+            "name": "Traditional music",
+            "probability": 0.004073649644851685,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/05rwpb",
+            "name": "Independent music",
+            "probability": 0.02249017544090748,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          }
+        ]
+      },
+      "gated": {
+        "threshold": 0.15,
+        "labels": [
+          {
+            "label_id": "/m/04rlf",
+            "name": "Music",
+            "probability": 0.9919135570526123,
+            "target": 1,
+            "predicted": 1,
+            "status": "true_positive"
+          },
+          {
+            "label_id": "/m/04szw",
+            "name": "Musical instrument",
+            "probability": 0.03213432431221008,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0342h",
+            "name": "Guitar",
+            "probability": 0.001295275054872036,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0fx80y",
+            "name": "Plucked string instrument",
+            "probability": 0.00077409902587533,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/015lz1",
+            "name": "Singing",
+            "probability": 0.002961196471005678,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0l14md",
+            "name": "Percussion",
+            "probability": 0.00015746569260954857,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/085jw",
+            "name": "Wind instrument, woodwind instrument",
+            "probability": 0.0023141372948884964,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/01kcd",
+            "name": "Brass instrument",
+            "probability": 0.00207075965590775,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/09x0r",
+            "name": "Speech",
+            "probability": 0.002017694991081953,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/026t6",
+            "name": "Drum",
+            "probability": 0.00037908501690253615,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/074ft",
+            "name": "Song",
+            "probability": 0.00461067957803607,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02rr_",
+            "name": "Effects unit",
+            "probability": 0.01250325795263052,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/05148p4",
+            "name": "Keyboard (musical)",
+            "probability": 0.0013319370336830616,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02sgy",
+            "name": "Electric guitar",
+            "probability": 0.002225116128101945,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/042v_gx",
+            "name": "Acoustic guitar",
+            "probability": 8.599868306191638e-05,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02lkt",
+            "name": "Electronic music",
+            "probability": 0.01650357060134411,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/06by7",
+            "name": "Rock music",
+            "probability": 0.0043059783056378365,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0164x2",
+            "name": "Music of Africa",
+            "probability": 0.00304461014457047,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/064t9",
+            "name": "Pop music",
+            "probability": 0.00341915525496006,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0g12c5",
+            "name": "Distortion",
+            "probability": 0.0009773126803338528,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0l14_3",
+            "name": "Bowed string instrument",
+            "probability": 0.000846804934553802,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0155w",
+            "name": "Blues",
+            "probability": 0.004850500728935003,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/01lyv",
+            "name": "Country",
+            "probability": 0.00034644146217033267,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/0glt670",
+            "name": "Hip hop music",
+            "probability": 0.0005437173531390727,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02bxd",
+            "name": "Didgeridoo",
+            "probability": 0.0013643144629895687,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/t/dd00036",
+            "name": "Angry music",
+            "probability": 0.008371839299798012,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02v2lh",
+            "name": "New-age music",
+            "probability": 0.23996427655220032,
+            "target": 0,
+            "predicted": 1,
+            "status": "false_positive"
+          },
+          {
+            "label_id": "/m/02x8m",
+            "name": "Funk",
+            "probability": 0.0017402991652488708,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/02p0sh1",
+            "name": "Traditional music",
+            "probability": 0.07078219950199127,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          },
+          {
+            "label_id": "/m/05rwpb",
+            "name": "Independent music",
+            "probability": 0.01016071904450655,
+            "target": 0,
+            "predicted": 0,
+            "status": "true_negative"
+          }
+        ]
+      }
+    }
+  }
+]

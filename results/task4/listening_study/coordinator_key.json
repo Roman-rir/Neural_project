@@ -1,0 +1,1007 @@
+{
+  "study_id": "ad9f07d46a6ea4f8",
+  "trials": [
+    {
+      "trial_id": "7d5146fac6987f15",
+      "query_id": "-4NLarMj4xU_30_40",
+      "caption": "The Pop song features a soft female vocal singing over sustained pulsating synth lead, mellow piano melody, sustained synth brass, punchy kick, claps. tinny wide hi hats and high pitched female vocal melody. It sounds emotional, sad, passionate and like something you would hear on a radio.",
+      "sample_id": "Ysrlv2UlG8A_30_40",
+      "audio": "audio/9556e34e1a2d483a.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "trial_id": "73f003202e8d26e2",
+      "query_id": "-4NLarMj4xU_30_40",
+      "caption": "The Pop song features a soft female vocal singing over sustained pulsating synth lead, mellow piano melody, sustained synth brass, punchy kick, claps. tinny wide hi hats and high pitched female vocal melody. It sounds emotional, sad, passionate and like something you would hear on a radio.",
+      "sample_id": "Ycid0vBwqUg_160_170",
+      "audio": "audio/699ede4d250881d1.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "trial_id": "bd9f30708b14bdd1",
+      "query_id": "-4NLarMj4xU_30_40",
+      "caption": "The Pop song features a soft female vocal singing over sustained pulsating synth lead, mellow piano melody, sustained synth brass, punchy kick, claps. tinny wide hi hats and high pitched female vocal melody. It sounds emotional, sad, passionate and like something you would hear on a radio.",
+      "sample_id": "ICtri0ElFZc_30_40",
+      "audio": "audio/a91a373741b2f9ac.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "trial_id": "80ac64514641b885",
+      "query_id": "-4NLarMj4xU_30_40",
+      "caption": "The Pop song features a soft female vocal singing over sustained pulsating synth lead, mellow piano melody, sustained synth brass, punchy kick, claps. tinny wide hi hats and high pitched female vocal melody. It sounds emotional, sad, passionate and like something you would hear on a radio.",
+      "sample_id": "-4NLarMj4xU_30_40",
+      "audio": "audio/8a071f53e970209b.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "trial_id": "1f32d590a9578a7f",
+      "query_id": "-4NLarMj4xU_30_40",
+      "caption": "The Pop song features a soft female vocal singing over sustained pulsating synth lead, mellow piano melody, sustained synth brass, punchy kick, claps. tinny wide hi hats and high pitched female vocal melody. It sounds emotional, sad, passionate and like something you would hear on a radio.",
+      "sample_id": "GFJNgqcX7u0_30_40",
+      "audio": "audio/d8e8601da049020d.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "trial_id": "703b3ac42d29b9f0",
+      "query_id": "-4NLarMj4xU_30_40",
+      "caption": "The Pop song features a soft female vocal singing over sustained pulsating synth lead, mellow piano melody, sustained synth brass, punchy kick, claps. tinny wide hi hats and high pitched female vocal melody. It sounds emotional, sad, passionate and like something you would hear on a radio.",
+      "sample_id": "UnFEqUWTefM_60_70",
+      "audio": "audio/bc38c5f5daf5efcc.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "trial_id": "b665d294fa50a757",
+      "query_id": "-6pcgdLfb_A_110_120",
+      "caption": "This is an R&B/soul music piece. There is a male vocalist singing melodically and in a sensual manner over multiple tracks. The melody of the beat is provided by a string sample. There is a strong bass sound in the piece. The rhythm is provided by a groovy electronic drum beat. There is an urban feel to this piece. It could be used in the soundtrack of a TV series where two characters are sharing intimate moments.",
+      "sample_id": "UDS6PrY9ZIM_130_140",
+      "audio": "audio/6f39336e9aa6ce08.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "trial_id": "f1e10f35abb4f810",
+      "query_id": "-6pcgdLfb_A_110_120",
+      "caption": "This is an R&B/soul music piece. There is a male vocalist singing melodically and in a sensual manner over multiple tracks. The melody of the beat is provided by a string sample. There is a strong bass sound in the piece. The rhythm is provided by a groovy electronic drum beat. There is an urban feel to this piece. It could be used in the soundtrack of a TV series where two characters are sharing intimate moments.",
+      "sample_id": "4QES-SJ7mP0_210_220",
+      "audio": "audio/38710e6bec1803bf.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "trial_id": "20adbc3a9fe19c27",
+      "query_id": "-6pcgdLfb_A_110_120",
+      "caption": "This is an R&B/soul music piece. There is a male vocalist singing melodically and in a sensual manner over multiple tracks. The melody of the beat is provided by a string sample. There is a strong bass sound in the piece. The rhythm is provided by a groovy electronic drum beat. There is an urban feel to this piece. It could be used in the soundtrack of a TV series where two characters are sharing intimate moments.",
+      "sample_id": "ICtri0ElFZc_30_40",
+      "audio": "audio/a91a373741b2f9ac.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "trial_id": "152dbb1e444c3652",
+      "query_id": "-6pcgdLfb_A_110_120",
+      "caption": "This is an R&B/soul music piece. There is a male vocalist singing melodically and in a sensual manner over multiple tracks. The melody of the beat is provided by a string sample. There is a strong bass sound in the piece. The rhythm is provided by a groovy electronic drum beat. There is an urban feel to this piece. It could be used in the soundtrack of a TV series where two characters are sharing intimate moments.",
+      "sample_id": "L_KkjB0Wt_Q_20_30",
+      "audio": "audio/96a229973b982ed5.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "trial_id": "de3bdaf1cb40c1c0",
+      "query_id": "-6pcgdLfb_A_110_120",
+      "caption": "This is an R&B/soul music piece. There is a male vocalist singing melodically and in a sensual manner over multiple tracks. The melody of the beat is provided by a string sample. There is a strong bass sound in the piece. The rhythm is provided by a groovy electronic drum beat. There is an urban feel to this piece. It could be used in the soundtrack of a TV series where two characters are sharing intimate moments.",
+      "sample_id": "-4NLarMj4xU_30_40",
+      "audio": "audio/8a071f53e970209b.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "trial_id": "e7694380b6f606c5",
+      "query_id": "-6pcgdLfb_A_110_120",
+      "caption": "This is an R&B/soul music piece. There is a male vocalist singing melodically and in a sensual manner over multiple tracks. The melody of the beat is provided by a string sample. There is a strong bass sound in the piece. The rhythm is provided by a groovy electronic drum beat. There is an urban feel to this piece. It could be used in the soundtrack of a TV series where two characters are sharing intimate moments.",
+      "sample_id": "9aE33JEIGOg_30_40",
+      "audio": "audio/f07e9bddae41ffc6.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "trial_id": "3321ecdb92a497f9",
+      "query_id": "-7wUQP6G5EQ_30_40",
+      "caption": "The low quality recording features a renaissance music that consists of soft wooden percussion and mellow, harmonized flute melody playing on top of it. The recording is a bit noisy, but it also sounds soulful, mellow, passionate, emotional and vintage - It really puts the listener in a period of renaissance.",
+      "sample_id": "I6eU2qRjJ7Y_520_530",
+      "audio": "audio/6d9977270bc4e2c1.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "trial_id": "ba1a356c76093b6b",
+      "query_id": "-7wUQP6G5EQ_30_40",
+      "caption": "The low quality recording features a renaissance music that consists of soft wooden percussion and mellow, harmonized flute melody playing on top of it. The recording is a bit noisy, but it also sounds soulful, mellow, passionate, emotional and vintage - It really puts the listener in a period of renaissance.",
+      "sample_id": "B9ME0Vcm_xA_190_200",
+      "audio": "audio/3e5d4fe83c31c577.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "trial_id": "7b4b193b4d276e6a",
+      "query_id": "-7wUQP6G5EQ_30_40",
+      "caption": "The low quality recording features a renaissance music that consists of soft wooden percussion and mellow, harmonized flute melody playing on top of it. The recording is a bit noisy, but it also sounds soulful, mellow, passionate, emotional and vintage - It really puts the listener in a period of renaissance.",
+      "sample_id": "NUTaOnEhvzE_40_50",
+      "audio": "audio/94216d6a459a648f.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "trial_id": "0956519fe0899721",
+      "query_id": "-7wUQP6G5EQ_30_40",
+      "caption": "The low quality recording features a renaissance music that consists of soft wooden percussion and mellow, harmonized flute melody playing on top of it. The recording is a bit noisy, but it also sounds soulful, mellow, passionate, emotional and vintage - It really puts the listener in a period of renaissance.",
+      "sample_id": "8iPpgyEh8WM_30_40",
+      "audio": "audio/740b61972a908bc8.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "trial_id": "b186e6a8c9b33330",
+      "query_id": "-7wUQP6G5EQ_30_40",
+      "caption": "The low quality recording features a renaissance music that consists of soft wooden percussion and mellow, harmonized flute melody playing on top of it. The recording is a bit noisy, but it also sounds soulful, mellow, passionate, emotional and vintage - It really puts the listener in a period of renaissance.",
+      "sample_id": "SFHoTmcgw8E_220_230",
+      "audio": "audio/8b6df56f75db571c.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "trial_id": "599efe497afc9870",
+      "query_id": "-7wUQP6G5EQ_30_40",
+      "caption": "The low quality recording features a renaissance music that consists of soft wooden percussion and mellow, harmonized flute melody playing on top of it. The recording is a bit noisy, but it also sounds soulful, mellow, passionate, emotional and vintage - It really puts the listener in a period of renaissance.",
+      "sample_id": "L_KkjB0Wt_Q_20_30",
+      "audio": "audio/96a229973b982ed5.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "trial_id": "b5b1f4b9257a0d12",
+      "query_id": "-DeAdhYKbGE_290_300",
+      "caption": "A bagpipe ensemble playing a quick melody in unison, employing trills to ornament it.",
+      "sample_id": "NJ_Ha89QjiI_70_80",
+      "audio": "audio/7b0a9534dcc3390b.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "trial_id": "aaf9d29ad1e4d889",
+      "query_id": "-DeAdhYKbGE_290_300",
+      "caption": "A bagpipe ensemble playing a quick melody in unison, employing trills to ornament it.",
+      "sample_id": "OECgm1obaFs_30_40",
+      "audio": "audio/26420ee186ac9d4c.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "trial_id": "a79955daf362e5aa",
+      "query_id": "-DeAdhYKbGE_290_300",
+      "caption": "A bagpipe ensemble playing a quick melody in unison, employing trills to ornament it.",
+      "sample_id": "WYbD9YUrf_4_80_90",
+      "audio": "audio/033a72283182865f.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "trial_id": "d2c956beecced5ba",
+      "query_id": "-DeAdhYKbGE_290_300",
+      "caption": "A bagpipe ensemble playing a quick melody in unison, employing trills to ornament it.",
+      "sample_id": "NUTaOnEhvzE_40_50",
+      "audio": "audio/94216d6a459a648f.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "trial_id": "2e949cfa767fa13b",
+      "query_id": "-DeAdhYKbGE_290_300",
+      "caption": "A bagpipe ensemble playing a quick melody in unison, employing trills to ornament it.",
+      "sample_id": "AJTU5RhF3S4_550_560",
+      "audio": "audio/e3bcd8384ebd13b8.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "trial_id": "7840a41fb51a42cf",
+      "query_id": "-DeAdhYKbGE_290_300",
+      "caption": "A bagpipe ensemble playing a quick melody in unison, employing trills to ornament it.",
+      "sample_id": "axb48YrvRmw_30_40",
+      "audio": "audio/6cc4e443d72fa8a3.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "trial_id": "cfe7b3531e8fe6b6",
+      "query_id": "-FEPOSP7ay0_260_270",
+      "caption": "The low quality recording features loud bells and metallic squeaking sounds. The recording is mono and noisy.",
+      "sample_id": "PduP4CpaDtY_0_10",
+      "audio": "audio/275c5e18860f2ce9.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "trial_id": "e89d226386609edf",
+      "query_id": "-FEPOSP7ay0_260_270",
+      "caption": "The low quality recording features loud bells and metallic squeaking sounds. The recording is mono and noisy.",
+      "sample_id": "Vbx6TFxSPYY_70_80",
+      "audio": "audio/d71d0919e5f8e53f.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "trial_id": "ce7db2c7e047ea29",
+      "query_id": "-FEPOSP7ay0_260_270",
+      "caption": "The low quality recording features loud bells and metallic squeaking sounds. The recording is mono and noisy.",
+      "sample_id": "JiBAkAwK0GM_30_40",
+      "audio": "audio/50e47a445bee7e42.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "trial_id": "b094553a11ef049a",
+      "query_id": "-FEPOSP7ay0_260_270",
+      "caption": "The low quality recording features loud bells and metallic squeaking sounds. The recording is mono and noisy.",
+      "sample_id": "-FEPOSP7ay0_260_270",
+      "audio": "audio/bf88a813752e6a46.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "trial_id": "4cf88c8b792b8227",
+      "query_id": "-FEPOSP7ay0_260_270",
+      "caption": "The low quality recording features loud bells and metallic squeaking sounds. The recording is mono and noisy.",
+      "sample_id": "Zxyfhub6nV4_80_90",
+      "audio": "audio/75bcb555fd3f054e.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "trial_id": "4d6a8e10f8d96991",
+      "query_id": "-FEPOSP7ay0_260_270",
+      "caption": "The low quality recording features loud bells and metallic squeaking sounds. The recording is mono and noisy.",
+      "sample_id": "BBmXMoI9Qus_30_40",
+      "audio": "audio/a786e207243649a9.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "trial_id": "e650a0436b62d078",
+      "query_id": "-f1DNyngKVY_30_40",
+      "caption": "This is an instrumental sitar music piece. The sitar is being played at a medium-to-high range. There is a calming and relaxing atmosphere to this piece. This piece can be used in the background of a meditation video. It could also be played during a meditation session at a course.",
+      "sample_id": "B3lq6U4PDZo_30_40",
+      "audio": "audio/7f2de82c1b62f16c.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "trial_id": "eec931f2751ec51a",
+      "query_id": "-f1DNyngKVY_30_40",
+      "caption": "This is an instrumental sitar music piece. The sitar is being played at a medium-to-high range. There is a calming and relaxing atmosphere to this piece. This piece can be used in the background of a meditation video. It could also be played during a meditation session at a course.",
+      "sample_id": "Ieef9l-gWN8_20_30",
+      "audio": "audio/fec9da8af5bfe640.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "trial_id": "8d45b7d16fbc6da0",
+      "query_id": "-f1DNyngKVY_30_40",
+      "caption": "This is an instrumental sitar music piece. The sitar is being played at a medium-to-high range. There is a calming and relaxing atmosphere to this piece. This piece can be used in the background of a meditation video. It could also be played during a meditation session at a course.",
+      "sample_id": "ZX7EzqMBjfo_160_170",
+      "audio": "audio/10fa801dd9c588db.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "trial_id": "de9937b2f880bb7c",
+      "query_id": "-f1DNyngKVY_30_40",
+      "caption": "This is an instrumental sitar music piece. The sitar is being played at a medium-to-high range. There is a calming and relaxing atmosphere to this piece. This piece can be used in the background of a meditation video. It could also be played during a meditation session at a course.",
+      "sample_id": "-f1DNyngKVY_30_40",
+      "audio": "audio/07382c0751d19b37.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "trial_id": "ce2b972b8c870ea8",
+      "query_id": "-f1DNyngKVY_30_40",
+      "caption": "This is an instrumental sitar music piece. The sitar is being played at a medium-to-high range. There is a calming and relaxing atmosphere to this piece. This piece can be used in the background of a meditation video. It could also be played during a meditation session at a course.",
+      "sample_id": "Z_HT-d8W1_M_30_40",
+      "audio": "audio/3237c2045f7d03e7.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "trial_id": "d066ff4b81c494c9",
+      "query_id": "-f1DNyngKVY_30_40",
+      "caption": "This is an instrumental sitar music piece. The sitar is being played at a medium-to-high range. There is a calming and relaxing atmosphere to this piece. This piece can be used in the background of a meditation video. It could also be played during a meditation session at a course.",
+      "sample_id": "LKurVRvkmKc_30_40",
+      "audio": "audio/523f6084ac7bfbfc.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "trial_id": "bac27ccd63f48198",
+      "query_id": "-lPXTBXa0tE_30_40",
+      "caption": "The song is an instrumental. The song is medium tempo played by a solo guitarist on a vintage super tone with an exquisite tone. The song is emotional and passionate. The song has poor audio quality.",
+      "sample_id": "KsFCPOKAH60_90_100",
+      "audio": "audio/216eb548ffb7a5e0.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "trial_id": "8edbb8cd1e901db0",
+      "query_id": "-lPXTBXa0tE_30_40",
+      "caption": "The song is an instrumental. The song is medium tempo played by a solo guitarist on a vintage super tone with an exquisite tone. The song is emotional and passionate. The song has poor audio quality.",
+      "sample_id": "D-PxXM2I5gY_0_10",
+      "audio": "audio/0e12f831d8357fae.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "trial_id": "b6e8a1c92e7be3f6",
+      "query_id": "-lPXTBXa0tE_30_40",
+      "caption": "The song is an instrumental. The song is medium tempo played by a solo guitarist on a vintage super tone with an exquisite tone. The song is emotional and passionate. The song has poor audio quality.",
+      "sample_id": "9hCnEfZFZ04_30_40",
+      "audio": "audio/acc2ce5e631f70dd.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "trial_id": "f917bf115f8694e0",
+      "query_id": "-lPXTBXa0tE_30_40",
+      "caption": "The song is an instrumental. The song is medium tempo played by a solo guitarist on a vintage super tone with an exquisite tone. The song is emotional and passionate. The song has poor audio quality.",
+      "sample_id": "hbCaMcbT8to_30_40",
+      "audio": "audio/7d96af464db4704e.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "trial_id": "8f96d01ee4f9f1be",
+      "query_id": "-lPXTBXa0tE_30_40",
+      "caption": "The song is an instrumental. The song is medium tempo played by a solo guitarist on a vintage super tone with an exquisite tone. The song is emotional and passionate. The song has poor audio quality.",
+      "sample_id": "07FxCXxknY4_30_40",
+      "audio": "audio/9547252595902835.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "trial_id": "d28279e39f805cb8",
+      "query_id": "-lPXTBXa0tE_30_40",
+      "caption": "The song is an instrumental. The song is medium tempo played by a solo guitarist on a vintage super tone with an exquisite tone. The song is emotional and passionate. The song has poor audio quality.",
+      "sample_id": "ZmgkpmzvL6c_30_40",
+      "audio": "audio/5ffc3f50f8171bba.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "trial_id": "2eb453e8313ed4fc",
+      "query_id": "-m5ZlWziIeA_200_210",
+      "caption": "This amateur recording features a vinyl scratch being played on a DJ console. This is accompanied by programmed percussion playing a simple beat at a fast tempo. The hi-hat is struck in eighth notes. The snare and kick are played in a unique pattern. A synth plays a two-note lick at different intervals. Other instruments are not audible as the audio quality is low.",
+      "sample_id": "WsDb16qzA5Q_160_170",
+      "audio": "audio/d767259ffaec6d09.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "trial_id": "d01a85a8925dbecc",
+      "query_id": "-m5ZlWziIeA_200_210",
+      "caption": "This amateur recording features a vinyl scratch being played on a DJ console. This is accompanied by programmed percussion playing a simple beat at a fast tempo. The hi-hat is struck in eighth notes. The snare and kick are played in a unique pattern. A synth plays a two-note lick at different intervals. Other instruments are not audible as the audio quality is low.",
+      "sample_id": "Dr4Ijx7Q9jk_30_40",
+      "audio": "audio/94a3ce4b8fd6d0c5.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "trial_id": "ae69b54bc9223ce7",
+      "query_id": "-m5ZlWziIeA_200_210",
+      "caption": "This amateur recording features a vinyl scratch being played on a DJ console. This is accompanied by programmed percussion playing a simple beat at a fast tempo. The hi-hat is struck in eighth notes. The snare and kick are played in a unique pattern. A synth plays a two-note lick at different intervals. Other instruments are not audible as the audio quality is low.",
+      "sample_id": "KoP8T0QqzeM_30_40",
+      "audio": "audio/5367c8b14983f278.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "trial_id": "abb21ed31ae06628",
+      "query_id": "-m5ZlWziIeA_200_210",
+      "caption": "This amateur recording features a vinyl scratch being played on a DJ console. This is accompanied by programmed percussion playing a simple beat at a fast tempo. The hi-hat is struck in eighth notes. The snare and kick are played in a unique pattern. A synth plays a two-note lick at different intervals. Other instruments are not audible as the audio quality is low.",
+      "sample_id": "CkgzMSbE68M_30_40",
+      "audio": "audio/58243b97ffcaf1e6.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "trial_id": "a35aaac9a00bb712",
+      "query_id": "-m5ZlWziIeA_200_210",
+      "caption": "This amateur recording features a vinyl scratch being played on a DJ console. This is accompanied by programmed percussion playing a simple beat at a fast tempo. The hi-hat is struck in eighth notes. The snare and kick are played in a unique pattern. A synth plays a two-note lick at different intervals. Other instruments are not audible as the audio quality is low.",
+      "sample_id": "2f1UXGix_Cw_30_40",
+      "audio": "audio/f816b930d862dab2.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "trial_id": "098d0c56d388c5f2",
+      "query_id": "-m5ZlWziIeA_200_210",
+      "caption": "This amateur recording features a vinyl scratch being played on a DJ console. This is accompanied by programmed percussion playing a simple beat at a fast tempo. The hi-hat is struck in eighth notes. The snare and kick are played in a unique pattern. A synth plays a two-note lick at different intervals. Other instruments are not audible as the audio quality is low.",
+      "sample_id": "OHrrS6AKW_c_30_40",
+      "audio": "audio/75e87d75bd309104.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "trial_id": "d7e1ad40225185bc",
+      "query_id": "-nlkWWphiaM_30_40",
+      "caption": "The low quality recording features a live performance that consists of fruity male vocal singing over accordion melody, acoustic rhythm guitar chords and shimmering bells. It sounds emotional and hopeful. The recording is a bit noisy and in mono, as it was probably recorded with a phone.",
+      "sample_id": "ChCdYoDz7CY_500_510",
+      "audio": "audio/a7b7f820ef00642f.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "trial_id": "9325d089f241e8bf",
+      "query_id": "-nlkWWphiaM_30_40",
+      "caption": "The low quality recording features a live performance that consists of fruity male vocal singing over accordion melody, acoustic rhythm guitar chords and shimmering bells. It sounds emotional and hopeful. The recording is a bit noisy and in mono, as it was probably recorded with a phone.",
+      "sample_id": "FHC7gN3NnX8_60_70",
+      "audio": "audio/9e96ab49d5810f28.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "trial_id": "14a2c1c798ce4db6",
+      "query_id": "-nlkWWphiaM_30_40",
+      "caption": "The low quality recording features a live performance that consists of fruity male vocal singing over accordion melody, acoustic rhythm guitar chords and shimmering bells. It sounds emotional and hopeful. The recording is a bit noisy and in mono, as it was probably recorded with a phone.",
+      "sample_id": "_cf0WYQcNvk_570_580",
+      "audio": "audio/4b513b86f867c1da.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "trial_id": "b01e9c6520d12fd2",
+      "query_id": "-nlkWWphiaM_30_40",
+      "caption": "The low quality recording features a live performance that consists of fruity male vocal singing over accordion melody, acoustic rhythm guitar chords and shimmering bells. It sounds emotional and hopeful. The recording is a bit noisy and in mono, as it was probably recorded with a phone.",
+      "sample_id": "6KqFiP_ux5U_50_60",
+      "audio": "audio/bc2c4fb8cf99e99f.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "trial_id": "6afd5999d53c1840",
+      "query_id": "-nlkWWphiaM_30_40",
+      "caption": "The low quality recording features a live performance that consists of fruity male vocal singing over accordion melody, acoustic rhythm guitar chords and shimmering bells. It sounds emotional and hopeful. The recording is a bit noisy and in mono, as it was probably recorded with a phone.",
+      "sample_id": "L_KkjB0Wt_Q_20_30",
+      "audio": "audio/96a229973b982ed5.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "trial_id": "3c4991d374c83e04",
+      "query_id": "-nlkWWphiaM_30_40",
+      "caption": "The low quality recording features a live performance that consists of fruity male vocal singing over accordion melody, acoustic rhythm guitar chords and shimmering bells. It sounds emotional and hopeful. The recording is a bit noisy and in mono, as it was probably recorded with a phone.",
+      "sample_id": "bxoJOfGx3hM_90_100",
+      "audio": "audio/6b22f258424ac8c8.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "trial_id": "789890028e4d814f",
+      "query_id": "-qcTD2o6I9s_30_40",
+      "caption": "The kick is playing on every beat along with a fast paced high hat and a snare sound. The digital bass is adding some spice and sounds overdriven. Pad sounds can be heard in the background while a synth lead sound is playing a simple repetitive melody. A male voice is rapping/singing. A lot of backing vocals with delay are adding energy to the mix. This song may be playing in a car.",
+      "sample_id": "_mQ6KuA2p6k_40_50",
+      "audio": "audio/f7bc4bc1e81be68e.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "trial_id": "b44376d0136cebb5",
+      "query_id": "-qcTD2o6I9s_30_40",
+      "caption": "The kick is playing on every beat along with a fast paced high hat and a snare sound. The digital bass is adding some spice and sounds overdriven. Pad sounds can be heard in the background while a synth lead sound is playing a simple repetitive melody. A male voice is rapping/singing. A lot of backing vocals with delay are adding energy to the mix. This song may be playing in a car.",
+      "sample_id": "b-Cr0EWwaTk_140_150",
+      "audio": "audio/eff985cea0f1e2c4.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "trial_id": "574d430be1bf42b5",
+      "query_id": "-qcTD2o6I9s_30_40",
+      "caption": "The kick is playing on every beat along with a fast paced high hat and a snare sound. The digital bass is adding some spice and sounds overdriven. Pad sounds can be heard in the background while a synth lead sound is playing a simple repetitive melody. A male voice is rapping/singing. A lot of backing vocals with delay are adding energy to the mix. This song may be playing in a car.",
+      "sample_id": "cd5BIQoHyPI_70_80",
+      "audio": "audio/ff8c6f8f64408b90.wav",
+      "roles": [
+        {
+          "method": "graph",
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "trial_id": "529bb41995fffc93",
+      "query_id": "-qcTD2o6I9s_30_40",
+      "caption": "The kick is playing on every beat along with a fast paced high hat and a snare sound. The digital bass is adding some spice and sounds overdriven. Pad sounds can be heard in the background while a synth lead sound is playing a simple repetitive melody. A male voice is rapping/singing. A lot of backing vocals with delay are adding energy to the mix. This song may be playing in a car.",
+      "sample_id": "-qcTD2o6I9s_30_40",
+      "audio": "audio/b257dd45dc2dcd3a.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "trial_id": "a10ba1547ba38431",
+      "query_id": "-qcTD2o6I9s_30_40",
+      "caption": "The kick is playing on every beat along with a fast paced high hat and a snare sound. The digital bass is adding some spice and sounds overdriven. Pad sounds can be heard in the background while a synth lead sound is playing a simple repetitive melody. A male voice is rapping/singing. A lot of backing vocals with delay are adding energy to the mix. This song may be playing in a car.",
+      "sample_id": "EmSZKb0LdVM_30_40",
+      "audio": "audio/d491f0dbabaf7eec.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "trial_id": "f0b2284b392ad99c",
+      "query_id": "-qcTD2o6I9s_30_40",
+      "caption": "The kick is playing on every beat along with a fast paced high hat and a snare sound. The digital bass is adding some spice and sounds overdriven. Pad sounds can be heard in the background while a synth lead sound is playing a simple repetitive melody. A male voice is rapping/singing. A lot of backing vocals with delay are adding energy to the mix. This song may be playing in a car.",
+      "sample_id": "-m5ZlWziIeA_200_210",
+      "audio": "audio/53e02bdffbbb0fb3.wav",
+      "roles": [
+        {
+          "method": "clap",
+          "rank": 3
+        }
+      ]
+    }
+  ],
+  "clips": {
+    "Ysrlv2UlG8A_30_40": {
+      "path": "9556e34e1a2d483a.wav",
+      "sha256": "d8a62ba2baeefd412136ae7b270b262eb4c46d32ffadf7265a6b865ab0f3a2f8"
+    },
+    "Ycid0vBwqUg_160_170": {
+      "path": "699ede4d250881d1.wav",
+      "sha256": "23b4036135ac0fdbe08c1e8b51bfa5369fb70fbf7046082cd58a18062b406d3c"
+    },
+    "ICtri0ElFZc_30_40": {
+      "path": "a91a373741b2f9ac.wav",
+      "sha256": "36def64dfea6831c540e31e9988ab59f52b970a2329b2a2bd84ae1b589de3311"
+    },
+    "-4NLarMj4xU_30_40": {
+      "path": "8a071f53e970209b.wav",
+      "sha256": "4f3f1aec19cbb3f84dec69be72283787a6bda0d8b67941960ea21fdf0514c367"
+    },
+    "GFJNgqcX7u0_30_40": {
+      "path": "d8e8601da049020d.wav",
+      "sha256": "68a0c76da6736d5d8f9befbdcaebadef2cd5ee8cd1fce196d9e5a5ac2dedb49a"
+    },
+    "UnFEqUWTefM_60_70": {
+      "path": "bc38c5f5daf5efcc.wav",
+      "sha256": "1b0d6bf2db386a1e7871e0a01f0e6f9535644e4b9784032ff40f3ea52d628ec4"
+    },
+    "UDS6PrY9ZIM_130_140": {
+      "path": "6f39336e9aa6ce08.wav",
+      "sha256": "c872a040b46cb07447d42f9045bbaf67e2d7a61af45bf0d078c1bf3d91d02719"
+    },
+    "4QES-SJ7mP0_210_220": {
+      "path": "38710e6bec1803bf.wav",
+      "sha256": "0321aacbfd8c1232837caaf68907559bc3cc3b13be1df88077da2847e9b3c790"
+    },
+    "L_KkjB0Wt_Q_20_30": {
+      "path": "96a229973b982ed5.wav",
+      "sha256": "8c17daa9b80b8ee9730bee7a1a843baa1ecb73abde1910ec568332130b5392c0"
+    },
+    "9aE33JEIGOg_30_40": {
+      "path": "f07e9bddae41ffc6.wav",
+      "sha256": "67ea390529b9dbd6801a7a385865041727fc6d08ad80a3ec0e4e5be6b5ca2848"
+    },
+    "I6eU2qRjJ7Y_520_530": {
+      "path": "6d9977270bc4e2c1.wav",
+      "sha256": "b9a5ff5d04b4e7960444f38ae380f9a96309b0803a224484fbe6d8ce6a56dbb3"
+    },
+    "B9ME0Vcm_xA_190_200": {
+      "path": "3e5d4fe83c31c577.wav",
+      "sha256": "8a30c1d693bf5f462a2126c98a183eb941ecafc7a0e9a1cf7a045712338fa13c"
+    },
+    "NUTaOnEhvzE_40_50": {
+      "path": "94216d6a459a648f.wav",
+      "sha256": "11f2748e959af5a8435a20c68923f3b770672b82bd9339f431c3664fc2d26311"
+    },
+    "8iPpgyEh8WM_30_40": {
+      "path": "740b61972a908bc8.wav",
+      "sha256": "136a239fa880b963265bcc13e0f9a658b4d371896b2ba56fa1626a07abf47e2b"
+    },
+    "SFHoTmcgw8E_220_230": {
+      "path": "8b6df56f75db571c.wav",
+      "sha256": "52c61abb99a6c5d34882b963996363d8ef1926bb9a371a439771f15265f604e8"
+    },
+    "NJ_Ha89QjiI_70_80": {
+      "path": "7b0a9534dcc3390b.wav",
+      "sha256": "6d60c371e0a642f5cd5f3e7c58bd86cdb70a14f3dec66deb226536f92c52856f"
+    },
+    "OECgm1obaFs_30_40": {
+      "path": "26420ee186ac9d4c.wav",
+      "sha256": "37847900e7ec2d54e179e892f807e4aaf8e7624a13f7ef55caf2645db42492ce"
+    },
+    "WYbD9YUrf_4_80_90": {
+      "path": "033a72283182865f.wav",
+      "sha256": "b6d25b3b340cfd9a972ae87395916b533ee93c244d62d77cc5db7eee8b2320c6"
+    },
+    "AJTU5RhF3S4_550_560": {
+      "path": "e3bcd8384ebd13b8.wav",
+      "sha256": "4557657ece7f57be061dc2a9b2a7c9a2874bd3bea2127713281654468a2bd59b"
+    },
+    "axb48YrvRmw_30_40": {
+      "path": "6cc4e443d72fa8a3.wav",
+      "sha256": "a4d84e133638042bb8c36cfe65bfcea33853492b86b83a37769237d9bad00bad"
+    },
+    "PduP4CpaDtY_0_10": {
+      "path": "275c5e18860f2ce9.wav",
+      "sha256": "058ebc82157d362ae462b63087ab503150ba188e2d357ed3c07195bd43180a4b"
+    },
+    "Vbx6TFxSPYY_70_80": {
+      "path": "d71d0919e5f8e53f.wav",
+      "sha256": "7237f614fc35abaa484ce95321e2446bbfc8f3d265bce0ed875bdce068c2ce37"
+    },
+    "JiBAkAwK0GM_30_40": {
+      "path": "50e47a445bee7e42.wav",
+      "sha256": "3af9a3012089592ef07e529e89c29527f8d64865573b475994444ee7ebeb8a79"
+    },
+    "-FEPOSP7ay0_260_270": {
+      "path": "bf88a813752e6a46.wav",
+      "sha256": "78f94b08bdefc6fd96039e3e51d3c13d7d4dbbf5ce39b7725718e0a8d73374dd"
+    },
+    "Zxyfhub6nV4_80_90": {
+      "path": "75bcb555fd3f054e.wav",
+      "sha256": "78dbadd4e5ff90521e9937fd919e2929a9dcc5c94bf7fdfb8d1339df40f55ed4"
+    },
+    "BBmXMoI9Qus_30_40": {
+      "path": "a786e207243649a9.wav",
+      "sha256": "f7ced98c6994200e48f7d56b5eb6a367d5ca536fe3524b9fc63cd614c103d263"
+    },
+    "B3lq6U4PDZo_30_40": {
+      "path": "7f2de82c1b62f16c.wav",
+      "sha256": "c09965f3f88dcc9b4635667f3230e1d8e62a7d3b8b2e1e8550a76422d3cfa4a8"
+    },
+    "Ieef9l-gWN8_20_30": {
+      "path": "fec9da8af5bfe640.wav",
+      "sha256": "1fe7b5d23a9418e78e5985f63857623a049e61b2d73bb9acfacd61e88d482148"
+    },
+    "ZX7EzqMBjfo_160_170": {
+      "path": "10fa801dd9c588db.wav",
+      "sha256": "56d81e2d8216c29c468e126d223376c3b0b016a85ccdfe51abc18d790a61c483"
+    },
+    "-f1DNyngKVY_30_40": {
+      "path": "07382c0751d19b37.wav",
+      "sha256": "1676169274f3794b2de3e8dab6a29eed0a8b675504bbdf198977d4bc4dc404f7"
+    },
+    "Z_HT-d8W1_M_30_40": {
+      "path": "3237c2045f7d03e7.wav",
+      "sha256": "c62d8e3e03be8169a68d942d2ede7c26a551d6a41edd8a50c7f942db3d28861d"
+    },
+    "LKurVRvkmKc_30_40": {
+      "path": "523f6084ac7bfbfc.wav",
+      "sha256": "88b49408c1ed912d4922aab1d8eb2dd7eaa7e90b285d62e45cf3aa18691cbb21"
+    },
+    "KsFCPOKAH60_90_100": {
+      "path": "216eb548ffb7a5e0.wav",
+      "sha256": "b5867b45ed7b7ff53139558dfa8c11a4b8a42d70a07b4280c425a642e0cc0261"
+    },
+    "D-PxXM2I5gY_0_10": {
+      "path": "0e12f831d8357fae.wav",
+      "sha256": "d7195d1e74d8e03f3131fc5a55d25a20d08c64bc979f6bdf9c5115356b90bcc4"
+    },
+    "9hCnEfZFZ04_30_40": {
+      "path": "acc2ce5e631f70dd.wav",
+      "sha256": "4e1bf7cd0d6e5d283e418911911a22d9f7ba645b9b670b4934d592b46b0b9948"
+    },
+    "hbCaMcbT8to_30_40": {
+      "path": "7d96af464db4704e.wav",
+      "sha256": "5e0e16cca898c3e2a6ff84f4c9c2f2c3c5e9272385336f5e8bffd84fae92f008"
+    },
+    "07FxCXxknY4_30_40": {
+      "path": "9547252595902835.wav",
+      "sha256": "59df575399af5809cbf1142b7a63bce5ed9264dff93a3d289f72f4673d7e085e"
+    },
+    "ZmgkpmzvL6c_30_40": {
+      "path": "5ffc3f50f8171bba.wav",
+      "sha256": "cdd3550d719d8fc5a22c9340156dfe1a3094d2a8468ccd38904be681d4714c7d"
+    },
+    "WsDb16qzA5Q_160_170": {
+      "path": "d767259ffaec6d09.wav",
+      "sha256": "f32c49b52b6d62e36068567a5b6ef3e468b318fb784e94f0c4b692d0305bd3ca"
+    },
+    "Dr4Ijx7Q9jk_30_40": {
+      "path": "94a3ce4b8fd6d0c5.wav",
+      "sha256": "b398e44941207509c298d16990dcba34e40327e8eb6793aba9f8b68f8346a897"
+    },
+    "KoP8T0QqzeM_30_40": {
+      "path": "5367c8b14983f278.wav",
+      "sha256": "b3d2498906b7c8047edbce24342fd914de6bdf2e8277b67bf6b830e1dde76dbe"
+    },
+    "CkgzMSbE68M_30_40": {
+      "path": "58243b97ffcaf1e6.wav",
+      "sha256": "5f8b10eb52081bb681053cad480c769ee5ed496d47f6262e4ae73f58bf62514a"
+    },
+    "2f1UXGix_Cw_30_40": {
+      "path": "f816b930d862dab2.wav",
+      "sha256": "adac925f473c204d5b4466b2c71f83d2852c1f6f9f56005de3635772bd19e71d"
+    },
+    "OHrrS6AKW_c_30_40": {
+      "path": "75e87d75bd309104.wav",
+      "sha256": "9ad8819efa21f9215a699918197066aafbacdf478b3800b7a6f2e13cf9a3aba0"
+    },
+    "ChCdYoDz7CY_500_510": {
+      "path": "a7b7f820ef00642f.wav",
+      "sha256": "5bb3042901691324de22e4ec60b9d21f6f7dacccff96cf9b9f31a54c0fdc09b1"
+    },
+    "FHC7gN3NnX8_60_70": {
+      "path": "9e96ab49d5810f28.wav",
+      "sha256": "d8edffb60f8c442a7f53879bb62999db85a91e793f0e3daf5efcbff3964df647"
+    },
+    "_cf0WYQcNvk_570_580": {
+      "path": "4b513b86f867c1da.wav",
+      "sha256": "a0f82c5896a6db10e00a92d2929384cc03b79445590cc0749d9c26f663705e07"
+    },
+    "6KqFiP_ux5U_50_60": {
+      "path": "bc2c4fb8cf99e99f.wav",
+      "sha256": "7e93cc19071574811981fbffb2f18872ae73d5adba62c2376f26def1c864ace6"
+    },
+    "bxoJOfGx3hM_90_100": {
+      "path": "6b22f258424ac8c8.wav",
+      "sha256": "dcea064f69b4812e6525f4bb9981a3b37930f5266a0c14bb554b0bcbac21c22c"
+    },
+    "_mQ6KuA2p6k_40_50": {
+      "path": "f7bc4bc1e81be68e.wav",
+      "sha256": "eb882fc9c332bb0f8fa3b063e249189ee8501d4da7bff8975215fc4866eadf4f"
+    },
+    "b-Cr0EWwaTk_140_150": {
+      "path": "eff985cea0f1e2c4.wav",
+      "sha256": "c2045fa57706c562ff9d8fddfef1139f9156c1c543e379e7851eb549786ef81f"
+    },
+    "cd5BIQoHyPI_70_80": {
+      "path": "ff8c6f8f64408b90.wav",
+      "sha256": "b217d6e2708bbbd5d29096b74fd141c30a2bf71e32c4df627fbb5b5bdef3b36c"
+    },
+    "-qcTD2o6I9s_30_40": {
+      "path": "b257dd45dc2dcd3a.wav",
+      "sha256": "ee58b5e07590ec48c9b773bf9158901d2d8e584f98ffeecbf998f0ee81dfe179"
+    },
+    "EmSZKb0LdVM_30_40": {
+      "path": "d491f0dbabaf7eec.wav",
+      "sha256": "b6a6f5a5bf43f791af905c08f05c51fc7aab41a37b535ee0b8705c491a0de38d"
+    },
+    "-m5ZlWziIeA_200_210": {
+      "path": "53e02bdffbbb0fb3.wav",
+      "sha256": "86a6dd0ad3e10f8003fa73003e13859d24e033b624121b9c11b2509722195144"
+    }
+  }
+}

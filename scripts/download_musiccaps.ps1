@@ -2,6 +2,8 @@
 param(
     [ValidateRange(0, 2147483647)]
     [int]$Limit = 0,
+    [switch]$FastResume,
+    [switch]$RetryUnavailable,
     [string]$MetadataCsv = 'data/raw/musiccaps_official.csv',
     [string]$AudioDir = 'data/raw/musiccaps_audio'
 )
@@ -139,7 +141,18 @@ New-Item -ItemType Directory -Force -Path $audioPath | Out-Null
 $logDirectory = Join-Path $projectRoot 'results/task2'
 New-Item -ItemType Directory -Force -Path $logDirectory | Out-Null
 $failureLog = Join-Path $logDirectory 'audio_download_failures.txt'
-$consecutiveFailures = 0
+$unavailableLog = Join-Path $logDirectory 'audio_unavailable.jsonl'
+$unavailableIds = [Collections.Generic.HashSet[string]]::new([StringComparer]::Ordinal)
+if (-not $RetryUnavailable -and (Test-Path -LiteralPath $unavailableLog -PathType Leaf)) {
+    foreach ($line in [IO.File]::ReadLines($unavailableLog)) {
+        if (-not [string]::IsNullOrWhiteSpace($line)) {
+            $entry = $line | ConvertFrom-Json
+            [void]$unavailableIds.Add([string]$entry.sample_id)
+        }
+    }
+}
+$unavailable = 0
+$downloadRunner = Join-Path $PSScriptRoot 'run_audio_download.py'
 $failures = 0
 $downloaded = 0
 $skipped = 0
@@ -147,8 +160,34 @@ Write-Host "FFmpeg: $ffmpeg"
 Write-Host "JavaScript runtime: $runtime"
 Write-Host "Audio directory: $audioPath"
 
+# Read the old loop's archive once, rather than launching yt-dlp for each ID.
+$archivedIds = [Collections.Generic.HashSet[string]]::new([StringComparer]::Ordinal)
+$archivePath = Join-Path $logDirectory 'audio_downloaded.txt'
+if ($FastResume -and (Test-Path -LiteralPath $archivePath -PathType Leaf)) {
+    foreach ($line in [IO.File]::ReadLines($archivePath)) {
+        if ($line -match '^youtube\s+([A-Za-z0-9_-]{11})\s*$') {
+            [void]$archivedIds.Add($Matches[1])
+        }
+    }
+}
+$fastSkipped = 0
+if ($FastResume) {
+    Write-Host "Fast resume: $($archivedIds.Count) archived IDs loaded. Existing archived WAVs will skip decoding checks."
+}
+
 foreach ($clip in $clips) {
     $wavPath = Join-Path $audioPath "$($clip.Name).wav"
+    if ($unavailableIds.Contains($clip.Name) -and -not (Test-Path -LiteralPath $wavPath)) {
+        $unavailable++
+        continue
+    }
+    if ($FastResume -and $archivedIds.Contains($clip.Id) -and
+        (Test-Path -LiteralPath $wavPath -PathType Leaf) -and
+        (Get-Item -LiteralPath $wavPath).Length -gt 44) {
+        $skipped++
+        $fastSkipped++
+        continue
+    }
     if (Test-Path -LiteralPath $wavPath) {
         $issue = Get-ClipValidation $wavPath $clip.Duration
         if ($issue) {
@@ -157,12 +196,12 @@ foreach ($clip in $clips) {
         }
         Write-Host "Verified existing clip: $($clip.Name)"
         $skipped++
-        $consecutiveFailures = 0
         continue
     }
 
     $downloadArgs = @(
-        '-m', 'yt_dlp', '--ignore-config', '--no-playlist', '--no-overwrites',
+        '-m', 'yt_dlp', '--ignore-config', '--no-playlist', '--no-overwrites', '--no-progress',
+        '--downloader-args', 'ffmpeg:-loglevel error',
         '--ffmpeg-location', $ffmpegDirectory, '--js-runtimes', $runtime,
         '-f', 'bestaudio', '-x', '--audio-format', 'wav',
         '--download-sections', $clip.Section, '--force-keyframes-at-cuts',
@@ -170,27 +209,37 @@ foreach ($clip in $clips) {
         '-o', (Join-Path $audioPath "$($clip.Name).%(ext)s"),
         "https://www.youtube.com/watch?v=$($clip.Id)"
     )
-    & $python @downloadArgs
+    # The helper streams stderr safely on Windows PowerShell and classifies errors.
+    $ytArguments = @($downloadArgs | Select-Object -Skip 2)
+    & $python $downloadRunner @ytArguments
     $downloadExit = $LASTEXITCODE
+    if ($downloadExit -eq 20) {
+        $entry = [ordered]@{ sample_id = $clip.Name; video_id = $clip.Id; reason = 'yt-dlp reported private, removed or unavailable'; checked_at = (Get-Date -Format o) }
+        Add-Content -LiteralPath $unavailableLog -Value ($entry | ConvertTo-Json -Compress) -Encoding UTF8
+        [void]$unavailableIds.Add($clip.Name)
+        $unavailable++
+        Write-Warning "$($clip.Name): unavailable; recorded and skipped."
+        Start-Sleep -Seconds 2
+        continue
+    }
     $issue = $null
-    if ($downloadExit -ne 0) { $issue = "yt-dlp exit code $downloadExit" }
+    if ($downloadExit -eq 21) { $issue = 'Access restriction, bot check or rate limit; clip skipped' }
+    elseif ($downloadExit -ne 0) { $issue = "yt-dlp exit code $downloadExit" }
     elseif (-not (Test-Path -LiteralPath $wavPath -PathType Leaf)) { $issue = 'No WAV output was produced' }
     else { $issue = Get-ClipValidation $wavPath $clip.Duration }
     if ($issue) {
         Add-Content -LiteralPath $failureLog -Value "$(Get-Date -Format o)`t$($clip.Name)`t$issue"
         Write-Warning "$($clip.Name): $issue"
         $failures++
-        $consecutiveFailures++
-        if ($consecutiveFailures -ge 3) {
-            throw "Stopped after three consecutive failures. Check the errors and $failureLog before retrying."
-        }
     }
     else {
         $downloaded++
-        $consecutiveFailures = 0
+        if ($archivedIds.Add($clip.Id)) {
+            Add-Content -LiteralPath $archivePath -Value "youtube $($clip.Id)" -Encoding ASCII
+        }
         Write-Host "Verified downloaded clip: $($clip.Name)"
     }
     Start-Sleep -Seconds 2
 }
-Write-Host "Finished: $downloaded downloaded, $skipped existing clips verified, $failures failed."
-if ($failures -gt 0) { throw "Some clips failed. Review $failureLog before continuing." }
+Write-Host "Finished: $downloaded downloaded, $skipped existing clips skipped ($fastSkipped using archive), $unavailable unavailable clips skipped, $failures other failures."
+if ($failures -gt 0) { Write-Warning "Batch completed with failed clips. Review $failureLog before preprocessing." }

@@ -1,0 +1,376 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 2.5824270529360382,
+    "validation": {
+      "gallery_size": 583,
+      "effective_k": {
+        "1": 1,
+        "5": 5,
+        "10": 10
+      },
+      "tie_policy": "pessimistic: tied negatives rank ahead of the paired positive",
+      "random_ranking_expected_recall": {
+        "1": 0.0017152658662092624,
+        "5": 0.008576329331046312,
+        "10": 0.017152658662092625
+      },
+      "random_ranking_expected_mrr": 0.011914683085775505,
+      "text_to_graph": {
+        "recall_at_1": 0.022298456260720412,
+        "recall_at_5": 0.09605488850771869,
+        "recall_at_10": 0.15780445969125215,
+        "median_rank": 63.0,
+        "mean_reciprocal_rank": 0.07480666230935094
+      },
+      "graph_to_text": {
+        "recall_at_1": 0.018867924528301886,
+        "recall_at_5": 0.10634648370497427,
+        "recall_at_10": 0.16123499142367068,
+        "median_rank": 55.0,
+        "mean_reciprocal_rank": 0.0711758562356323
+      },
+      "mean_recall_at_1": 0.020583190394511147
+    }
+  },
+  {
+    "epoch": 2,
+    "train_loss": 2.1968790157421214,
+    "validation": {
+      "gallery_size": 583,
+      "effective_k": {
+        "1": 1,
+        "5": 5,
+        "10": 10
+      },
+      "tie_policy": "pessimistic: tied negatives rank ahead of the paired positive",
+      "random_ranking_expected_recall": {
+        "1": 0.0017152658662092624,
+        "5": 0.008576329331046312,
+        "10": 0.017152658662092625
+      },
+      "random_ranking_expected_mrr": 0.011914683085775505,
+      "text_to_graph": {
+        "recall_at_1": 0.03430531732418525,
+        "recall_at_5": 0.1320754716981132,
+        "recall_at_10": 0.19210977701543738,
+        "median_rank": 57.0,
+        "mean_reciprocal_rank": 0.09143213340740057
+      },
+      "graph_to_text": {
+        "recall_at_1": 0.0274442538593482,
+        "recall_at_5": 0.10120068610634649,
+        "recall_at_10": 0.1783876500857633,
+        "median_rank": 55.0,
+        "mean_reciprocal_rank": 0.08081045593271882
+      },
+      "mean_recall_at_1": 0.030874785591766724
+    }
+  },
+  {
+    "epoch": 3,
+    "train_loss": 2.0250561311223487,
+    "validation": {
+      "gallery_size": 583,
+      "effective_k": {
+        "1": 1,
+        "5": 5,
+        "10": 10
+      },
+      "tie_policy": "pessimistic: tied negatives rank ahead of the paired positive",
+      "random_ranking_expected_recall": {
+        "1": 0.0017152658662092624,
+        "5": 0.008576329331046312,
+        "10": 0.017152658662092625
+      },
+      "random_ranking_expected_mrr": 0.011914683085775505,
+      "text_to_graph": {
+        "recall_at_1": 0.029159519725557463,
+        "recall_at_5": 0.11149228130360206,
+        "recall_at_10": 0.19039451114922812,
+        "median_rank": 48.0,
+        "mean_reciprocal_rank": 0.08394373570901373
+      },
+      "graph_to_text": {
+        "recall_at_1": 0.036020583190394515,
+        "recall_at_5": 0.11492281303602059,
+        "recall_at_10": 0.18524871355060035,
+        "median_rank": 47.0,
+        "mean_reciprocal_rank": 0.0912336469867975
+      },
+      "mean_recall_at_1": 0.032590051457975985
+    }
+  },
+  {
+    "epoch": 4,
+    "train_loss": 1.8980869878734554,
+    "validation": {
+      "gallery_size": 583,
+      "effective_k": {
+        "1": 1,
+        "5": 5,
+        "10": 10
+      },
+      "tie_policy": "pessimistic: tied negatives rank ahead of the paired positive",
+      "random_ranking_expected_recall": {
+        "1": 0.0017152658662092624,
+        "5": 0.008576329331046312,
+        "10": 0.017152658662092625
+      },
+      "random_ranking_expected_mrr": 0.011914683085775505,
+      "text_to_graph": {
+        "recall_at_1": 0.024013722126929673,
+        "recall_at_5": 0.12521440823327615,
+        "recall_at_10": 0.20240137221269297,
+        "median_rank": 48.0,
+        "mean_reciprocal_rank": 0.08551357641039369
+      },
+      "graph_to_text": {
+        "recall_at_1": 0.030874785591766724,
+        "recall_at_5": 0.10463121783876501,
+        "recall_at_10": 0.18867924528301888,
+        "median_rank": 48.0,
+        "mean_reciprocal_rank": 0.08575090344240803
+      },
+      "mean_recall_at_1": 0.0274442538593482
+    }
+  },
+  {
+    "epoch": 5,
+    "train_loss": 1.7834474850560094,
+    "validation": {
+      "gallery_size": 583,
+      "effective_k": {
+        "1": 1,
+        "5": 5,
+        "10": 10
+      },
+      "tie_policy": "pessimistic: tied negatives rank ahead of the paired positive",
+      "random_ranking_expected_recall": {
+        "1": 0.0017152658662092624,
+        "5": 0.008576329331046312,
+        "10": 0.017152658662092625
+      },
+      "random_ranking_expected_mrr": 0.011914683085775505,
+      "text_to_graph": {
+        "recall_at_1": 0.0274442538593482,
+        "recall_at_5": 0.11320754716981132,
+        "recall_at_10": 0.21269296740994853,
+        "median_rank": 46.0,
+        "mean_reciprocal_rank": 0.09037350554606219
+      },
+      "graph_to_text": {
+        "recall_at_1": 0.029159519725557463,
+        "recall_at_5": 0.10463121783876501,
+        "recall_at_10": 0.17667238421955403,
+        "median_rank": 46.0,
+        "mean_reciprocal_rank": 0.08238180593722264
+      },
+      "mean_recall_at_1": 0.02830188679245283
+    }
+  },
+  {
+    "epoch": 6,
+    "train_loss": 1.6991506092398017,
+    "validation": {
+      "gallery_size": 583,
+      "effective_k": {
+        "1": 1,
+        "5": 5,
+        "10": 10
+      },
+      "tie_policy": "pessimistic: tied negatives rank ahead of the paired positive",
+      "random_ranking_expected_recall": {
+        "1": 0.0017152658662092624,
+        "5": 0.008576329331046312,
+        "10": 0.017152658662092625
+      },
+      "random_ranking_expected_mrr": 0.011914683085775505,
+      "text_to_graph": {
+        "recall_at_1": 0.04288164665523156,
+        "recall_at_5": 0.1183533447684391,
+        "recall_at_10": 0.2195540308747856,
+        "median_rank": 45.0,
+        "mean_reciprocal_rank": 0.10018516700582661
+      },
+      "graph_to_text": {
+        "recall_at_1": 0.029159519725557463,
+        "recall_at_5": 0.1320754716981132,
+        "recall_at_10": 0.2281303602058319,
+        "median_rank": 44.0,
+        "mean_reciprocal_rank": 0.09368965537340836
+      },
+      "mean_recall_at_1": 0.036020583190394515
+    }
+  },
+  {
+    "epoch": 7,
+    "train_loss": 1.6198198807346929,
+    "validation": {
+      "gallery_size": 583,
+      "effective_k": {
+        "1": 1,
+        "5": 5,
+        "10": 10
+      },
+      "tie_policy": "pessimistic: tied negatives rank ahead of the paired positive",
+      "random_ranking_expected_recall": {
+        "1": 0.0017152658662092624,
+        "5": 0.008576329331046312,
+        "10": 0.017152658662092625
+      },
+      "random_ranking_expected_mrr": 0.011914683085775505,
+      "text_to_graph": {
+        "recall_at_1": 0.022298456260720412,
+        "recall_at_5": 0.1234991423670669,
+        "recall_at_10": 0.1783876500857633,
+        "median_rank": 42.0,
+        "mean_reciprocal_rank": 0.0827308552468341
+      },
+      "graph_to_text": {
+        "recall_at_1": 0.03430531732418525,
+        "recall_at_5": 0.10806174957118353,
+        "recall_at_10": 0.1835334476843911,
+        "median_rank": 49.0,
+        "mean_reciprocal_rank": 0.08629584695867698
+      },
+      "mean_recall_at_1": 0.02830188679245283
+    }
+  },
+  {
+    "epoch": 8,
+    "train_loss": 1.5337095544144914,
+    "validation": {
+      "gallery_size": 583,
+      "effective_k": {
+        "1": 1,
+        "5": 5,
+        "10": 10
+      },
+      "tie_policy": "pessimistic: tied negatives rank ahead of the paired positive",
+      "random_ranking_expected_recall": {
+        "1": 0.0017152658662092624,
+        "5": 0.008576329331046312,
+        "10": 0.017152658662092625
+      },
+      "random_ranking_expected_mrr": 0.011914683085775505,
+      "text_to_graph": {
+        "recall_at_1": 0.032590051457975985,
+        "recall_at_5": 0.1269296740994854,
+        "recall_at_10": 0.2006861063464837,
+        "median_rank": 49.0,
+        "mean_reciprocal_rank": 0.09234547305108448
+      },
+      "graph_to_text": {
+        "recall_at_1": 0.029159519725557463,
+        "recall_at_5": 0.12006861063464837,
+        "recall_at_10": 0.18867924528301888,
+        "median_rank": 48.0,
+        "mean_reciprocal_rank": 0.08576260238377861
+      },
+      "mean_recall_at_1": 0.030874785591766724
+    }
+  },
+  {
+    "epoch": 9,
+    "train_loss": 1.474783936234208,
+    "validation": {
+      "gallery_size": 583,
+      "effective_k": {
+        "1": 1,
+        "5": 5,
+        "10": 10
+      },
+      "tie_policy": "pessimistic: tied negatives rank ahead of the paired positive",
+      "random_ranking_expected_recall": {
+        "1": 0.0017152658662092624,
+        "5": 0.008576329331046312,
+        "10": 0.017152658662092625
+      },
+      "random_ranking_expected_mrr": 0.011914683085775505,
+      "text_to_graph": {
+        "recall_at_1": 0.029159519725557463,
+        "recall_at_5": 0.12006861063464837,
+        "recall_at_10": 0.20411663807890223,
+        "median_rank": 46.0,
+        "mean_reciprocal_rank": 0.09147052790194105
+      },
+      "graph_to_text": {
+        "recall_at_1": 0.022298456260720412,
+        "recall_at_5": 0.1183533447684391,
+        "recall_at_10": 0.20240137221269297,
+        "median_rank": 43.0,
+        "mean_reciprocal_rank": 0.08578006172180293
+      },
+      "mean_recall_at_1": 0.025728987993138937
+    }
+  },
+  {
+    "epoch": 10,
+    "train_loss": 1.3869085336375881,
+    "validation": {
+      "gallery_size": 583,
+      "effective_k": {
+        "1": 1,
+        "5": 5,
+        "10": 10
+      },
+      "tie_policy": "pessimistic: tied negatives rank ahead of the paired positive",
+      "random_ranking_expected_recall": {
+        "1": 0.0017152658662092624,
+        "5": 0.008576329331046312,
+        "10": 0.017152658662092625
+      },
+      "random_ranking_expected_mrr": 0.011914683085775505,
+      "text_to_graph": {
+        "recall_at_1": 0.03430531732418525,
+        "recall_at_5": 0.11149228130360206,
+        "recall_at_10": 0.18867924528301888,
+        "median_rank": 50.0,
+        "mean_reciprocal_rank": 0.08901845201415523
+      },
+      "graph_to_text": {
+        "recall_at_1": 0.03430531732418525,
+        "recall_at_5": 0.12178387650085763,
+        "recall_at_10": 0.19210977701543738,
+        "median_rank": 49.0,
+        "mean_reciprocal_rank": 0.09215431839630701
+      },
+      "mean_recall_at_1": 0.03430531732418525
+    }
+  },
+  {
+    "epoch": 11,
+    "train_loss": 1.3253873134518528,
+    "validation": {
+      "gallery_size": 583,
+      "effective_k": {
+        "1": 1,
+        "5": 5,
+        "10": 10
+      },
+      "tie_policy": "pessimistic: tied negatives rank ahead of the paired positive",
+      "random_ranking_expected_recall": {
+        "1": 0.0017152658662092624,
+        "5": 0.008576329331046312,
+        "10": 0.017152658662092625
+      },
+      "random_ranking_expected_mrr": 0.011914683085775505,
+      "text_to_graph": {
+        "recall_at_1": 0.029159519725557463,
+        "recall_at_5": 0.1269296740994854,
+        "recall_at_10": 0.20926243567753003,
+        "median_rank": 49.0,
+        "mean_reciprocal_rank": 0.08981558418764259
+      },
+      "graph_to_text": {
+        "recall_at_1": 0.0274442538593482,
+        "recall_at_5": 0.12521440823327615,
+        "recall_at_10": 0.19210977701543738,
+        "median_rank": 50.0,
+        "mean_reciprocal_rank": 0.08865879486660426
+      },
+      "mean_recall_at_1": 0.02830188679245283
+    }
+  }
+]

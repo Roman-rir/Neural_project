@@ -1,0 +1,226 @@
+{
+  "macro_f1": 0.26549371584054093,
+  "micro_f1": 0.5946666666666667,
+  "mean_average_precision": 0.27683610113989,
+  "threshold": 0.2,
+  "samples": 606,
+  "map_label_count": 30,
+  "map_definition": "Mean per-label average precision over labels with positive support; not trapezoidal PR AUC",
+  "per_label": {
+    "/m/04rlf": {
+      "precision": 0.8448275862068966,
+      "recall": 0.9859154929577465,
+      "f1": 0.9099350046425255,
+      "support": 497,
+      "average_precision": 0.906401832212063
+    },
+    "/m/04szw": {
+      "precision": 0.3563218390804598,
+      "recall": 0.3875,
+      "f1": 0.3712574850299401,
+      "support": 80,
+      "average_precision": 0.35437113101417816
+    },
+    "/m/0342h": {
+      "precision": 0.6,
+      "recall": 0.46551724137931033,
+      "f1": 0.5242718446601942,
+      "support": 58,
+      "average_precision": 0.5117126054246673
+    },
+    "/m/0fx80y": {
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444444444444444,
+      "support": 48,
+      "average_precision": 0.4395842127039462
+    },
+    "/m/015lz1": {
+      "precision": 0.5714285714285714,
+      "recall": 0.3,
+      "f1": 0.39344262295081966,
+      "support": 40,
+      "average_precision": 0.39228664779087163
+    },
+    "/m/0l14md": {
+      "precision": 0.16,
+      "recall": 0.14285714285714285,
+      "f1": 0.1509433962264151,
+      "support": 28,
+      "average_precision": 0.09119328775478985
+    },
+    "/m/085jw": {
+      "precision": 0.65,
+      "recall": 0.43333333333333335,
+      "f1": 0.52,
+      "support": 30,
+      "average_precision": 0.5365518343511728
+    },
+    "/m/01kcd": {
+      "precision": 0.3,
+      "recall": 0.42857142857142855,
+      "f1": 0.35294117647058826,
+      "support": 14,
+      "average_precision": 0.2488446915332291
+    },
+    "/m/09x0r": {
+      "precision": 0.2857142857142857,
+      "recall": 0.1111111111111111,
+      "f1": 0.16,
+      "support": 18,
+      "average_precision": 0.2343842670733331
+    },
+    "/m/026t6": {
+      "precision": 0.08333333333333333,
+      "recall": 0.05555555555555555,
+      "f1": 0.06666666666666667,
+      "support": 18,
+      "average_precision": 0.07299578886628061
+    },
+    "/m/074ft": {
+      "precision": 0.125,
+      "recall": 0.07692307692307693,
+      "f1": 0.09523809523809523,
+      "support": 13,
+      "average_precision": 0.07793428805283284
+    },
+    "/m/02rr_": {
+      "precision": 0.4375,
+      "recall": 0.5,
+      "f1": 0.4666666666666667,
+      "support": 14,
+      "average_precision": 0.4017921852751384
+    },
+    "/m/05148p4": {
+      "precision": 0.12903225806451613,
+      "recall": 0.26666666666666666,
+      "f1": 0.17391304347826086,
+      "support": 15,
+      "average_precision": 0.180347639651051
+    },
+    "/m/02sgy": {
+      "precision": 0.15,
+      "recall": 0.15789473684210525,
+      "f1": 0.15384615384615385,
+      "support": 19,
+      "average_precision": 0.15378037078256643
+    },
+    "/m/042v_gx": {
+      "precision": 0.25,
+      "recall": 0.3125,
+      "f1": 0.2777777777777778,
+      "support": 16,
+      "average_precision": 0.23696377536829766
+    },
+    "/m/02lkt": {
+      "precision": 0.5,
+      "recall": 0.13043478260869565,
+      "f1": 0.20689655172413793,
+      "support": 23,
+      "average_precision": 0.22453353583289104
+    },
+    "/m/06by7": {
+      "precision": 0.1111111111111111,
+      "recall": 0.14285714285714285,
+      "f1": 0.125,
+      "support": 14,
+      "average_precision": 0.16321135962120506
+    },
+    "/m/0164x2": {
+      "precision": 0.2857142857142857,
+      "recall": 0.5,
+      "f1": 0.36363636363636365,
+      "support": 4,
+      "average_precision": 0.3966222533894343
+    },
+    "/m/064t9": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 7,
+      "average_precision": 0.037168046278069494
+    },
+    "/m/0g12c5": {
+      "precision": 0.4117647058823529,
+      "recall": 0.4375,
+      "f1": 0.42424242424242425,
+      "support": 16,
+      "average_precision": 0.2970467291518499
+    },
+    "/m/0l14_3": {
+      "precision": 0.2222222222222222,
+      "recall": 0.25,
+      "f1": 0.23529411764705882,
+      "support": 8,
+      "average_precision": 0.08444432324627744
+    },
+    "/m/0155w": {
+      "precision": 0.07692307692307693,
+      "recall": 0.1111111111111111,
+      "f1": 0.09090909090909091,
+      "support": 9,
+      "average_precision": 0.14104410117443622
+    },
+    "/m/01lyv": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 7,
+      "average_precision": 0.03288271247086491
+    },
+    "/m/0glt670": {
+      "precision": 0.13333333333333333,
+      "recall": 0.5,
+      "f1": 0.21052631578947367,
+      "support": 8,
+      "average_precision": 0.2191212669217523
+    },
+    "/m/02bxd": {
+      "precision": 0.25806451612903225,
+      "recall": 0.8888888888888888,
+      "f1": 0.4,
+      "support": 9,
+      "average_precision": 0.7759920634920636
+    },
+    "/t/dd00036": {
+      "precision": 0.35294117647058826,
+      "recall": 0.5,
+      "f1": 0.41379310344827586,
+      "support": 12,
+      "average_precision": 0.32615171027385376
+    },
+    "/m/02v2lh": {
+      "precision": 0.08695652173913043,
+      "recall": 0.3333333333333333,
+      "f1": 0.13793103448275862,
+      "support": 6,
+      "average_precision": 0.3270018553770582
+    },
+    "/m/02x8m": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 11,
+      "average_precision": 0.08381220580779705
+    },
+    "/m/02p0sh1": {
+      "precision": 0.5,
+      "recall": 0.125,
+      "f1": 0.2,
+      "support": 8,
+      "average_precision": 0.16054769182010933
+    },
+    "/m/05rwpb": {
+      "precision": 0.1111111111111111,
+      "recall": 0.08333333333333333,
+      "f1": 0.09523809523809523,
+      "support": 12,
+      "average_precision": 0.19635862148462038
+    }
+  },
+  "split": "test",
+  "inference_seconds": 1.1789158000028692,
+  "dataset_fingerprint": "1c37c2d2d5a476613291707596b271070abf555d592fa4f208b5949cd1f6f8fb",
+  "synthetic": false,
+  "parameter_count": 120862
+}

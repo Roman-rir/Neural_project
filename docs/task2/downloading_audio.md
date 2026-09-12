@@ -36,6 +36,21 @@ Once that succeeds, download the full metadata list:
 .\scripts\download_musiccaps.ps1
 ```
 
+If resuming the earlier pasted loop is slow, press Ctrl+C in that terminal,
+then use:
+
+```powershell
+.\scripts\download_musiccaps.ps1 -FastResume
+```
+
+This reads `results/task2/audio_downloaded.txt` once and skips IDs whose expected
+WAV files are present and nonempty, without launching yt-dlp, ffprobe or FFmpeg
+for each completed clip and without sleeping between skipped clips. Missing
+files are still downloaded even if their IDs are archived. This optional fast
+path trusts the archive and defers audio integrity checks for those existing
+files; run the normal script for a full validation pass before preprocessing.
+New downloads are still validated. Keep both the archive and audio directory.
+
 `-Limit` selects the first N metadata rows, including rows whose clips already
 exist. Use `-MetadataCsv` and `-AudioDir` to override the defaults. Relative paths
 are resolved from the repository root. The defaults are
@@ -48,9 +63,16 @@ checks existing WAVs the same way before skipping them, so rerunning resumes
 without relying on a video-level download archive. Existing invalid WAVs are
 preserved; inspect and move or rename them before retrying.
 
-Failures are logged to `results/task2/audio_download_failures.txt`. Three
-consecutive failures stop the download. If the errors show a bot check, rate
-limit or access restriction, stop and inspect the error before rerunning.
+Private, removed and unavailable videos are logged to
+`results/task2/audio_unavailable.jsonl` and skipped without stopping the batch.
+Subsequent runs skip these recorded clips; use `-RetryUnavailable` to check
+them again later. This log records reported availability, not permanent deletion.
+Other failures are logged to `results/task2/audio_download_failures.txt` and the
+batch continues with the next clip, including after bot checks or rate limits.
+There is no automatic stop after three download failures. Access restrictions
+are not bypassed, and these failures are not recorded as permanently missing
+videos. Press Ctrl+C to stop manually. Dependency/configuration errors and invalid
+existing WAVs still require correction; the script preserves those files.
 Deleted or unavailable videos can remain missing; Task 2's manifest reports
 which samples are retained. Do not replace missing audio with synthetic clips.
 

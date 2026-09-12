@@ -1,0 +1,56 @@
+[
+  {
+    "seed": 42,
+    "direction": "text_to_graph",
+    "queries": 606,
+    "paired_top1": 16,
+    "paired_top10": 108,
+    "paired_outside_top10": 498,
+    "worst_rank": 587
+  },
+  {
+    "seed": 42,
+    "direction": "graph_to_text",
+    "queries": 606,
+    "paired_top1": 18,
+    "paired_top10": 114,
+    "paired_outside_top10": 492,
+    "worst_rank": 595
+  },
+  {
+    "seed": 43,
+    "direction": "text_to_graph",
+    "queries": 606,
+    "paired_top1": 15,
+    "paired_top10": 113,
+    "paired_outside_top10": 493,
+    "worst_rank": 594
+  },
+  {
+    "seed": 43,
+    "direction": "graph_to_text",
+    "queries": 606,
+    "paired_top1": 14,
+    "paired_top10": 112,
+    "paired_outside_top10": 494,
+    "worst_rank": 585
+  },
+  {
+    "seed": 44,
+    "direction": "text_to_graph",
+    "queries": 606,
+    "paired_top1": 16,
+    "paired_top10": 102,
+    "paired_outside_top10": 504,
+    "worst_rank": 584
+  },
+  {
+    "seed": 44,
+    "direction": "graph_to_text",
+    "queries": 606,
+    "paired_top1": 19,
+    "paired_top10": 113,
+    "paired_outside_top10": 493,
+    "worst_rank": 567
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "valid": true,
+  "runs_checked": 5,
+  "evaluated_test": true,
+  "validation_only_selection": true,
+  "encoder_updates_recorded": true,
+  "frozen_layers_unchanged": true,
+  "dataset_verified": true
+}

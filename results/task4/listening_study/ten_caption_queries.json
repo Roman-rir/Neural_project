@@ -1,0 +1,589 @@
+{
+  "selection": "First ten test IDs in unchanged cache order; seed42 graph model",
+  "examples": [
+    {
+      "query_id": "-4NLarMj4xU_30_40",
+      "caption": "The Pop song features a soft female vocal singing over sustained pulsating synth lead, mellow piano melody, sustained synth brass, punchy kick, claps. tinny wide hi hats and high pitched female vocal melody. It sounds emotional, sad, passionate and like something you would hear on a radio.",
+      "methods": {
+        "graph": {
+          "paired_rank": 200,
+          "top3": [
+            {
+              "rank": 1,
+              "sample_id": "Ysrlv2UlG8A_30_40",
+              "caption": "The song is instrumental. The tempo is medium with electrical current manipulation to produce different frequencies to play percussively and harmonically with each other. The song is  for scientific research and not  pleasing to the ear. The song is of poor audio quality.",
+              "cosine": 0.6196588057464913,
+              "paired_positive": false
+            },
+            {
+              "rank": 2,
+              "sample_id": "Ycid0vBwqUg_160_170",
+              "caption": "This is a mellow and soulful 2000s R&B song. The female vocalist gives a sensual and passionate vocal performance. The song is seductive, intimate and relaxed. There are string-like sounds and a warm and bright pad-synth along with the mellow groovy drum beat.",
+              "cosine": 0.5808216538410951,
+              "paired_positive": false
+            },
+            {
+              "rank": 3,
+              "sample_id": "ICtri0ElFZc_30_40",
+              "caption": "This is a traditional middle eastern type of song with traditional singing that involves vocal modulation. The percussion is simple and encourages dancing. The three men sing in unison and there's an intermittent chant. They repeat the same phrase like a refrain.",
+              "cosine": 0.5786099698846003,
+              "paired_positive": false
+            }
+          ]
+        },
+        "clap": {
+          "paired_rank": 1,
+          "top3": [
+            {
+              "rank": 1,
+              "sample_id": "-4NLarMj4xU_30_40",
+              "caption": "The Pop song features a soft female vocal singing over sustained pulsating synth lead, mellow piano melody, sustained synth brass, punchy kick, claps. tinny wide hi hats and high pitched female vocal melody. It sounds emotional, sad, passionate and like something you would hear on a radio.",
+              "cosine": 0.6747330422170448,
+              "paired_positive": true
+            },
+            {
+              "rank": 2,
+              "sample_id": "GFJNgqcX7u0_30_40",
+              "caption": "This is an instrumental electric guitar jam meant to showcase an echo delay pedal. The guitar using the pedal is merely strumming the chords while there is another electric guitar in the background playing the melody. There is also a bass guitar playing a simple bass line. In the rhythmic background there is a chill rock beat played by the acoustic drums. There is a calm and chill atmosphere in this piece. It could be used as the loading screen music in a video game.",
+              "cosine": 0.6732581353751088,
+              "paired_positive": false
+            },
+            {
+              "rank": 3,
+              "sample_id": "UnFEqUWTefM_60_70",
+              "caption": "A female vocalist sings this melodic song. The tempo is medium with female vocalisation, female choral backup, groovy bass lines,slick drumming, church organ harmony, and a lively piano  accompaniment that comes in at the end of this clip. The song is pleasant, melodic, insistent, repetitive and recurring  like a chant or trance. This song is a soul music/ Trip Hop.",
+              "cosine": 0.6528506010132924,
+              "paired_positive": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query_id": "-6pcgdLfb_A_110_120",
+      "caption": "This is an R&B/soul music piece. There is a male vocalist singing melodically and in a sensual manner over multiple tracks. The melody of the beat is provided by a string sample. There is a strong bass sound in the piece. The rhythm is provided by a groovy electronic drum beat. There is an urban feel to this piece. It could be used in the soundtrack of a TV series where two characters are sharing intimate moments.",
+      "methods": {
+        "graph": {
+          "paired_rank": 48,
+          "top3": [
+            {
+              "rank": 1,
+              "sample_id": "UDS6PrY9ZIM_130_140",
+              "caption": "This pop song features a female voice singing the main melody. At the highest pitch, her voice goes into falsetto. This is accompanied by percussion playing a simple beat in common time. An electric guitar plays a repetitive two note phrase in the background. Another guitar player fills in the background. The bass plays the root notes of the chords. This song can be played in a romantic movie.",
+              "cosine": 0.584797801821122,
+              "paired_positive": false
+            },
+            {
+              "rank": 2,
+              "sample_id": "4QES-SJ7mP0_210_220",
+              "caption": "A four chord modern hip hop/ R&B production featuring synthesizer pads, electronic drums, a female vocalist in a minor key.",
+              "cosine": 0.5838788656283751,
+              "paired_positive": false
+            },
+            {
+              "rank": 3,
+              "sample_id": "ICtri0ElFZc_30_40",
+              "caption": "This is a traditional middle eastern type of song with traditional singing that involves vocal modulation. The percussion is simple and encourages dancing. The three men sing in unison and there's an intermittent chant. They repeat the same phrase like a refrain.",
+              "cosine": 0.5626302055285171,
+              "paired_positive": false
+            }
+          ]
+        },
+        "clap": {
+          "paired_rank": 75,
+          "top3": [
+            {
+              "rank": 1,
+              "sample_id": "L_KkjB0Wt_Q_20_30",
+              "caption": "A female singer sings this chanting vocals with backup singers in vocal harmony. The song is medium tempo with bell harmony, keyboard accompaniment, steady rhythm and a string pad harmony. The song is healing and a new age in nature.",
+              "cosine": 0.6182401092487587,
+              "paired_positive": false
+            },
+            {
+              "rank": 2,
+              "sample_id": "-4NLarMj4xU_30_40",
+              "caption": "The Pop song features a soft female vocal singing over sustained pulsating synth lead, mellow piano melody, sustained synth brass, punchy kick, claps. tinny wide hi hats and high pitched female vocal melody. It sounds emotional, sad, passionate and like something you would hear on a radio.",
+              "cosine": 0.6128008967758425,
+              "paired_positive": false
+            },
+            {
+              "rank": 3,
+              "sample_id": "9aE33JEIGOg_30_40",
+              "caption": "A female vocalist sings this soft melody. The song is slow tempo with a mellow electric guitar harmony, soft keyboard accompaniment , a soft lilting flute melody and subtle bass line. There is no use of percussion. The song is soft, mellow, emotional, nostalgic and sentimental . This song is Soft pop.",
+              "cosine": 0.6097840559124065,
+              "paired_positive": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query_id": "-7wUQP6G5EQ_30_40",
+      "caption": "The low quality recording features a renaissance music that consists of soft wooden percussion and mellow, harmonized flute melody playing on top of it. The recording is a bit noisy, but it also sounds soulful, mellow, passionate, emotional and vintage - It really puts the listener in a period of renaissance.",
+      "methods": {
+        "graph": {
+          "paired_rank": 322,
+          "top3": [
+            {
+              "rank": 1,
+              "sample_id": "I6eU2qRjJ7Y_520_530",
+              "caption": "This music is instrumental. The tempo is medium with a dramatic, intense and suspenseful synthesiser arrangement, cymbal riff and conch shell sound. The music is a background score for a Bengali movie / TV series with a male voice giving instructions, a Hindu priest chanting Om with women joining in with the chant and vocalisations and the sound of the conch shell.",
+              "cosine": 0.5717558930363871,
+              "paired_positive": false
+            },
+            {
+              "rank": 2,
+              "sample_id": "B9ME0Vcm_xA_190_200",
+              "caption": "This is an instrumental alternative music piece. There are two electric guitars with heavy effects playing chill melodies. A distinct crackling effect can be heard. The rhythm consists of a medium tempo percussion beat. The atmosphere is trippy. This piece can be used in the soundtrack of a drama movie, especially during a flashback scene involving good memories.",
+              "cosine": 0.5465149889326552,
+              "paired_positive": false
+            },
+            {
+              "rank": 3,
+              "sample_id": "NUTaOnEhvzE_40_50",
+              "caption": "The song is an instrumental. The song is slow tempo with three accordions playing in harmony and in a relaxed manner. The song is beautiful and romantic. The audio quality is average and an amateur home recording.",
+              "cosine": 0.5328509274723269,
+              "paired_positive": false
+            }
+          ]
+        },
+        "clap": {
+          "paired_rank": 6,
+          "top3": [
+            {
+              "rank": 1,
+              "sample_id": "8iPpgyEh8WM_30_40",
+              "caption": "This is a modern classical instrumental piece. The melody is played by an orchestra with the strings section as the lead, the piano playing an arpeggio and the bass guitar carrying the background. There is a light percussive element resembling a tambourine keeping the rhythmic background. The piece has a melodic, story-telling mood to it which would make it the perfect choice to use in a movie soundtrack, especially a romantic movie.",
+              "cosine": 0.6387692071865041,
+              "paired_positive": false
+            },
+            {
+              "rank": 2,
+              "sample_id": "SFHoTmcgw8E_220_230",
+              "caption": "This audio contains a string instrument playing a melody with a bow in the higher mid range. Someone is picking a harp while strings are playing long notes in the background. A deep and low bass is also almost serving as a soft kick hit. A flute is playing a short melody with a lot of reverb at the end. This song may be playing while doing qigong.",
+              "cosine": 0.621959287489553,
+              "paired_positive": false
+            },
+            {
+              "rank": 3,
+              "sample_id": "L_KkjB0Wt_Q_20_30",
+              "caption": "A female singer sings this chanting vocals with backup singers in vocal harmony. The song is medium tempo with bell harmony, keyboard accompaniment, steady rhythm and a string pad harmony. The song is healing and a new age in nature.",
+              "cosine": 0.6059767975451715,
+              "paired_positive": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query_id": "-DeAdhYKbGE_290_300",
+      "caption": "A bagpipe ensemble playing a quick melody in unison, employing trills to ornament it.",
+      "methods": {
+        "graph": {
+          "paired_rank": 4,
+          "top3": [
+            {
+              "rank": 1,
+              "sample_id": "NJ_Ha89QjiI_70_80",
+              "caption": "The low quality recording features shoe tapping sounds alongside loud bagpipe melody and drum rolls. It sounds like it was recorded outside and therefore it is reverberant, epic and powerful. The recording is in mono and a bit noisy.",
+              "cosine": 0.6725083528377506,
+              "paired_positive": false
+            },
+            {
+              "rank": 2,
+              "sample_id": "OECgm1obaFs_30_40",
+              "caption": "This audio contains people playing a melody with bagpipes in a higher pitch. This song may be playing live during a traditional and formal event.",
+              "cosine": 0.62145750716102,
+              "paired_positive": false
+            },
+            {
+              "rank": 3,
+              "sample_id": "WYbD9YUrf_4_80_90",
+              "caption": "The low quality recording features a bagpipes melody played while soldiers are marching. The recording is noisy, in mono and it sounds prideful, soulful and powerful.",
+              "cosine": 0.5707896771374434,
+              "paired_positive": false
+            }
+          ]
+        },
+        "clap": {
+          "paired_rank": 8,
+          "top3": [
+            {
+              "rank": 1,
+              "sample_id": "NUTaOnEhvzE_40_50",
+              "caption": "The song is an instrumental. The song is slow tempo with three accordions playing in harmony and in a relaxed manner. The song is beautiful and romantic. The audio quality is average and an amateur home recording.",
+              "cosine": 0.6833523900909696,
+              "paired_positive": false
+            },
+            {
+              "rank": 2,
+              "sample_id": "AJTU5RhF3S4_550_560",
+              "caption": "This folk song features an accordion playing the main melody. Another accordion plays a backing melody and chords. The bass plays a groovy lick based around the root note of the chord. A triangle plays the part of the percussion. This is a low quality audio and the percussion is not audible. This song can be played in a village fair.",
+              "cosine": 0.6497698520294086,
+              "paired_positive": false
+            },
+            {
+              "rank": 3,
+              "sample_id": "axb48YrvRmw_30_40",
+              "caption": "Classical music features a variety of string instruments that play a bright melody. The sound is big and orchestral. A clarinet plays a high-pitched melody in the foreground.  The atmosphere of the song is positive and happy.",
+              "cosine": 0.625454491036033,
+              "paired_positive": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query_id": "-FEPOSP7ay0_260_270",
+      "caption": "The low quality recording features loud bells and metallic squeaking sounds. The recording is mono and noisy.",
+      "methods": {
+        "graph": {
+          "paired_rank": 68,
+          "top3": [
+            {
+              "rank": 1,
+              "sample_id": "PduP4CpaDtY_0_10",
+              "caption": "The low quality recording features a children's song played on some small device that reproduces mono sound. The song consists of a funny male vocal, alongside harmonizing vocals, singing over a shimmering bell melody and some claps. It sounds happy, fun, joyful, muffled and the recording is noisy.",
+              "cosine": 0.6560763397984489,
+              "paired_positive": false
+            },
+            {
+              "rank": 2,
+              "sample_id": "Vbx6TFxSPYY_70_80",
+              "caption": "The low quality recording features a sound of a digital bell, followed by crowd noises in the background. The recording is noisy and in mono.",
+              "cosine": 0.5915959049952997,
+              "paired_positive": false
+            },
+            {
+              "rank": 3,
+              "sample_id": "JiBAkAwK0GM_30_40",
+              "caption": "This is a very poor quality recording of an electronic music piece played in the background of a dance video. There is an irritatingly high-pitched synth playing a repetitive melody while an electronic drum beat is in the rhythmic background. If an aggressive high-end cutoff was applied, samples could be lifted from this piece to be used in a beat.",
+              "cosine": 0.5558359190717883,
+              "paired_positive": false
+            }
+          ]
+        },
+        "clap": {
+          "paired_rank": 1,
+          "top3": [
+            {
+              "rank": 1,
+              "sample_id": "-FEPOSP7ay0_260_270",
+              "caption": "The low quality recording features loud bells and metallic squeaking sounds. The recording is mono and noisy.",
+              "cosine": 0.6729091530422932,
+              "paired_positive": true
+            },
+            {
+              "rank": 2,
+              "sample_id": "Zxyfhub6nV4_80_90",
+              "caption": "This audio holds a church bell ringing loudly with a lot of sustain. The sound is so loud that the recorded audio clips and overdrives the speaker. The audio file is of very poor recording quality.",
+              "cosine": 0.6138057584620075,
+              "paired_positive": false
+            },
+            {
+              "rank": 3,
+              "sample_id": "BBmXMoI9Qus_30_40",
+              "caption": "The Ambient music features soft metallic percussive elements and wide synth pad chords. It sounds calming, relaxing, mellow and soft - like something you would listen to while meditating.",
+              "cosine": 0.5815109809907336,
+              "paired_positive": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query_id": "-f1DNyngKVY_30_40",
+      "caption": "This is an instrumental sitar music piece. The sitar is being played at a medium-to-high range. There is a calming and relaxing atmosphere to this piece. This piece can be used in the background of a meditation video. It could also be played during a meditation session at a course.",
+      "methods": {
+        "graph": {
+          "paired_rank": 43,
+          "top3": [
+            {
+              "rank": 1,
+              "sample_id": "B3lq6U4PDZo_30_40",
+              "caption": "This instrumental song features a melody played using bells. There are chiming sounds played in the background like clockwork. A theremin plays a vibrato note. There is no percussion in this song.  This song has a spooky theme and can be used in a children's scary movie. There is a lot of white noise that can be heard in this low quality recording. There are no voices in this song.",
+              "cosine": 0.6198292765334528,
+              "paired_positive": false
+            },
+            {
+              "rank": 2,
+              "sample_id": "Ieef9l-gWN8_20_30",
+              "caption": "This song features a marimba playing a melody on the higher register. The marimba plays a repetitive melody. This is accompanied by a clarinet and flute playing a dissonant chord together. This song is relaxing. It has a dreamy sound. This song can be played at the beginning of a dream sequence in a children's animation movie.",
+              "cosine": 0.5943442390964317,
+              "paired_positive": false
+            },
+            {
+              "rank": 3,
+              "sample_id": "ZX7EzqMBjfo_160_170",
+              "caption": "This is a melodic composition on the organ. The song itself feels soothing and calming. We hear light arpeggios played which would be suitable for a lullaby or a fairytale story.",
+              "cosine": 0.5889946859086195,
+              "paired_positive": false
+            }
+          ]
+        },
+        "clap": {
+          "paired_rank": 1,
+          "top3": [
+            {
+              "rank": 1,
+              "sample_id": "-f1DNyngKVY_30_40",
+              "caption": "This is an instrumental sitar music piece. The sitar is being played at a medium-to-high range. There is a calming and relaxing atmosphere to this piece. This piece can be used in the background of a meditation video. It could also be played during a meditation session at a course.",
+              "cosine": 0.6712438931325267,
+              "paired_positive": true
+            },
+            {
+              "rank": 2,
+              "sample_id": "Z_HT-d8W1_M_30_40",
+              "caption": "This song is a Sitar instrumental. The tempo is slow with a beautiful violin orchestra accompaniment and keyboard harmony. This is an indo western piece with the musician playing a mellifluous lead on a sitar accompanied with a harmonic violin composition. The medley is ethereal, beautiful, peaceful, serene , calming, soothing, pleasing and ethereal.",
+              "cosine": 0.6221777106721127,
+              "paired_positive": false
+            },
+            {
+              "rank": 3,
+              "sample_id": "LKurVRvkmKc_30_40",
+              "caption": "Someone is playing a melody on a zitar along with a shrutibox in the background. At the end male and female voices are chanting in the mid to high range and a percussive sound can be heard. This song may be playing live at a concert while meditating.",
+              "cosine": 0.6032557320346068,
+              "paired_positive": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query_id": "-lPXTBXa0tE_30_40",
+      "caption": "The song is an instrumental. The song is medium tempo played by a solo guitarist on a vintage super tone with an exquisite tone. The song is emotional and passionate. The song has poor audio quality.",
+      "methods": {
+        "graph": {
+          "paired_rank": 466,
+          "top3": [
+            {
+              "rank": 1,
+              "sample_id": "KsFCPOKAH60_90_100",
+              "caption": "The low quality recording features a breathy flute melody playing over acoustic rhythm guitar. The recording is noisy, in mono and it sounds passionate and easygoing.",
+              "cosine": 0.7285270940321551,
+              "paired_positive": false
+            },
+            {
+              "rank": 2,
+              "sample_id": "D-PxXM2I5gY_0_10",
+              "caption": "The low quality recording features a chill electric guitar melody. It sounds easygoing and relaxing. The recording is noisy and in mono.",
+              "cosine": 0.669010829734546,
+              "paired_positive": false
+            },
+            {
+              "rank": 3,
+              "sample_id": "9hCnEfZFZ04_30_40",
+              "caption": "The low quality recording features a reverberant acoustic guitar melody. It sounds passionate and emotional. The recording is noisy.",
+              "cosine": 0.6289497086258413,
+              "paired_positive": false
+            }
+          ]
+        },
+        "clap": {
+          "paired_rank": 11,
+          "top3": [
+            {
+              "rank": 1,
+              "sample_id": "hbCaMcbT8to_30_40",
+              "caption": "This is an acoustic cover of a rock music piece. There is an acoustic guitar playing a gentle melody. The piece has a slow tempo. The atmosphere is sentimental. This piece can be included in the soundtrack of a romantic movie.",
+              "cosine": 0.6741215872265913,
+              "paired_positive": false
+            },
+            {
+              "rank": 2,
+              "sample_id": "07FxCXxknY4_30_40",
+              "caption": "This audio contains an acoustic guitar. The piece is played in fingerstyle. Meaning that the chords and the melody are played at the same time. The guitar has some reverb on it. This song may be playing live at an art gallery.",
+              "cosine": 0.6293601965431254,
+              "paired_positive": false
+            },
+            {
+              "rank": 3,
+              "sample_id": "ZmgkpmzvL6c_30_40",
+              "caption": "The low quality recording features a smooth buzzy bass guitar and chill, electric guitar melody playing. It is noisy and the stereo image is unbalanced, as the bass guitar is leaning toward the left channel. It sounds easygoing, chill and relaxing.",
+              "cosine": 0.6177825863177584,
+              "paired_positive": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query_id": "-m5ZlWziIeA_200_210",
+      "caption": "This amateur recording features a vinyl scratch being played on a DJ console. This is accompanied by programmed percussion playing a simple beat at a fast tempo. The hi-hat is struck in eighth notes. The snare and kick are played in a unique pattern. A synth plays a two-note lick at different intervals. Other instruments are not audible as the audio quality is low.",
+      "methods": {
+        "graph": {
+          "paired_rank": 58,
+          "top3": [
+            {
+              "rank": 1,
+              "sample_id": "WsDb16qzA5Q_160_170",
+              "caption": "This is a mellow, groovy hip hop beat. Its distinguishing factor is a vinyl scratching technique used by DJs. It also consists of what sounds like a brass instrument and forms a chord progression along with the bass that plays at the same cadence.",
+              "cosine": 0.584716403774925,
+              "paired_positive": false
+            },
+            {
+              "rank": 2,
+              "sample_id": "Dr4Ijx7Q9jk_30_40",
+              "caption": "This is amateur low quality audio. A violin plays sets of two notes. A continuous percussion is played which drowns out the other instruments. The tempo is moderate.",
+              "cosine": 0.5803714566662697,
+              "paired_positive": false
+            },
+            {
+              "rank": 3,
+              "sample_id": "KoP8T0QqzeM_30_40",
+              "caption": "This music is a lively instrumental using a maracas. The tempo is fast with a bongos accompaniment . The music is a duel between the two hand percussion. It is lively, vigorous and vibrant.",
+              "cosine": 0.5528937897665238,
+              "paired_positive": false
+            }
+          ]
+        },
+        "clap": {
+          "paired_rank": 39,
+          "top3": [
+            {
+              "rank": 1,
+              "sample_id": "CkgzMSbE68M_30_40",
+              "caption": "The low quality recording features a sound from a video game that consists of sea sound effects, seagull sound effects, ping pong sound effects and weird, short, pitch bend riser sounds. In the beginning of the loop, there is a short snippet of some music playing in the background. The instrumental consists only of drums - wide kick hits, shimmering cymbals and some manic snare hits. There is a short echoing effect on drums that serves as a transition to the in-game sounds.",
+              "cosine": 0.5447226437570598,
+              "paired_positive": false
+            },
+            {
+              "rank": 2,
+              "sample_id": "2f1UXGix_Cw_30_40",
+              "caption": "The low quality recording features a techno song that consists of a compilation of sounds. The first version is thin and crushed, as it was played on a speaker and recorded with a poor microphone. The second version is the actual song being played, which consists of a \"4 on the floor\" kick patter, wide percussive elements and shimmering open hats. The final, third version is crushed, distorted and heavy as it consists of very loud kick punches.",
+              "cosine": 0.5395457027710577,
+              "paired_positive": false
+            },
+            {
+              "rank": 3,
+              "sample_id": "OHrrS6AKW_c_30_40",
+              "caption": "The tune is instrumental. The tempo is variable with a drum machine playing different styles and tempos. The song is a demonstration of a synth drum module with a guitar lead playing in the background. The audio quality is poor with hissing tones.",
+              "cosine": 0.528248260688714,
+              "paired_positive": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query_id": "-nlkWWphiaM_30_40",
+      "caption": "The low quality recording features a live performance that consists of fruity male vocal singing over accordion melody, acoustic rhythm guitar chords and shimmering bells. It sounds emotional and hopeful. The recording is a bit noisy and in mono, as it was probably recorded with a phone.",
+      "methods": {
+        "graph": {
+          "paired_rank": 303,
+          "top3": [
+            {
+              "rank": 1,
+              "sample_id": "ChCdYoDz7CY_500_510",
+              "caption": "Kid voices are talking along with female voices. Then a background song starts playing a track containing acoustic drums, a piano and a female voice singing. The kids are singing along loudly, sounding cheerful. This song may be playing in a classroom full of kids.",
+              "cosine": 0.6568755113271393,
+              "paired_positive": false
+            },
+            {
+              "rank": 2,
+              "sample_id": "FHC7gN3NnX8_60_70",
+              "caption": "The low quality recording features a cover of a rock song sung by harmonizing female choir vocals. The recording is noisy, in mono and it sounds emotional and passionate.",
+              "cosine": 0.6330899898421138,
+              "paired_positive": false
+            },
+            {
+              "rank": 3,
+              "sample_id": "_cf0WYQcNvk_570_580",
+              "caption": "This is a religious music piece. There is a female vocalist singing melodically in the Portuguese language with a Brazilian accent. The piano and the violin are playing a mellow tune. The atmosphere is spiritual. Although the words give the impression it is a Christian gospel, the footage in the video belongs to the site of a syncretic movement, so one should not mistakenly take it as a gospel piece.",
+              "cosine": 0.6178271059473104,
+              "paired_positive": false
+            }
+          ]
+        },
+        "clap": {
+          "paired_rank": 4,
+          "top3": [
+            {
+              "rank": 1,
+              "sample_id": "6KqFiP_ux5U_50_60",
+              "caption": "The low quality recording features a soul song that consists of a passionate male vocal, alongside wide harmonizing female vocals, singing over smooth piano melody, wide sustained strings and subtle, arpeggiated electric guitar melody. It sounds heartfelt, emotional and uplifting - like something you would hear in church.",
+              "cosine": 0.6492803351727988,
+              "paired_positive": false
+            },
+            {
+              "rank": 2,
+              "sample_id": "L_KkjB0Wt_Q_20_30",
+              "caption": "A female singer sings this chanting vocals with backup singers in vocal harmony. The song is medium tempo with bell harmony, keyboard accompaniment, steady rhythm and a string pad harmony. The song is healing and a new age in nature.",
+              "cosine": 0.640031587580874,
+              "paired_positive": false
+            },
+            {
+              "rank": 3,
+              "sample_id": "bxoJOfGx3hM_90_100",
+              "caption": "The low quality recording features a female opera vocalist singing over sustained strings. There is tinny metallic percussive foley at one point in the loop. It is a bit quiet, but it also sounds dynamic, emotional and passionate.",
+              "cosine": 0.6387007607739114,
+              "paired_positive": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query_id": "-qcTD2o6I9s_30_40",
+      "caption": "The kick is playing on every beat along with a fast paced high hat and a snare sound. The digital bass is adding some spice and sounds overdriven. Pad sounds can be heard in the background while a synth lead sound is playing a simple repetitive melody. A male voice is rapping/singing. A lot of backing vocals with delay are adding energy to the mix. This song may be playing in a car.",
+      "methods": {
+        "graph": {
+          "paired_rank": 21,
+          "top3": [
+            {
+              "rank": 1,
+              "sample_id": "_mQ6KuA2p6k_40_50",
+              "caption": "This is a remix of an Indian folk music piece. There is a male vocalist singing melodically and passionately. The rhythmic background is full of percussive elements that were emphasized by the use of electronic drums. The atmosphere is lively and jovial. This piece could be played in dance parties and also in contemporary dancing courses as an accompaniment piece.",
+              "cosine": 0.6649944054519941,
+              "paired_positive": false
+            },
+            {
+              "rank": 2,
+              "sample_id": "b-Cr0EWwaTk_140_150",
+              "caption": "The low quality recording features a hip hop song that consists of flat male vocals, alongside echoing whispering vocals, rapping over shimmering hi hats, punchy kick, boomy 808 bass, claps, quiet snare hits and arpeggiated synth melody. The song sounds energetic, especially because of the uptempo hi hat triplets.",
+              "cosine": 0.6316715029656942,
+              "paired_positive": false
+            },
+            {
+              "rank": 3,
+              "sample_id": "cd5BIQoHyPI_70_80",
+              "caption": "A fast techno four on the floor beat with a repetitive driving bass, wild synthesizer sounds processed with delay. An energetic feeling that might be considered acid house.",
+              "cosine": 0.6223696181038944,
+              "paired_positive": false
+            }
+          ]
+        },
+        "clap": {
+          "paired_rank": 1,
+          "top3": [
+            {
+              "rank": 1,
+              "sample_id": "-qcTD2o6I9s_30_40",
+              "caption": "The kick is playing on every beat along with a fast paced high hat and a snare sound. The digital bass is adding some spice and sounds overdriven. Pad sounds can be heard in the background while a synth lead sound is playing a simple repetitive melody. A male voice is rapping/singing. A lot of backing vocals with delay are adding energy to the mix. This song may be playing in a car.",
+              "cosine": 0.6382827690692479,
+              "paired_positive": true
+            },
+            {
+              "rank": 2,
+              "sample_id": "EmSZKb0LdVM_30_40",
+              "caption": "The low quality recording features an electro house song that consists of punchy \"4 on the floor\" kick pattern, claps, funky electric guitar melody, groovy synth keys, groovy bass that glues everything together and shimmering shakers. It sounds a bit muddy, but also energetic, fun and exciting - like something you would hear in clubs during 70s and 80s a lot.",
+              "cosine": 0.6364056587671478,
+              "paired_positive": false
+            },
+            {
+              "rank": 3,
+              "sample_id": "-m5ZlWziIeA_200_210",
+              "caption": "This amateur recording features a vinyl scratch being played on a DJ console. This is accompanied by programmed percussion playing a simple beat at a fast tempo. The hi-hat is struck in eighth notes. The snare and kick are played in a unique pattern. A synth plays a two-note lick at different intervals. Other instruments are not audible as the audio quality is low.",
+              "cosine": 0.6345869622132517,
+              "paired_positive": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "embedding_hashes": {
+    "graph": "334882058d9a4b1e8d31fc4baafd63513b76a4bbead018097902018df3c1a7fc",
+    "clap": "815fd356b24d6e64c8ad22a39e2adf283d41fe0c544d1326b1891d367d6c52d3"
+  }
+}

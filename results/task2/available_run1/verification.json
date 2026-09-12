@@ -1,0 +1,28 @@
+{
+  "synthetic": false,
+  "evaluated_test": true,
+  "verified_runs": [
+    "seed42/mlp",
+    "seed42/cnn",
+    "seed42/gnn_temporal",
+    "seed42/gnn_similarity",
+    "seed42/gnn_random",
+    "seed43/mlp",
+    "seed43/cnn",
+    "seed43/gnn_temporal",
+    "seed43/gnn_similarity",
+    "seed43/gnn_random",
+    "seed44/mlp",
+    "seed44/cnn",
+    "seed44/gnn_temporal",
+    "seed44/gnn_similarity",
+    "seed44/gnn_random"
+  ],
+  "dataset_fingerprint": "1c37c2d2d5a476613291707596b271070abf555d592fa4f208b5949cd1f6f8fb",
+  "all_metrics_recomputed": true,
+  "identical_ids_targets_labels": true,
+  "validation_thresholds_verified": true,
+  "checkpoint_hashes_verified": true,
+  "aggregate_mean_std_verified": true,
+  "graph_visualizations": 20
+}

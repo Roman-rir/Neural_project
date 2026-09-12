@@ -1,0 +1,19 @@
+{
+  "epochs": 30,
+  "batch_size": 32,
+  "projection_dim": 64,
+  "temperature": 0.07,
+  "learning_rate": 0.001,
+  "patience": 5,
+  "seed": 44,
+  "device": "cpu",
+  "dimensions": {
+    "text_dim": 768,
+    "graph_dim": 256,
+    "projection_dim": 64
+  },
+  "cpu_threads": 6,
+  "weight_decay": 0.01,
+  "parameter_count": 65664,
+  "frozen_encoders": true
+}

@@ -1,8 +1,12 @@
 # Task 2 artifacts
 
-Real-data Task 2 training is not complete. The source alignment and local audio
-availability audit is in [audio_availability_audit.json](audio_availability_audit.json):
-5,521 metadata records, 30 AudioSet labels, zero matching real audio clips.
+Real training and final evaluation are complete in [available_run1/](available_run1/),
+with 3,964 clips, 15 model/seed runs and 20 real graph examples.
+See [the measured report](../../report/task2_results.md),
+[real comparison](available_run1/runs/comparison_aggregate.csv),
+[real graph gallery](available_run1/graph_examples/index.html) and
+[verification](available_run1/verification.json).
+The earlier `audio_availability_audit.json` is a historical pre-download snapshot.
 
 [synthetic_verification/](synthetic_verification/) contains a completed pipeline
 check: 30 generated tone clips, 90 validated graphs, 20 graph visualizations,

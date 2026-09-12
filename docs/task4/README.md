@@ -1,84 +1,121 @@
-# Task 4: graph–text retrieval
+# Task 4: contrastive graph-text retrieval
 
-Task 4 trains two linear projection heads over frozen BERT CLS embeddings and
-GraphSAGE graph embeddings. L2-normalized projections share a space, and symmetric
-InfoNCE trains each caption to retrieve its paired graph and each graph to retrieve
-its caption. Other examples in the batch are negatives. Labels are not used in
-the loss. Temperature defaults to 0.07.
+Task 4 is implemented and measured on the same 3,964 paired MusicCaps clips as
+Task 3. See [measured results](../../report/task4_results.md),
+[completion audit](../../report/task4_completion_audit.md) and the
+[executed review notebook](../../notebooks/task4_retrieval.ipynb).
 
-## Terminal demo
+New: [zero-shot comparisons and ten queries](../../report/task4_extensions.md),
+[five-listener instructions](../../report/task4_listening_guide.md) and
+[frozen-encoder scope deviation](../../report/task4_scope_deviation.md).
+The full original proposal remains pending real listener ratings and resolution
+of its encoder-update requirement; frozen projection training alone is narrower.
 
-Run from the project root in your Python environment:
+## Frozen encoders and objective
+
+Reuse `data/processed/task3_available/features.pt`, produced and audited in
+Task 3. Task 1's trained DistilBERT and Task 2's temporal GraphSAGE are frozen;
+Task 4 never loads them into its optimizer. Their cached outputs are detached.
+The CLS vector (768 dimensions) and graph readout (256 dimensions) each pass
+through a linear projection into 64 dimensions, followed by L2 normalization.
+Only these 65,664 projection parameters train. AudioSet labels do not enter the loss.
+
+Each sample ID defines one positive caption/graph pair. Other pairs in the
+training batch are negatives. Symmetric InfoNCE averages caption-to-graph and
+graph-to-caption cross-entropy with temperature 0.07. A final singleton batch
+is merged into the previous batch so every update has negatives.
+
+## Reproduce the real-data suite
+
+Run from the repository root in the configured Python environment, using a new
+output directory. Prepare features using the [Task 3 guide](../task3/README.md)
+if the local cache is unavailable. Large features and checkpoints are excluded
+from Git and must be retained locally or transferred separately.
 
 ```powershell
-python -m src.task4 train --demo --epochs 5 --device cpu --output-dir tmp/task4_demo
-python -m src.task4 evaluate --checkpoint tmp/task4_demo/best_model.pt --features tmp/task4_demo.demo.pt --output-dir tmp/task4_demo/test --device cpu
+python -m src.task4.experiment run --features data/processed/task3_available/features.pt --output-dir results/task4/my_run --seeds 42 43 44 --epochs 30 --batch-size 32 --projection-dim 64 --temperature 0.07 --learning-rate 0.001 --patience 5 --cpu-threads 6 --device cpu
+python -m src.task4.experiment evaluate --output-dir results/task4/my_run --device cpu
+python -m src.task4.analyze --output-dir results/task4/my_run
+python -m src.task4.experiment verify --output-dir results/task4/my_run
 ```
 
-Use fresh output paths on subsequent runs. The demonstration uses the same random
-feature fixture as Task 3. It checks execution only; it is not trained on real audio
-or real BERT features. Its independent random modalities may not generalize.
+The first command uses training pairs for gradients and validation pairs for
+checkpoint selection/early stopping. Mean bidirectional validation Recall@1
+selects the checkpoint; the earliest epoch wins ties. Every seed finishes before
+`selection.json` freezes all checkpoints, initial projection weights, validation
+artifacts and the suite declaration using SHA-256 hashes. The second command
+checks those hashes before any test inference. It evaluates all declared seeds
+and baselines once; it does not choose a seed using test results.
 
-## Real paired features
-
-Follow `docs/task3/README.md` to prepare aligned encoder features, then run:
-
-```powershell
-python -m src.task4 train --features data/processed/task3/features.pt --epochs 30 --batch-size 32 --projection-dim 64 --patience 5 --output-dir results/task4/seed42 --device auto
-python -m src.task4 evaluate --checkpoint results/task4/seed42/best_model.pt --features data/processed/task3/features.pt --output-dir results/task4/seed42/test --device auto
-```
-
-Training sees only training pairs. Checkpoint selection and early stopping use
-mean bidirectional validation Recall@1. Test evaluation is a separate command
-and reuses the selected checkpoint. Feature SHA-256 verification prevents mixing
-a checkpoint and a changed feature cache. The implementation supports retrieval
-within cached split galleries, not encoding a new raw audio/text query.
+`verify` recomputes metrics from saved embeddings, checks their unit norms and
+ordered split IDs, validates per-query ranks, frozen checkpoint/configuration
+hashes and the first-best validation epoch, and checks both comparison CSVs.
+It performs no new inference or training. Use `--features <relocated-cache>`
+with evaluate/verify/analyze after moving an identical cache to another machine.
 
 ## Metrics and artifacts
 
-Each evaluation uses every pair in the chosen split as both query and gallery,
-with one positive per unique sample ID. It reports Recall@1/5/10 in both directions,
-median ranks, gallery size, and effective K (clipped when the gallery has fewer
-than K items). Small synthetic galleries make R@10 trivial. Metrics rank tied
-negatives ahead of the positive to avoid optimistic ID-order artifacts. Example
-lists use stable gallery-order sorting for ties and include similarity scores.
+The complete chosen split is both query set and gallery: 583 validation pairs or
+606 test pairs. Report Recall@1/5/10, median rank and mean reciprocal rank for
+both text-to-graph and graph-to-text. Recall is a fraction in JSON/CSV, a
+percentage where explicitly marked in plots/reports. Effective K is clipped at
+gallery size. Tied negatives rank before the paired positive; example rankings
+use the same rule. Scoring uses bounded query blocks and float64 normalization.
+Feature loading memory-maps the token cache and copies only compact CLS vectors.
 
-Query scoring is blocked to avoid retaining an entire N-by-N matrix. Frozen
-feature loading still requires the complete Task 3 cache in CPU memory. Singleton
-training batches are merged into the preceding batch because InfoNCE needs negatives.
+The untrained baseline uses each seed's exact initial projection weights.
+Random-ranking expected Recall@K is `min(K, N) / N` and expected MRR is
+`sum(1/r for r in 1..N) / N`. This is an analytical expectation, not a sampled
+random run. Mean/sample-standard-deviation summaries measure projection-seed
+variation; encoders and data stay fixed across seeds.
 
-Training saves `best_model.pt`, `config.json`, `history.json`,
-`learning_curves.png`, and `validation/`. Standalone evaluation saves
-`metrics.json`, `embeddings.npz` (including sample IDs), and `examples.json`
-(three queries per direction). Saved embeddings allow independent recomputation.
+- Suite: `suite_config.json`, `pairing_audit.json`, `selection.json`,
+  `test_evaluation.json`, `comparison.csv`, `comparison_aggregate.csv`,
+  `verification.json`.
+- Each seed: `best_model.pt` (trained and initial heads), `config.json`,
+  `initial_validation.json`, `history.json`, `timing.json`, `learning_curves.png`.
+- Each seed/split: `metrics.json`, `embeddings.npz`, `untrained_embeddings.npz`,
+  `ranks.json` and `examples.json` with IDs, captions, ranks and cosine scores.
+- Analysis: comparison/learning plots, `cases.md` and `rank_summary.json`.
 
-New runs also save `initial_validation.json` and the exact initial projection
-weights. Evaluations report `untrained_projection_metrics` and the trained-minus-
-untrained `mean_recall_at_1_gain`; negative gains are retained. Curves show the
-untrained baseline and analytical random-ranking expectation (K / gallery size,
-clipped at 1). These baselines do not substitute for the planned CLAP comparison.
-Old checkpoints still evaluate, but cannot provide their missing initial weights.
-
-Metrics now include mean reciprocal rank in both directions. Examples include
-`paired_rank` with the same conservative tie policy as aggregate metrics.
-Recompute trained or baseline metrics without retraining or loading encoders:
+Recompute a single metric set independently:
 
 ```powershell
-python -m src.task4.metrics --embeddings tmp/task4_demo/test/embeddings.npz
-python -m src.task4.metrics --embeddings tmp/task4_demo/test/untrained_embeddings.npz
+python -m src.task4.metrics --embeddings results/task4/available_run1/seed42/test/embeddings.npz
+python -m src.task4.metrics --embeddings results/task4/available_run1/seed42/test/untrained_embeddings.npz
 ```
 
-The verifier checks sample-ID uniqueness and uses the saved row alignment. It
-cannot detect external edits that reorder only one modality while preserving IDs.
+## Single-run API and offline check
 
-The notebook `notebooks/task4_retrieval.ipynb` runs the same APIs.
+The original single-run commands remain supported:
 
-## Remaining experimental work
+```powershell
+python -m src.task4 train --demo --epochs 5 --device cpu --output-dir tmp/task4_demo_new
+python -m src.task4 evaluate --checkpoint tmp/task4_demo_new/best_model.pt --features tmp/task4_demo_new.demo.pt --output-dir tmp/task4_demo_new/test --device cpu
+python -m unittest discover -s tests/task4 -v
+```
 
-Real-audio retrieval, a CLAP zero-shot comparison, multiple seeds, and human
-listening evaluation have not been measured. They remain necessary for the full
-planned experimental comparison. Similar or duplicate captions may create false
-negatives under the one-positive objective. Audit track grouping and caption
-duplicates before reporting results. Classification-trained encoders and their
-proxy-label limitations carry over from Task 3; retrieval scores do not remove
-those limitations. No model downloads or listening judgments are fabricated.
+The random-feature demonstration tests execution only. Its six-pair held-out
+gallery makes Recall@10 trivial; it is not evidence of music retrieval quality.
+The review notebook reads real saved results by default and keeps synthetic
+retraining opt-in. New raw queries require the same encoder/preprocessing stages;
+the implemented retrieval interface operates on cached embeddings.
+
+## Interpretation limits
+
+The audit detects exact and normalized duplicate captions and repeated video
+IDs; the completed cohort has none. Semantically similar music can still create
+false negatives: an unpaired but suitable track is penalized by one-positive
+InfoNCE and exact-pair retrieval metrics. Do not interpret a failed exact match
+as proof of poor listening quality. Future work could audit semantic duplicates,
+group truly equivalent pairs, or use multiple positives without consulting test
+results to tune the current model.
+
+The reused text encoder trained on 3,864 original training captions, including
+1,089 without paired audio; the graph encoder trained on 2,775 paired clips.
+Held-out IDs preserve the original partitions. Missing-audio selection bias,
+coarse graph features, fixed classification-trained representations and lack of
+artist-disjoint evaluation remain limitations. CLAP retrieval and a caption-tag
+prompt-similarity comparison have now been measured; see the extension report.
+Human listening is pending five real participants, and no subjective quality
+claim is made. Forms and local audio are in `results/task4/listening_study/`.

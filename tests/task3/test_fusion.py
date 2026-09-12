@@ -45,11 +45,17 @@ class FusionTests(unittest.TestCase):
                 changed = tokens.detach().clone()
                 changed[~mask.bool()] = 999
                 torch.testing.assert_close(output, model(changed, mask, graph))
+                changed[~mask.bool()] = float("nan")
+                torch.testing.assert_close(output, model(changed, mask, graph))
                 output.sum().backward()
                 if mode != "gnn":
                     self.assertGreater(tokens.grad.abs().sum().item(), 0)
+                    self.assertEqual(tokens.grad[~mask.bool()].abs().sum().item(), 0)
                 if mode != "bert":
                     self.assertGreater(graph.grad.abs().sum().item(), 0)
+                for name, parameter in model.named_parameters():
+                    self.assertIsNotNone(parameter.grad, name)
+                    self.assertTrue(torch.isfinite(parameter.grad).all(), name)
                 if mode == "cross_attention":
                     self.assertGreater(tokens.grad[:, 1:3].abs().sum().item(), 0)
                 torch.testing.assert_close(output[:1], model(tokens[:1], mask[:1], graph[:1]))
@@ -66,7 +72,8 @@ class FusionTests(unittest.TestCase):
             self.assertTrue(report["provenance"]["synthetic"])
             for mode in MODES:
                 self.assertTrue((root / "results" / f"{mode}.pt").exists())
-            for filename in ("comparison.csv", "cases.json", "embeddings.png", "selected_predictions.npz"):
+            for filename in ("comparison.csv", "cases.json", "embeddings.png", "selected_predictions.npz",
+                             "training_curves.png", "validation_curves.png"):
                 self.assertTrue((root / "results" / filename).exists())
             selection = json.loads((root / "results/selection.json").read_text())
             checkpoint = root / "results" / selection["checkpoint"]

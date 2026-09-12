@@ -1,0 +1,30 @@
+{
+  "gallery_size": 583,
+  "effective_k": {
+    "1": 1,
+    "5": 5,
+    "10": 10
+  },
+  "tie_policy": "pessimistic: tied negatives rank ahead of the paired positive",
+  "random_ranking_expected_recall": {
+    "1": 0.0017152658662092624,
+    "5": 0.008576329331046312,
+    "10": 0.017152658662092625
+  },
+  "random_ranking_expected_mrr": 0.011914683085775505,
+  "text_to_graph": {
+    "recall_at_1": 0.0,
+    "recall_at_5": 0.0017152658662092624,
+    "recall_at_10": 0.005145797598627788,
+    "median_rank": 295.0,
+    "mean_reciprocal_rank": 0.00817405537580668
+  },
+  "graph_to_text": {
+    "recall_at_1": 0.003430531732418525,
+    "recall_at_5": 0.0137221269296741,
+    "recall_at_10": 0.02058319039451115,
+    "median_rank": 308.0,
+    "mean_reciprocal_rank": 0.013590556675865265
+  },
+  "mean_recall_at_1": 0.0017152658662092624
+}

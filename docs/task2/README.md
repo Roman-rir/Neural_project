@@ -1,9 +1,11 @@
 # Task 2 — Music graphs, GraphSAGE and audio baselines
 
-Task 2's implementation is verified, but the real-data experiment is **not
-complete**. The repository has MusicCaps metadata and Task 1 labels, with no
-matching real audio clips. See [the requirement audit](../../report/task2_results.md)
-for completed outputs and remaining work. Synthetic results are pipeline checks.
+Task 2 training and final test evaluation are **complete on 3,964 real MusicCaps
+clips** in `results/task2/available_run1/`: 15 model/seed runs, 20 graph examples,
+and 606 held-out test clips. Temporal GraphSAGE was selected on validation and
+achieved mean test Macro-F1 0.2648, Micro-F1 0.5729 and mAP 0.2762 across three
+seeds. See [the measured report](../../report/task2_results.md) for all controls,
+uncertainty and verification. The synthetic run remains a separate pipeline check.
 
 Open [the notebook](../../notebooks/task2_gnn_cnn.ipynb), or use the CLI below.
 Both use the same modules in `src/task2/`.
@@ -66,6 +68,22 @@ pooling on the clip-level log-mel image. Models use sigmoid outputs and
 BCEWithLogitsLoss. Parameter counts describe each complete classifier.
 
 ## Real-data workflow
+
+To train using only the audio downloaded so far, first stop the downloader with
+Ctrl+C. Then run these commands individually from the project root:
+
+```powershell
+python -m scripts.prepare_task2_available --output data/splits/task2_available.json
+python -m src.task2.preprocess --manifest data/splits/task2_available.json --output-dir data/processed/task2_available
+python -m src.task2.experiment --manifest data/processed/task2_available/manifest.json --output-dir results/task2/available_run1 --epochs 30 --seeds 42 43 44 --device auto
+```
+
+The preparation command fully decodes each candidate clip, excludes invalid or
+incomplete audio without deleting files, and saves an exclusion audit beside the
+frozen manifest. It preserves Task 1 labels and splits. Stop if a command fails.
+If the frozen manifest already exists, reuse it and start at preprocessing;
+new cohorts or training runs need fresh output paths. These commands perform
+validation-based training; frozen test evaluation remains a separate step.
 
 Run from the repository root with the project environment activated. Use fresh
 output directories for training.

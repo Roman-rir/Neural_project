@@ -1,0 +1,11 @@
+{
+  "valid": true,
+  "metrics_recomputed": true,
+  "config_sha256": "a4c62994aad6fb8f7e4839d4058ad6874fec3484a630ce369ccf11a8beac7ba7",
+  "embeddings_sha256": "815fd356b24d6e64c8ad22a39e2adf283d41fe0c544d1326b1891d367d6c52d3",
+  "metrics_sha256": "90837940e2b4dfe2a6ecb9100977fc38238a2e4c8b88bd96a5024c4216698852",
+  "model": "laion/clap-htsat-unfused",
+  "revision": "8fa0f1c6d0433df6e97c127f64b2a1d6c0dcda8a",
+  "pairs": 606,
+  "trainable_parameters": 0
+}

@@ -23,3 +23,6 @@ Thumbs.db
 tmp/
 
 *.pt
+
+# Local listening-study audio; do not commit redistributed dataset clips.
+results/task4/listening_study/participants/audio/

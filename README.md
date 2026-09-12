@@ -51,23 +51,55 @@ python -m src.evaluate --config config.yaml --checkpoint results/checkpoints/bes
 
 ## Milestones
 
-Task 4 retrieval is available in `src/task4/` and
-[`notebooks/task4_retrieval.ipynb`](notebooks/task4_retrieval.ipynb).
-See [`docs/task4/README.md`](docs/task4/README.md) for training and evaluation.
+Task 4 retrieval is measured on the same 3,964 paired clips with three projection seeds
+over frozen encoders. Held-out Recall@1/5/10 is **2.59% / 10.62% / 17.77%**
+for text-to-graph and **2.81% / 11.11% / 18.65%** for graph-to-text.
+See the [measured report](report/task4_results.md),
+[review notebook](notebooks/task4_retrieval.ipynb) and
+[training/evaluation guide](docs/task4/README.md). [CLAP and zero-shot caption-tag
+comparisons](report/task4_extensions.md) are now measured, with ten caption-query
+examples. [Five-listener evaluation](report/task4_listening_guide.md) awaits real
+responses; the [frozen-encoder scope deviation](report/task4_scope_deviation.md)
+remains explicit.
 
-Task 3's standalone frozen-encoder implementation is available in
-[`notebooks/task3_fusion.ipynb`](notebooks/task3_fusion.ipynb), with terminal and
-real-data instructions in [`docs/task3/README.md`](docs/task3/README.md).
-Run an offline five-ablation check with:
+Task 3's frozen experiment is complete on 3,964 paired MusicCaps clips: five heads,
+three seeds, 15 verified validation/test runs, embedding plots and three
+token/segment case studies. BERT-only wins validation selection; held-out mean
+Macro-F1 is **0.3850** versus **0.3705** for validation-selected gated fusion.
+See [the measured report](report/task3_results.md),
+[executed review notebook](notebooks/task3_fusion.ipynb) and
+[run guide](docs/task3/README.md). The five-model joint experiment is also
+complete in `joint_run2`, including verified test evaluation, genre/mood t-SNE,
+three cases and executed inference notebooks. Validation-selected gated fusion
+achieved test Macro-F1 **0.4073**, compared with **0.3727** for joint BERT-only
+and **0.2700** for joint GNN-only (one seed). See the
+[joint results](report/task3_joint_results.md),
+[joint review notebook](notebooks/task3_joint.ipynb) and
+[raw audio/caption demo](notebooks/demo_context.ipynb).
+
+Verify the completed run, or train a fresh run using the dedicated configuration:
 
 ```powershell
-python -m src.task3 --demo --epochs 2 --device cpu --output-dir tmp/task3_demo
+.venv/Scripts/python.exe -m src.task3.pipeline verify --config configs/task3.yaml
+.venv/Scripts/python.exe -m src.task3.pipeline train --output-dir results/task3/joint_run3
+.venv/Scripts/python.exe -m src.task3.pipeline evaluate --output-dir results/task3/joint_run3
+.venv/Scripts/python.exe -m src.task3.pipeline verify --output-dir results/task3/joint_run3
+.venv/Scripts/python.exe -m src.task3.pipeline plot --output-dir results/task3/joint_run3
+.venv/Scripts/python.exe -m src.task3.pipeline analyze --output-dir results/task3/joint_run3
 ```
+
+The configuration defaults to the completed `results/task3/joint_run2`; the
+training commands above override that with `joint_run3`. Do not rerun `train` on an existing output folder;
+use a fresh `--output-dir` consistently for another experiment. `joint_run1`
+is incomplete. `config1` duplicates the legacy root `config.yaml`; neither is
+the joint-training configuration. Content from `README1` is integrated in the
+[Task 3 guide](docs/task3/README.md). Full assignment compliance still depends
+on the scope and deliverables in the [submission audit](report/submission_readiness_audit.md).
 
 - Task 1: text-only BERT baseline (`--model bert`)
 - Task 2: GraphSAGE audio-graph baseline (`--model gnn`)
 - Task 3: GNN-BERT fusion (`--model fusion`)
-- Task 4: optional contrastive retrieval (`src/contrastive.py`)
+- Task 4: contrastive retrieval (`src/task4/`)
 
 ## Task 1: independent AudioSet text baseline
 
@@ -95,8 +127,8 @@ work remains in `Task1_test/`, earlier `results/task1/` outputs,
 [`docs/task1/legacy_proxy.md`](docs/task1/legacy_proxy.md).
 See [the run guide](docs/task1/README.md) and [measured report](report/task1_results.md)
 for methods, limitations and reproduction. Task 2's real-data manifest now
-inherits this vocabulary and video split; real audio/fusion models still need
-training on the available-audio cohort.
+inherits this vocabulary and video split; the completed Task 2 and Task 3
+comparisons use the available-audio cohort.
 
 ## Part 1: dataset viability audit
 
@@ -120,10 +152,12 @@ features, connected graph validation, a 20-example gallery, and one controlled
 suite for GraphSAGE (temporal/similarity/random), pooled MLP and mel-CNN.
 Checkpoints are bound to identical cached samples, labels and splits.
 
-The end-to-end synthetic verification includes 30 audio clips, 90 checked graphs,
-20 visualizations, five checkpoints, curves, prediction files and ablation
-tables. **Real-data Task 2 is not complete:** no matching MusicCaps audio exists
-in the project. Synthetic scores do not measure music-context performance.
+Real-data Task 2 is complete on the available 3,964-clip MusicCaps subset:
+15 trained/evaluated model runs, 20 graph visualizations, curves and predictions.
+Validation-selected temporal GraphSAGE achieved mean test Macro-F1 **0.2648**,
+Micro-F1 **0.5729** and mAP **0.2762** across three seeds on 606 held-out clips.
+See [the measured report](report/task2_results.md) for baseline comparisons and
+limitations. The notebook's default synthetic demonstration remains separate.
 
 Open [`notebooks/task2_gnn_cnn.ipynb`](notebooks/task2_gnn_cnn.ipynb) to review the
 saved verification, or reproduce it in a fresh directory:

@@ -1,0 +1,39 @@
+{
+  "first_optimizer_step": {
+    "gradient_l2": {
+      "text": 0.1542366668176502,
+      "graph": 0.13782694757424072,
+      "head": 0.25274729685596226
+    },
+    "changes": {
+      "text": {
+        "parameter": "text_encoder.transformer.layer.5.attention.q_lin.weight",
+        "max_abs_change": 1.0073184967041016e-05
+      },
+      "graph": {
+        "parameter": "graph_encoder.convs.0.lin_l.weight",
+        "max_abs_change": 0.00010031461715698242
+      },
+      "head": {
+        "parameter": "head.text_projection.weight",
+        "max_abs_change": 0.00010018050670623779
+      }
+    }
+  },
+  "selected_checkpoint_changes": {
+    "text": {
+      "parameter": "text_encoder.transformer.layer.5.attention.q_lin.weight",
+      "max_abs_change": 0.001011363696306944
+    },
+    "graph": {
+      "parameter": "graph_encoder.convs.0.lin_l.weight",
+      "max_abs_change": 0.0074666813015937805
+    },
+    "head": {
+      "parameter": "head.text_projection.weight",
+      "max_abs_change": 0.006230302155017853
+    }
+  },
+  "frozen_text_sha256_before": "9fd41de2042b185f15243419a0c62281a6bc0fce372fe7782c613b7fbe2550e2",
+  "frozen_text_sha256_after": "9fd41de2042b185f15243419a0c62281a6bc0fce372fe7782c613b7fbe2550e2"
+}
