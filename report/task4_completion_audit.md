@@ -1,5 +1,7 @@
 # Task 4 completion audit
 
+> **Audit scope:** implementation completion below refers to frozen projections, not every original Task 4 requirement. The [current audit](submission_readiness_audit.md) records the optional/bonus rubric and unresolved human/encoder-update items.
+
 **Revised verdict (2026-09-11): the frozen-encoder retrieval experiment is
 measured, but full original-proposal completion remains pending five real
 listener responses and resolution of the encoder-training scope deviation.**
@@ -8,8 +10,8 @@ See [extension results](task4_extensions.md) and [scope deviation](task4_scope_d
 
 | Requirement | Status | Evidence |
 |---|---|---|
-| Attempt after stable Tasks 1–3 | Complete | Task 3 completion audit, unchanged audited feature hash and 77 passing repository tests. |
-| Freeze trained text and graph encoders | Complete | Audited trained DistilBERT/temporal GraphSAGE cache; detached features; encoders absent from the Task 4 optimizer. |
+| Prerequisite feature checks (implementation plan) | Recorded | Task 3 frozen audit, matching feature hash and historical 10 September tests; not a separate PDF deliverable. |
+| Frozen-backbone implementation (revised scope, not Algorithm 4) | Scope deviation | Audited trained DistilBERT/temporal GraphSAGE cache; detached features; encoders absent from the Task 4 optimizer. |
 | Small projection heads and shared normalized space | Complete | Two linear heads; 768/256 inputs → 64 outputs; 65,664 parameters; unit embeddings verified. |
 | Symmetric contrastive objective | Complete | Symmetric InfoNCE at temperature 0.07; paired sample IDs are positives and other batch items are negatives. |
 | Both retrieval directions | Complete | All 583 validation and 606 test pairs used as queries and galleries. |

@@ -1,5 +1,7 @@
 # Task 3 completion audit
 
+> **Audit scope:** dated verification records below are not a new regression run. See the [current assignment audit](submission_readiness_audit.md). The existing PDF is present and preserved unchanged.
+
 ## Current update: 11 September 2026
 
 The checklist below certifies the **frozen experiment**, not full assignment
@@ -8,7 +10,8 @@ encoder forwards, active-branch gradient/update checks and fixed lower text
 layers. The five-mode run `results/task3/joint_run2` has **completed training and
 held-out test evaluation**. Verification passed for all five models with
 `evaluated_test: true`. `joint_run1` remains an interrupted BERT run.
-See the [joint results](task3_joint_results.md): validation-selected gated fusion
+See the [joint results](task3_joint_results.md): validation selects BERT-only
+overall and gated among fusion models. Gated fusion
 achieves test Macro-F1 **0.4073**, versus **0.3727** for BERT-only and **0.2700**
 for GNN-only. This is a single-seed result; gated Micro-F1 is lower than BERT-only.
 
@@ -26,7 +29,7 @@ errors. The former reproduces three live-encoder validation predictions; the
 latter reconstructs a graph from real audio and verifies its resulting fusion
 prediction. Evidence: `results/task3/joint_run2/notebook_verification.json`.
 
-The missing training-curve output was restored. All **86 repository tests**
+The missing training-curve output was restored. The saved 11 September regression record reports **86 repository tests**
 passed, including **28 Task 3 tests**, after the joint-analysis tests were added
 (`tmp/task3_full_regression.log`). `src/task3/pipeline.py` and `configs/task3.yaml` now exist; the run guide
 contains matching commands. `README1` was integrated into that guide; `config1`

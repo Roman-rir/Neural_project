@@ -1,5 +1,9 @@
 # Task 4: contrastive graph-text retrieval
 
+## Assignment coverage (12 September 2026)
+
+[Brief](../../CSE425_Project_GNN_BERT_Music_Context.pdf), pp. 5-7: retrieval, ten caption queries and zero-shot caption-tag comparison are measured. Five real listeners (p. 6) and encoder updates in Algorithm 4 (p. 7) remain unresolved. Task 4 is optional/bonus; full completion still requires these items. The zero-shot supervised comparator is **frozen** Task 3 gated fusion, not `joint_run2`. See the [audit](../../report/submission_readiness_audit.md).
+
 Task 4 is implemented and measured on the same 3,964 paired MusicCaps clips as
 Task 3. See [measured results](../../report/task4_results.md),
 [completion audit](../../report/task4_completion_audit.md) and the

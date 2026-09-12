@@ -1,5 +1,9 @@
 # Task 1 — Measured independent AudioSet results
 
+## Assignment deliverables
+
+Task 1 (brief p. 3) evidence: [fine-tuning code](../src/task1/train.py), [F1 curves](../results/task1/audioset_cpu_20260907/f1_curve.png), [five predictions](../results/task1/audioset_cpu_20260907/example_predictions.json) and metrics below. DistilBERT is explicitly permitted. The 30 independent AudioSet targets differ from top-50 MagnaTagATune and the caption-derived proxy option preserved below. Attention visualization is optional. See the [audit](submission_readiness_audit.md).
+
 ## Completed run
 
 Run: `results/task1/audioset_cpu_20260907/`, 7 September 2026. All results below
@@ -145,8 +149,10 @@ artist overlap, near-duplicate content or possible pretrained exposure. This is
 a custom random ID split, not official AudioSet evaluation or a stratified
 multilabel split. Only one training seed and two full fine-tuning epochs were
 run; no claim of convergence, seed robustness, or statistically significant
-superiority is made. There is no new frozen-encoder result. Existing Tasks 2–4
-must be aligned to this manifest before cross-modal comparisons.
+superiority is made. This Task 1 run adds no frozen-encoder comparison. Completed paired Tasks 2-4
+now inherit this vocabulary and video-ID partition, retaining 2,775 / 583 / 606
+train/validation/test clips. Compare modalities on matched populations; the
+headline Task 1 test set still has 829 clips.
 
 The former notebook and documentation are preserved as
 `notebooks/task1_lexical_proxy.ipynb` and `docs/task1/legacy_proxy.md`. Original

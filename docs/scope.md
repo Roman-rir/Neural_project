@@ -1,122 +1,54 @@
-# Part 1 - Scope approval and MusicCaps viability gate
+# Current scope and assignment alignment
 
-Date: 29 August 2026  
-Status: **conditional go for MusicCaps; instructor approval still required**
+Updated 12 September 2026 against the [assignment brief](../CSE425_Project_GNN_BERT_Music_Context.pdf). **Measured experiments are complete for the documented MusicCaps scope; full assignment compliance is not established.**
 
-## Decision
+## Dataset decision
 
-Use MusicCaps as the provisional paired dataset for Tasks 1-3. The deterministic
-200-ID pilot (seed 42) found 187 clips available and 13 private/unavailable:
-**93.5% usable**, above the plan's 80% gate. The probe used yt-dlp metadata
-extraction with `skip_download=True`; it did not download or save media.
+MusicCaps supplies aligned ten-second audio references, captions and independent AudioSet positive labels. The text run uses all 5,521 metadata rows; paired experiments use 3,964 validated clips and the same 30 training-selected labels.
 
-The official metadata passed its structural checks: 5,521 unique 10-second clip
-windows, no missing required fields, no duplicate video IDs, no duplicate clip
-windows, and no exact duplicate captions. The detailed machine-readable evidence
-is in `results/data_audit.json`; the 13 failures are recorded in
-`results/musiccaps_availability_failures.jsonl`.
+| Cohort | Train | Validation | Test |
+|---|---:|---:|---:|
+| Full caption cohort (Task 1) | 3,864 | 828 | 829 |
+| Available paired cohort (Tasks 2-4) | 2,775 | 583 | 606 |
 
-A full 5,521-ID probe was attempted after the pilot passed, but YouTube began
-returning "confirm you are not a bot" responses after the first few hundred
-requests. Those responses are platform throttling, not evidence that clips are
-missing, so the run was stopped and its partial output was not used. The clean,
-pre-throttle 200-ID pilot remains the gate result.
+The custom seed-42 video-ID split is inherited by the paired subset. No artist-disjoint or official FMA/MagnaTagATune split is claimed. Availability can bias the retained cohort. Missing positive annotations are operationally zero, not confirmed negatives.
 
-The route cannot be fully signed off until the instructor approves MusicCaps for
-Tasks 1-3. Send this exact question:
+The brief lists MusicCaps and recommends aligned MusicCaps audio for advanced work (pp. 2-3), but **Task 2 names GTZAN/FMA-small and Task 3 names FMA-medium/MagnaTagATune (p. 4)**. Our runs do not establish results on those datasets. Instructor acceptance of substitution is not documented. Training and the original viability pilot are not approval evidence.
 
-> May we use MusicCaps as the paired dataset for Tasks 1-3 so every graph,
-> caption, and label refers to the same 10-second clip, while keeping Task 4
-> optional?
+## Task boundaries
 
-## Requirement checklist
+| Task | Completed implementation | Difference or limitation |
+|---|---|---|
+| 1 | Fine-tuned DistilBERT, independent labels, three controls, curves and five predictions | 30-label independent AudioSet task; permitted caption-derived proxy retained separately |
+| 2 | GraphSAGE, mel-CNN, pooled MLP and temporal/similarity/random ablations; three seeds | MusicCaps instead of named dataset; one-second nodes, top-2 similarity neighbors and mean/max readout are declared choices |
+| 3 | Five joint modes with partial BERT/live GNN updates; separate frozen ablation; F1, mAP, trapezoidal PR-AUC, t-SNE and cases | One joint seed; dataset substitution; only 12 Angry music mood annotations. Cross-attention uses a residual graph connection rather than the displayed concatenated readout |
+| 4 | Frozen-backbone InfoNCE projections, bidirectional retrieval, ten queries, caption tags and CLAP | Algorithm 4 updates encoders; our retrieval loss updates projections only. Five human responses are absent |
 
-| Proposal requirement | Part 1 interpretation | Status |
-| --- | --- | --- |
-| At least one audio dataset and one text/tag source | MusicCaps supplies aligned YouTube clip references, captions, aspects, and AudioSet labels | Conditional pass; audio rights remain separate |
-| Task 1 BERT multi-label baseline | Caption-only input; top tag vocabulary; BCEWithLogitsLoss; Macro/Micro-F1 curves; five predictions | In scope |
-| Task 2 GNN music graph and CNN comparison | Segment graphs from the same 10-second clips; temporal and similarity edges | In scope |
-| Task 3 GNN-BERT fusion and ablations | BERT-only, GNN-only, concat, and advanced fusion on identical clip IDs | In scope |
-| Task 4 contrastive retrieval | Frozen-encoder stretch only after the core gate | Optional |
-| Correct splits and no leakage | Disjoint clip IDs; train-only vocabulary/statistics; validation-only thresholds; fixed test set | Required in Part 2 |
-| At least two fair baselines | Label prior/keyword/TF-IDF, CNN, BERT-only, and GNN-only | In scope |
-| Final artifacts | Repository/ZIP, 20 graph samples, plots/tables, 6-10 page report, demo notebook | In scope |
-| No invented experimental results | Every reported value must trace to a saved run or audit artifact | Required |
+`joint_run2` supplies the live/partial-encoder update aspect of Algorithm 3. It does not make the separate Task 4 retrieval experiment jointly fine-tuned. Validation selects BERT-only overall and gated among fusion models; higher gated test Macro-F1 does not change that selection.
 
-## Measured metadata audit
+No DEAM regression, chord-recognition experiment, broad mood-discrimination result or statistical significance is claimed. The [submission audit](../report/submission_readiness_audit.md) maps deliverables to PDF pages.
 
-| Check | Result | Gate implication |
-| --- | ---: | --- |
-| Rows / unique clip windows | 5,521 / 5,521 | Pass |
-| Missing required values | 0 | Pass |
-| Duplicate video IDs / clip windows / captions | 0 / 0 / 0 | Pass |
-| Duration | exactly 10 s for every row | Pass |
-| Caption authors | 10 | Record author-stratified errors; do not treat authors as labels |
-| Balanced subset rows | 1,000 | Available for a smaller controlled experiment |
-| AudioSet-eval rows | 2,858 | Preserve the flag; do not silently call it a MusicCaps test split |
-| Unique canonical aspect phrases | 13,082 | Synonym consolidation is mandatory |
-| Unique AudioSet label IDs | 346 | Map IDs to names before label selection |
-| Rows with an exact aspect phrase in the caption | 5,387 (97.57%) | High lexical leakage risk |
-| 200-ID availability pilot | 187/200 (93.5%) | Passes 80% gate |
-| Decoded 22.05 kHz mono PCM estimate | 2.435 GB | Allow 10-20 GB with caches/checkpoints |
+## Leakage and metric policy
 
-The label-frequency plot is
-`results/plots/musiccaps_label_frequency.png`. Its top-30 counts are a global
-**audit only**, not the final vocabulary. Part 2 must create the split first and
-fit the label vocabulary, synonym map, normalization statistics, and thresholds
-without using validation or test labels.
+Caption text alone enters DistilBERT. Aspect lists, label fields and IDs are excluded from its input. Targets come from `audioset_positive_labels`; vocabulary and normalization use training data only. Checkpoints and thresholds use validation only.
 
-## Leakage decision
+The historical lexical proxy derives targets from caption words. Its near-perfect scores are not comparable to independent-label results. Text pretraining used 1,089 more training-only captions than graph pretraining. Joint fine-tuning itself uses the same paired cohort across modes.
 
-MusicCaps aspects and captions were written to describe the same clips, and the
-audit found at least one exact aspect phrase in 97.57% of captions. Therefore:
+mAP averages per-label average precision; trapezoidal PR-AUC is separately computed in the joint report. Do not rename historical AP fields as trapezoidal area. Exact-ID Recall@K is not listener-rated relevance. Captions, ranks and software-test fixtures cannot supply human ratings.
 
-1. BERT input is the `caption` field only.
-2. `aspect_list`, AudioSet label fields, and any derived target columns are never
-   concatenated into the input text.
-3. The current keyword-derived Task 1 experiment remains a clearly labelled
-   pipeline/proxy demonstration; its near-perfect F1 is not evidence of music
-   understanding.
-4. The final Task 1 report must include label-prior, keyword-overlap, and TF-IDF
-   controls plus overlap-stratified results.
-5. Prefer a documented canonical top-30 target vocabulary selected from the
-   training split. Exclude recording-quality artifacts such as "low quality"
-   unless the instructor explicitly wants production-quality tags.
+## Remaining submission decisions
 
-## Scope freeze
+1. Record acceptance of MusicCaps for Tasks 2/3 or supply the named-dataset experiments.
+2. Resolve projection-only Task 4 scope and collect five real listener responses if claiming full advanced-task credit.
+3. Package at least 20 loadable graphs with schema, labels and preprocessing information; the PNG gallery alone is insufficient.
+4. Assemble and verify the source/results/demo package. The existing PDF remains unchanged; current Markdown reports qualify its older frozen-fusion conclusions.
 
-- **Core:** MusicCaps metadata/audio viability; deterministic preprocessing;
-  BERT-only, GNN-only, compact CNN, prior/keyword/TF-IDF baselines; concat
-  fusion; Macro-F1, Micro-F1, and mAP; graph ablations; 20 graph samples; demo;
-  final report.
-- **Advanced comparison:** gated fusion or one-way graph-to-text
-  cross-attention only after concat is stable.
-- **Stretch:** contrastive retrieval only after the core table, tests, demo, and
-  report draft are complete.
-- **Out of scope for the core:** DEAM multitask regression, training a large
-  audio-text encoder from scratch, and cross-dataset fusion without verified
-  track-level identities.
+## Historical viability audit (29 August 2026)
 
-## Legal and operational note
+The [metadata audit](../results/data_audit.json) found 5,521 unique ten-second windows, no missing required fields and no exact duplicate captions or video IDs. A deterministic metadata-only 200-ID pilot found 187 available clips and 13 unavailable (93.5%); no media was downloaded. A larger probe encountered throttling and was stopped. Those failures were not treated as permanent missing audio.
 
-The MusicCaps metadata card identifies the dataset as CC BY-SA 4.0 and exposes
-YouTube IDs/timestamps rather than redistributed audio. Referenced audio retains
-separate rights and platform constraints. Do not commit or publish raw audio;
-store only permitted local copies and document attribution. See the
-[official MusicCaps dataset card](https://huggingface.co/datasets/google/MusicCaps/blob/main/README.md).
+The pilot supported the original technical go-ahead, conditional on dataset acceptance. Its availability count is superseded by the validated 3,964-clip cohort. The initial audit found aspect phrases in 97.57% of captions, motivating independent targets rather than headline proxy scores.
 
-## Exit status and next action
+## Attribution and local data
 
-| Gate | Status |
-| --- | --- |
-| Metadata integrity | Pass |
-| 200-ID audio availability threshold | Pass (93.5% >= 80%) |
-| License/attribution note | Written |
-| Input/target ambiguity | Resolved, subject to final train-only taxonomy |
-| FMA fallback | Not activated because the primary gate passed |
-| Instructor approval | **Pending human action** |
-
-After instructor approval, Part 2 may freeze split manifests and the train-only
-label taxonomy. If approval is denied, or a permitted acquisition run later
-finds less than 80% usable audio, switch immediately to FMA-small.
-
+Attribution and source links are in the [Task 1 guide](task1/README.md#scope-and-attribution). MusicCaps metadata and referenced audio have separate reuse considerations. Keep raw audio and credentials out of Git; preserve permitted local audio needed by the demo. Acquisition tooling is documented in the [audio guide](task2/downloading_audio.md).

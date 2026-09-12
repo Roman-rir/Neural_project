@@ -1,5 +1,7 @@
 # Downloading real MusicCaps audio on Windows
 
+> **Current role:** new acquisition or recovery of local audio. The measured cohort already contains 3,964 validated clips. Preserve its manifest/splits; additional downloads need a separately declared cohort and do not change published results. See [scope](../scope.md).
+
 The error `ffmpeg is not installed` means yt-dlp cannot extract the requested
 MusicCaps interval. The JavaScript runtime warning also needs attention for
 reliable YouTube extraction. Install both tools in PowerShell:
@@ -13,7 +15,7 @@ Restart VS Code after installation so new terminals receive the updated PATH.
 From the project root, install yt-dlp into the existing project environment:
 
 ```powershell
-.\.venv\Scripts\python.exe -m pip install --upgrade "yt-dlp[default]"
+.\.venv\Scripts\python.exe -m pip install "yt-dlp[default]==2026.8.19"
 ```
 
 The [download script](../../scripts/download_musiccaps.ps1) finds FFmpeg,

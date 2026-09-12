@@ -1,5 +1,9 @@
 # Task 2 — Music graphs, GraphSAGE and audio baselines
 
+## Assignment coverage (12 September 2026)
+
+[Brief](../../CSE425_Project_GNN_BERT_Music_Context.pdf), p. 4: graph construction, GraphSAGE/GAT and mel-CNN comparison are implemented. MusicCaps results do not supply the named GTZAN/FMA-small experiment; substitution acceptance remains undocumented. Page 8 requires at least 20 loadable graphs, not only the [image gallery](../../results/task2/available_run1/graph_examples/index.html). Package samples with schema, labels and normalization; see the [submission audit](../../report/submission_readiness_audit.md).
+
 Task 2 training and final test evaluation are **complete on 3,964 real MusicCaps
 clips** in `results/task2/available_run1/`: 15 model/seed runs, 20 graph examples,
 and 606 held-out test clips. Temporal GraphSAGE was selected on validation and
@@ -69,21 +73,24 @@ BCEWithLogitsLoss. Parameter counts describe each complete classifier.
 
 ## Real-data workflow
 
+These commands create a new cohort and run; choose unused reproduction paths.
 To train using only the audio downloaded so far, first stop the downloader with
 Ctrl+C. Then run these commands individually from the project root:
 
 ```powershell
-python -m scripts.prepare_task2_available --output data/splits/task2_available.json
-python -m src.task2.preprocess --manifest data/splits/task2_available.json --output-dir data/processed/task2_available
-python -m src.task2.experiment --manifest data/processed/task2_available/manifest.json --output-dir results/task2/available_run1 --epochs 30 --seeds 42 43 44 --device auto
+python -m scripts.prepare_task2_available --output data/splits/task2_reproduction.json
+python -m src.task2.preprocess --manifest data/splits/task2_reproduction.json --output-dir data/processed/task2_reproduction
+python -m src.task2.experiment --manifest data/processed/task2_reproduction/manifest.json --output-dir results/task2/reproduction_run1 --epochs 30 --seeds 42 43 44 --device auto
+python -m src.task2.experiment --evaluate-run results/task2/reproduction_run1/runs --device auto
 ```
 
 The preparation command fully decodes each candidate clip, excludes invalid or
 incomplete audio without deleting files, and saves an exclusion audit beside the
 frozen manifest. It preserves Task 1 labels and splits. Stop if a command fails.
 If the frozen manifest already exists, reuse it and start at preprocessing;
-new cohorts or training runs need fresh output paths. These commands perform
-validation-based training; frozen test evaluation remains a separate step.
+new cohorts or training runs need fresh output paths. The training command
+uses validation only; the final command evaluates the frozen test comparison
+after training completes. Skip that command for an already evaluated run.
 
 Run from the repository root with the project environment activated. Use fresh
 output directories for training.
@@ -236,4 +243,5 @@ speed or accuracy advantage should be claimed from the tiny synthetic run.
 
 Task 1's published full-cohort scores use 829 test clips. An audio subset requires
 re-evaluation of text predictions on that same subset before cross-task numeric
-comparisons. Tasks 3/4 have not been retrained by this Task 2 update.
+comparisons. The later Tasks 3/4 runs use this paired cohort. See the separate
+[Task 3](../task3/README.md) and [Task 4](../task4/README.md) guides.

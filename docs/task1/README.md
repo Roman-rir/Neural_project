@@ -1,5 +1,9 @@
 # Task 1 — Independent AudioSet text baseline
 
+## Assignment coverage (12 September 2026)
+
+[Brief](../../CSE425_Project_GNN_BERT_Music_Context.pdf), p. 3: BERT/DistilBERT fine-tuning, F1 curves and five predictions. The independent 30-label run supplies these artifacts. It differs from top-50 MagnaTagATune and the separately preserved lexical proxy; identify the actual target source. Attention visualization is optional. See [scope](../scope.md) and [Task 1 evidence](../../report/task1_results.md).
+
 Task 1 now predicts the independently supplied `audioset_positive_labels` from
 MusicCaps captions. The completed CPU run uses 5,521 rows, 30 training-selected
 labels and disjoint video-ID partitions. Open
@@ -85,7 +89,8 @@ threshold; the completed run uses validation calibration.
 A prepared manifest is authoritative for partitions: `--split-path` must agree
 with it exactly. Existing legacy text-only CSVs and aligned Task 3 CSVs remain
 readable, but are marked `legacy_unverified`; they do not carry independent-label
-provenance. The existing Tasks 2–4 artifacts have not been realigned or retrained.
+provenance. Completed independent-label Tasks 2-4 runs now inherit this manifest and label
+order on the available-audio subset. Historical proxy outputs remain separate.
 
 ## Notebook behavior
 
@@ -154,5 +159,5 @@ frequent-label imbalance and lexical shortcuts. It is not a validated general
 mood/genre understanding benchmark or evidence of listening to audio. The split
 protects video IDs, not artists, authors, near duplicates or possible pretrained
 model exposure. Single-seed uncertainty and incomplete AudioSet negatives remain
-limitations. Future multimodal comparisons must align all branches to this exact
-ID manifest and training-fitted vocabulary.
+limitations. Current paired comparisons preserve this ID partition and training-fitted
+vocabulary; new multimodal runs must do the same.

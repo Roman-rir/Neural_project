@@ -1,183 +1,71 @@
-# Submission readiness audit against the assignment PDF
+# Submission readiness audit against the assignment
 
-Audit date: 10 September 2026.
+**Updated: 12 September 2026.** Source: all nine pages of the [assignment brief](../CSE425_Project_GNN_BERT_Music_Context.pdf). Deadline: **2 October 2026**.
 
-**11 September update:** The five-mode Task 3 `joint_run2` experiment completed
-training and held-out test evaluation; all five models passed saved-result and
-dataset verification (`evaluated_test: true`). Genre/mood t-SNE, curves, three
-cases and failure analysis are generated. Both the joint review notebook and
-the real audio/caption demo executed with zero errors. Mood coverage remains
-limited to 12 Angry music annotations. `joint_run1` remains interrupted.
-The missing frozen-head `training_curves.png` generation was fixed; all 86
-repository tests passed, including 28 Task 3 tests (`tmp/task3_full_regression.log`).
-See [joint results](task3_joint_results.md) and
-[notebook verification](../results/task3/joint_run2/notebook_verification.json).
-Dataset approval, the final report and submission packaging remain separate
-requirements. The current blockers below exclude the resolved Task 3 items.
+**Verdict: substantial measured work is available, but full assignment compliance and a portable final submission are not yet established.** This reviews local documentation and saved artifacts, not a remote repository, instructor approval, new training or a clean installation of a final archive.
 
-**Verdict: not ready for final submission.** The repository contains substantial,
-measured work across Tasks 1-4, and the current tests and saved-result checks pass.
-However, several explicit PDF deliverables are missing or differ from the
-implemented scope. The existing task completion audits certify narrower
-experiments; they do not establish compliance with the entire assignment.
-
-Source of requirements: `CSE425_Project_GNN_BERT_Music_Context.pdf`, all nine
-pages read and visually inspected. The stated deadline is **2 October 2026**.
-This audit covers the current local workspace; it does not certify the contents
-of the live GitHub repository or instructor approvals outside this workspace.
-
-## Submission blockers
-
-| Priority | Finding | Evidence | Required action |
-|---|---|---|---|
-| 1 | Final report PDF is missing. | PDF section 10, pp. 8-9 requires a 6-10 page NeurIPS/IEEE/ICML-style report. `report/README.md` still instructs the author to place it there; only task Markdown reports exist. | Write and render the final report with actual results, diagrams, methods, citations and limitations. |
-| 1 | Dataset substitution lacks documented sign-off. | PDF p. 4 specifies GTZAN/FMA-small for Task 2 and FMA-medium/MagnaTagATune for Task 3. The measured runs use MusicCaps. `docs/scope.md` explicitly records instructor approval as pending. | Record any existing instructor approval, or obtain approval for the MusicCaps substitution; otherwise run the required dataset experiments. This audit cannot assume approval from completed training. |
-| 2 | Required graph files are not included in tracked Git contents. | 3,964 processed `.pt` samples exist locally, but `.gitignore` excludes `data/processed/*` and all `*.pt`; `git ls-files '*.pt'` returns none. The 20-example gallery contains PNGs and an index, not a portable graph-sample bundle. | Package at least 20 loadable `.pt` or `.json` graphs with feature/edge schema and label mapping in the submission ZIP or explicitly tracked sample directory. |
-| 2 | Final source/results package is not established. | The working tree contains modified and untracked source, tests, reports and result directories. No final project submission ZIP was found; the Task 1 source snapshot ZIP is not the complete project. | Include the current files in the selected repository commit or ZIP, provide model/data dependencies, and test the submitted copy. A Git remote being configured does not prove the current local work is published. |
+Earlier findings that the report PDF, ten caption queries and zero-shot tag comparison were missing are superseded. The existing [seven-page report](../CSE715_Project_Report.pdf) is present and remains unchanged. Its abstract/discussion/conclusion describe the frozen experiment; the [joint report](task3_joint_results.md) records the latest results.
 
 ## Requirement-by-requirement assessment
 
-### Dataset and preprocessing: implemented with a scope qualification
+| Assignment requirement | Current evidence | Status / qualification |
+|---|---|---|
+| Audio plus text/tag data, pp. 2-3 | MusicCaps captions, aligned audio and independent AudioSet labels | Both modalities supplied; task-specific substitution remains unresolved |
+| Resampling, mel/chroma and normalization, pp. 2-3 | 22.05 kHz mono, per-clip peak normalization, 128-bin mel, chroma/MFCC | Implemented; feature normalization fitted on training nodes only |
+| Segment graphs and tokenization, p. 3 | Ten one-second nodes, 311 features, temporal/top-2 similarity edges; max text length 128 | Declared choices; top-k edges differ from the displayed cosine-threshold graph |
+| Split discipline, p. 3 | Seed-42 video-ID split inherited by paired cohort | No ID overlap; custom split, not artist-disjoint or official FMA/MagnaTagATune split |
+| Task 1 fine-tuning, F1 curves and five predictions, p. 3 | [Report](task1_results.md), current `f1_curve.png` and `example_predictions.json` | Independent 30-label targets; permitted lexical proxy retained separately. Attention visualization optional |
+| Task 2 GraphSAGE/GAT plus mel-CNN, p. 4 | [Results](task2_results.md): five configurations, three seeds | Implemented GraphSAGE; mean/max pooling extends displayed mean-only readout |
+| Task 2 GTZAN/FMA-small, p. 4 | Current results use 3,964 MusicCaps clips | Named-dataset result not supplied; substitution acceptance undocumented |
+| Task 3 live fusion and ablations, p. 4; Algorithm 3, p. 7 | `joint_run2`: BERT, GNN, concat, gated and cross-attention | All five trained/evaluated; final BERT block, GNN and active heads update; one joint seed |
+| Task 3 FMA-medium/MagnaTagATune, p. 4 | Current results use MusicCaps | Named-dataset result not supplied; substitution acceptance undocumented |
+| Task 3 F1 and mean AUC-PR, pp. 4-5 | [Joint comparison](../results/task3/joint_run2/comparison.csv) | F1, mAP and separately computed trapezoidal mean PR-AUC present |
+| Genre/mood t-SNE, p. 4 | [Joint plots](../results/task3/joint_run2/semantic_plots/README.md) | Generated on 583 validation clips; 95 genre/style positives and only 12 Angry music annotations |
+| Three graph/caption cases, p. 4 | [Frozen graph-path/sensitivity cases](../results/task3/available_run1/case_studies/cases.md); [joint prediction cases](../results/task3/joint_run2/analysis/cases.md) | Three fixed cases each; frozen visualization evidence is not joint-model attribution |
+| Task 4 shared embedding and contrastive loss, p. 5 | [Retrieval report](task4_results.md), three projection seeds | Measured over frozen classification-trained backbones |
+| Task 4 encoder updates, Algorithm 4, p. 7 | Only projections receive retrieval gradients | Scope deviation; acceptance or completed contrastive encoder fine-tuning not documented |
+| Bidirectional Recall@1/5/10, p. 5 | 606-query/gallery exact-pair comparison and controls | Measured; CLAP is an additional external comparator |
+| Ten caption queries to top-three clips, p. 5 | [Ten fixed queries](../results/task4/listening_study/ten_caption_queries.md) | Present for graph seed 42 and CLAP |
+| Zero-shot caption tags versus Task 3, p. 5 | [Extensions](task4_extensions.md) | Fixed CLAP text prompt baseline versus frozen supervised gated fusion, not the later joint model |
+| Five listeners, scale 1-5, p. 6 | [Protocol/forms](task4_listening_guide.md) | Prepared; no returned ratings or human summary found |
+| At least two baselines, pp. 6-7 | Prior, keyword, TF-IDF, pooled MLP, CNN, unimodal controls | Present; retain matched-cohort and training-access qualifications |
+| Full source repository or ZIP, p. 8 | Current source and guides | Final delivered commit/archive and clean-copy checks not established |
+| At least 20 loadable graphs, p. 8 | 3,964 local `.pt` samples; 20-example PNG gallery | No tracked `.pt` files; portable graph bundle needs schema/labels and inclusion in submission |
+| Evaluation tables and plots, p. 8 | Reports, CSVs, curves, t-SNE, retrieval examples | Present locally; include matching artifacts in delivered package |
+| 6-10 page report in named paper template, pp. 8-9 | Existing seven-page `CSE715_Project_Report.pdf` | Page-count range met; preserved PDF predates joint results. Current content/template compliance is not certified by page count |
+| End-to-end demo, p. 8 | [Notebook](../notebooks/demo_context.ipynb) and saved zero-error execution | Executed locally; matching WAV, checkpoint, tokenizer and preprocessing dependencies required |
 
-- **Paired audio and text:** 3,964 available MusicCaps audio/caption pairs, with
-  independent AudioSet label IDs. MusicCaps supplies both modalities; acceptance
-  as a substitute for the task-specific datasets remains unresolved above.
-- **Audio preprocessing:** 22.05 kHz mono, per-track peak normalization, 128-bin
-  log-mel features plus chroma/MFCC features are documented and implemented.
-- **Segmentation and graphs:** ten one-second segment nodes; temporal,
-  temporal-plus-similarity and edge-count-matched random controls. The brief gives
-  segment durations as examples. The top-k similarity and mean/max readout choices
-  should be described as implementation choices rather than exact copies of the
-  displayed threshold graph and mean-only readout.
-- **Text:** DistilBERT tokenization with maximum length 128 is implemented.
-- **Splits:** video-ID train/validation/test separation, training-only vocabulary
-  and normalization, validation-only thresholds and model selection. Paired
-  cohort: 2,775 train / 583 validation / 606 test. No artist-disjoint claim is
-  supported; the reports disclose that limitation.
+Task 4 is optional/bonus in the p. 7 rubric. Human ratings remain a requirement of that advanced task. DEAM regression is conditional on available targets; Task 1 attention visualization, graph coherence and PCA+MLP are optional. The brief's Table 3 numbers are illustrative, not required scores.
 
-### Task 1: implemented and measured
+## Current measured outcomes
 
-- DistilBERT fine-tuning code, held-out Macro/Micro-F1, epoch curves and example
-  predictions are present.
-- Current independent-label run: `results/task1/audioset_cpu_20260907/`.
-- The original MusicCaps caption-to-tag proxy run remains preserved and is
-  explicitly identified as a lexical proxy, as allowed by Task 1's wording.
-- The current 30-label independent-target experiment is a disclosed variation;
-  do not present its results as top-50 MagnaTagATune results or mix its scores with
-  the old near-perfect proxy scores.
-- Task 1's full test set has 829 clips; its headline score must not be directly
-  compared with Task 2's 606-clip test set as if the cohorts were identical.
+| Experiment | Test population | Result and interpretation |
+|---|---|---|
+| Task 1 DistilBERT | 829 captions | Macro-F1 0.3840, Micro-F1 0.5902, mAP 0.3686; TF-IDF has higher Micro-F1 |
+| Task 2 temporal GraphSAGE | 606 clips, three seeds | Mean Macro-F1 0.2648; pooled MLP 0.2610, CNN 0.2215; small graph-over-pooling gain |
+| Task 3 frozen | 606 clips, three head seeds | BERT mean Macro-F1 0.3850; gated 0.3705 |
+| Task 3 joint | 606 clips, seed 42 | Gated Macro-F1 0.4073 and PR-AUC 0.3986; BERT 0.3727 and 0.3751 |
+| Task 4 projections | 606 pairs, three seeds | Text-to-graph R@10 17.77%; reverse 18.65% |
+| CLAP zero-shot | Same 606 pairs | Caption-to-audio R@10 45.38%; reverse 40.92%; external pretraining differs |
 
-### Task 2: implemented and measured on the substitute dataset
+Validation selects **BERT-only overall and gated among fusion models** in both Task 3 suites. The joint gated test gain does not override selection. Gated Micro-F1 is lower than BERT-only. Joint and frozen seeds must not be pooled; no significance is claimed. Text pretraining used 1,089 more training-only captions than graph pretraining.
 
-- Graph construction scripts, PyTorch Geometric GraphSAGE, mel-CNN and pooled
-  MLP are present.
-- Five configurations across three seeds give 15 saved checkpoints and
-  validation/test prediction sets in `results/task2/available_run1/runs/`.
-- Graph ablations, training curves and a 20-example real graph gallery exist.
-- The specific GTZAN/FMA-small deliverable is not demonstrated by these runs.
-- `notebooks/task2_gnn_cnn.ipynb` defaults to synthetic verification. The report
-  and `available_run1` contain the real results; the final reviewer entry point
-  should make this distinction clear.
+## Saved verification reviewed
 
-### Task 3: frozen and joint ablations completed on the substitute dataset
+- [Task 1](../results/task1/audioset_cpu_20260907/verification.json): independent labels, 829 test IDs and calibrated model/control metrics.
+- [Task 2](../results/task2/available_run1/verification.json): 15 real-data runs, identical IDs/targets/labels, thresholds, hashes and aggregate statistics.
+- [Joint verification](../results/task3/joint_run2/verification.json): valid, five runs, evaluated test, active encoder updates and unchanged frozen layers.
+- [Notebook verification](../results/task3/joint_run2/notebook_verification.json): joint review (five code cells) and raw-audio demo (three), zero errors.
+- [Retrieval](../results/task4/available_run1/verification.json) and [extensions](../results/task4/extension_verification.json): saved retrieval evidence, aligned CLAP/tag metrics, ten queries and five forms. Forms are not ratings.
 
-- BERT-only, GNN-only, concatenation and cross-attention are measured; gated
-  fusion is an additional comparison. All five heads have three seeds.
-- Saved outputs, comparisons, curves and three graph/caption case studies exist
-  under `results/task3/available_run1/`. The case figures show temporal paths and
-  segment/token sensitivities; these are representation interventions, not causal
-  alignment proofs.
-- Joint training now updates GraphSAGE, the fusion head and the final transformer
-  block. All five modes completed three epochs and passed held-out verification
-  in `joint_run2`. Genre/mood t-SNE is also complete, with limited mood coverage.
-- Both inference notebooks executed successfully, including the raw audio/caption
-  demonstration. Their external input/checkpoint dependencies still need packaging.
-- In the single-seed joint run, validation-selected gated fusion has test
-  Macro-F1 0.4073 versus 0.3727 for BERT-only and 0.2700 for GNN-only. Its
-  Micro-F1 remains below BERT-only; no statistical significance is claimed.
-- The specific FMA-medium/MagnaTagATune results are not supplied.
-- In the historical frozen experiment, BERT-only wins mean validation Macro-F1; gated fusion is the best fusion mode.
-  Test Macro-F1 is 0.3850 for BERT-only and 0.3705 for gated fusion. Failure to beat
-  BERT is an honest experimental outcome, not by itself a missing deliverable.
-- Text encoder training used 1,089 additional training-only captions beyond the
-  paired cohort. The report discloses this; characterize these as controlled head
-  comparisons over reused encoders, not equally trained encoder comparisons.
+These are existing records inspected for this documentation update. No retraining, new test inference or fresh full regression run was performed. Older 77/86-test references are historical snapshots. No current submission ZIP was found at the project root; the Task 1 source snapshot covers only one run.
 
-### Task 4: useful retrieval experiment, not the full listed advanced task
+## Remaining submission actions
 
-Task 4 is marked optional/bonus in the rubric on p. 7. If claiming completion
-of Task 4, its listed requirements still need to be addressed.
+1. Document acceptance of MusicCaps for Tasks 2/3, or supply the named-dataset experiments.
+2. If claiming the entire advanced task, collect ratings from at least five real people and resolve the frozen-encoder deviation.
+3. Package at least 20 loadable graphs with ordered labels, node-feature schema, edge conventions, sample IDs and normalization information. Validate loading from the package, not just images.
+4. Package source, requirements/configuration, tables/plots and demo dependencies; account for historical absolute paths. Execute the demo and relevant checks from that delivered copy.
+5. Keep the existing report unchanged as requested. Its older conclusions should not imply the joint experiment remains unperformed; consult the current result reports when assessing completed work.
 
-| Requirement | Status and evidence |
-|---|---|
-| Shared embedding space and InfoNCE training | Implemented with trained projection heads over frozen DistilBERT/GraphSAGE features. |
-| Encoder updates in Algorithm 4, p. 7 | Not demonstrated: encoders remain frozen. Document acceptance of this variation or run the specified training. |
-| Bidirectional Recall@1/5/10 table | Present for 606 held-out pairs, three seeds, with untrained/random controls. |
-| Ten caption queries with top-three matched clips, p. 5 | Incomplete in the saved test examples: five caption queries and five reverse-direction queries per seed. There are only seven distinct caption queries across the three test seeds. Top-ten matches contain the top three, but the caption-query count is still short. |
-| Zero-shot tag prediction versus Task 3 supervised model, p. 5 | No implementation/result deliverable found. This is distinct from an optional CLAP comparison. |
-| At least five listeners rating matches from 1 to 5, p. 6 | Not performed; report explicitly disclaims listening evaluation. The PDF does not mark this subrequirement optional separately from Task 4 as a whole. |
-
-Do not label Task 4 fully complete against the PDF without resolving these
-items. Human ratings must come from actual participants; they cannot be inferred
-from retrieval ranks or generated by the model.
-
-### Baselines, metrics and optional extensions
-
-- **At least two baselines:** satisfied by multiple implemented controls,
-  including label-prior, text-only, CNN and pooled MLP comparisons. Use matched
-  populations when making cross-model claims.
-- **Macro-F1 and Micro-F1:** present with saved predictions and threshold policy.
-- **AUC-PR terminology:** the joint Task 3 report now includes both mAP and
-  separately calculated trapezoidal mean PR-AUC. The historical reports provide mean average precision and explicitly
-  say this is not trapezoidal PR area. The brief asks for mean AUC-PR. Specify the
-  chosen definition in the final report; for literal coverage, also compute and
-  report trapezoidal PR-AUC from the same frozen predictions. Do not simply
-  relabel AP as a different numerical metric.
-- **Emotion regression:** optional when DEAM targets are available; its absence
-  is not a core blocker for the stated non-DEAM scope.
-- **Attention visualization for Task 1, graph coherence score and PCA+MLP:**
-  explicitly optional; no completion claim is needed for omitted extensions.
-- **Performance values in the PDF:** illustrative, not minimum required scores.
-
-## Historical verification performed on 10 September
-
-1. Read and rendered all nine assignment pages, inspected relevant source,
-   task reports/audits, graph/case artifacts and notebook cell contents.
-2. Ran `python -m unittest discover -s tests -v`: **77 tests passed**, 22.017 s.
-   Log: `tmp/submission_audit_tests.log`.
-3. Re-ran `python -m src.task1.evaluate --run-dir results/task1/audioset_cpu_20260907`:
-   passed; saved IDs, targets, calibration and metrics reproduced for DistilBERT
-   and its controls. Log: `tmp/submission_task1_verify.log`.
-4. Recomputed validation/test aggregate and per-label metrics for all **15 Task 2
-   runs**, rederived validation thresholds, checked saved classifications and
-   identical IDs/targets/label order. Passed. Record:
-   `tmp/submission_task2_verify.json`. This check did not repeat audio extraction
-   or the full saved-graph integrity audit.
-5. Re-ran `python -m src.task3.experiment --verify-run results/task3/available_run1`:
-   passed. Checks include the feature fingerprint, frozen selections, prediction
-   metrics/thresholds, identities and comparison tables. Log:
-   `tmp/submission_task3_verify.log`.
-6. Re-ran `python -m src.task4.experiment verify --output-dir results/task4/available_run1`:
-   passed for validation/test retrieval, baselines, normalized embeddings,
-   identities, checkpoint/artifact hashes and tables. Log:
-   `tmp/submission_task4_verify.log`.
-
-These are software and saved-evidence checks, not full retraining or a clean
-installation test of a final submission archive. No experimental results were
-fabricated or retrained during this audit. Existing verifier commands refreshed
-their verification artifacts; model/source files were not edited.
-
-## Recommended completion order
-
-1. Resolve/document instructor acceptance of the dataset substitution and any Task 4 scope variations.
-2. Package the executed real end-to-end demo with its dependencies plus 20 graph files.
-3. Incorporate the completed genre/mood t-SNE and separately defined PR-AUC metrics into the final report.
-4. Complete the remaining Task 4 deliverables if claiming full advanced-task credit.
-5. Assemble the 6-10 page report with measured evidence and explicit limitations.
-6. Correct the scope of completion claims and stale quick-start instructions;
-   package/commit the final files and execute the demo from that delivered copy.
-
-The project does not need to be restarted. The existing measured experiments
-are useful evidence, but successful tests and task-specific completion notes do
-not replace the missing submission artifacts or instructor-approved scope.
+A documentation refresh does not collect ratings, grant approval, create portable graph files or certify an archive.

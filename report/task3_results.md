@@ -1,5 +1,7 @@
 # Task 3 — measured frozen GNN–BERT fusion
 
+> **Separate frozen-encoder ablation.** This report alone does not supply Algorithm 3 encoder updates; the [joint experiment](task3_joint_results.md) does. Do not combine its one seed with the three frozen-head seeds below. See the [current audit](submission_readiness_audit.md).
+
 **The frozen Task 3 experiment is complete on the available 3,964-clip MusicCaps cohort:** five heads,
 three seeds, 15 trained and evaluated checkpoints, verified predictions, training/validation curves,
 embedding plots, three case studies and failure analysis. The run is
@@ -8,7 +10,7 @@ Missing Task 3 modules were recovered from the supplied source/test archives;
 the real feature cache and experiment outputs were regenerated locally. The
 measurements below describe this verified run and supersede the earlier draft.
 
-This report covers frozen encoders. Joint encoder/fusion fine-tuning uses
+This report covers frozen encoders. Joint encoder/fusion fine-tuning in
 `results/task3/joint_run2` is also complete; see the [joint results](task3_joint_results.md),
 [current completion audit](task3_completion_audit.md) and [run guide](../docs/task3/README.md). MusicCaps dataset
 substitution approval remains separate from experimental completion.

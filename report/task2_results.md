@@ -1,5 +1,9 @@
 # Task 2 — Measured MusicCaps audio results
 
+## Assignment deliverables
+
+Task 2 (brief p. 4) evidence: [graph construction](../src/task2/graphs.py), [GraphSAGE/CNN models](../src/task2/models.py), [comparison](../results/task2/available_run1/runs/comparison.csv) and [gallery](../results/task2/available_run1/graph_examples/index.html). These MusicCaps results do not establish the named GTZAN/FMA-small genre experiment; substitution acceptance is undocumented. Page 8 portable graph files are separate from gallery images. See the [audit](submission_readiness_audit.md).
+
 **Task 2 training and final evaluation are complete on the available MusicCaps
 subset.** The run is `results/task2/available_run1/`, using real audio and the
 same 30 independent AudioSet labels as Task 1. This is a 3,964-clip subset,

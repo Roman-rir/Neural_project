@@ -1,5 +1,7 @@
 # How to run the five-listener evaluation
 
+> **Assignment requirement:** p. 6 requires at least five listeners and a 1-5 rating scale. No returned ratings were found in the 12 September review. This guide describes pending work, not a completed study.
+
 The automatic retrieval metric asks, “Did the model return the exact paired
 clip?” The listening study asks, “Does this clip sound like the caption?” A
 different clip may still be a good semantic match. The proposal requires at

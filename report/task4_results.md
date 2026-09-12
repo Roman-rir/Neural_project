@@ -1,5 +1,7 @@
 # Task 4 — measured contrastive graph–text retrieval
 
+> **Assignment status, 12 September 2026:** p. 5 ten-query and zero-shot-tag deliverables are in the [extension report](task4_extensions.md). The retrieval run remains projection-only; p. 6 human ratings and p. 7 encoder updates are unresolved. See the [audit](submission_readiness_audit.md).
+
 **Frozen-encoder exact-pair retrieval is measured on the available 3,964-clip
 MusicCaps cohort; full proposal completion remains pending human ratings and
 resolution of the encoder-training scope deviation.** See the
@@ -162,7 +164,8 @@ so no subjective relevance or listening-quality claim is made.
 - [Verification](../results/task4/available_run1/verification.json) confirms
   checkpoint/configuration hashes, first-best validation selection, split IDs,
   unit embeddings, recomputed metrics/ranks and comparison tables.
-- All **77 repository tests passed**, including **8 Task 4 tests** for ranks,
+- At the original 10 September verification, **77 repository tests passed**,
+  including **8 Task 4 tests** for ranks,
   gradients, detached inputs, label independence, checkpoint restoration,
   baseline comparison, split separation and artifact tampering.
 - [Executed notebook](../notebooks/task4_retrieval.ipynb),
