@@ -221,7 +221,7 @@ The repository documents completed experiments; it does not establish full compl
 | Demo notebook | Executed locally; a submitted copy still needs matching checkpoint, manifest, normalization and audio dependencies |
 | Task 4 human evaluation | Five real listener responses remain pending |
 | Task 4 encoder updates | Measured training updates projections only; the original algorithm updates encoders. See the [scope deviation](report/task4_scope_deviation.md) |
-| Final repository/ZIP | Package current source, evidence and required dependencies, then verify the delivered copy; local artifacts alone do not establish a complete submission |
+
 
 Other limitations include available-audio selection bias, incomplete labels, coarse one-second segment features, unequal historical encoder-training cohorts and no artist-disjoint evaluation. No emotion-regression result or statistical significance is claimed.
 
